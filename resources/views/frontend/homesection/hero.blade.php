@@ -17,7 +17,7 @@
 </div>
 
 <div class="bg-[#003F5F] w-full relative -z-1">
-    <h1 class="text-[25px] text-center md:text-[30px] lg:text-[35px] mx-auto max-w-[70rem] p-10 text-white">
+    <h1 class="text-[25px] text-center md:text-[30px] lg:text-[35px] mx-auto max-w-280 p-10 text-white">
         Don’t let isolation stall you. Grow faster and outlast the competition with growthmasters.
     </h1>
 

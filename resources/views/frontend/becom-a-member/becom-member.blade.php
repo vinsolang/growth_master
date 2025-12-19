@@ -288,7 +288,7 @@
             </div>
 
 
-        </div>
+            </div>
         <!-- Button -->
         <div class=" flex justify-start space-x-6">
                         <button class="text-[#c8bfbf] font-bold py-4 rounded-sm cursor-pointer text-xl">
@@ -371,26 +371,75 @@
 
             <!-- Title -->
             <h2 class="text-2xl max-w-2xl md:text-3xl text-left font-light leading-tight">
-                Were you referred by someone in the Vistage Community?
+                Were you referred by someone in the Growth Master Community?
             </h2>
             {{-- Radio --}}
-            <div class="flex flex-col justify-start items-start text-xl max-w-2xl md:text-3xl text-left font-light leading-tight">
-                <div class="flex justify-center items-center space-x-2">
-                    <input type="radio" name="yes" id="no" value="Yes">
-                    <label for="">Yes</label>
-                </div>
-                <div class="flex justify-center items-center space-x-2">
-                    <input type="radio" name="no" id="no" value="No">
-                    <label for="">No</label>
-                </div>
+            <div class="flex flex-col items-start space-y-3 text-xl max-w-2xl">
+                <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="radio" name="referred" value="yes" class="accent-yellow-400">
+                    <span>Yes</span>
+                </label>
+
+                <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="radio" name="referred" value="no" class="accent-yellow-400">
+                    <span>No</span>
+                </label>
             </div>
+
 
             {{-- input First Name and Last Name --}}
             <div class="w-full flex flex-col space-y-4">
-                <input type="text" name="company" id="company" inputmode="numeric" placeholder="Postal Code*"
-                    maxlength="5" class="border border-[#c8bfbf] w-full max-w-2xl h-12
-                    text-xl font-medium px-4 rounded-md
-                    placeholder:font-medium focus:outline-none">
+                <!-- Container to better control width/layout -->
+                <div class="w-full max-w-2xl">
+                    <div id="referralSelectWrapper" class="hidden w-full max-w-2xl mt-6">
+                        <select
+                            id="referralSelect"
+                            class="
+                            appearance-none w-full h-12 rounded-md
+                            border border-white pl-3 pr-14 cursor-pointer
+                            bg-[#0b2642] text-white text-xl font-medium px-4
+                            focus:outline-none focus:ring-2 focus:ring-blue-500
+
+                            bg-[url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\")]
+                            bg-no-repeat bg-[length:1.25em] bg-[right_3rem_center]
+                            "
+                        >
+                            <option value="" selected disabled>Who referred you?</option>
+                            <option value="member">Growth Master member</option>
+                            <option value="chair">Growth Master Chair</option>
+                            <option value="speaker">Growth Master Speaker</option>
+                        </select>
+
+                        <!-- Right button -->
+                        <button
+                            type="button"
+                            class="absolute inset-y-0 right-0 w-12 flex items-center justify-center
+                                border-l border-white text-white hover:bg-white/10 transition"
+                            aria-label="Open select"
+                            onclick="document.getElementById('referralSelect').focus()"
+                        >
+                            ▼
+                        </button>
+                    </div>
+
+
+                <div id="referralInputs" class="hidden py-4 space-y-4 text-xl max-w-2xl">
+                    <input
+                        type="text"
+                        placeholder="Name of the person who referred you"
+                        class="border border-[#c8bfbf] w-full h-12 rounded-md
+                            placeholder:font-medium placeholder:text-white px-4 bg-transparent text-white"
+                    >
+                    <input
+                        type="email"
+                        placeholder="Email of person who referred you"
+                        class="border border-[#c8bfbf] w-full h-12 rounded-md
+                            placeholder:font-medium placeholder:text-white px-4 bg-transparent text-white"
+                    >
+                </div>
+            </div>
+
+
             </div>
             <!-- Button -->
             <div class=" flex justify-start space-x-6">
@@ -405,6 +454,54 @@
 
         </div>
     </div>
+
+    {{-- Contact Information --}}
+    <div class=" bg-[#0b2642] md:h-[120vh] flex justify-center text-white py-4">
+        <div class="w-full max-w-4xl text-center px-6 space-y-6">
+
+            <!-- Logo -->
+            <div class="w-40 h-40">
+                <img src="{{ asset('assets/logo.png') }}" alt="" class="rounded-full">
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full flex mt-20">
+                <div class="w-full max-w-2xl h-4 bg-gray-300 rounded-full relative">
+                    <div class="h-4 bg-[#ffbf00] rounded-full w-full flex items-center justify-end pr-2">
+                        <span class="text-xs text-black font-semibold">100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-2xl max-w-2xl md:text-3xl text-left font-light leading-tight">
+                What is your contact information?
+            </h2>
+
+            <h2 class="text-2xl max-w-2xl md:text-3xl text-left font-light leading-tight">
+                If your application is approved, we’ll reach out to schedule your interview and learn more about your goals.
+            </h2>
+            {{-- input First Name and Last Name --}}
+            <div class="w-full flex flex-col space-y-4">
+                <input type="text" name="company" id="company" inputmode="numeric" placeholder="Mobile Phone*"
+                    class="border border-[#c8bfbf] w-full max-w-2xl h-12
+                    text-xl font-medium px-4 rounded-md
+                    placeholder:font-medium focus:outline-none">
+            </div>
+            <!-- Button -->
+            <div class=" flex justify-start space-x-6">
+                <button class="text-[#c8bfbf] font-bold py-4 rounded-sm cursor-pointer text-xl">
+                    Previous
+                </button>
+                <a href="{{ route('sucess') }}" class="bg-[#ffbf00] text-black font-bold py-2 w-80 rounded-sm
+                    hover:bg-yellow-400 transition cursor-pointer text-xl uppercase flex justify-center items-center">
+                    become a member
+                </a>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -417,6 +514,36 @@
         updateState();
         select.addEventListener("change", updateState);
     });
+</script>
+
+{{-- Condition about choose button radio Yes or No --}}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const radios = document.querySelectorAll('input[name="referred"]');
+    const selectWrapper = document.getElementById("referralSelectWrapper");
+    const select = document.getElementById("referralSelect");
+    const inputs = document.getElementById("referralInputs");
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            if (radio.value === "yes") {
+                selectWrapper.classList.remove("hidden");
+            } else {
+                selectWrapper.classList.add("hidden");
+                inputs.classList.add("hidden");
+                select.selectedIndex = 0;
+            }
+        });
+    });
+
+    select.addEventListener("change", () => {
+        if (select.value) {
+            inputs.classList.remove("hidden");
+        } else {
+            inputs.classList.add("hidden");
+        }
+    });
+});
 </script>
 
 </html>

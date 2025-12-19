@@ -5,6 +5,8 @@ use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
 use App\Http\Controllers\backend\HowItWorksController;
+use App\Http\Controllers\frontend\AboutGrowthControll;
+use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +24,13 @@ Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])-
 Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
+Route::get('thankyou-membership-application', [BecomeAMemberController::class, 'PageSubmitSucess'])->name('sucess');
 Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
+
+// aboute
+Route::get('about-griwth-bg-cover', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
 
 
 

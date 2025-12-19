@@ -1,4 +1,4 @@
-<nav id="navbar" class="py-4 px-6 shadow-lg bg-black/40 fixed top-0 right-0 left-0 z-10 transition-all duration-300">
+<nav id="navbar" class="py-4 px-6 shadow-lg bg-black/40 fixed top-0 right-0 left-0 z-50 transition-all duration-300">
     <div class="flex justify-between items-center">
         
         <!-- Left Section -->
@@ -32,7 +32,7 @@
                         </div>   
                     </div>
                 </li>
-                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="{{ route('events') }}" class="flex items-center">
                         Events 
                         <i class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
@@ -46,7 +46,19 @@
                     </div>
                 </li>
                 <li class="hover:text-[#EDC11C] cursor-pointer">Resources</li>
-                <li class="hover:text-[#EDC11C] cursor-pointer">About</li>
+                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                    <a href="{{ route('about') }}" class="flex items-center">
+                        About 
+                        <i class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
+                        <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
+                            <a href="{{ route('events') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">What is GrowthMaster Event?</a>
+                            <a href="{{ route('ceo.climb.events') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">7 Laws of Leadership</a>
+                            <a href="{{ route('research.center.webinar') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">The CEO</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="hover:text-[#EDC11C] cursor-pointer">Chair</li>
             </ul>
         </div>

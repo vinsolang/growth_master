@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 {{-- Block 2 --}}
-                <div class="border-1 flex md:flex-row flex-col justify-between items-center border-[#e6ecf0] w-full h-auto xl:w-[70%] md:h-50 rounded-md">
+                <div class="border flex md:flex-row flex-col justify-between items-center border-[#e6ecf0] w-full h-auto xl:w-[70%] md:h-50 rounded-md">
                     <div class="min-w-[30%] h-full">
                         <img src="https://myvistage.com/hub/wp-content/uploads/sites/4/2025/08/Business-Trends-2026-Blog-1024x686-1.jpg" alt="" class="w-full h-full object-cover rounded-md">
                     </div>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 {{-- Block 3 --}}
-                <div class="border-1 flex md:flex-row flex-col justify-between items-center border-[#e6ecf0] w-full h-auto xl:w-[70%] md:h-50 rounded-md">
+                <div class="border flex md:flex-row flex-col justify-between items-center border-[#e6ecf0] w-full h-auto xl:w-[70%] md:h-50 rounded-md">
                     <div class="min-w-[30%] h-full">
                         <img src="https://myvistage.com/hub/wp-content/uploads/sites/4/2025/08/Business-Trends-2026-Blog-1024x686-1.jpg" alt="" class="w-full h-full object-cover rounded-md">
                     </div>

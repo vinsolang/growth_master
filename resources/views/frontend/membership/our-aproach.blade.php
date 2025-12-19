@@ -461,7 +461,7 @@
                     <div class="cursor-pointer">
                         <button class="question-toggle cursor-pointer flex justify-between items-center w-full py-4 text-lg font-medium text-gray-900 focus:outline-none">
                             <span class="icon-indicator mr-3 text-xl text-gray-900">
-                                &#9654;
+                                
                             </span>
                             <span class="grow text-left">
                                What is a Growthmaster membership?

@@ -1,4 +1,4 @@
-<div class=" w-full h-[100vh] relative  ">
+<div class=" w-full h-screen relative  ">
     <!-- Hero Image -->
     <img src="{{ asset('assets/membership_hero1.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
 
@@ -31,20 +31,20 @@
 </div>
 
 <div class="flex flex-col  justify-center  items-center mt-10  gap-10">
-    <p class="text-start text-[#343434] mx-[40px] md:mx-[250px]  font-regular text-[17px] md:text-[20px]">Traditional
+    <p class="text-start text-[#343434] mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">Traditional
         business coaching focuses on personal development through one-on-one sessions with a certified
         coach. While valuable for building management skills, this approach falls short when you’re evaluating a
         major acquisition, considering international expansion or navigating partnership disputes. And while your
         internal team can offer operational insight, they’re too close to daily operations to see the blind spots
         that outside perspectives can reveal.</p>
-    <p class="text-start text-[#343434] mx-[40px] md:mx-[250px] font-regular text-[17px] md:text-[20px]">
+    <p class="text-start text-[#343434] mx-10 md:mx-[250px] font-regular text-[17px] md:text-[20px]">
         GrowthMaster combines personal leadership development with strategic business support through guided peer
         advisory groups. You get perspectives from 10-15 business owners who’ve made similar decisions, plus expert
         facilitation and individual coaching on finance and KPI setting. This comprehensive approach transforms how
         you lead your business, strengthen your personal effectiveness, and create positive impact in your
         community.
     </p>
-    <p class="text-start text-[#343434] mx-[40px]  md:mx-[250px] font-regular text-[17px] md:text-[20px]">
+    <p class="text-start text-[#343434] mx-10  md:mx-[250px] font-regular text-[17px] md:text-[20px]">
         The key difference: traditional coaching develops you as a leader, while GrowthMaster develops you as a
         leader AND provide an integrated suite of tools that seamlessly connects financial health analytics with
         strategic insights across Sales, Operations, and Human Resource Management (HRM), ensuring targeted,
