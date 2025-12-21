@@ -129,7 +129,7 @@
           </li>
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-buildings"></i>
               <div data-i18n="Layouts">About Us</div>
@@ -147,10 +147,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-group"></i>
               <div data-i18n="Layouts">Our Team</div>
@@ -168,7 +168,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
            <!-- Layouts -->
           <li class="menu-item">
@@ -234,7 +234,7 @@
           </li>
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-grid-alt"></i>
               <div data-i18n="Layouts">Our Services</div>
@@ -252,7 +252,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
           <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">

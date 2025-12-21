@@ -176,7 +176,7 @@
     <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Real Growth Stories From Growth Master
         Members</h1>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-3 min-h-screen py-12 px-4 md:px-16 max-w-8xl mx-auto space-x-6 space-y-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 min-h-screen py-12 px-6 md:px-16 w-full md:max-w-8xl mx-auto gap-8">
 
     <div
         class="group relative h-[900px] md:h-[800px] bg-[#0b2642] shadow-2xl overflow-hidden rounded-lg cursor-pointer">
