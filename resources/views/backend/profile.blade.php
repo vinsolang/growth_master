@@ -1,85 +1,94 @@
 @extends('backend.admin')
 
 @section('content')
-<div class="flex justify-center mt-2">
+<div class="flex justify-center mt-4">
     <div class="w-full max-w-7xl bg-white shadow-xl rounded-2xl p-10">
-        <!-- Title -->
-        <h2 class="text-3xl font-bold text-[#4DA358] mb-8 text-center border-b pb-4">
+
+        <h2 class="text-3xl font-bold text-[#4DA358] text-center mb-8 border-b pb-4">
             Admin Profile
         </h2>
 
-        <!-- Success Message -->
+        {{-- Success --}}
         @if(session('success'))
-            <div class="bg-green-100 text-green-700 p-3 rounded mb-6 text-center font-medium">
+            <div class="bg-green-100 text-green-700 p-3 rounded mb-6 text-center">
                 {{ session('success') }}
             </div>
         @endif
 
-        <!-- Profile Form -->
-        <form action="{{ route('submit.update.profile') }}" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            @csrf
-            <input type="hidden" name="id" value="{{ $showProfile[0]->id }}">
+        {{-- Error --}}
+        @if(session('error'))
+            <div class="bg-red-100 text-red-700 p-3 rounded mb-6 text-center">
+                {{ session('error') }}
+            </div>
+        @endif
 
-            <!-- Left Column: Profile Image -->
+        <form action="{{ route('submit.update.profile') }}"
+              method="POST"
+              enctype="multipart/form-data"
+              class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            @csrf
+
+            {{-- LEFT --}}
             <div class="flex flex-col items-center">
-                <div class="relative">
-                    <img src="../../assets/profile/{{ $showProfile[0]->profile }}"
-                         alt="Profile Image"
-                         class="w-40 h-40 rounded-full object-contain border-4 border-[#4DA358] shadow-md mb-4">
-                    <input type="hidden" name="old_profile" value="{{ $showProfile[0]->profile }}">
+
+                <img src="{{ asset('assets/profile/'.$user->profile) }}"
+                     class="w-40 h-40 rounded-full border-4 border-[#4DA358] object-contain mb-4">
+
+                <label class="font-semibold mb-2">Change Profile Picture</label>
+                <input typxe="file" name="update_profile"
+                       class="w-full border rounded-lg p-2">
+
+                @error('update_profile')
+                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                @enderror
+
+            </div>
+
+            {{-- RIGHT --}}
+            <div>
+
+                {{-- Username --}}
+                <div class="mb-5">
+                    <label class="font-semibold mb-2 block">Username</label>
+                    <input type="text" name="update_username"
+                           value="{{ $user->username }}"
+                           class="w-full border p-3 rounded-lg">
                 </div>
 
-                <label class="block text-gray-700 font-semibold mb-2">Change Profile Picture</label>
-                <input type="file" name="update_profile"
-                       class="w-full text-sm text-gray-600 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#4DA358]">
-                @error('profile') 
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p> 
-                @enderror
-                  <!-- Submit Button (Full Width) -->
-                    <div class="col-span-1 md:col-span-2 text-center mt-4">
+                {{-- Email --}}
+                <div class="mb-5">
+                    <label class="font-semibold mb-2 block">Email</label>
+                    <input type="email" name="update_email"
+                           value="{{ $user->email }}"
+                           class="w-full border p-3 rounded-lg">
+                </div>
+
+                {{-- Old Password --}}
+                <div class="mb-5 hidden">
+                    <label class="font-semibold mb-2 block">Old Password</label>
+                    <input type="password" name="old_password"
+                           class="w-full border p-3 rounded-lg">
+                </div>
+
+                {{-- New Password --}}
+                <div class="mb-5">
+                    <label class="font-semibold mb-2 block">New Password</label>
+                    <input type="password" name="update_password"
+                           class="w-full border p-3 rounded-lg">
+                </div>
+
+            </div>
+
+            {{-- BUTTON --}}
+            <div class="md:col-span-2 text-center">
                 <button type="submit"
-                        class="bg-[#4DA358] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3c8747] transition-all shadow-md">
+                        class="bg-[#4DA358] text-white px-10 py-3 rounded-lg font-semibold hover:bg-green-700 transition">
                     Update Profile
                 </button>
             </div>
-            </div>
-           
 
-            <!-- Right Column: Info Fields -->
-            <div>
-                <!-- Username -->
-                <div class="mb-5">
-                    <label class="block text-gray-700 font-semibold mb-2">Username</label>
-                    <input type="text" name="update_username" value="{{ $showProfile[0]->username }}"
-                           class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4DA358]">
-                    @error('name') 
-                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p> 
-                    @enderror
-                </div>
-
-                <!-- Email -->
-                <div class="mb-5">
-                    <label class="block text-gray-700 font-semibold mb-2">Email</label>
-                    <input type="email" name="update_email" value="{{ $showProfile[0]->email }}"
-                           class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4DA358]">
-                    @error('email') 
-                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p> 
-                    @enderror
-                </div>
-
-                <!-- Password -->
-                <div class="mb-5">
-                    <label class="block text-gray-700 font-semibold mb-2">Change Password</label>
-                    <input type="hidden" name="old_password" value="{{ $showProfile[0]->password }}"
-                           class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4DA358]">
-                    <input type="password" name="update_password"
-                           class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4DA358]">
-                    @error('password') 
-                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p> 
-                    @enderror
-                </div>
-            </div>
         </form>
+
     </div>
 </div>
 @endsection

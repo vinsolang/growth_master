@@ -10,18 +10,16 @@
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Explore Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="">Membership</a></li>
+                        <li><a href="{{ route('membership') }}">Membership</a></li>
                         <li><a href="">Chair</a></li>
-                        <li><a href="">Events</a></li>
-                        <li><a href="">Membership</a></li>
-                        <li><a href="">Membership</a></li>
+                        <li><a href="{{ route('events') }}">Events</a></li>
                     </ul>
                 </div>
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Learn About Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="">About Growth Master</a></li>
-                        <li><a href="">What is Growth Master</a></li>
+                        <li><a href="{{ route('about') }}">About Growth Master</a></li>
+                        <li><a href="{{ route('what.is.growth') }}">What is Growth Master</a></li>
                         <li><a href="">Worldwide Locations</a></li>
                         <li><a href="">Careers</a></li>
                     </ul>

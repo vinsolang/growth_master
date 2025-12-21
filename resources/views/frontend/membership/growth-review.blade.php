@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Growth Master Reviews')
 @section('content')
     @component('components.navbar')
 

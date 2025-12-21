@@ -8,6 +8,7 @@ use App\Http\Controllers\backend\HowItWorksController;
 use App\Http\Controllers\frontend\AboutGrowthControll;
 use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
+use App\Http\Controllers\MembershipController;
 use Illuminate\Support\Facades\Route;
 
 /* ============================================================================================
@@ -24,15 +25,20 @@ Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])-
 Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
-Route::get('thankyou-membership-application', [BecomeAMemberController::class, 'PageSubmitSucess'])->name('sucess');
 Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
 
 // aboute
-Route::get('about-griwth-bg-cover', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
+Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
+Route::get('about-growth/what-is-growth-master', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
+Route::get('about-growth/leadership-laws/', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
 
 
+// Submite Become a member
+Route::resource('memberships', MembershipController::class)
+    ->only(['store', 'index', 'destroy']);
+Route::get('thankyou-membership-application', [BecomeAMemberController::class, 'PageSubmitSucess'])->name('sucess');
 
 
 
@@ -41,7 +47,7 @@ Route::get('about-griwth-bg-cover', [AboutGrowthControll::class, 'aboutGrowth'])
 =============================================================================================== */
 
 //=========================================== Profile View and Update=============================
-Route::get('/admin/profile', [AuthController::class,'profile'])->name('profile')->middleware('auth');
+Route::get('/admin/profile', [AuthController::class,'profile'])->name('profile');
 Route::post('/admin/submit_profile',[AuthController::class,'submitUpdateUser'])->name('submit.update.profile');
 // ==== Route Loing and Register ====
 Route::get('/login',[AuthController::class,'login'])->name('login');
@@ -51,6 +57,7 @@ Route::post('/submit/login', [AuthController::class,'submitLogin'])->name('submi
 // ==== Route Logout ====
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::post('/submit/logout',[AuthController::class,'submitLogout'])->name('logout.submit');
+
 
 
 Route::middleware(['auth'])->group(function(){

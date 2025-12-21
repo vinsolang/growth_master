@@ -26,24 +26,30 @@
         </div>
 
         <div class="space-y-6">
-            <p class="flex justify-center items-center text-[#141826] max-w-[65%] mx-auto font-normal text-[20px] text-left py-10 px-8 md:px-12">Great news: We have assigned your application to Michael Fletcher, a Market Manager, to learn more about your needs and what you are looking to accomplish with Vistage.</p>
+            <p class="flex justify-center items-center text-[#141826] max-w-[65%] mx-auto font-normal text-[20px] text-left py-10 px-8 md:px-12">
+                Thank you for submitting your application for Growth Master membership. We are currently reviewing your information. 
+                A regional consultant will reach out to you if you match the criteria for a Growth Master peer advisory program in your area.
+           </p>
             {{-- Block card element --}}
             <div class="flex justify-center items-center space-x-8">
-                <div class="w-40 h-40">
-                    <img src="https://www.vistage.com/wp-content/uploads/2023/03/tt-Michael-Fletcher-150x150.jpg" alt="" class="w-full h-full object-cover">
+                <div class="w-64 h-64">
+                    <img src="{{ asset('assets/profile/1765335726-founder.jpg') }}" alt="" class="w-full h-full object-contain">
                 </div>
                 <div class="text-[#333333] text-xl font-medium">
-                    <p>Michael Fletcher</p>
-                    <p>Market Manager</p>
+                    <p class="uppercase text-2xl">san rithy</p>
+                    <p>Founder, Cambodia Accounting Club(CAC)</p>
+                    <p>Shareholder, Acclime</p>
                 </div>
-            </div>            
-            <p class="flex justify-center items-center text-[#141826] font-medium text-[20px] text-left py-10 px-8 w-full md:px-12">To schedule a call with Michael, please select a date and time that works best for you.</p>
+            </div>   
+
             {{-- Calender --}}
+            {{-- <p class="flex justify-center items-center text-[#141826] font-medium text-[20px] text-left py-10 px-8 w-full md:px-12">To schedule a call with Michael, please select a date and time that works best for you.</p>
+            
             <div class="bg-gray-100 min-h-screen flex items-center justify-center">
-                <!-- CARD -->
+           
                 <div class="bg-white w-full max-w-6xl rounded-xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
 
-                    <!-- LEFT PANEL -->
+                    
                     <div class="p-10 space-y-8 border-r">
                         <h1 class="text-5xl font-extrabold text-teal-800 uppercase">Growth Master</h1>
 
@@ -62,42 +68,42 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT PANEL -->
+                    
                     <div class="p-10 relative">
 
-                        <!-- Powered by -->
+                        
                         <div class="absolute top-0 right-0 bg-gray-700 text-white text-xs px-4 py-2 rotate-45 translate-x-12 -translate-y-2">
                             Powered by Calendly
                         </div>
 
                         <h2 class="text-2xl font-bold mb-6">Select a Date & Time</h2>
 
-                        <!-- Month Navigation -->
+                        
                         <div class="flex items-center justify-center space-x-6 mb-6">
                             <button id="prevMonth" class="text-2xl text-gray-500 hover:text-black">&lsaquo;</button>
                             <span id="monthLabel" class="text-lg font-semibold">December 2025</span>
                             <button id="nextMonth" class="text-2xl text-blue-600 hover:text-blue-800">&rsaquo;</button>
                         </div>
 
-                        <!-- Days -->
+                        
                         <div class="grid grid-cols-7 text-center text-sm font-semibold text-gray-500 mb-3">
                             <span>MON</span><span>TUE</span><span>WED</span>
                             <span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
                         </div>
 
-                        <!-- Calendar Grid -->
+                       
                         <div class="grid grid-cols-7 gap-y-6 text-center text-gray-700 relative">
-                            <!-- Empty -->
+                            
                             <span></span>
 
-                            <!-- Days -->
+                           
                             <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
                             <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
                             <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
                             <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
                             <span>28</span><span>29</span><span>30</span><span>31</span>
 
-                            <!-- No Times Bubble -->
+                            
                             <div class="absolute left-1/2 top-[55%] -translate-x-1/2 bg-white shadow-xl rounded-full px-6 py-3 text-center">
                                 <p class="text-sm text-gray-600">No times in December</p>
                                 <button class="text-blue-600 font-semibold mt-1 flex items-center justify-center gap-1">
@@ -107,7 +113,7 @@
                             </div>
                         </div>
 
-                        <!-- Timezone -->
+                        
                         <div class="mt-14">
                             <p class="text-sm font-semibold text-gray-700 mb-2">Time zone</p>
                             <button class="flex items-center space-x-2 text-blue-600 font-medium">
@@ -123,7 +129,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> --}}
             @component('components.footer')
             @endcomponent
         </div>

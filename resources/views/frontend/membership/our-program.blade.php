@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Executive Coaching Services & Leadership Programs')
 @section('content')
     @component('components.navbar')
 

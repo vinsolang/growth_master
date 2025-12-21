@@ -257,18 +257,13 @@
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-check-shield"></i>
-              <div data-i18n="Layouts">Why Choose</div>
+              <div data-i18n="Layouts">Submitting</div>
             </a>
 
             <ul class="menu-sub">
               <li class="menu-item">
-                <a href="" class="menu-link">
+                <a href="{{ route('memberships.index') }}" class="menu-link">
                   <div data-i18n="Without menu">View</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="" class="menu-link">
-                  <div data-i18n="Without menu">Add</div>
                 </a>
               </li>
             </ul>

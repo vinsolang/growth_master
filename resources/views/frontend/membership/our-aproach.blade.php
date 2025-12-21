@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Peer Advisory Groups')
 @section('content')
     @component('components.navbar')
 

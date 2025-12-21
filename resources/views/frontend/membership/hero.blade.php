@@ -1,3 +1,4 @@
+@section('title', 'Why Join GrowthMaster for business coaching')
 <div class=" w-full h-screen relative  ">
     <!-- Hero Image -->
     <img src="{{ asset('assets/membership_hero1.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">

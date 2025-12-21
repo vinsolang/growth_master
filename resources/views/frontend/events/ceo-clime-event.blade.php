@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Growth Master CEO CLIMB EVENTS')
 @section('content')
     <style>
         .no-scrollbar::-webkit-scrollbar {

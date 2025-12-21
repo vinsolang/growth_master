@@ -93,7 +93,7 @@
 
     <div class="flex justify-center items-center mt-10">
         <button
-            class="group py-[12px] px-[25px] text-[16px] md:text-[18px] border border-[#003F5F]
+            class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#003F5F]
             text-[#003F5F] bg-white rounded 
             transition-all duration-300 ease-in-out
             hover:bg-[#003F5F] hover:text-white">

@@ -10,7 +10,7 @@
     {{-- Font Family --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ asset('assets/logo.png') }}">
-    <title>Growth Master </title>
+    <title>@yield('title')</title>
     <style>
         body {
             @font-face {

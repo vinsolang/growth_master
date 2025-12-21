@@ -8,7 +8,7 @@
             ADMIN DASHBOARD 
         @endsection
 
-        <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="container-xxl grow container-p-y">
             <div class="flex items-center justify-center min-h-screen">
                 <h1 class="text-center text-7xl font-bold">
                     Welcome to <br /> <br>
