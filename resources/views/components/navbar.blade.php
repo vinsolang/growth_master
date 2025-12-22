@@ -87,7 +87,7 @@
                         <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
                             <a href="{{ route('chair.growth') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Lead a Group</a>
-                            <a href=""
+                            <a href="{{ route('ceo.coa.qual') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Chair Qualifications</a>
                             <a href=""
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Meet Our Growth Master Chairs</a>
@@ -183,8 +183,8 @@
             </button>
 
             <ul id="mobileChair" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="" class="block hover:text-[#EDC11C]">Lead a Group</a></li>
-                <li><a href="" class="block hover:text-[#EDC11C]">Chair Qualifications</a></li>
+                <li><a href="{{ route('chair.growth') }}" class="block hover:text-[#EDC11C]">Lead a Group</a></li>
+                <li><a href="{{ route('ceo.coa.qual') }}" class="block hover:text-[#EDC11C]">Chair Qualifications</a></li>
                 <li><a href="" class="block hover:text-[#EDC11C]">Meet Our Growth Master Chairs</a></li>
                 <li><a href="" class="block hover:text-[#EDC11C]">Apply to be a Growth Master Chair</a></li>
             </ul>

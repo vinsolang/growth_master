@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Become an Execurtive | GrowthMaster')
 @section('content')
     @component('components.navbar')
     @endcomponent
@@ -53,7 +53,7 @@
 
                         {{-- TEXT --}}
                         <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[400px] order-2 space-y-10 md:py-0 py-4
-                                            {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}">
+                                                    {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}">
                             <h1 class="text-[#000000] lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
                                 {{ $card['title'] }}
                             </h1>
@@ -64,7 +64,7 @@
 
                         {{-- IMAGE --}}
                         <div class="lg:w-1/2 w-full lg:h-[90%] order-1 lg:py-4
-                                            {{ $index % 2 == 0 ? 'lg:order-2' : 'lg:order-1' }}">
+                                                    {{ $index % 2 == 0 ? 'lg:order-2' : 'lg:order-1' }}">
                             <img src="{{ $card['image'] }}" class="w-full h-full object-cover">
                         </div>
 
@@ -88,12 +88,11 @@
         {{-- Card Element --}}
         <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">
             {{-- Card 1 --}}
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
                     Beyond Financial Success
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     don’t just want a financially rewarding role,
                     but are seeking something deeper: the ability to create lasting impact in other leaders’
                     lives while building a career that offers both flexibility and fulfillment.
@@ -103,12 +102,11 @@
             </div>
 
             {{-- Card 2 --}}
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
                     The Need for Purpose
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     After years of building businesses, many executives crave
                     work that feels meaningful on a personal level. You’ve spent
                     decades focused on one organization’s growth. Now you can
@@ -119,12 +117,11 @@
                 </p>
             </div>
             {{-- card 3 --}}
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
                     The “What’s Next?” Moment
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     Whether you’ve sold your company, reached retirement
                     age but aren’t ready to retire or simply feel you’ve
                     accomplished what you set out to do in traditional business,
@@ -134,12 +131,11 @@
                 </p>
             </div>
             <!-- Card 4 -->
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
                     Intellectual Challenge Without Operational Stress
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     As a Chair, you face complex strategic challenges daily,
                     but without the weight of execution on your shoulders.
                     You get to think at the highest level while helping others
@@ -150,12 +146,11 @@
             </div>
 
             <!-- Card 5 -->
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
                     The Desire to Make an Impact
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     After benefiting from mentors and advisors throughout your career,
                     becoming a Chair lets you pay that forward. You remember the moments when someone’s guidance changed
                     your trajectory.
@@ -163,12 +158,11 @@
                 </p>
             </div>
             {{-- Card 6 --}}
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
                     Lifestyle Flexibility
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     The Chair role offers something rare for high-impact work:
                     control over your schedule. You can build your practice around how you want to live,
                     whether that means extended travel, family commitments or pursuing other interests.
@@ -178,12 +172,11 @@
             </div>
 
             {{-- Card 7 --}}
-            <div
-                class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-center">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
                     Find Your Community
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-center">
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
                     Executive roles can be isolating. As a Chair, you join a community of
                     fellow coaches who understand the weight of leadership. You’re surrounded by
                     people who’ve walked similar paths and share your commitment to developing others.
@@ -192,7 +185,261 @@
             </div>
         </div>
     </div>
-    @component('components.footer')
+
+    <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
+        <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+            Your Role as a GrowthMaster Chair
+        </h1>
+        <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl">
+            As a Vistage Chair, you’ll work directly with CEOs to help them make better decisions and achieve measurable
+            growth.
+            The role combines facilitation and coaching with relationship-building in a structured framework.
+        </p>
+
+        <div class="max-8xl mx-auto bg-amber-200 text-left">
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Monthly Group Meetings</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        Facilitate full-day sessions with up to 18 CEOs from non-competing companies,
+                        guiding structured problem-solving discussions where real business decisions get made.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">One-on-One Coaching</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        Meet privately with each member monthly for personalized executive coaching on their most
+                        challenging leadership issues.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Peer Group Development</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        With Vistage support and guidance, you’ll strategically build your group by evaluating and selecting
+                        high-caliber executives who contribute to strong group dynamics and cultural alignment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Ongoing Learning</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        Participate in Chair development events to collaborate with fellow Chairs and stay current with
+                        business trends through expert speaker programs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
+        <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+            Why Chairs Choose GrowthMaster Over Going Solo
+        </h1>
+        <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
+            While many accomplished executives consider independent coaching,
+            the Vistage platform offers distinct advantages that accelerate success and reduce risk.
+        </p>
+
+        {{-- Card Element --}}
+        <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 md:grid-cols-2 h-auto px-4 gap-x-8">
+            {{-- Card 1 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                    Proven Methodology
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    Instead of creating your own coaching framework, you get access to 65+
+                    years of refined processes that consistently produce results. The issue-processing model, group dynamics
+                    and accountability
+                    systems are all tested and proven to help CEOs make better decisions and drive measurable business
+                    outcomes.
+                </p>
+            </div>
+
+            {{-- Card 2 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                    Built-in Credibility
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    The Vistage brand opens doors that would take years to open as an independent coach.
+                    CEOs know what Vistage represents — 65 years of proven leadership development,
+                    coaching 250k business leaders — which accelerates your ability to build a quality practice.
+                </p>
+            </div>
+            {{-- card 3 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                    Comprehensive Learning
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    You don’t have to have all the answers. The Chair Academy provides intensive
+                    preparation for your new role. You’ll learn facilitation techniques and coaching methodologies,
+                    plus business development approaches specifically designed for executive-level work.
+                </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                    Ongoing Support System
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    You’re not operating in isolation. The Chair community provides continuous support and shared resources,
+                    with access to first-party research and proprietary data normally
+                    only available to CEOs of Fortune 500 companies. You have experienced colleagues to turn to whenever
+                    needed.
+                </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                    Established Infrastructure
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    GrowthMaster handles marketing and administration, including back-office functions,
+                    allowing you to focus on what you do best: working with leaders.
+                    This eliminates the overhead of building a consulting practice from scratch.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-[#003f5e] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- HEADER -->
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h1 class="text-4xl md:text-5xl font-semibold mb-6">
+                    Run Your Practice. On Your Terms.
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+                    As a Vistage Chair, you’ll create a lasting legacy while building a coaching
+                    practice that offers complete schedule flexibility.
+                </p>
+            </div>
+
+            <!-- CONTENT GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+
+                <!-- ITEM 1 -->
+                <div class="flex gap-6">
+                    <div class="shrink-0 text-white text-4xl">
+                        <!-- ICON -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M15 7a3 3 0 11-6 0 3 3 0 016 0zM12 14v7m-6 0h12" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#f5c400] text-xl font-semibold mb-3">
+                            Own Your Practice:
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            You operate as an independent contractor, building a practice that
+                            suits your ambition. The larger your groups, the greater your income
+                            potential.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="flex gap-6">
+                    <div class="shrink-0 text-white text-4xl">
+                        <!-- ICON -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12h6m-6 4h6m-6-8h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H9l-4 4v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#f5c400] text-xl font-semibold mb-3">
+                            Lasting Legacy:
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            Create deep, lasting impact by elevating dozens of business leaders
+                            and lifting up your community— influence that extends far beyond
+                            your direct involvement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="flex gap-6">
+                    <div class="shrink-0 text-white text-4xl">
+                        <!-- ICON -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6 22v-2a6 6 0 0112 0v2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#f5c400] text-xl font-semibold mb-3">
+                            Sustained Income & Freedom:
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            Build a practice that can generate income well into your retirement
+                            years with the flexibility to structure your schedule around your
+                            life priorities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="flex gap-6">
+                    <div class="shrink-0 text-white text-4xl">
+                        <!-- ICON -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 12a4 4 0 100-8 4 4 0 000 8zM2 20h20M4 20a8 8 0 0116 0" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#f5c400] text-xl font-semibold mb-3">
+                            World-Class Support:
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            Access proven methodologies, comprehensive development and
+                            ongoing support that eliminates the trial-and-error of building
+                            an independent practice.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+   <div class="py-16">
+     @component('components.footer')
 
     @endcomponent
+   </div>
 @endsection

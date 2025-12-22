@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Event')
 @section('content')
     <div id="eventPage" class="space-y-45">
         @component('components.navbar')

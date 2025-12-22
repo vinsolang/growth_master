@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Webinars')
 @section('content')
     <style>
         .no-scrollbar::-webkit-scrollbar {

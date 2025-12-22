@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.home');
 })->name('home');
-
+// Member ship
 Route::get('membership', function () {
     return view('frontend.membership');
 })->name('membership');
@@ -26,10 +26,13 @@ Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])-
 Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
+// Event
 Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
+// Growth Master Chair
 Route::get('growthmaster/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
+Route::get('ceo-coaching-qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
 
 // aboute
 Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');

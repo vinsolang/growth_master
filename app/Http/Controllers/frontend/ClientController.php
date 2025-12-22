@@ -37,4 +37,7 @@ class ClientController extends Controller
     public function growthMasterChair(){
         return view('frontend.chair.lead-group');
     }
+    public function CEOCoachingQual(){
+        return view('frontend.chair.chair-qualifition');
+    }
 }
