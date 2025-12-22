@@ -150,27 +150,27 @@
           </li> --}}
 
           <!-- Layouts -->
-          {{-- <li class="menu-item">
+          <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-group"></i>
-              <div data-i18n="Layouts">Our Team</div>
+              <div data-i18n="Layouts">Member</div>
             </a>
 
             <ul class="menu-sub">
               <li class="menu-item">
-                <a href="" class="menu-link">
-                  <div data-i18n="Without menu">View Team</div>
+                <a href="{{ route('view_team') }}" class="menu-link">
+                  <div data-i18n="Without menu">View Member</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="" class="menu-link">
-                  <div data-i18n="Without menu">Add Team</div>
+                <a href="{{ route('add_team') }}" class="menu-link">
+                  <div data-i18n="Without menu">Add Member</div>
                 </a>
               </li>
             </ul>
-          </li> --}}
+          </li>
 
-           <!-- Layouts -->
+          <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-git-branch"></i>

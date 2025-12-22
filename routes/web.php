@@ -5,6 +5,7 @@ use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
 use App\Http\Controllers\backend\HowItWorksController;
+use App\Http\Controllers\backend\OurTeamController;
 use App\Http\Controllers\frontend\AboutGrowthControll;
 use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
@@ -76,4 +77,13 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('helpsction', HelpSectionController::class);
      // How It Works
     Route::resource('work', HowItWorksController::class);
+    // ============================================ @@ Our Team ===================================================
+    Route::get('/add/ourteam',[OurTeamController::class,'addOurTeam'])->name('add_team');
+    Route::get('/view/ourteam', [OurTeamController::class,'viewOurTeam'])->name('view_team');
+    Route::post('/submit/addteam',[OurTeamController::class,'submitAddOurTeam'])->name('submit.add.team');
+    // Update our team
+    Route::get('/update/team/{id}', [OurTeamController::class,'updateTeam'])->name('update.team');
+    Route::post('/submit/updateteam', [OurTeamController::class,'submitToUpdateTeam'])->name('submit.update.team');
+    // Remove our team
+    Route::post('/remove/our_team', [OurTeamController::class,'submitToRemoveTeam'])->name('remove.our.team');
 });
