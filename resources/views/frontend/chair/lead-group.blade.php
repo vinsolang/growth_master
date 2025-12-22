@@ -86,7 +86,7 @@
         </p>
 
         {{-- Card Element --}}
-        <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">~
+        <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">
             {{-- Card 1 --}}
             <div
                 class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
