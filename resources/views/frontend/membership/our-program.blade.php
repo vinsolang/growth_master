@@ -32,10 +32,12 @@
                         Find the right program fit for you and your team.
                     </p>
 
-                    <button
+                    <a href="{{ route('application') }}">
+                        <button
                         class="mt-6 py-5 px-7 bg-[#EDC11C] text-[#333333] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
                         JOIN A PROGRAM
                     </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -50,7 +52,8 @@
             </div>
             {{-- Button Join out Programs --}}
             <div class="flex justify-center items-center mt-10">
-                <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#003F5F]
+               <a href="{{ route('application') }}">
+                 <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#003F5F]
                             text-[#003F5F] bg-white rounded 
                             transition-all duration-300 ease-in-out
                             hover:bg-[#003F5F] hover:text-white font-semibold">
@@ -60,6 +63,7 @@
                         <i class="fa-solid fa-angle-right"></i>
                     </span>
                 </button>
+               </a>
             </div>
         </div>
         {{-- Block post about Our Program --}}

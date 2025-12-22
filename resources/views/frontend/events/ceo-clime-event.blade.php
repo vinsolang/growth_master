@@ -53,7 +53,7 @@
         <div class="space-y-6">
             <div class="text-[#000000] text-4xl md:text-5xl text-center md:w-5xl mx-auto py-8 space-y-10">
                 <h1>Discover Where Top CEOs Go for Powerful Insights & Inspiration</h1>
-                <button
+                <button id="btn-join-event" type="button"
                     class="cursor-pointer py-4 px-6 text-xl bg-[#EDC11C] text-[#333333] rounded font-semibold leading-relaxed tracking-[0.4rem] uppercase">
                     Join a Climb Event
                 </button>
@@ -103,7 +103,7 @@
             </div>
 
             {{-- Block card event clime --}}
-            <div class="bg-[#003f5e] w-full h-auto md:-mt-15 text-white">
+            <div class="bg-[#003f5e] w-full h-auto text-white py-8" id="section-join">
                 <h1 class="text-5xl text-center py-16">Attend the Next CEO Climb Event</h1>
                 <h4 class="text-xl text-center">Choose your event below and sign up on the next page to secure your spot.</h4>
                 {{-- Block Event --}}
@@ -289,6 +289,22 @@
             carousel.scrollBy({ left: -300, behavior: "smooth" });
         });
     </script>
+
+    {{-- Button Join for clim Event --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('btn-join-event');
+            const section = document.getElementById('section-join');
+
+            btn.addEventListener('click', function () {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+
 
 
 @endsection
