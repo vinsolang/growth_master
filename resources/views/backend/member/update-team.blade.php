@@ -32,7 +32,7 @@
                                     <label for="formFile" class="form-label text-[#0F4634]">Position</label>
                                     {{-- <input class="form-control" type="text" name="update_position"
                                         value="{{ $row[0]->position }}" /> --}}
-                                    <textarea name="update_position" id="" class="form-control">{{ {{ $row[0]->position }} }}</textarea>
+                                    <textarea name="update_position" id="" class="form-control"> {{ $row[0]->position }}</textarea>
                                 </div>
                                  <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">BIO</label>

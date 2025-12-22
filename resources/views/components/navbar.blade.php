@@ -101,11 +101,13 @@
 
         <!-- Right Section -->
         <div class="flex items-center gap-5">
-            <button
+            <a href="{{ route('application') }}">
+                <button
                 class="py-4 px-6 bg-[#EDC11C] text-[#003F5F] hover:bg-[#003F5F] hover:text-white hidden md:block rounded font-medium">
                 Become a Member
             </button>
 
+            </a>
             <div class="hidden flex items-center gap-2 cursor-pointer">
                 <i id="searchIcon" class="fa-solid fa-magnifying-glass text-xl text-white"></i>
                 <span id="searchText" class="hidden md:block text-white">Search</span>

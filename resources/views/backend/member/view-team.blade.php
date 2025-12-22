@@ -30,17 +30,49 @@
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/team/{{ $team->profile }}" alt="Avatar" class="rounded-circle"
                                                 style="width: 50px;
-                                                                        object-fit: cover;
-                                                                        border-radius: 0px !important;
-                                                                    ">
+                                                                                object-fit: cover;
+                                                                                border-radius: 0px !important;
+                                                                            ">
                                         </ul>
                                     </td>
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
                                         <strong>{{ $team->name }}</strong>
                                     </td>
                                     <td>{{$team->position}}</td>
-                                    <td>{{$team->bio}}</td>
-                                    <td>{{$team->highlight}}</td>
+                                    <td>
+                                        <span class="short-text">
+                                            {{ \Illuminate\Support\Str::words($team->bio, 5) }}
+                                        </span>
+
+                                        <span class="full-text hidden">
+                                            {{ $team->bio }}
+                                        </span>
+
+                                        @if (str_word_count($team->bio) > 20)
+                                            <a href="javascript:void(0)" class="read-more text-blue-600 text-sm"
+                                                onclick="toggleText(this)">
+                                                Read more
+                                            </a>
+                                        @endif
+                                    </td>
+
+                                    <td>
+                                        <span class="short-text">
+                                            {{ \Illuminate\Support\Str::words($team->highlight, 5) }}
+                                        </span>
+
+                                        <span class="full-text hidden">
+                                            {{ $team->highlight }}
+                                        </span>
+
+                                        @if (str_word_count($team->highlight) > 20)
+                                            <a href="javascript:void(0)" class="read-more text-blue-600 text-sm"
+                                                onclick="toggleText(this)">
+                                                Read more
+                                            </a>
+                                        @endif
+                                    </td>
+
                                     <td><span class="badge bg-label-primary me-1">{{ $team->created_at }}</span></td>
 
                                     <td>
@@ -50,9 +82,9 @@
                                                 <i class="bx bx-dots-vertical-rounded"></i>
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="{{ route('update.team', ['id'=>$team->id]) }}"><i
+                                                <a class="dropdown-item" href="{{ route('update.team', ['id' => $team->id]) }}"><i
                                                         class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                 <a href="javascript:void(0);" class="dropdown-item remove-post-key"
+                                                <a href="javascript:void(0);" class="dropdown-item remove-post-key"
                                                     data-id="{{ $team->id }}" data-bs-toggle="modal"
                                                     data-bs-target="#basicModal">
                                                     <i class="bx bx-trash me-1"></i> Delete
@@ -94,5 +126,23 @@
         <!-- / Content -->
     </div>
     </div>
+
+<script>
+function toggleText(el) {
+    const td = el.closest('td');
+    const shortText = td.querySelector('.short-text');
+    const fullText = td.querySelector('.full-text');
+
+    if (fullText.classList.contains('hidden')) {
+        shortText.classList.add('hidden');
+        fullText.classList.remove('hidden');
+        el.innerText = 'Read less';
+    } else {
+        shortText.classList.remove('hidden');
+        fullText.classList.add('hidden');
+        el.innerText = 'Read more';
+    }
+}
+</script>
 
 @endsection

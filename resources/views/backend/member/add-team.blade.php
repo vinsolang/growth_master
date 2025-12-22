@@ -11,6 +11,28 @@
     <!-- Content wrapper -->
     <div class="content-wrapper">
         <div class="container-xxl flex-grow-1 container-p-y">
+            @if ($errors->any())
+                <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                    <ul class="list-disc pl-5">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            @if (session('error'))
+                <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            @if (session('success'))
+                <div class="mb-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <div class="col-xl-12">
                 <!-- File input -->
                 <form action="{{ route('submit.add.team') }}" method="post" enctype="multipart/form-data">
