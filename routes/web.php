@@ -29,6 +29,7 @@ Route::get('membership/member-application', [ClientController::class, 'membershi
 Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
+Route::get('growthmaster/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
 
 // aboute
 Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');

@@ -78,14 +78,14 @@
                 </li>
 
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
-                    <a href="" class="flex items-center">
+                    <a href="{{ route('chair.growth') }}" class="flex items-center">
                         Chair
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
-                            <a href=""
+                            <a href="{{ route('chair.growth') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Lead a Group</a>
                             <a href=""
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Chair Qualifications</a>

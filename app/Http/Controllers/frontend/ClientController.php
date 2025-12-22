@@ -32,4 +32,9 @@ class ClientController extends Controller
     public function membershipApplication(){
         return view('frontend.becom-a-member.becom-member');
     }
+
+    // Chair
+    public function growthMasterChair(){
+        return view('frontend.chair.lead-group');
+    }
 }
