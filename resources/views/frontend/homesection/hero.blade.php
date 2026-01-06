@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="bg-[#003F5F] w-full relative -z-1">
+{{-- <div class="bg-[#003F5F] w-full relative -z-1">
     <h1 class="text-[25px] text-center md:text-[30px] lg:text-[35px] mx-auto max-w-280 p-10 text-white">
         Don’t let isolation stall you. Grow faster and outlast the competition with growthmasters.
     </h1>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 {{-- Vision, Mission, Care value --}}
 <div class="py-12">
@@ -154,19 +154,6 @@
 
         </div>
 
-        <!-- Tagline -->
-        <div class="mt-16 text-center">
-            <p class="text-red-600 text-xl font-semibold italic">
-                Our Tagline: Sharing is the seed of receiving. 
-            </p>
-            <p class="text-red-600 text-xl font-semibold italic mt-2">
-                Sharing is growing…
-            </p>
-            <p class="text-red-600 text-xl font-bold mt-4">
-                Digitalize your business Lead the market.
-            </p>
-        </div>
-
     </section>
 
 </div>
@@ -177,222 +164,14 @@
         Members</h1>
 </div>
 {{-- Version Dasktop --}}
-<div class="grid grid-cols-1 lg:grid-cols-3 min-h-screen py-12 px-6 md:px-16 w-full md:max-w-8xl mx-auto gap-8">
+<div class="hidden md:flex justify-center items-center py-12">
     {{-- Card 1 --}}
     <div
-        class="group relative h-[900px] md:h-[800px] bg-[#0b2642] shadow-2xl overflow-hidden rounded-lg cursor-pointer">
+        class="group relative h-[900px] w-[50%] md:h-[800px] bg-[#0b2642] shadow-2xl rounded-lg cursor-pointer">
 
         <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
             <div class="relative h-3/4 w-full">
                 <img src="{{ asset('assets/profile/1765335800-founder.jpg') }}" alt="Sean Forman"
-                    class="w-full h-full object-cover object-top" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0b2642] via-transparent to-transparent">
-                </div>
-            </div>
-
-            <div class="p-8 pt-0">
-                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
-                <p class="text-white text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
-                <p class="text-white text-lg leading-tight">Shareholder, Acclime</p>
-            </div>
-        </div>
-
-        <div
-            class="absolute inset-0 flex flex-col justify-center p-8 bg-[#0b2642] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            <div class="border-l-4 border-[#e6b34b] pl-4">
-                <h1 class="font-bold uppercase text-white">short bio:</h1>
-                <p class="text-white text-lg leading-relaxed">
-                    Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
-                    IPA Australia. Besides being a shareholder of
-                    Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
-                    (CAC) which has more than 1000 menbers, he is also recognized
-                    as an SME coach in shaping family business to next level.
-                </p>
-                <p class="text-white text-lg leading-relaxed mt-4">
-                    With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
-                    Financial Management, Mr. Rithy has also spent more than a decade
-                    advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
-                    to distill complex financial and operational
-                    challenges into actionable strategies has earned him recognition as a trusted <span
-                        class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
-                </p>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-white/20">
-                <h1 class="font-bold uppercase text-white">highlight</h1>
-                <p class="text-[#ffffff] text-md">
-                    One of this most notable achievements includes leading the transformation of a locally owned
-                    business into a globally
-                    integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
-                    vission, strategic acument,
-                    and commitment to excellence
-                </p>
-            </div>
-        </div>
-    </div>
-    {{-- card 2 --}}
-    <div
-        class="group relative h-[900px] md:h-[800px] bg-[#0b2642] shadow-2xl overflow-hidden rounded-lg cursor-pointer">
-
-        <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
-            <div class="relative h-3/4 w-full">
-                <img src="{{ asset('assets/profile/DSC05890(2).jpg') }}" alt="Sean Forman"
-                    class="w-full h-full object-cover object-top" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0b2642] via-transparent to-transparent">
-                </div>
-            </div>
-
-            <div class="p-8 pt-0">
-                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
-                <p class="text-white text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
-                <p class="text-white text-lg leading-tight">Shareholder, Acclime</p>
-            </div>
-        </div>
-
-        <div
-            class="absolute inset-0 flex flex-col justify-center p-8 bg-[#0b2642] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            <div class="border-l-4 border-[#e6b34b] pl-4">
-                <h1 class="font-bold uppercase text-white">short bio:</h1>
-                <p class="text-white text-lg leading-relaxed">
-                    Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
-                    IPA Australia. Besides being a shareholder of
-                    Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
-                    (CAC) which has more than 1000 menbers, he is also recognized
-                    as an SME coach in shaping family business to next level.
-                </p>
-                <p class="text-white text-lg leading-relaxed mt-4">
-                    With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
-                    Financial Management, Mr. Rithy has also spent more than a decade
-                    advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
-                    to distill complex financial and operational
-                    challenges into actionable strategies has earned him recognition as a trusted <span
-                        class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
-                </p>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-white/20">
-                <h1 class="font-bold uppercase text-white">highlight</h1>
-                <p class="text-[#ffffff] text-md">
-                    One of this most notable achievements includes leading the transformation of a locally owned
-                    business into a globally
-                    integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
-                    vission, strategic acument,
-                    and commitment to excellence
-                </p>
-            </div>
-        </div>
-    </div>
-    {{-- Card 3 --}}
-    <div
-        class="group relative h-[900px] md:h-[800px] bg-[#0b2642] shadow-2xl overflow-hidden rounded-lg cursor-pointer">
-
-        <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
-            <div class="relative h-3/4 w-full">
-                <img src="{{ asset('assets/profile/DSC05883.jpg') }}" alt="Sean Forman"
-                    class="w-full h-full object-cover object-top" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0b2642] via-transparent to-transparent">
-                </div>
-            </div>
-
-            <div class="p-8 pt-0">
-                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
-                <p class="text-white text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
-                <p class="text-white text-lg leading-tight">Shareholder, Acclime</p>
-            </div>
-        </div>
-
-        <div
-            class="absolute inset-0 flex flex-col justify-center p-8 bg-[#0b2642] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            <div class="border-l-4 border-[#e6b34b] pl-4">
-                <h1 class="font-bold uppercase text-white">short bio:</h1>
-                <p class="text-white text-lg leading-relaxed">
-                    Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
-                    IPA Australia. Besides being a shareholder of
-                    Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
-                    (CAC) which has more than 1000 menbers, he is also recognized
-                    as an SME coach in shaping family business to next level.
-                </p>
-                <p class="text-white text-lg leading-relaxed mt-4">
-                    With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
-                    Financial Management, Mr. Rithy has also spent more than a decade
-                    advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
-                    to distill complex financial and operational
-                    challenges into actionable strategies has earned him recognition as a trusted <span
-                        class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
-                </p>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-white/20">
-                <h1 class="font-bold uppercase text-white">highlight</h1>
-                <p class="text-[#ffffff] text-md">
-                    One of this most notable achievements includes leading the transformation of a locally owned
-                    business into a globally
-                    integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
-                    vission, strategic acument,
-                    and commitment to excellence
-                </p>
-            </div>
-        </div>
-    </div>
-    {{-- Card 4 --}}
-    <div
-        class="group relative h-[900px] md:h-[800px] bg-[#0b2642] shadow-2xl overflow-hidden rounded-lg cursor-pointer">
-
-        <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
-            <div class="relative h-3/4 w-full">
-                <img src="{{ asset('assets/profile/DSC03933(5).jpg') }}" alt="Sean Forman"
-                    class="w-full h-full object-cover object-top" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0b2642] via-transparent to-transparent">
-                </div>
-            </div>
-
-            <div class="p-8 pt-0">
-                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
-                <p class="text-white text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
-                <p class="text-white text-lg leading-tight">Shareholder, Acclime</p>
-            </div>
-        </div>
-
-        <div
-            class="absolute inset-0 flex flex-col justify-center p-8 bg-[#0b2642] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            <div class="border-l-4 border-[#e6b34b] pl-4">
-                <h1 class="font-bold uppercase text-white">short bio:</h1>
-                <p class="text-white text-lg leading-relaxed">
-                    Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
-                    IPA Australia. Besides being a shareholder of
-                    Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
-                    (CAC) which has more than 1000 menbers, he is also recognized
-                    as an SME coach in shaping family business to next level.
-                </p>
-                <p class="text-white text-lg leading-relaxed mt-4">
-                    With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
-                    Financial Management, Mr. Rithy has also spent more than a decade
-                    advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
-                    to distill complex financial and operational
-                    challenges into actionable strategies has earned him recognition as a trusted <span
-                        class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
-                </p>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-white/20">
-                <h1 class="font-bold uppercase text-white">highlight</h1>
-                <p class="text-[#ffffff] text-md">
-                    One of this most notable achievements includes leading the transformation of a locally owned
-                    business into a globally
-                    integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
-                    vission, strategic acument,
-                    and commitment to excellence
-                </p>
-            </div>
-        </div>
-    </div>
-    {{-- Card 5 --}}
-    <div
-        class="group relative h-[900px] md:h-[800px] bg-[#0b2642] shadow-2xl overflow-hidden rounded-lg cursor-pointer">
-
-        <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
-            <div class="relative h-3/4 w-full">
-                <img src="{{ asset('assets/profile/AR508340(4).jpg') }}" alt="Sean Forman"
                     class="w-full h-full object-cover object-top" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0b2642] via-transparent to-transparent">
                 </div>

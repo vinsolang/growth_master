@@ -38,6 +38,7 @@ Route::get('ceo-coaching-qualifications', [ClientController::class, 'CEOCoaching
 Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
 Route::get('about-growth/what-is-growth-master', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
 Route::get('about-growth/leadership-laws/', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
+Route::get('about-growth/ceo-climp/', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
 
 
 // Submite Become a member

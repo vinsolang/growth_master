@@ -19,4 +19,9 @@ class AboutGrowthControll extends Controller
     public function leaderShip(){
         return view('frontend.about.leadership-laws');
     }
+
+    // CEO Climp
+    public function CeoClimp(){
+        return view('frontend.about.ceo-climp');
+    }
 }
