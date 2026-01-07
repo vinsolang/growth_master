@@ -22,7 +22,7 @@
 
             <a href="{{ route('application') }}">
                 <button
-                    class="mt-6 py-5 px-8 bg-[#EDC11C] text-[#333333] hover:bg-[#003F5F] hover:text-white rounded font-semibold leading-relaxed tracking-widest uppercase">
+                    class="mt-6 py-5 px-8 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold leading-relaxed tracking-widest uppercase">
                     lead a group
                 </button>
             </a>

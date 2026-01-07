@@ -169,12 +169,13 @@
               </li>
             </ul>
           </li>
-
+          
+          
           <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-git-branch"></i>
-              <div data-i18n="Layouts">How It Works</div>
+              <div data-i18n="Layouts">Approach</div>
             </a>
 
             <ul class="menu-sub">
@@ -190,6 +191,28 @@
               </li>
             </ul>
           </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-clipboard"></i>
+              <div data-i18n="Layouts">Program</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('program.index') }}" class="menu-link">
+                  <div data-i18n="Without menu">View Program</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="{{ route('program.create') }}" class="menu-link">
+                  <div data-i18n="Without menu">Add Program</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
 
           <!-- Layouts -->
           <li class="menu-item">

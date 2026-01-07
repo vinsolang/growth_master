@@ -27,8 +27,8 @@
                                     <textarea name="question" class="form-control" id="question"></textarea>
                                 </div>
                                 <div class="mb-3 col-12">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Answer</label>
-                                    <textarea name="answer" class="form-control" id="answer"></textarea>
+                                    <label for="answer" class="form-label text-[#0F4634]">Answer</label>
+                                    <textarea name="answer" class="form-control" id="answer" rows="4"></textarea>
                                 </div>
                                 {{-- <div class="mb-3 col-12">
                                     <button class="bg-[#0F4634] px-3 py-2">
@@ -52,5 +52,32 @@
             </div>
         </div>
     </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#answer'), {
+            toolbar: [
+                'heading',
+                '|',
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                '|',
+                'bulletedList',
+                'numberedList',
+                '|',
+                'link',
+                'blockQuote',
+                '|',
+                'undo',
+                'redo'
+            ]
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
 @endsection

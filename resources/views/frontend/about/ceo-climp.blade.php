@@ -23,7 +23,7 @@
 
                 <p
                     class="text-[25px] md:text-[45px] lg:text-[55px] font-semibold max-w-[940px] leading-tight mb-3 md:px-10 xl:px-12 md:py-20">
-                    Endless. Limitless. The Journey of a Vistage leader is life-long.
+                    Endless. Limitless. The Journey of a Growth Master leader is life-long.
                 </p>
             </div>
         </div>

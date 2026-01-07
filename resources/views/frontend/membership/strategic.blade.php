@@ -92,7 +92,7 @@
     </p>
 
     <div class="flex justify-center items-center mt-10">
-        <button
+        <a href="{{ route('form.input') }}"
             class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#003F5F]
             text-[#003F5F] bg-white rounded 
             transition-all duration-300 ease-in-out
@@ -103,7 +103,7 @@
             <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
                 <i class="fa-solid fa-angle-right"></i>
             </span>
-        </button>
+        </a>
     </div>
 </div>
 

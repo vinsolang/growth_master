@@ -32,9 +32,12 @@
                                 <textarea name="question" class="form-control" id="question">{{ $helpsction->question }}</textarea>
                             </div>
 
-                            <div class="mb-3 col-12">
+                           <div class="mb-3 col-12">
                                 <label class="form-label text-[#0F4634]">Answer</label>
-                                <textarea name="answer" class="form-control" id="answer">{{ $helpsction->answer }}</textarea>
+                                <textarea name="answer"
+                                        class="form-control"
+                                        id="answer"
+                                        rows="6">{!! $helpsction->answer !!}</textarea>
                             </div>
 
                             <div class="flex gap-3 mt-3">
@@ -45,7 +48,7 @@
 
                                 <button type="submit"
                                     class="px-6 py-3 bg-[#0F4634] text-white font-semibold rounded-xl hover:bg-[#052e21] transition duration-200">
-                                    Update FAQ
+                                    Submit
                                 </button>
                             </div>
 
@@ -58,5 +61,30 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#answer'), {
+            toolbar: [
+                'heading',
+                '|',
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                '|',
+                'bulletedList',
+                'numberedList',
+                '|',
+                'link',
+                'blockQuote',
+                '|',
+                'undo',
+                'redo'
+            ]
+        })
+        .catch(error => console.error(error));
+</script>
 
 @endsection

@@ -8,7 +8,7 @@
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
                 <!-- Hero Image -->
-                <img src="{{ asset('https://www.vistage.com/wp-content/uploads/2025/09/hero-reviews.webp') }}" class="w-full h-full object-cover" alt="Hero Image">
+                <img src="{{ asset('https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC07389-59-768x512.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
                 <div class="absolute inset-0 bg-black/40 w-full h-full"></div>
                 <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-30 text-white">
@@ -30,7 +30,7 @@
 
                     <a href="{{ route('application') }}">
                         <button
-                        class="mt-6 py-6 px-8 bg-[#EDC11C] text-[#333333] hover:bg-[#003F5F] hover:text-white rounded font-bold w-max uppercase tracking-widest">
+                        class="mt-6 py-6 px-8 bg-[#68875d] text-[#FFFFFF] hover:bg-[#003F5F] hover:text-white rounded font-bold w-max uppercase tracking-widest">
                         BECOME A MEMBER
                     </button>
                     </a>

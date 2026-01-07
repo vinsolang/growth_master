@@ -3,18 +3,33 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\FAQs;
+use App\Models\HelpSection;
+use App\Models\HowItWorks;
+use App\Models\Program;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
     public function ourApproach(){
-        return view('frontend.membership.our-aproach');
+        $showApproach = HowItWorks::all();
+        $showHelpSection = HelpSection::all();
+        $showFAQs = FAQs::all();
+        return view('frontend.membership.our-aproach', compact(
+            'showApproach', 
+            'showHelpSection',
+            'showFAQs'  
+        ));
     }
     public function memberShipPrograms(){
-        return view('frontend.membership.our-program');
+        $showProgram = Program::all();
+        return view('frontend.membership.our-program', compact('showProgram'));
     }
      public function growthReview(){
         return view('frontend.membership.growth-review');
+    }
+     public function ExclusivePeerGroups(){
+        return view('frontend.membership.exclusive-peer-groups');
     }
 
     //  Event
@@ -44,5 +59,11 @@ class ClientController extends Controller
      public function ChairProfile(){
         return view('frontend.chair.meet-our-growth');
     }
+    
 
+    public function ChairApplication(){
+        return view('frontend.chair.apply-to-growthmaster');
+    }
+
+    
 }

@@ -30,7 +30,7 @@
                              @foreach ($helpSections as $help)
                                 <tr>
                                     <td>{{ $help->question }}</td>
-                                    <td>{{ $help->answer }}</td>
+                                    <td>{!! $help->answer !!}</td>
                                     <td>
                                         <div class="dropdown position-static">
                                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow"

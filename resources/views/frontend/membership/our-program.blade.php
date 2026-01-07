@@ -20,12 +20,12 @@
 
                     <p
                         class="text-[16px] md:w-2xl text-start md:text-[18px] mt-5 font-regular max-w-[940px] leading-tight">
-                        Whether you’re a CEO seeking strategic peer advisory or looking to strengthen your leadership team, Vistage offers programs designed for varying levels of responsibility and organizational complexity.
+                        Whether you’re a CEO seeking strategic peer advisory or looking to strengthen your leadership team, GrowthMaster offers programs designed for varying levels of responsibility and organizational complexity.
                     </p>
 
                     <p
                         class="text-[16px] md:w-2xl text-start mt-5 md:text-[18px] font-regular max-w-[940px] leading-tight">
-                        All programs offer the same foundational benefits of the Vistage platform and professionally facilitated peer groups, but the context and scale of the challenges discussed are aligned with your business revenue and role.
+                        All programs offer the same foundational benefits of the GrowthMaster platform and professionally facilitated peer groups, but the context and scale of the challenges discussed are aligned with your business revenue and role.
                     </p>
                     <p
                         class="text-[16px] md:w-2xl text-start mt-5 md:text-[18px] font-regular max-w-[940px] leading-tight">
@@ -34,7 +34,7 @@
 
                     <a href="{{ route('application') }}">
                         <button
-                        class="mt-6 py-5 px-7 bg-[#EDC11C] text-[#333333] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
+                        class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
                         JOIN A PROGRAM
                     </button>
                     </a>
@@ -43,16 +43,16 @@
         </section>
         <div class="text-[#333333] text-4xl font-2xl text-center space-y-8">
             <h1>Programs for CEOs, Presidents, Founders, & Owners</h1>
-            <p class="text-xl font-normal max-w-5xl mx-auto text-left">Designed for CEOs, Presidents, Founders, Owners, or first-time CEOs, these Vistage programs provide unparalleled peer advisory and executive coaching for leaders navigating the complexities of business.</p>
+            <p class="text-xl font-normal max-w-5xl mx-auto text-left">Designed for CEOs, Presidents, Founders, Owners, or first-time CEOs, these GrowthMaster programs provide unparalleled peer advisory and executive coaching for leaders navigating the complexities of business.</p>
             <p class="text-xl font-normal max-w-5xl mx-auto text-left">They are ideal for those with a formal management team and established departments, processes, and systems in place. Our members are driven by a desire to learn, identify and resolve blind spots, and significantly enhance their leadership ability.</p>
-            <h1>How Vistage Helped Karen Norheim Define Her CEO Journey</h1>
+            <h1>How GrowthMaster Helped Karen Norheim Define Her CEO Journey</h1>
             {{-- Video --}}
             <div class="flex justify-center items-center">
                 <video src="{{ asset('assets/vedo.mp4') }}"></video>
             </div>
             {{-- Button Join out Programs --}}
             <div class="flex justify-center items-center mt-10">
-               <a href="{{ route('application') }}">
+               <a href="{{ route('form.input') }}">
                  <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#003F5F]
                             text-[#003F5F] bg-white rounded 
                             transition-all duration-300 ease-in-out
@@ -68,80 +68,114 @@
         </div>
         {{-- Block post about Our Program --}}
         <div class="relative w-full">
-            {{-- blcok 1 --}}
-            <div
-                class="flex flex-col md:flex-row justify-center items-center py-4 px-4 xl:py-16 xl:px-35 gap-8 bg-[#f5f2f2]">
-                {{-- image --}}
-                <div class="md:hidden w-full md:w-1/2 flex justify-items-start">
-                    <img src="https://www.vistage.com/wp-content/uploads/2025/09/2025-programs-ce.webp" alt="">
+
+            @foreach ($showProgram as $index => $program)
+
+                <div
+                    class="flex flex-col md:flex-row justify-center items-center
+                        py-4 px-4 xl:py-16 xl:px-35 gap-8
+                        {{ $index % 2 === 0 ? 'bg-[#f5f2f2]' : '' }}">
+
+                    {{-- MOBILE IMAGE (top) --}}
+                    <div class="md:hidden w-full md:w-1/2 flex">
+                        <img src="{{ asset('assets/our_program/' . $program->image) }}" alt="">
+                    </div>
+
+                    {{-- DESKTOP IMAGE LEFT (odd block) --}}
+                    @if ($index % 2 !== 0)
+                        <div class="hidden md:flex w-full md:w-1/2">
+                            <img src="{{ asset('assets/our_program/' . $program->image) }}" alt="">
+                        </div>
+                    @endif
+
+                    {{-- TEXT --}}
+                    <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
+                        <h3 class="text-[#333333] text-[16px] md:text-[20px]">
+                            {{ $program->audience }}
+                        </h3>
+
+                        <h1 class="text-[#333333] text-[30px] lg:text-[35px]">
+                            {{ $program->title }}
+                        </h1>
+
+                        <p class="text-[#343434] text-[14px] md:text-[18px]">
+                            {{ $program->description }}
+                        </p>
+
+                        @if ($program->button_text)
+                            <a href="{{ $program->button_link ?? '#' }}"
+                            class="text-[#003f5e] flex gap-2 font-semibold text-[16px] md:text-[18px]">
+                                <span class="hover:text-[#0c6c9b]">
+                                    {{ $program->button_text }}
+                                </span>
+                                <span class="text-xl">&rarr;</span>
+                            </a>
+                        @endif
+                    </div>
+
+                    {{-- DESKTOP IMAGE RIGHT (even block) --}}
+                    @if ($index % 2 === 0)
+                        <div class="hidden md:flex w-full md:w-1/2">
+                            <img src="{{ asset('assets/our_program/' . $program->image) }}" alt="">
+                        </div>
+                    @endif
+
                 </div>
-                {{-- text --}}
-                <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
-                    <h3 class="text-[#333333] text-[16px] md:text-[20px]">FOUNDERS & OWNERS</h3>
-                    <h1 class="text-[#333333] text-[30px] md:text-[30px] lg:text-[35px]">Chief Executive Program</h1>
-                    <p class="text-start text-[#343434] font-regular text-[14px] md:text-[18px]">
-                        The Vistage Chief Executive Program is specifically designed for leaders of companies 
-                        with annual revenues of $5 million and above, 
-                        focusing on the complex strategic challenges faced by established enterprises.
-                    </p>
-                    <a href="" class="text-[#003f5e] flex gap-2 font-semibold text-[16px] md:text-[18px]">
-                        <button class="cursor-pointer hover:text-[#0c6c9b]">Learn more about Vistage Chairs</button>
-                        <p class="arrow_r text-xl">&rarr;</p>
-                    </a>
-                </div>
-                {{-- image --}}
-                <div class="hidden w-full md:w-1/2 md:flex justify-items-start">
-                    <img src="https://www.vistage.com/wp-content/uploads/2025/09/2025-programs-ce.webp" alt="">
-                </div>
-            </div>
-            {{-- blcok 2 --}}
-            <div class="flex flex-col md:flex-row justify-center items-center py-4 px-4 xl:py-16 xl:px-35 gap-8">
-                {{-- image --}}
-                <div class="w-full md:w-1/2 flex justify-items-start">
-                    <img src="https://www.vistage.com/wp-content/uploads/2025/09/2025-programs-sb.webp" alt="">
-                </div>
-                {{-- text --}}
-                <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
-                    <h3 class="text-[#333333] text-[16px] md:text-[20px]">FOUNDERS & OWNERS</h3>
-                    <h1 class="text-[#333333] text-[30px] md:text-[30px] lg:text-[35px]">Chief Executive Program</h1>
-                    <p class="text-start text-[#343434] font-regular text-[14px] md:text-[18px]">
-                        The Vistage Chief Executive Program is specifically designed for leaders of companies 
-                        with annual revenues of $5 million and above, 
-                        focusing on the complex strategic challenges faced by established enterprises.
-                    </p>
-                    <a href="" class="text-[#003f5e] flex gap-2 font-semibold text-[16px] md:text-[18px]">
-                        <button class="cursor-pointer hover:text-[#0c6c9b]">Learn more about Vistage Chairs</button>
-                        <p class="arrow_r text-xl">&rarr;</p>
-                    </a>
-                </div>
-            </div>
-            {{-- blcok 3 --}}
-            <div
-                class="flex flex-col md:flex-row justify-center items-center py-4 px-4 xl:py-16 xl:px-35 gap-8 bg-[#f5f2f2]">
-                {{-- image --}}
-                <div class="md:hidden w-full md:w-1/2 flex justify-items-start">
-                    <img src="https://www.vistage.com/wp-content/uploads/2025/09/2025-programs-ce.webp" alt="">
-                </div>
-                {{-- text --}}
-                <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
-                    <h3 class="text-[#333333] text-[16px] md:text-[20px]">FOUNDERS & OWNERS</h3>
-                    <h1 class="text-[#333333] text-[30px] md:text-[30px] lg:text-[35px]">Chief Executive Program</h1>
-                    <p class="text-start text-[#343434] font-regular text-[14px] md:text-[18px]">
-                        The Vistage Chief Executive Program is specifically designed for leaders of companies 
-                        with annual revenues of $5 million and above, 
-                        focusing on the complex strategic challenges faced by established enterprises.
-                    </p>
-                    <a href="" class="text-[#003f5e] flex gap-2 font-semibold text-[16px] md:text-[18px]">
-                        <button class="cursor-pointer hover:text-[#0c6c9b]">Learn more about Vistage Chairs</button>
-                        <p class="arrow_r text-xl">&rarr;</p>
-                    </a>
-                </div>
-                {{-- image --}}
-                <div class="hidden w-full md:w-1/2 md:flex justify-items-start">
-                    <img src="https://www.vistage.com/wp-content/uploads/2025/09/2025-programs-ce.webp" alt="">
-                </div>
-            </div>
+
+            @endforeach
+
         </div>
+
+        {{-- Elevate Your Team with Leadership Development Programs --}}
+        <section class="w-full bg-[#003f5e] py-16 px-4 md:px-12 lg:px-24">
+            <!-- Title -->
+            <h1 class="text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight text-center text-[#ffffff]">
+                Elevate Your Team with Leadership Development Programs
+            </h1>
+            <div class="max-w-6xl mx-auto text-white space-y-10 py-6">
+
+                <!-- Intro paragraph -->
+                <p class="text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
+                    For CEOs who want to accelerate growth and protect their business, 
+                    Leadership Development Programs drive the transformation of employees throughout their organization.
+                </p>
+
+                <!-- Highlight line -->
+                <h2 class="text-[#f5c400] text-[20px] md:text-[22px] font-semibold">
+                    Strengthen leadership at every level of your organization
+                </h2>
+
+                <!-- Description -->
+                <p class="text-[16px] md:text-[18px] leading-relaxed max-w-5xl">
+                    Adapted from the proven Vistage model for how world-class leaders learn, each program is purpose-built to 
+                    develop employees based on your goals and deliver measurable results through guided peer advisory, 
+                    coaching, and curated education.
+                </p>
+
+                <!-- Sub heading -->
+                <h3 class="text-[#f5c400] text-[18px] md:text-[20px] font-semibold">
+                    Match development to leadership responsibility for:
+                </h3>
+
+                <!-- Bullet list -->
+                <ul class="list-disc pl-6 space-y-4 text-[16px] md:text-[18px] max-w-4xl">
+                    <li>
+                        Senior executives who need strategic thinking skills beyond their functional expertise
+                    </li>
+                    <li>
+                        Experienced managers ready to lead complex initiatives and develop others
+                    </li>
+                    <li>
+                        Rising stars who show potential but need comprehensive leadership training
+                    </li>
+                    <li>
+                        Entire teams requiring aligned leadership culture and collaborative skills
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
         <div>
             @component('components.footer')
 

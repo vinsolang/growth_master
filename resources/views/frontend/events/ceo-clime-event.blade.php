@@ -54,7 +54,7 @@
             <div class="text-[#000000] text-4xl md:text-5xl text-center md:w-5xl mx-auto py-8 space-y-10">
                 <h1>Discover Where Top CEOs Go for Powerful Insights & Inspiration</h1>
                 <button id="btn-join-event" type="button"
-                    class="cursor-pointer py-4 px-6 text-xl bg-[#EDC11C] text-[#333333] rounded font-semibold leading-relaxed tracking-[0.4rem] uppercase">
+                    class="cursor-pointer py-4 px-6 text-xl bg-[#68875d] text-[#ffffff] rounded font-semibold leading-relaxed tracking-[0.4rem] uppercase">
                     Join a Climb Event
                 </button>
             </div>

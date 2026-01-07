@@ -32,9 +32,9 @@
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Programs</a>
                             <a href="{{ route('review') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster Reviews</a>
-                            <a href="#" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Exclusive Peer
+                            <a href="{{ route('exclusive.peer.groups') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Exclusive Peer
                                 Groups</a>
-                            <a href="{{ route('application') }}"
+                            <a href="{{ route('form.input') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Become a Member</a>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Chair Qualifications</a>
                             <a href="{{ route('chair.profile') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Meet Our Growth Master Chairs</a>
-                            <a href=""
+                            <a href="{{ route('chair.application') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Apply to be a Growth Master Chair</a>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
 
         <!-- Right Section -->
         <div class="flex items-center gap-5">
-            <a href="{{ route('application') }}">
+            <a href="{{ route('form.input') }}">
                 <button
                 class="py-4 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white hidden md:block rounded font-medium">
                 Become a Member
@@ -137,7 +137,7 @@
                 <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">Our Approach</a></li>
                 <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">Our Programs</a></li>
                 <li><a href="{{ route('review') }}" class="block hover:text-[#EDC11C]">GrowthMaster Reviews</a></li>
-                <li><a href="{{ route('application') }}" class="block hover:text-[#EDC11C]">Become a Member</a></li>
+                <li><a href="{{ route('form.input')}}" class="block hover:text-[#EDC11C]">Become a Member</a></li>
             </ul>
         </li>
 

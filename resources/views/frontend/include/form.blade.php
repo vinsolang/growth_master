@@ -169,7 +169,7 @@
     </div> --}}
     <div class="flex justify-center text-xl mt-10">
         <button type="submit"
-            class="inline-flex items-center justify-center w-72 h-14 bg-[#edc01c] font-semibold uppercase cursor-pointer">
+            class="inline-flex items-center justify-center w-72 h-14 bg-[#68875d] text-[#ffffff] font-semibold uppercase cursor-pointer">
             Become a member
         </button>
     </div>

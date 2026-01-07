@@ -5,7 +5,7 @@
         @component('components.navbar')
         @endcomponent
 
-        <div class="relative w-full h-[40vh] md:h-[100vh] top-40">
+        <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
             <img src="https://www.vistage.com/wp-content/uploads/2019/09/HERO2020-2.jpg"

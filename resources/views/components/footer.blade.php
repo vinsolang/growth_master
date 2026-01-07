@@ -11,7 +11,7 @@
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Explore Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
                         <li><a href="{{ route('membership') }}">Membership</a></li>
-                        <li><a href="">Chair</a></li>
+                        <li><a href="{{ route('chair.growth') }}">Chair</a></li>
                         <li><a href="{{ route('events') }}">Events</a></li>
                     </ul>
                 </div>
@@ -25,9 +25,9 @@
                     </ul>
                 </div>
                 <div class="space-y-2">
-                    <h1 class="italic text-gray-400 font-meduim text-[14px]">Apply for Vistage:</h1>
+                    <h1 class="italic text-gray-400 font-meduim text-[14px]">Apply for Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="">Become a Member</a></li>
+                        <li><a href="{{ route('form.input') }}">Become a Member</a></li>
                         <li><a href="">Become a Mentor</a></li>
                         <li><a href="">Become a Speaker</a></li>
                         <li><a href="">Become a Licensee</a></li>
@@ -36,22 +36,28 @@
                     </ul>
                 </div>
                 <div class="space-y-2">
-                    <h1 class="italic text-gray-400 font-meduim text-[14px]">Popular Resources:</h1>
+                    <h1 class="italic text-gray-400 font-meduim text-[14px]">Popular Events Joined by CEO </h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="">Tariffs Resource Center</a></li>
+                        <li><a href="">Finance for Non-finance </a></li>
+                        <li><a href="">Tariffs Resource Center</a>
                         <li><a href="">Free Executive Coaching Course</a></li>
-                        <li><a href="">CEO Climb Events</a></li>
-                        <li><a href="">The CEO’s 7 Laws of Leadership</a></li>
+                        <li><a href="{{ route('ceo.climp') }}">CEO Climb Events</a></li>
+                        <li><a href="{{ route('Laws.of.eadership') }}">The CEO’s 7 Laws of Leadership</a></li>
                         <li><a href="">Leadership Resource & PDFs</a></li>
                         <li><a href="">Diversity and Inclusion</a></li>
                     </ul>
                 </div>
                 <div class="space-y-2">
-                    <h1 class="font-bold text-[14px]">Growth Master Worldwide Headquarters</h1>
+                    <h1 class="font-bold text-[14px]">Growthmaster Headquarter’s Address </h1>
                     <div class="space-y-2 text-[14px]">
-                        <p class="italic">4840 Eastgate Mall San Diego, CA 92121</p>
-                        <p>858-523-6800 phone</p>
-                        <p>800-274-2367 toll free</p>
+                        <p class="italic">
+                            2 <sup>nd</sup> Floor, LSI Building (#03), Friendship Hanoi-Phnom Penh Blvd., 
+                            (Street 1019), Phnom Penh Thmey, Khan Sen Sok, Phnom Penh City, Kingdom of Cambodia.
+                        </p>
+                        <p class="font-bold">Hours</p>
+                        <p>Everyday: 8:00AM–5:00PM</p>
+                        <p class="font-bold">Tel:</p>
+                        <p>015 55 44 41 / 012 401 909</p>
                     </div>
                 </div>
             </div>
@@ -59,11 +65,15 @@
         <div class="space-y-4">
             {{-- Icon socail media --}}
             <div class="flex space-x-4 justify-start">
-                <div class="w-[30px] h-[30px] rounded-full bg-gray-600"></div>
-                <div class="w-[30px] h-[30px] rounded-full bg-gray-600"></div>
-                <div class="w-[30px] h-[30px] rounded-full bg-gray-600"></div>
-                <div class="w-[30px] h-[30px] rounded-full bg-gray-600"></div>
-                <div class="w-[30px] h-[30px] rounded-full bg-gray-600"></div>
+                <div class="w-[30px] h-[30px] rounded-full bg-gray-600">
+                    <img src="https://www.vistage.com/wp-content/themes/vistage/dist/img/instagram.svg" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[30px] h-[30px] rounded-full bg-gray-600">
+                    <img src="https://www.vistage.com/wp-content/themes/vistage/dist/img/facebook.svg" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[30px] h-[30px] rounded-full bg-gray-600">
+                    <img src="https://www.vistage.com/wp-content/themes/vistage/dist/img/youtube.svg" alt="" class="w-full h-full object-cover">
+                </div>
             </div>
             {{-- Line white --}}
             <div>
@@ -71,7 +81,7 @@
             </div>
             {{-- copy right --}}
             <div class="flex flex-col lg:flex-row gap-x-8 text-[#ffffff] font-meduim text-[14px]">
-                <p class="font-bold">© 2025 Vistage Worldwide, Inc.</p>
+                <p class="font-bold">© 2025 Growthmaster Headquarter’s Address</p>
                 <p>Privacy Policy</p>
                 <p>Confidentiality Pledge</p>
                 <p>Terms of Use</p>

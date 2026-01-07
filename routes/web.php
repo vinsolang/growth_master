@@ -5,6 +5,8 @@ use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
 use App\Http\Controllers\backend\HowItWorksController;
+use App\Http\Controllers\backend\OurApproachController;
+use App\Http\Controllers\backend\OurProgramController;
 use App\Http\Controllers\backend\OurTeamController;
 use App\Http\Controllers\frontend\AboutGrowthControll;
 use App\Http\Controllers\frontend\BecomeAMemberController;
@@ -26,6 +28,9 @@ Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])-
 Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
+Route::get('membership/exclusive-peer-groups', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
+
+
 // Event
 Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
@@ -34,6 +39,7 @@ Route::get('research-center/webinar', [ClientController::class, 'researchCenterW
 Route::get('growthmaster/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
 Route::get('ceo-coaching-qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
 Route::get('growth-chair/chair-profile', [ClientController::class, 'ChairProfile'])->name('chair.profile');
+Route::get('chiar-application', [ClientController::class, 'ChairApplication'])->name('chair.application');
 
 // aboute
 Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
@@ -93,4 +99,8 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/submit/updateteam', [OurTeamController::class,'submitToUpdateTeam'])->name('submit.update.team');
     // Remove our team
     Route::post('/remove/our_team', [OurTeamController::class,'submitToRemoveTeam'])->name('remove.our.team');
+
+    // Our Approach
+    Route::resource('approach', OurApproachController::class);
+    Route::resource('program', OurProgramController::class);
 });

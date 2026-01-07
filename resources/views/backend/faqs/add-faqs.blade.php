@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Answer</label>
-                                    <textarea name="answer" class="form-control" id="answer"></textarea>
+                                    <textarea name="answer" class="form-control" id="answer" rows="6"></textarea>
                                 </div>
                                 {{-- <div class="mb-3 col-12">
                                     <button class="bg-[#0F4634] px-3 py-2">

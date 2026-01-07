@@ -370,7 +370,7 @@
                         </div>
                         {{-- Button Become a Member --}}
                         <div class="flex justify-center text-xl">
-                            <a href="{{ route('sucess') }}" class="inline-flex items-center justify-center w-72 h-14 bg-[#edc01c] font-semibold tracking-wider uppercase">
+                            <a href="{{ route('form.input') }}" class="inline-flex items-center justify-center w-72 h-14 bg-[#edc01c] font-semibold tracking-wider uppercase">
                                 Become a member
                             </a>
                         </div>

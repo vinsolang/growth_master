@@ -34,7 +34,7 @@
 
                             <div class="mb-3 col-12">
                                 <label class="form-label text-[#0F4634]">Answer</label>
-                                <textarea name="answer" class="form-control" id="answer">{{ $faq->answer }}</textarea>
+                                <textarea name="answer" class="form-control" id="answer" rows="6">{{ $faq->answer }}</textarea>
                             </div>
 
                             <div class="flex gap-3 mt-3">

@@ -29,11 +29,11 @@
                                     <input class="form-control" type="text" name="title" value="{{ $work->title }}" />
                                 </div>
                                 <div class="mb-3 col-12">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Description(1)</label>
+                                    <label for="formFile" class="form-label text-[#0F4634]">Description</label>
                                     <textarea name="description" class="form-control" id="description">{{ $work->description }}</textarea>
                                 </div>
                                  <div class="mb-3 col-12">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Description(2)</label>
+                                    <label for="formFile" class="form-label text-[#0F4634]">Text of Button</label>
                                     <textarea name="button_text" class="form-control" id="button_text">{{ $work->button_text }}</textarea>
                                 </div>
                                 <div class="mb-5 col-12">
