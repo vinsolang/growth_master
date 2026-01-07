@@ -89,7 +89,7 @@
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Lead a Group</a>
                             <a href="{{ route('ceo.coa.qual') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Chair Qualifications</a>
-                            <a href=""
+                            <a href="{{ route('chair.profile') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Meet Our Growth Master Chairs</a>
                             <a href=""
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Apply to be a Growth Master Chair</a>
@@ -103,7 +103,7 @@
         <div class="flex items-center gap-5">
             <a href="{{ route('application') }}">
                 <button
-                class="py-4 px-6 bg-[#EDC11C] text-[#003F5F] hover:bg-[#003F5F] hover:text-white hidden md:block rounded font-medium">
+                class="py-4 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white hidden md:block rounded font-medium">
                 Become a Member
             </button>
 

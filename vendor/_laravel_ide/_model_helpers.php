@@ -950,12 +950,12 @@ namespace App\Models {
      *
      * @property \Illuminate\Support\Carbon $updated_at
      * @property \Illuminate\Support\Carbon $created_at
-     * @property string $email_refer
-     * @property string|null $name_refer
-     * @property string $revenue
+     * @property string|null $source
+     * @property string|null $staff
+     * @property string|null $revenue
      * @property string $role
      * @property string $company
-     * @property string $postal_code
+     * @property string|null $postal_code
      * @property string $phone
      * @property string $email
      * @property string $lastname
@@ -970,8 +970,8 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereCompany($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereRole($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereRevenue($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereNameRefer($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereEmailRefer($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereStaff($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereSource($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Membership>|Membership newModelQuery()

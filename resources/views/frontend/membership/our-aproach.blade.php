@@ -8,7 +8,7 @@
         <section class="relative w-full">
             <div class="w-full h-screen relative">
                 <!-- Hero Image -->
-                <img src="{{ asset('assets/membership_hero1.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
+                <img src="{{ asset('https://cac-center.edu.kh/wp-content/uploads/2025/05/379185291_301310172521341_6205432678662828896_n-1600x800.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
 
                 <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
@@ -32,7 +32,7 @@
 
                     <a href="{{ route('application') }}">
                         <button
-                        class="mt-6 py-5 px-7 bg-[#EDC11C] text-[#333333] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
+                        class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
                         JOIN A GROUP
                     </button>
                     </a>

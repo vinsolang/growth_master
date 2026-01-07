@@ -1,6 +1,7 @@
 <div class=" w-full h-[80vh] relative  ">
     <!-- Hero Image -->
-    <img src="{{ asset('assets/hero.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
+    <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC09713-1600x800.jpg"
+        class="w-full h-full object-cover" alt="Hero Image">
 
     <!-- Overlay Content -->
     <div class="absolute inset-0 flex flex-col justify-center items-center px-6 md:px-16 lg:px-24 text-white">
@@ -10,11 +11,11 @@
             Join the world leader in CEO peer advisory & coaching.
         </h1>
 
-        <a href="{{ route('application') }}">
+        <a href="{{ route('form.input') }}">
             <button
-            class="mt-6 py-5 px-8 bg-[#EDC11C] text-[#333333] hover:bg-[#003F5F] hover:text-white rounded font-semibold leading-relaxed tracking-widest">
-            BECOME A MEMBER
-        </button>
+                class="mt-6 py-5 px-8 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold leading-relaxed tracking-widest">
+                BECOME A MEMBER
+            </button>
         </a>
     </div>
 </div>
@@ -100,9 +101,7 @@
 
         <!-- Title -->
         <div class="flex items-center justify-center gap-4 mb-12">
-            <img src="{{ asset('assets/icon/value.png') }}"
-                alt="Core Values Icon"
-                class="w-24 h-24">
+            <img src="{{ asset('assets/icon/value.png') }}" alt="Core Values Icon" class="w-24 h-24">
 
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
                 Core Values: SHARE</span>
@@ -124,7 +123,7 @@
             <div class="bg-white rounded-2xl p-6 hover:shadow-xl transition">
                 <h2 class="text-2xl font-bold text-gray-800 mb-3">H – Humility</h2>
                 <p class="text-xl text-[#333333]">
-                   Embrace a growth mindset. There are new things to learn from one another.
+                    Embrace a growth mindset. There are new things to learn from one another.
                 </p>
             </div>
 
@@ -140,7 +139,7 @@
             <div class="bg-white rounded-2xl p-6 hover:shadow-xl transition">
                 <h2 class="text-2xl font-bold text-gray-800 mb-3">R – Responsibility</h2>
                 <p class="text-xl text-[#333333]">
-                    We are all in. 
+                    We are all in.
                 </p>
             </div>
 
@@ -166,8 +165,7 @@
 {{-- Version Dasktop --}}
 <div class="hidden md:flex justify-center items-center py-12">
     {{-- Card 1 --}}
-    <div
-        class="group relative h-[900px] w-[50%] md:h-[800px] bg-[#0b2642] shadow-2xl rounded-lg cursor-pointer">
+    <div class="group relative h-[900px] w-[50%] bg-[#0b2642] shadow-2xl rounded-lg cursor-pointer">
 
         <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
             <div class="relative h-3/4 w-full">
@@ -220,6 +218,45 @@
 </div>
 
 {{-- Version Mobile --}}
-<div class="md:hidden flex flex-col">
-    Mobile
+<div class="md:hidden flex flex-col py-12">
+    <div class="bg-[#0b2642] w-full">
+        <div class="px-8 py-8">
+            <h1 class="font-bold uppercase text-white text-xl">short bio:</h1>
+            <p class="text-white text-lg leading-relaxed">
+                Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
+                IPA Australia. Besides being a shareholder of
+                Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
+                (CAC) which has more than 1000 menbers, he is also recognized
+                as an SME coach in shaping family business to next level.
+            </p>
+            <p class="text-white text-lg leading-relaxed mt-4">
+                With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
+                Financial Management, Mr. Rithy has also spent more than a decade
+                advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
+                to distill complex financial and operational
+                challenges into actionable strategies has earned him recognition as a trusted <span
+                    class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
+            </p>
+            <hr class="bg-[#edc01c]">
+            <h1 class="font-bold uppercase text-white text-xl py-2">highlight</h1>
+            <p class="text-[#ffffff] text-lg leading-relaxed">
+                One of this most notable achievements includes leading the transformation of a locally owned
+                business into a globally
+                integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
+                vission, strategic acument,
+                and commitment to excellence
+            </p>
+        </div>
+        <div class="flex justify-center items-center px-8 space-x-4">
+            <div>
+                <img src="{{ asset('assets/profile/1765335800-founder.jpg') }}" alt="Sean Forman"
+                    class="w-24 h-24 rounded-full object-cover object-top" />
+            </div>
+            <div class="">
+                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
+                <p class="text-white text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
+                <p class="text-white text-lg leading-tight">Shareholder, Acclime</p>
+            </div>
+        </div>
+    </div>
 </div>

@@ -18,7 +18,7 @@
                             <tr>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                                    Name</th>
+                                    Full Name</th>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
                                     Email</th>
@@ -27,17 +27,23 @@
                                     Company</th>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                                    Name of Referred</th>
+                                    Phone</th>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                                    Email of Referred</th>
+                                    Professional Role</th>
                                 <th
-                                    class="px-6 py-4 text-center text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                    class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                    The staff has</th>
+                                <th
+                                    class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                    Source</th>
+                                <th
+                                      class="px-6 py-4 text-center text-xs font-semibold text-gray-500 uppercase tracking-wider">
                                     Action</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-100">
-                            @foreach($members as $member)
+                            @foreach($memberships as $member)
                                 <tr class="hover:bg-gray-50 transition-colors duration-200">
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="font-medium text-gray-900">{{ $member->firstname }} {{ $member->lastname }}
@@ -52,11 +58,17 @@
                                         </span>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="font-medium text-gray-900">{{ $member->name_refer }}
+                                        <div class="font-medium text-gray-900">{{ $member->phone }}
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-gray-600">
-                                        {{ $member->email_refer }}
+                                        {{ $member->role }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-600">
+                                        {{ $member->staff }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-600">
+                                        {{ $member->source }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-center">
                                         <form action="{{ route('memberships.destroy', $member->id) }}" method="POST"

@@ -10,4 +10,7 @@ class BecomeAMemberController extends Controller
     public function PageSubmitSucess(){
         return view('frontend.becom-a-member.page-submit-becomemember-sucess');
     }
+    public function FormInputInfo(){
+        return view('frontend.form-input-information.form');
+    }
 }

@@ -33,6 +33,7 @@ Route::get('research-center/webinar', [ClientController::class, 'researchCenterW
 // Growth Master Chair
 Route::get('growthmaster/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
 Route::get('ceo-coaching-qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
+Route::get('growth-chair/chair-profile', [ClientController::class, 'ChairProfile'])->name('chair.profile');
 
 // aboute
 Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
@@ -44,7 +45,8 @@ Route::get('about-growth/ceo-climp/', [AboutGrowthControll::class, 'CeoClimp'])-
 // Submite Become a member
 Route::resource('memberships', MembershipController::class)
     ->only(['store', 'index', 'destroy']);
-Route::get('thankyou-membership-application', [BecomeAMemberController::class, 'PageSubmitSucess'])->name('sucess');
+Route::get('thankyou-membership-application', [BecomeAMemberController::class, 'PageSubmitSucess'])->name('success');
+Route::get('form/input-info', [BecomeAMemberController::class, 'FormInputInfo'])->name('form.input');
 
 
 
