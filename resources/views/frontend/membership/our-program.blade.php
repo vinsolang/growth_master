@@ -32,7 +32,7 @@
                         Find the right program fit for you and your team.
                     </p>
 
-                    <a href="{{ route('application') }}">
+                    <a href="{{ route('form.input') }}">
                         <button
                         class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
                         JOIN A PROGRAM

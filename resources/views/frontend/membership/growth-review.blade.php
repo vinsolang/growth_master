@@ -28,7 +28,7 @@
                         Whether you’re a CEO scaling a team rapidly, navigating your first leadership role or steering through crisis, the reviews below come from Vistage members who faced the same crossroads you’re experiencing now.
                     </p>
 
-                    <a href="{{ route('application') }}">
+                    <a href="{{ route('form.input') }}">
                         <button
                         class="mt-6 py-6 px-8 bg-[#68875d] text-[#FFFFFF] hover:bg-[#003F5F] hover:text-white rounded font-bold w-max uppercase tracking-widest">
                         BECOME A MEMBER

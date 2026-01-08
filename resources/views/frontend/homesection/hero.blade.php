@@ -247,10 +247,10 @@
                 and commitment to excellence
             </p>
         </div>
-        <div class="flex justify-center items-center px-8 space-x-4">
-            <div>
+        <div class="flex justify-center items-center md:px-8 px-2 space-x-4">
+            <div class="w-24 h-24">
                 <img src="{{ asset('assets/profile/1765335800-founder.jpg') }}" alt="Sean Forman"
-                    class="w-24 h-24 rounded-full object-cover object-top" />
+                    class="w-full h-full rounded-full object-cover object-top" />
             </div>
             <div class="">
                 <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
