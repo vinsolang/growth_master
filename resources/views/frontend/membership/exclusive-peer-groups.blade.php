@@ -128,6 +128,60 @@
                                 structured outcome measurement.
                             </td>
                         </tr>
+                        <!-- Row 4 -->
+                        <tr>
+                            <td class="px-6 py-6 text-[18px] font-medium border">
+                                Confidentiality Structure
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                                Members come from non-competing companies, and meetings are 100% 
+                                confidential so that you can discuss sensitive issues openly without competitive intelligence concerns.
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                                Groups may include members from overlapping markets, 
+                                limiting the ability to build trust and have in-depth, candid discussions.
+                            </td>
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr>
+                            <td class="px-6 py-6 text-[18px] font-medium border">
+                                Time Investment Design
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                                Monthly full-day sessions focus on the issues that impact you the most, 
+                                maximizing the value of your time commitment.
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                                Meeting frequency and format vary widely, often emphasizing social interaction over strategic work.
+                            </td>
+                        </tr>
+                        <!-- Row 6 -->
+                        <tr>
+                            <td class="px-6 py-6 text-[18px] font-medium border">
+                                Local Community & Live Interaction
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                               Groups meet in person in your local market, building relationships with fellow CEOs who understand your 
+                               geographic business environment and can become trusted advisors beyond formal meetings.
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                                Many groups operate virtually or draw members 
+                                from distant markets, limiting relationship depth and local business relevance.
+                            </td>
+                        </tr>
+                        <!-- Row 7 -->
+                        <tr>
+                            <td class="px-6 py-6 text-[18px] font-medium border">
+                                Access to Broader Expertise
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                               Growth Master has a global network of 45,000 members across 40 countries, 
+                               providing specific industry insights when you need specialized expertise.
+                            </td>
+                            <td class="px-6 py-6 text-[16px] leading-relaxed border">
+                                Network access varies, sometimes including global connections and other times limited to regional chapters.
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
 
@@ -136,10 +190,124 @@
         {{-- Button Become a member --}}
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('form.input') }}"
-                class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#68875d]
+                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
                 text-[#003F5F] bg-white rounded 
                 transition-all duration-300 ease-in-out
-                hover:bg-[#68875d] hover:text-white">
+                hover:bg-[#68875d] hover:text-white font-semibold">
+
+                Become A Member
+
+                <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+            </a>
+        </div>
+        {{-- Signs You’re Ready for an Exclusive Peer Group --}}
+        <section class="relative w-full">
+            <h1 class="text-[#000000] text-2xl md:text-4xl text-center py-6">Signs You’re Ready for an Exclusive Peer Group</h1>
+            <p class="text-[#333333] text-xl md:2xl text-center py-4">
+                You’ve likely reached the point where an exclusive peer 
+                group makes strategic sense if you recognize these situations in your leadership experience:
+            </p>
+            {{-- section text and image --}}
+            @php
+                $showProgram = [
+                    [
+                        'title1' => 'You lack structured accountability for your biggest initiatives.',
+                        'title2' => 'You’re making critical decisions without comparable perspectives.',
+                        'title3' => '',
+                        'desc1' => 'Your board meetings and internal team discussions don’t provide the external perspective and follow-through that drives execution on essential goals.',
+                        'desc2' => 'Your C-suite team may struggle to grasp ownership decisions or refuse to provide unfiltered feedback. You need input from owners who understand that one wrong choice could cost jobs, derail growth or jeopardize everything you’ve built.',
+                        'desc3' => '',
+                        'image' => 'https://www.vistage.com/wp-content/uploads/2025/08/board-meeting.webp'
+                    ],
+                    [
+                        'title1' => 'Your revenue and operational complexity demand peer-level input.',
+                        'title2' => 'Confidentiality limits your ability to seek advice.',
+                        'title3' => 'You’re working late into the night because you can’t delegate effectively.',
+                        'desc1' => 'When you’re managing $5M+ in annual revenue with dozens of employees, your decisions carry weight that most business advisors haven’t experienced firsthand.',
+                        'desc2' => 'The sensitive nature of your business challenges requires a trusted environment where you can discuss issues openly without competitive risk.',
+                        'desc3' => 'When you believe you need to handle everything personally, you create a bottleneck that limits your company’s growth and leaves you exhausted from operational details rather than focusing on strategic leadership.',
+                        'image' => 'https://www.vistage.com/wp-content/uploads/2025/08/revenue-5m.webp'
+                    ],
+                ]; 
+            @endphp
+            <div class="relative w-full">
+
+                @foreach ($showProgram as $index => $program)
+
+                    <div
+                        class="flex flex-col md:flex-row justify-center items-center py-4 px-4 xl:py-16 xl:px-35 gap-8">
+
+                        {{-- MOBILE IMAGE (top) --}}
+                        <div class="md:hidden w-full md:w-1/2 flex">
+                            {{-- <img src="{{ asset('assets/our_program/' . $program->image) }}" alt=""> --}}
+                            <img src="{{ $program['image'] }}" alt="">
+                        </div>
+
+                        {{-- DESKTOP IMAGE LEFT (odd block) --}}
+                        @if ($index % 2 !== 0)
+                            <div class="hidden md:flex w-full md:w-1/2">
+                                {{-- <img src="{{ asset('assets/our_program/' . $program->image) }}" alt=""> --}}
+                                <img src="{{ $program['image'] }}" alt="">
+                            </div>
+                        @endif
+
+                        {{-- TEXT --}}
+                        <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
+                            {{-- <h1 class="text-[#333333] text-[30px] lg:text-[35px]">
+                                {{ $program->title }}
+                            </h1>
+
+                            <p class="text-[#343434] text-[14px] md:text-[18px]">
+                                {{ $program->description }}
+                            </p> --}}
+                            <h1 class="text-[#333333] text-xl md:text-2xl">
+                                {{ $program['title1']}}
+                            </h1>
+
+                            <p class="text-[#343434] text-[16px] md:text-[18px]">
+                                {{ $program['desc1'] }}
+                            </p>
+                             <h1 class="text-[#333333] text-xl md:text-2xl">
+                                {{ $program['title2']}}
+                            </h1>
+
+                            <p class="text-[#343434] text-[16px] md:text-[18px]">
+                                {{ $program['desc2'] }}
+                            </p>
+                             <h1 class="text-[#333333] text-xl md:text-2xl">
+                                {{ $program['title3']}}
+                            </h1>
+
+                            <p class="text-[#343434] text-[16px] md:text-[18px]">
+                                {{ $program['desc3'] }}
+                            </p>
+                        </div>
+
+                        {{-- DESKTOP IMAGE RIGHT (even block) --}}
+                        @if ($index % 2 === 0)
+                            <div class="hidden md:flex w-full md:w-1/2">
+                                {{-- <img src="{{ asset('assets/our_program/' . $program->image) }}" alt=""> --}}
+                                <img src="{{ $program['image'] }}" alt="">
+                            </div>
+                        @endif
+
+                    </div>
+
+                @endforeach
+
+            </div>
+
+        </section>
+
+        {{-- Button Become a member --}}
+        <div class="flex justify-center items-center mt-10">
+            <a href="{{ route('form.input') }}"
+                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
+                text-[#003F5F] bg-white rounded 
+                transition-all duration-300 ease-in-out
+                hover:bg-[#68875d] hover:text-white font-semibold">
 
                 Become A Member
 
