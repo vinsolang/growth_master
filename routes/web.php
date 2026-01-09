@@ -12,13 +12,15 @@ use App\Http\Controllers\frontend\AboutGrowthControll;
 use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
 use App\Http\Controllers\MembershipController;
+use App\Models\FAQs;
 use Illuminate\Support\Facades\Route;
 
 /* ============================================================================================
                                                 @@@ Frontend
 ============================================================================================== */
 Route::get('/', function () {
-    return view('frontend.home');
+      $showFAQs = FAQs::all();
+    return view('frontend.home', compact('showFAQs'));
 })->name('home');
 // Member ship
 Route::get('membership', function () {

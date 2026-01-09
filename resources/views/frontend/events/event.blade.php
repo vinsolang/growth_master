@@ -33,10 +33,10 @@
                 <p>The hardest climb is not Denali, K2 or even Everest. It isn’t at 24,000 feet. The hardest climb lies deep
                     within. It’s the mental climb. Gain an insider’s edge to power your ascent with events purpose-built for
                     driven CEOs and business owners. Learn from subject-matter experts and build connections with
-                    high-impact business leaders at Vistage events.</p>
+                    high-impact business leaders at Growth Master events.</p>
             </div>
 
-            {{-- Vistage Events Types --}}
+            {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 {{-- Title --}}
                 <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Growth Master Events Types</h1>
@@ -74,7 +74,7 @@
                         <div class="bg-[#124d6b] py-14 px-8 space-y-4 w-[480px] h-auto xl:h-[500px]">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
-                                    <img src="" alt="" class="w-full h-full object-cover rounded-full">
+                                    <img src="https://www.vistage.com/wp-content/uploads/2021/01/Event-Icon-Guest-100.png" alt="" class="w-full h-full object-cover rounded-full">
                                 </div>
                                 <div>
                                     <p class="text-[10px] text-white">Growth Master</p>
@@ -126,7 +126,7 @@
                         <div class="bg-[#124d6b] py-14 px-8 space-y-4 w-[480px] h-auto xl:h-[500px]">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
-                                    <img src="" alt="" class="w-full h-full object-cover rounded-full">
+                                    <img src="https://www.vistage.com/wp-content/uploads/2021/01/Event-Icon-Member-100.png" alt="" class="w-full h-full object-cover rounded-full">
                                 </div>
                                 <div>
                                     <p class="text-[10px] text-white">Growth Master</p>

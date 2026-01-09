@@ -101,7 +101,7 @@
 
         <!-- Right Section -->
         <div class="flex items-center gap-5">
-            <a href="{{ route('form.input') }}">
+            <a href="{{ route('home') }}#member-form">
                 <button
                 class="py-4 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white hidden md:block rounded font-medium">
                 Become a Member

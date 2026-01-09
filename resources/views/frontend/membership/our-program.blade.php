@@ -32,7 +32,7 @@
                         Find the right program fit for you and your team.
                     </p>
 
-                    <a href="{{ route('form.input') }}">
+                    <a href="#program-form">
                         <button
                         class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
                         JOIN A PROGRAM
@@ -52,11 +52,11 @@
             </div>
             {{-- Button Join out Programs --}}
             <div class="flex justify-center items-center mt-10">
-               <a href="{{ route('form.input') }}">
-                 <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#003F5F]
-                            text-[#003F5F] bg-white rounded 
+               <a href="#program-form">
+                 <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
+                            text-[#68875d] bg-white rounded 
                             transition-all duration-300 ease-in-out
-                            hover:bg-[#003F5F] hover:text-white font-semibold">
+                            hover:bg-[#68875d] hover:text-white font-semibold">
                     JOIN A PROGRAM
 
                     <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
@@ -175,7 +175,86 @@
 
             </div>
         </section>
+        {{-- Join 45,000 Leaders Who’ve Chosen Strategic Accountability --}}
+        <section class="relative w-full">
+            <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
+                Join 45,000 Leaders Who’ve Chosen Strategic Accountability Over Going It Alone
+            </h1>
+            <p class="text-[#343434] text-lg max-w-[70%] mx-auto text-left">
+                Being at the top doesn’t have to mean leading in isolation. Whether you need peer insights for high-stakes decisions or want to develop your team’s leadership capabilities, 
+                Growth Master provides a structured support system that transforms how you lead and how your organization performs.
+            </p>
 
+             <div class="max-w-6xl mx-auto mt-12 border border-gray-300">
+                <!-- Header -->
+                <div class="grid grid-cols-2">
+                    <div class="bg-[#003A57] py-5 text-center border-r border-gray-300">
+                        <h2 class="text-[#FFC300] text-xl font-bold">
+                            The Investment
+                        </h2>
+                    </div>
+                    <div class="bg-[#003A57] py-5 text-center">
+                        <h2 class="text-[#FFC300] text-xl font-bold">
+                            The Results
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="grid grid-cols-2 border-t border-gray-300 text-lg">
+                    <div class="p-6 border-r border-gray-300 text-gray-900">
+                        Strategic peer advisory and professional executive coaching.
+                    </div>
+                    <div class="p-6 text-gray-900">
+                        Vistage members grow their companies 2.2x faster than non-members.
+                    </div>
+                </div>
+
+                <!-- Row 2 (Gray background) -->
+                <div class="grid grid-cols-2 bg-gray-100 border-t border-gray-300 text-lg">
+                    <div class="p-6 border-r border-gray-300 text-gray-900">
+                        Proven frameworks for complex decision-making facilitation.
+                    </div>
+                    <div class="p-6 text-gray-900">
+                        Member businesses operate 4x longer than the average U.S. company.
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="grid grid-cols-2 border-t border-gray-300 text-lg">
+                    <div class="p-6 border-r border-gray-300 text-gray-900">
+                        Leadership development at every organizational level.
+                    </div>
+                    <div class="p-6 text-gray-900">
+                        Proven guidance that generates ROI through improved outcomes.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        {{-- Frequently asked questions --}}
+        <div class="relative w-full">
+            @include('frontend.include.faqs')
+        </div>
+        {{-- From Contact --}}
+        <section class="relative w-full">
+            <div class="space-y-4" id="program-form">
+                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
+                    Become a Growth Master Member
+                </h1>
+                <p class="text-[#333333] text-lg md:text-xl text-left max-w-[60%] mx-auto">
+                    With Vistage you’re joining a powerful community of high-caliber executives who challenge each other, 
+                    inspire each other and share their perspectives 
+                    to help each other make better decisions, become better leaders and achieve better outcomes.
+                </p>
+                <p class="text-[#333333] text-lg md:text-xl text-center">
+                    Take your success to a new level. Complete the form below to find out if you qualify.
+                </p>
+            </div>
+            <div class="py-6">
+                @include('frontend.include.form')
+            </div>
+        </section>
         <div>
             @component('components.footer')
 

@@ -11,7 +11,7 @@
                 <img src="{{ asset('https://cac-center.edu.kh/wp-content/uploads/2025/05/379185291_301310172521341_6205432678662828896_n-1600x800.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
 
                 <!-- Overlay Content -->
-                <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
+                <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white md:bg-none bg-black/50">
 
                     <h1
                         class="text-[22px] text-start md:text-[35px] lg:text-[45px] font-semibold max-w-[940px] leading-tight">
@@ -19,18 +19,18 @@
                     </h1>
 
                     <p
-                        class="text-[16px] text-start md:text-[18px] mt-5 lg:text-[25px] font-regular max-w-[940px] leading-tight">
+                        class="text-[16px] text-start md:text-[18px] mt-5 lg:text-[25px] font-medium max-w-[940px] leading-tight">
                         Executive coaching alone can’t deliver what peer advisory groups provide.
                     </p>
 
                     <p
-                        class="text-[16px] text-start mt-5 md:text-[18px] lg:text-[25px] font-regular max-w-[940px] leading-tight">
+                        class="text-[16px] text-start mt-5 md:text-[18px] lg:text-[25px] font-medium max-w-[940px] leading-tight">
                         Our comprehensive platform for success features core elements that work together:
                         valuable perspectives from a trusted group of peers, professional guidance from an accomplished
                         business leader (advisor) and deep insights from subject matter experts.
                     </p>
 
-                    <a href="{{ route('application') }}">
+                    <a href="#approach-form">
                         <button
                         class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
                         JOIN A GROUP
@@ -110,11 +110,11 @@
                     </div>
                 </div>
                 <div class="flex justify-center items-center mt-10">
-                    <a href="{{ route('application') }}">
-                        <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#003F5F]
-                                text-[#003F5F] bg-white rounded 
+                    <a href="#approach-form">
+                        <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
+                                text-[#68875d] bg-white rounded 
                                 transition-all duration-300 ease-in-out
-                                hover:bg-[#003F5F] hover:text-white font-semibold">
+                                hover:bg-[#68875d] hover:text-white font-semibold">
                         JOIN A GROUP
 
                         <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
@@ -187,7 +187,21 @@
                     </div>
                 @endforeach
             </div>
+            {{-- Button become a member --}}
+            <div class="flex justify-center items-center mt-10">
+                    <a href="#approach-form">
+                        <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
+                                text-[#68875d] bg-white rounded 
+                                transition-all duration-300 ease-in-out
+                                hover:bg-[#68875d] hover:text-white font-semibold">
+                        JOIN A GROUP
 
+                        <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </button>
+                    </a>
+                </div>
             <div class="relative w-full space-y-4">
                 <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
                     What Makes Peer Advisory Groups More Effective Than Other Leadership Development
@@ -235,28 +249,26 @@
 
             {{-- Frequently asked questions --}}
             <div class="relative w-full">
+                @include('frontend.include.faqs')
+            </div>
+        </section>
+        {{-- From Contact --}}
+        <section class="relative w-full">
+            <div class="space-y-4" id="approach-form">
                 <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
-                    Frequently asked questions
+                    Become a Growth Master Member
                 </h1>
-                <div id="faq-container" class="max-w-5xl mx-auto p-6 bg-white">
-                    @foreach ($showFAQs as $item)
-                        <div class="cursor-pointer">
-                        <button class="question-toggle cursor-pointer flex justify-between items-center w-full py-4 text-lg font-medium text-gray-900 focus:outline-none">
-                            <span class="icon-indicator mr-3 text-xl text-gray-900">
-                                
-                            </span>
-                            <span class="grow text-left">
-                               {{ $item->question }}
-                            </span>
-                        </button>
-                        <div class="content px-10 pb-4 text-[#343434] overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
-                            <p>
-                                {{ $item->answer }}
-                            </p>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
+                <p class="text-[#333333] text-lg md:text-xl text-left max-w-[60%] mx-auto">
+                    With Vistage you’re joining a powerful community of high-caliber executives who challenge each other, 
+                    inspire each other and share their perspectives 
+                    to help each other make better decisions, become better leaders and achieve better outcomes.
+                </p>
+                <p class="text-[#333333] text-lg md:text-xl text-center">
+                    Take your success to a new level. Complete the form below to find out if you qualify.
+                </p>
+            </div>
+            <div class="py-6">
+                @include('frontend.include.form')
             </div>
         </section>
         <div>
@@ -301,43 +313,5 @@
 });
 
 </script>
-{{-- Frequently asked questions --}}
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const toggles = document.querySelectorAll('.question-toggle');
-
-    toggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const parentDiv = toggle.parentElement;
-            const content = parentDiv.querySelector('.content');
-            const icon = parentDiv.querySelector('.icon-indicator');
-
-            const isOpen = content.classList.contains('max-h-[500px]');
-
-            // Close all others
-            toggles.forEach(otherToggle => {
-                const otherContent = otherToggle.parentElement.querySelector('.content');
-                const otherIcon = otherToggle.parentElement.querySelector('.icon-indicator');
-
-                otherContent.classList.remove('max-h-[500px]', 'opacity-100');
-                otherContent.classList.add('max-h-0', 'opacity-0');
-                otherIcon.innerHTML = '&#9654;';
-            });
-
-            // Toggle current
-            if (!isOpen) {
-                content.classList.remove('max-h-0', 'opacity-0');
-                content.classList.add('max-h-[500px]', 'opacity-100');
-                icon.innerHTML = '&#9660;';
-            } else {
-                content.classList.remove('max-h-[500px]', 'opacity-100');
-                content.classList.add('max-h-0', 'opacity-0');
-                icon.innerHTML = '&#9654;';
-            }
-        });
-    });
-});
-</script>
-
 
 @endsection

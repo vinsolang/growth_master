@@ -23,7 +23,7 @@
                         As a CEO leading a $5M+ company, you need strategic input from peers who understand the leadership climb
                     </p>
 
-                    <a href="{{ route('form.input') }}">
+                    <a href="{{ route('home') }}#member-form">
                         <button
                         class="mt-6 py-6 px-8 bg-[#68875d] text-[#FFFFFF] hover:bg-[#003F5F] hover:text-white rounded font-bold w-max uppercase tracking-widest">
                         BECOME A MEMBER
@@ -189,7 +189,7 @@
         </section>
         {{-- Button Become a member --}}
         <div class="flex justify-center items-center mt-10">
-            <a href="{{ route('form.input') }}"
+            <a href="{{ route('home') }}#member-form"
                 class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
                 text-[#003F5F] bg-white rounded 
                 transition-all duration-300 ease-in-out
@@ -303,7 +303,7 @@
 
         {{-- Button Become a member --}}
         <div class="flex justify-center items-center mt-10">
-            <a href="{{ route('form.input') }}"
+            <a href="{{ route('home') }}#member-form"
                 class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
                 text-[#003F5F] bg-white rounded 
                 transition-all duration-300 ease-in-out
@@ -317,6 +317,182 @@
             </a>
         </div>
 
+        {{-- Section  --}}
+        <div class="max-w-7xl mx-auto bg-amber-200 text-left">
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Strategic Decision Velocity</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                       In our guided peer-to-peer setting, solve challenges faster 
+                       using proven frameworks that move from problem identification 
+                       to measurable action. By reducing “analysis paralysis” and discussing your 
+                       situation from multiple angles with other talented leaders, 
+                       you’ll feel more confident and grounded in your choices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Risk Assessment & Blind Spot Identification</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        Peers spot potential pitfalls and opportunities you might miss when you’re too close to the problem, 
+                        drawing from their own experience navigating situations like yours.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Leadership Team Development</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        Valuable insights from peers can help you build a high-performing executive team with the right roles to 
+                        help you achieve your vision and navigate leadership transitions more effectively.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Market Expansion & Growth Challenges</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                        When you’re considering new markets or scaling operations, fellow CEOs can share obstacles they 
+                        encountered and the specific moves that actually worked versus what looked good on paper.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
+                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Crisis Navigation & Pivoting</h1>
+                </div>
+                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                    <p class="text-white text-[16px] md:text-xl md:w-[90%]">
+                       Crisis moments demand immediate action when the usual playbook doesn’t apply. 
+                       CEOs who’ve weathered major disruptions understand what it 
+                       takes to make tough calls while preserving operations and eventually emerging stronger.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {{-- What to Evaluate When Choosing an Exclusive Peer Group --}}
+        <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
+            <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+                What to Evaluate When Choosing an Exclusive Peer Group
+            </h1>
+            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
+                Your time is your most valuable asset. Exclusive peer groups protect that investment by surrounding you with leaders 
+                whose experience directly applies to your current challenges and can guide critical decisions.
+            </p>
+
+            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
+                Vistage built its entire model around this principle. Every element from member 
+                selection to meeting structure maximizes the strategic value of your time commitment.
+            </p>
+
+            {{-- Card Element --}}
+        <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">
+            {{-- Card 1 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-center">
+                    Group Composition Standards
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    You need clear revenue thresholds and leadership requirements to ensure you’re working with peers at relevant operational stages.
+                    <br>
+                    Growth Master limits membership to CEOs of $5M+ companies with additional vetting for experience and commitment.
+                </p>
+            </div>
+
+            {{-- Card 2 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                    Professional Facilitation
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    You need skilled facilitators with real-world executive experience,
+                    not peer-led discussions that lack structure and methodology.
+                    <br>
+                    Growth Master Chairs bring 10+ years of executive experience with P&L responsibility, 
+                    plus comprehensive development in proven facilitation methods.
+                </p>
+            </div>
+            {{-- card 3 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                    Accountability Systems
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    You need formal goal-setting and progress tracking that creates follow-through on key initiatives.
+                    <br>
+                    With Growth Master, you get monthly progress reviews and peer accountability in both group and one-to-one coaching sessions.
+                </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                    Time Investment Design
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                   Weekly meetings can disrupt your schedule and dilute focus, while quarterly (or fewer) 
+                   sessions don’t provide enough consistency to produce meaningful growth.
+                   <br>
+                   Growth Master strikes the right balance with monthly full-day sessions, 
+                   plus individual coaching sessions with your Chair.
+                </p>
+            </div>
+            {{-- Card 5 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                    Member Diversity
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    Peer groups with industry and experience variety 
+                    bring fresh perspectives and prevent stale conversations or echo chambers.
+                    <br>
+                    Vistage groups include non-competing companies across diverse industries, 
+                    with global network access when specialized expertise is needed.
+                </p>
+            </div>
+
+            {{-- Card 6 --}}
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+                <h1 class="text-[#003f5e] text-xl xl:text-xl font-bold mb-4 text-left">
+                    Proven Track Record
+                </h1>
+                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                    You need evidence of sustained outcomes and member satisfaction over time, beyond testimonials.
+                    <br>
+                    Vistage has a 65-year history, with members staying in business 4x longer than average, plus documented achievement metrics.
+                </p>
+            </div>
+        </div>
+        </div>
+        {{-- Button Become a member --}}
+        <div class="flex justify-center items-center mt-10">
+            <a href="{{ route('home') }}#member-form"
+                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
+                text-[#003F5F] bg-white rounded 
+                transition-all duration-300 ease-in-out
+                hover:bg-[#68875d] hover:text-white font-semibold">
+
+                Become A Member
+
+                <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+            </a>
+        </div>
         <div>
             @component('components.footer')
 

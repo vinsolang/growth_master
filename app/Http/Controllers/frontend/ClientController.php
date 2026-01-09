@@ -23,10 +23,12 @@ class ClientController extends Controller
     }
     public function memberShipPrograms(){
         $showProgram = Program::all();
-        return view('frontend.membership.our-program', compact('showProgram'));
+        $showFAQs = FAQs::all();
+        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs'));
     }
      public function growthReview(){
-        return view('frontend.membership.growth-review');
+        $showFAQs = FAQs::all();
+        return view('frontend.membership.growth-review', compact('showFAQs'));
     }
      public function ExclusivePeerGroups(){
         return view('frontend.membership.exclusive-peer-groups');

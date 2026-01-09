@@ -27,7 +27,7 @@
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Apply for Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="{{ route('form.input') }}">Become a Member</a></li>
+                        <li><a href="{{ route('home') }}#member-form">Become a Member</a></li>
                         <li><a href="">Become a Mentor</a></li>
                         <li><a href="">Become a Speaker</a></li>
                         <li><a href="">Become a Licensee</a></li>
@@ -38,7 +38,7 @@
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Popular Events Joined by CEO </h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="">Finance for Non-finance </a></li>
+                        {{-- <li><a href="">Finance for Non-finance </a></li> --}}
                         <li><a href="">Tariffs Resource Center</a>
                         <li><a href="">Free Executive Coaching Course</a></li>
                         <li><a href="{{ route('ceo.climp') }}">CEO Climb Events</a></li>
