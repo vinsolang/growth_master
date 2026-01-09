@@ -257,6 +257,26 @@
           </li>
 
           <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+             <i class="menu-icon tf-icons bx bx-calendar-event"></i>
+              <div data-i18n="Layouts">Event</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('event.index') }}" class="menu-link">
+                  <div data-i18n="Without menu">View Event</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="{{ route('event.create') }}" class="menu-link">
+                  <div data-i18n="Without menu">Add Event</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Layouts -->
           {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-grid-alt"></i>

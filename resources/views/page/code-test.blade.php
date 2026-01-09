@@ -134,3 +134,178 @@
     </section>
 
 </div>
+
+
+{{-- Event ========================== --}}
+  {{-- Block Of Event 2--}}
+                <div class="space-y-6">
+                    {{-- Line --}}
+                    <div class="flex justify-between items-center">
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                        <div class="text-center text-[#333333] text-xl">
+                            <h1>December 2025</h1>
+                        </div>
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-[2px] border-[#e6ecf0] h-auto xl:h-[400px] flex md:flex-row flex-col space-x-16">
+                            {{-- image --}}
+                            <div class="w-full lg:w-1/4 bg-gray-600 relative">
+                                <img src="{{ asset('assets/city.jpeg') }}" alt="" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 w-full h-full bg-[#082f42]/70"></div>
+                                <p class="absolute inset-0 flex items-center justify-center text-white font-semibold text-center px-3 bg-black/40">
+                                    12 <br>
+                                    Dec | Fri <br>
+                                    8:00 am - 9:30 am PST <br><br>
+                                    Virtual Event
+                                </p>
+                            </div>
+                            {{-- text --}}
+                            <div class="relative grid w-full lg:w-[60%] py-10 lg:px-0 px-4 gap-y-12">
+                                <div class="flex items-center space-x-2">
+                                    <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">Growth Executive Summits</h2>
+                                    <div class="bg-[#edc01c] h-1 w-1/14"></div>
+                                </div>
+                                <div>
+                                    <h1 class="text-[#141826] text-3xl">Austin Executive Summit</h1>
+                                </div>
+                                <div>
+                                    <p class="text-[#141826] font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. The Vistage Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
+                                </div>
+                                {{-- Button --}}
+                                <div>
+                                    <button class="cursor-pointer text-xl font-medium text-[#003f5e]">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Block Of Event 3--}}
+                <div class="space-y-6">
+                    {{-- Line --}}
+                    <div class="flex justify-between items-center">
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                        <div class="text-center text-[#333333] text-xl">
+                            <h1>December 2025</h1>
+                        </div>
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-[2px] border-[#e6ecf0] h-auto xl:h-[400px] flex md:flex-row flex-col space-x-16">
+                            {{-- image --}}
+                            <div class="w-full lg:w-1/4 bg-gray-600 relative">
+                                <img src="{{ asset('assets/city.jpeg') }}" alt="" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 w-full h-full bg-[#082f42]/70"></div>
+                                <p class="absolute inset-0 flex items-center justify-center text-white font-semibold text-center px-3 bg-black/40">
+                                    12 <br>
+                                    Dec | Fri <br>
+                                    8:00 am - 9:30 am PST <br><br>
+                                    Virtual Event
+                                </p>
+                            </div>
+                            {{-- text --}}
+                            <div class="relative grid w-full lg:w-[60%] py-10 lg:px-0 px-4 gap-y-12">
+                                <div class="flex items-center space-x-2">
+                                    <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">Growth Executive Summits</h2>
+                                    <div class="bg-[#edc01c] h-1 w-1/14"></div>
+                                </div>
+                                <div>
+                                    <h1 class="text-[#141826] text-3xl">Austin Executive Summit</h1>
+                                </div>
+                                <div>
+                                    <p class="text-[#141826] font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. The Vistage Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
+                                </div>
+                                {{-- Button --}}
+                                <div>
+                                    <button class="cursor-pointer text-xl font-medium text-[#003f5e]">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Block Of Event 4--}}
+                <div class="space-y-6">
+                    {{-- Line --}}
+                    <div class="flex justify-between items-center">
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                        <div class="text-center text-[#333333] text-xl">
+                            <h1>December 2025</h1>
+                        </div>
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-[2px] border-[#e6ecf0] h-auto xl:h-[400px] flex md:flex-row flex-col space-x-16">
+                            {{-- image --}}
+                            <div class="w-full lg:w-1/4 bg-gray-600 relative">
+                                <img src="{{ asset('assets/city.jpeg') }}" alt="" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 w-full h-full bg-[#082f42]/70"></div>
+                                <p class="absolute inset-0 flex items-center justify-center text-white font-semibold text-center px-3 bg-black/40">
+                                    12 <br>
+                                    Dec | Fri <br>
+                                    8:00 am - 9:30 am PST <br><br>
+                                    Virtual Event
+                                </p>
+                            </div>
+                            {{-- text --}}
+                            <div class="relative grid w-full lg:w-[60%] py-10 lg:px-0 px-4 gap-y-12">
+                                <div class="flex items-center space-x-2">
+                                    <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">Growth Executive Summits</h2>
+                                    <div class="bg-[#edc01c] h-1 w-1/14"></div>
+                                </div>
+                                <div>
+                                    <h1 class="text-[#141826] text-3xl">Austin Executive Summit</h1>
+                                </div>
+                                <div>
+                                    <p class="text-[#141826] font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. The Vistage Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
+                                </div>
+                                {{-- Button --}}
+                                <div>
+                                    <button class="cursor-pointer text-xl font-medium text-[#003f5e]">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Block Of Event 5--}}
+                <div class="space-y-6">
+                    {{-- Line --}}
+                    <div class="flex justify-between items-center">
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                        <div class="text-center text-[#333333] text-xl">
+                            <h1>December 2025</h1>
+                        </div>
+                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-[2px] border-[#e6ecf0] h-auto xl:h-[400px] flex md:flex-row flex-col space-x-16">
+                            {{-- image --}}
+                            <div class="w-full lg:w-1/4 bg-gray-600 relative">
+                                <img src="{{ asset('assets/city.jpeg') }}" alt="" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 w-full h-full bg-[#082f42]/70"></div>
+                                <p class="absolute inset-0 flex items-center justify-center text-white font-semibold text-center px-3 bg-black/40">
+                                    12 <br>
+                                    Dec | Fri <br>
+                                    8:00 am - 9:30 am PST <br><br>
+                                    Virtual Event
+                                </p>
+                            </div>
+                            {{-- text --}}
+                            <div class="relative grid w-full lg:w-[60%] py-10 lg:px-0 px-4 gap-y-12">
+                                <div class="flex items-center space-x-2">
+                                    <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">Growth Executive Summits</h2>
+                                    <div class="bg-[#edc01c] h-1 w-1/14"></div>
+                                </div>
+                                <div>
+                                    <h1 class="text-[#141826] text-3xl">Austin Executive Summit</h1>
+                                </div>
+                                <div>
+                                    <p class="text-[#141826] font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. The Vistage Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
+                                </div>
+                                {{-- Button --}}
+                                <div>
+                                    <button class="cursor-pointer text-xl font-medium text-[#003f5e]">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\EventsController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
 use App\Http\Controllers\backend\HowItWorksController;
@@ -104,5 +105,8 @@ Route::middleware(['auth'])->group(function(){
 
     // Our Approach
     Route::resource('approach', OurApproachController::class);
+    // Our Program
     Route::resource('program', OurProgramController::class);
+    // Events
+    Route::resource('event', EventsController::class);
 });

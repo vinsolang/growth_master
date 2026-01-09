@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Events;
 use App\Models\FAQs;
 use App\Models\HelpSection;
 use App\Models\HowItWorks;
@@ -36,7 +37,8 @@ class ClientController extends Controller
 
     //  Event
      public function events(){
-        return view('frontend.events.event');
+        $showEvents = Events::all();
+        return view('frontend.events.event', compact('showEvents'));
 
     }
     public function ceoClimbEvents(){
