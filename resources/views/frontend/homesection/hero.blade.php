@@ -166,9 +166,56 @@
 <div class="py-12">
     <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Real Growth Stories From Growth Master Members</h1>
 </div>
+
+<section class="relative w-full">
+    <div class="max-w-7xl mx-auto space-x-6 flex justify-center items-center md:flex-row flex-col">
+        {{-- profile --}}
+        <div class="md:w-[35%]">
+            <img src="{{ asset('assets/profile/1765335800-founder.jpg') }}" alt="" class="w-full h-full object-cover">
+        </div>
+        {{-- text dscription --}}
+        <div class="md:w-[60%]">
+            <div class="py-4">
+                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
+                <p class="text-[#333333] text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
+                <p class="text-[#333333] text-lg leading-tight">Shareholder, Acclime</p>
+            </div>
+            <hr class="bg-[#333333] w-full">
+            <div class="py-4">
+                <h1 class="font-bold uppercase text-[#333333]">short bio:</h1>
+                <p class="text-[#333333] text-lg leading-relaxed">
+                    Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
+                    IPA Australia. Besides being a shareholder of
+                    Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
+                    (CAC) which has more than 1000 menbers, he is also recognized
+                    as an SME coach in shaping family business to next level.
+                </p>
+                <p class="text-[#333333] text-lg leading-relaxed mt-4">
+                    With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
+                    Financial Management, Mr. Rithy has also spent more than a decade
+                    advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
+                    to distill complex financial and operational
+                    challenges into actionable strategies has earned him recognition as a trusted <span
+                        class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
+                </p>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-[#333333]/20">
+                <h1 class="font-bold uppercase text-[#333333]">highlight</h1>
+                <p class="text-[#3333333] text-lg">
+                    One of this most notable achievements includes leading the transformation of a locally owned
+                    business into a globally
+                    integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
+                    vission, strategic acument,
+                    and commitment to excellence
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- Version Dasktop --}}
-<div class="hidden md:flex justify-center items-center py-12">
-    {{-- Card 1 --}}
+{{-- <div class="hidden md:flex justify-center items-center py-12">   
     <div class="group relative h-[900px] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[30%] bg-[#0b2642] shadow-2xl rounded-lg cursor-pointer">
 
         <div class="absolute inset-0 flex flex-col transition-opacity duration-500 group-hover:opacity-0">
@@ -219,9 +266,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 {{-- Version Mobile --}}
-<div class="md:hidden flex flex-col py-12">
+{{-- <div class="md:hidden flex flex-col py-12">
     <div class="bg-[#0b2642] w-full">
         <div class="px-8 py-8">
             <h1 class="font-bold uppercase text-white text-xl">short bio:</h1>
@@ -262,7 +309,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+
+
 {{-- Button Become a member --}}
 <div class="flex justify-center items-center py-6">
     <a href="#member-form"

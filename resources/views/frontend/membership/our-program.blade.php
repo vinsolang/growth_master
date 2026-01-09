@@ -8,10 +8,10 @@
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
                 <!-- Hero Image -->
-                <img src="{{ asset('https://www.vistage.com/wp-content/uploads/2025/09/2025-programs-hero-2048x849.webp') }}" class="w-full h-full object-cover" alt="Hero Image">
+                <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC08045-scaled.jpg" class="w-full h-full object-cover" alt="Hero Image">
                 <div class="absolute inset-0 bg-black/40 w-full h-full"></div>
                 <!-- Overlay Content -->
-                <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-30 text-white">
+                <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-20 text-white bg-black/50">
 
                     <h1
                         class="text-[30px] md:w-3xl text-start md:text-[35px] font-semibold max-w-[940px] leading-tight">

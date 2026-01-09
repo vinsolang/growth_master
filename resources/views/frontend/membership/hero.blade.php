@@ -1,10 +1,10 @@
 @section('title', 'Why Join GrowthMaster for business coaching')
 <div class=" w-full h-screen relative  ">
     <!-- Hero Image -->
-    <img src="{{ asset('assets/membership_hero1.jpg') }}" class="w-full h-full object-cover" alt="Hero Image">
+    <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_5776-1536x1024.jpg" class="w-full h-full object-cover" alt="Hero Image">
 
     <!-- Overlay Content -->
-    <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-30 text-white">
+    <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-30 text-white bg-black/50">
 
         <h1 class="text-[22px] text-start md:text-[35px] lg:text-[45px] font-semibold max-w-[940px] leading-tight">
             Why Join GrowthMaster for business coaching

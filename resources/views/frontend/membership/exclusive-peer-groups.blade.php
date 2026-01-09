@@ -8,7 +8,7 @@
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
                 <!-- Hero Image -->
-                <img src="{{ asset('https://www.vistage.com/wp-content/uploads/2025/08/bg-exclusive-peer-groups-2048x999.webp') }}" class="w-full h-full object-cover" alt="Hero Image">
+                <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3422-1600x800.jpg" class="w-full h-full object-cover" alt="Hero Image">
                 <div class="absolute inset-0 bg-black/40 w-full h-full"></div>
                 <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-30 text-white">

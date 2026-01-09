@@ -329,7 +329,7 @@ namespace App\Models {
      * @property string|null $image
      * @property string $event_type
      * @property string $event_time
-     * @property string $event_date
+     * @property string|null $event_date
      * @property string|null $description
      * @property string|null $category
      * @property string $title
