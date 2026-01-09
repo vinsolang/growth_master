@@ -150,7 +150,7 @@
                     Growth Master powers performance
                 </h1>
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Vistage CEO members grew their annual revenue on average by 4.6% in 2020, while nonmembers with 
+                    Growth Master CEO members grew their annual revenue on average by 4.6% in 2020, while nonmembers with 
                     comparable small and midsize businesses saw revenue decrease by 4.7% according to an analysis 
                     of Dun & Bradstreet data.
                 </p>
@@ -229,7 +229,7 @@
                     Inquire About Membership
                 </h1>
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    With Vistage you’re joining a powerful community of high-caliber 
+                    With Growth Master you’re joining a powerful community of high-caliber 
                     executives who challenge each other, inspire each other and share 
                     their perspectives to help each other make better decisions, 
                     become better leaders and achieve better outcomes.

@@ -84,7 +84,7 @@
                         </h3>
 
                         <p class="text-gray-600 text-base leading-relaxed">
-                           Vistage leaders step up to help one another, applying core beliefs, 
+                           Growth Master leaders step up to help one another, applying core beliefs, 
                            insights and best practices that have made their climbs more successful. 
                            Follow in the footsteps of 45,000+ business leaders worldwide.
                         </p>
@@ -106,7 +106,7 @@
                         </h3>
 
                         <p class="text-gray-600 text-base leading-relaxed">
-                            Vistage CEO members grew their annual revenue on average by
+                            Growth Master CEO members grew their annual revenue on average by
                             <span class="font-semibold text-gray-700">4.6%</span> in 2020,
                             while nonmembers with comparable small and midsize businesses
                             saw revenue decrease by

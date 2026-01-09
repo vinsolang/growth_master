@@ -88,7 +88,7 @@
 
     <p class="mt-5 text-center text-[16px] md:text-[18px] max-w-[700px] mx-auto px-3">
         The difference between good decisions and great decisions often comes down to perspective.
-        Vistage gives you access to the perspectives that matter most.
+        Growth Master gives you access to the perspectives that matter most.
     </p>
 
     <div class="flex justify-center items-center mt-10">

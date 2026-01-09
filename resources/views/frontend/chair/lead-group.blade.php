@@ -16,7 +16,7 @@
                 Become an Executive Coach
             </h1>
             <p class="leading-relaxed text-xl max-w-3xl text-[#ffffff] text-left">
-                Ready to become an executive coach? Join Vistage as a Chair to turn hard-won CEO experience into lasting
+                Ready to become an executive coach? Join Growth Master as a Chair to turn hard-won CEO experience into lasting
                 impact—guide leaders, enjoy schedule freedom and build your legacy.
             </p>
 
@@ -34,12 +34,12 @@
             $cards = [
                 [
                     'image' => 'https://www.vistage.com/wp-content/uploads/2025/07/Now-build-leaders.webp',
-                    'text' => 'Becoming a Vistage Chair represents the pinnacle of executive coaching—a prestigious role reserved for accomplished leaders who understand what it means to carry P&L responsibility, lead through uncertainty and guide others through the challenges you’ve already mastered.',
+                    'text' => 'Becoming a Growth Master Chair represents the pinnacle of executive coaching—a prestigious role reserved for accomplished leaders who understand what it means to carry P&L responsibility, lead through uncertainty and guide others through the challenges you’ve already mastered.',
                     'title' => 'You’ve built companies. Now build leaders.'
                 ],
                 [
                     'image' => 'https://www.vistage.com/wp-content/uploads/2025/07/The-Most-Rewarding-Path-Beyond-The-C-Suite.webp',
-                    'text' => 'Unlike generic coaching certifications that treat everyone the same, the Vistage Chair role is designed specifically for executives who’ve walked the path today’s CEOs are navigating. You’re not learning to coach from textbooks—you’re sharing hard-won experience with business leaders who face the same pressures you once conquered.',
+                    'text' => 'Unlike generic coaching certifications that treat everyone the same, the Growth Master Chair role is designed specifically for executives who’ve walked the path today’s CEOs are navigating. You’re not learning to coach from textbooks—you’re sharing hard-won experience with business leaders who face the same pressures you once conquered.',
                     'title' => 'The Most Rewarding Path Beyond The C-Suite'
                 ],
             ];
@@ -191,7 +191,7 @@
             Your Role as a GrowthMaster Chair
         </h1>
         <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl">
-            As a Vistage Chair, you’ll work directly with CEOs to help them make better decisions and achieve measurable
+            As a Growth Master Chair, you’ll work directly with CEOs to help them make better decisions and achieve measurable
             growth.
             The role combines facilitation and coaching with relationship-building in a structured framework.
         </p>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
-                        With Vistage support and guidance, you’ll strategically build your group by evaluating and selecting
+                        With Growth Master support and guidance, you’ll strategically build your group by evaluating and selecting
                         high-caliber executives who contribute to strong group dynamics and cultural alignment.
                     </p>
                 </div>
@@ -255,7 +255,7 @@
         </h1>
         <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
             While many accomplished executives consider independent coaching,
-            the Vistage platform offers distinct advantages that accelerate success and reduce risk.
+            the Growth Master platform offers distinct advantages that accelerate success and reduce risk.
         </p>
 
         {{-- Card Element --}}
@@ -332,7 +332,7 @@
                     Run Your Practice. On Your Terms.
                 </h1>
                 <p class="text-lg md:text-xl text-white/90 leading-relaxed">
-                    As a Vistage Chair, you’ll create a lasting legacy while building a coaching
+                    As a Growth Master Chair, you’ll create a lasting legacy while building a coaching
                     practice that offers complete schedule flexibility.
                 </p>
             </div>

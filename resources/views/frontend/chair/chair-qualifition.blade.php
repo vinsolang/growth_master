@@ -29,14 +29,14 @@
             </div>
         </div>
         <div class="space-y-10">
-            {{-- Vistage Events Types --}}
+            {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 {{-- Title --}}
                 <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">
                     Join an elite group of executive mentors
                 </h1>
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Vistage Chairs come with strong financial acumen, superb management skills and an innate entrepreneurial
+                    Growth Master Chairs come with strong financial acumen, superb management skills and an innate entrepreneurial
                     spirit.
                     They’ve realized the kind of success to which most only aspire.
                     Now, they have the opportunity to greatly impact the lives of other business leaders in their

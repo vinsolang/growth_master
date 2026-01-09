@@ -134,7 +134,8 @@
                                     <h1 class="text-3xl">CEO Climb Event: The Science of Calm, Confident Leadership</h1>
                                 </div>
                                 <div>
-                                    <p class="font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. The Vistage Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
+                                    <p class="font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. 
+                                        The Growth Master Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
                                 </div>
                                 {{-- Button --}}
                                 <div>
@@ -169,7 +170,9 @@
                                     <h1 class="text-3xl">CEO Climb Event: The Science of Calm, Confident Leadership</h1>
                                 </div>
                                 <div>
-                                    <p class="font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. The Vistage Executive Summit is your day to build on that experience through expert insights, meaningful peer connection, and practical tools that drive growth.</p>
+                                    <p class="font-normal text-[16px]">Every decision, obstacle, and success has shaped the leader you are today. 
+                                        The Growth Master Executive Summit is your day to build on that experience through expert insights, 
+                                        meaningful peer connection, and practical tools that drive growth.</p>
                                 </div>
                                 {{-- Button --}}
                                 <div>
@@ -183,7 +186,7 @@
             </div>
             {{-- CEO Climb Guests --}}
             <div>
-                <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Past Vistage CEO Climb Guests</h1>
+                <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Past Growth Master CEO Climb Guests</h1>
             </div>
             <div class="relative w-full overflow-hidden group">
 

@@ -147,7 +147,7 @@
 
                 <!-- Description -->
                 <p class="text-[16px] md:text-[18px] leading-relaxed max-w-5xl">
-                    Adapted from the proven Vistage model for how world-class leaders learn, each program is purpose-built to 
+                    Adapted from the proven Growth Master model for how world-class leaders learn, each program is purpose-built to 
                     develop employees based on your goals and deliver measurable results through guided peer advisory, 
                     coaching, and curated education.
                 </p>
@@ -206,7 +206,7 @@
                         Strategic peer advisory and professional executive coaching.
                     </div>
                     <div class="p-6 text-gray-900">
-                        Vistage members grow their companies 2.2x faster than non-members.
+                        Growth Master members grow their companies 2.2x faster than non-members.
                     </div>
                 </div>
 
@@ -243,7 +243,7 @@
                     Become a Growth Master Member
                 </h1>
                 <p class="text-[#333333] text-lg md:text-xl text-left max-w-[60%] mx-auto">
-                    With Vistage you’re joining a powerful community of high-caliber executives who challenge each other, 
+                    With Growth Master you’re joining a powerful community of high-caliber executives who challenge each other, 
                     inspire each other and share their perspectives 
                     to help each other make better decisions, become better leaders and achieve better outcomes.
                 </p>

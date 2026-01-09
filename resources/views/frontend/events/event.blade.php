@@ -59,14 +59,14 @@
                             </div>
                             <div class="">
                                 <p class="text-base leading-relaxed text-[#ffffff]">
-                                    Gain insights, make connections, and elevate your leadership at a Vistage Executive
+                                    Gain insights, make connections, and elevate your leadership at a Growth Master Executive
                                     Summit.
                                     These exclusive in-person events bring together members and qualified candidates for
                                     market
-                                    forecasting from economic experts and Vistage Research, targeted learning breakouts with
+                                    forecasting from economic experts and Growth Master Research, targeted learning breakouts with
                                     industry leaders,
                                     and high-impact peer networking. Walk away with actionable strategies,
-                                    fresh perspectives, and a stronger connection to your greater Vistage community.
+                                    fresh perspectives, and a stronger connection to your greater Growth Master community.
                                 </p>
                             </div>
                         </div>

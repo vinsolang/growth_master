@@ -136,7 +136,7 @@
                     Become a Growth Master Member
                 </h1>
                 <p class="text-[#333333] text-lg md:text-xl text-left max-w-[60%] mx-auto">
-                    With Vistage you’re joining a powerful community of high-caliber executives who challenge each other, 
+                    With Growth Master you’re joining a powerful community of high-caliber executives who challenge each other, 
                     inspire each other and share their perspectives 
                     to help each other make better decisions, become better leaders and achieve better outcomes.
                 </p>

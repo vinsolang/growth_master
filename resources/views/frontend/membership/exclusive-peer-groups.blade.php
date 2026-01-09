@@ -390,13 +390,13 @@
             <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
                 What to Evaluate When Choosing an Exclusive Peer Group
             </h1>
-            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
+            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-6xl px-6">
                 Your time is your most valuable asset. Exclusive peer groups protect that investment by surrounding you with leaders 
                 whose experience directly applies to your current challenges and can guide critical decisions.
             </p>
 
-            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
-                Vistage built its entire model around this principle. Every element from member 
+            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-6xl px-6">
+                Growth Master built its entire model around this principle. Every element from member 
                 selection to meeting structure maximizes the strategic value of your time commitment.
             </p>
 
@@ -460,7 +460,7 @@
                     Peer groups with industry and experience variety 
                     bring fresh perspectives and prevent stale conversations or echo chambers.
                     <br>
-                    Vistage groups include non-competing companies across diverse industries, 
+                    Growth Master groups include non-competing companies across diverse industries, 
                     with global network access when specialized expertise is needed.
                 </p>
             </div>
@@ -473,7 +473,7 @@
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
                     You need evidence of sustained outcomes and member satisfaction over time, beyond testimonials.
                     <br>
-                    Vistage has a 65-year history, with members staying in business 4x longer than average, plus documented achievement metrics.
+                    Growth master has a 65-year history, with members staying in business 4x longer than average, plus documented achievement metrics.
                 </p>
             </div>
         </div>
@@ -503,13 +503,13 @@
             </h2>
 
             <!-- Intro Text -->
-            <p class="text-center max-w-4xl mx-auto text-lg leading-relaxed text-gray-200 mb-6">
+            <p class="text-left max-w-6xl mx-auto text-lg leading-relaxed text-gray-200 mb-6">
             High-performing CEOs choose Growth Master because they’ve reached a point where traditional support systems
             no longer serve their needs. They recognize they can’t navigate every challenge alone and feel
             overwhelmed by the isolation of leadership.
             </p>
 
-            <p class="text-center max-w-4xl mx-auto text-lg leading-relaxed text-gray-200 mb-16">
+            <p class="text-left max-w-6xl mx-auto text-lg leading-relaxed text-gray-200 mb-16">
             Growth Master provides the elite peer environment where serious leaders tackle their biggest challenges together.
             You might recognize these signs if you’re ready for this level of leadership support:
             </p>
