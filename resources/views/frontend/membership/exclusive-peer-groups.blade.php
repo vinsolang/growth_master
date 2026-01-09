@@ -493,6 +493,143 @@
                 </span>
             </a>
         </div>
+        {{-- Why High-Performing CEOs Choose GrowthMaster --}}
+        <section class="bg-[#0b3f5c] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-semibold text-center mb-6">
+            Why High-Performing CEOs Choose Growth Master
+            </h2>
+
+            <!-- Intro Text -->
+            <p class="text-center max-w-4xl mx-auto text-lg leading-relaxed text-gray-200 mb-6">
+            High-performing CEOs choose Growth Master because they’ve reached a point where traditional support systems
+            no longer serve their needs. They recognize they can’t navigate every challenge alone and feel
+            overwhelmed by the isolation of leadership.
+            </p>
+
+            <p class="text-center max-w-4xl mx-auto text-lg leading-relaxed text-gray-200 mb-16">
+            Growth Master provides the elite peer environment where serious leaders tackle their biggest challenges together.
+            You might recognize these signs if you’re ready for this level of leadership support:
+            </p>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+
+                <!-- Item 1 -->
+                <div class="gap-6 relative left-8">
+                    <div class="flex justify-start items-center space-x-2">
+                        <div class="w-12 h-12">
+                            <img src="{{ asset('assets/img-icon/1.png') }}" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-yellow-400 font-semibold mb-2">
+                            Objective Insight for Critical Decisions
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            You’re second-guessing major decisions because your team won’t challenge your ideas or those advising
+                            you either cannot do so objectively or don’t understand the full scope of what’s at stake for your
+                            employees, customers and personal financial security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gap-6 relative left-8">
+                    <div class="flex justify-start items-center space-x-2">
+                        <div class="w-12 h-12">
+                            <img src="{{ asset('assets/img-icon/2.png') }}" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-yellow-400 font-semibold mb-2">
+                            Confidence in Major Transitions
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            You’re facing a significant strategic transition like selling the business, bringing in private
+                            equity or expanding internationally, and need perspectives from CEOs who’ve navigated these decisions
+                            successfully.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="gap-6 relative left-8">
+                    <div class="flex justify-start items-center space-x-2">
+                        <div class="w-12 h-12">
+                            <img src="{{ asset('assets/img-icon/3.png') }}" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-yellow-400 font-semibold mb-2">
+                            Stronger Voices at the Table
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            You’ve outgrown your current board or advisory relationships and need input from operators who are
+                            actively managing similar challenges rather than offering theoretical guidance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gap-6 relative left-8">
+                    <div class="flex justify-start items-center space-x-2">
+                        <div class="w-12 h-12">
+                            <img src="{{ asset('assets/img-icon/4.png') }}" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-yellow-400 font-semibold mb-2">
+                           Guidance from Seasoned Leaders
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                           You’re frustrated with facilitators who’ve never carried P&L responsibility and lack development
+                            in proven methodologies that consistently drive results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gap-6 relative left-8">
+                    <div class="flex justify-start items-center space-x-2">
+                        <div class="w-12 h-12">
+                            <img src="{{ asset('assets/img-icon/5.png') }}" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-yellow-400 font-semibold mb-2">
+                            Clarity Through Proven Frameworks
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                           You want structured frameworks for processing complex issues rather than open-ended discussions
+                            that fail to reach actionable conclusions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gap-6 relative left-8">
+                    <div class="flex justify-start items-center space-x-2">
+                        <div class="w-12 h-12">
+                            <img src="{{ asset('assets/img-icon/6.png') }}" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-yellow-400 font-semibold mb-2">
+                             Accountability that Drives Results
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            You’re tired of setting goals and then drifting because you need follow-through and accountability
+                            systems that actually drive execution on your most critical initiatives.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+
         <div>
             @component('components.footer')
 
