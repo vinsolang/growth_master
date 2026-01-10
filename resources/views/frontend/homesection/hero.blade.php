@@ -175,13 +175,13 @@
         </div>
         {{-- text dscription --}}
         <div class="md:w-[60%]">
-            <div class="py-4">
+            <div class="py-4 lg:px-0 px-8">
                 <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
                 <p class="text-[#333333] text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
                 <p class="text-[#333333] text-lg leading-tight">Shareholder, Acclime</p>
             </div>
-            <hr class="bg-[#333333] w-full">
-            <div class="py-4">
+            <hr class="bg-[#333333] w-full hidden lg:block">
+            <div class="py-4 lg:px-0 px-8">
                 <h1 class="font-bold uppercase text-[#333333]">short bio:</h1>
                 <p class="text-[#333333] text-lg leading-relaxed">
                     Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
@@ -200,7 +200,7 @@
                 </p>
             </div>
 
-            <div class="mt-8 pt-4 border-t border-[#333333]/20">
+            <div class="mt-8 pt-4 border-t border-[#333333]/20 lg:px-0 px-8">
                 <h1 class="font-bold uppercase text-[#333333]">highlight</h1>
                 <p class="text-[#3333333] text-lg">
                     One of this most notable achievements includes leading the transformation of a locally owned
