@@ -311,6 +311,22 @@
               </li>
             </ul>
           </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-check-shield"></i>
+              <div data-i18n="Layouts">Chair Contact</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('chair.contact.index') }}" class="menu-link">
+                  <div data-i18n="Without menu">View</div>
+                </a>
+              </li>
+            </ul>
+          </li>
           
           <!-- Profile -->
           <li class="menu-item">

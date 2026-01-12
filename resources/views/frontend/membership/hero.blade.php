@@ -25,7 +25,7 @@
 
         </p>
 
-        <a href="{{ route('form.input') }}">
+        <a href="{{ route('home') }}#member-form">
             <button class="mt-6 py-5 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
             GET IN TOUCH
         </button>

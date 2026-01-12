@@ -5,7 +5,7 @@
         @component('components.navbar')
         @endcomponent
 
-        <div class="relative w-full h-[40vh] md:h-[100vh] top-40">
+        <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
             <img src="{{ asset('assets/event.png') }}" class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
@@ -39,7 +39,7 @@
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 {{-- Title --}}
-                <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Growth Master Events Types</h1>
+                {{-- <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Growth Master Events Types</h1>
                 <div class="flex justify-center items-center">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-1">
 
@@ -148,29 +148,19 @@
                         </div>
 
                     </div>
-                </div>
-            </div>
-
-            {{-- Regions --}}
-            <div class="space-y-6">
-                {{-- Title --}}
-                <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Regions</h1>
-                {{-- image --}}
-                <div class="w-[60%] h-[450px] bg-gray-300 mx-auto">
-                    <img src="https://www.vistage.com/wp-content/uploads/2021/01/Map-Infographic-events-hor.jpg" alt="" class="w-full h-full object-cover">
-                </div>
+                </div> --}}
             </div>
 
             {{-- Event Calendar --}}
-            <div class="space-y-6">
-                {{-- Title --}}
+            {{-- <div class="space-y-6">
+
                 <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Event Calendar</h1>
-                {{-- Seclect for filter Event and Regions --}}
+                
                 <div class="flex flex-col md:flex-row justify-center items-center">
-                    {{-- Fillter Events --}}
+                    
                     <div class="flex space-x-4 p-4 bg-white">
                         <div class="relative group">
-                            <!-- Button -->
+                            
                             <div
                                 class="border border-[#003f5e] p-5 px-4 rounded-md cursor-pointer flex items-center justify-between md:w-[220px]">
                                 <span class="text-[#003f5e] font-semibold text-sm">
@@ -183,7 +173,7 @@
                                 </svg>
                             </div>
 
-                            <!-- Dropdown Menu -->
+                           
                             <div
                                 class="absolute left-0 mt-2 z-10 bg-white border border-gray-300 shadow-md w-full opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200">
                                 <ul class="text-sm text-[#003f5e]">
@@ -205,10 +195,10 @@
 
                         </div>
                     </div>
-                    {{-- Fliiter Region --}}
+                    
                     <div class="flex space-x-4 p-4 bg-white">
                         <div class="relative group">
-                            <!-- Button -->
+                            
                             <div
                                 class="border border-[#003f5e] p-5 px-4 rounded-md cursor-pointer flex items-center justify-between min-w-[220px]">
                                 <span class="text-[#003f5e] font-semibold text-sm">
@@ -221,7 +211,7 @@
                                 </svg>
                             </div>
 
-                            <!-- Dropdown Menu -->
+                            
                             <div
                                 class="absolute left-0 mt-2 z-10 bg-white border border-gray-300 shadow-md w-full opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200">
                                 <ul class="text-sm text-[#003f5e]">
@@ -245,17 +235,19 @@
 
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
-            {{-- Day --}}
+            {{-- Section Event  --}}
             <div class="text-[#003f5e] font-semibold text-2xl px-12">
-                <button class="cursor-pointer flex gap-8">
+                {{-- <button class="cursor-pointer flex gap-8">
                     <h1 class="text-4xl font-normal">< ></h1>
                     <h1>Today</h1>
-                </button>
-                {{-- Block Of Event all--}}
-               @foreach ($showEvents as $items)
-                    <div class="space-y-6">
+                </button> --}}
+            <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl py-6">Growth Master Events</h1>
+                
+              @foreach ($showEvents as $items)
+                <div class="space-y-6">
+
                     {{-- Line --}}
                     <div class="flex justify-between items-center">
                         <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
@@ -264,46 +256,51 @@
                         </div>
                         <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
                     </div>
-                    <div class="space-y-4">
-                        <div class="border-2 border-[#e6ecf0] h-auto xl:h-[400px] flex md:flex-row flex-col space-x-16">
-                            {{-- image --}}
-                            <div class="w-full lg:w-1/4 bg-gray-600 relative">
-                                <img src="{{ asset($items->image) }}" alt="" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 w-full h-full bg-[#082f42]/70"></div>
-                                <p class="absolute inset-0 flex items-center justify-center text-white font-semibold text-center px-3 bg-black/40">
-                                    {{ $items->created_at->format('d') }} <br>
-                                    {{ $items->created_at->format('M') }} | {{ $items->created_at->format('D') }}<br>
-                                    {{ $items->event_time}} <br><br>
-                                    {{ $items->event_type}}
-                                </p>
-                            </div>
-                            {{-- text --}}
-                            <div class="relative grid w-full lg:w-[60%] py-10 lg:px-0 px-4 gap-y-12">
-                                <div class="flex items-center space-x-2">
-                                    <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">{{ $items->category}}</h2>
-                                    <div class="bg-[#edc01c] h-1 w-1/14"></div>
-                                </div>
-                                <div>
-                                    <h1 class="text-[#141826] text-3xl">{{ $items->title}}</h1>
-                                </div>
-                                <div>
-                                    <p class="text-[#141826] font-normal text-lg">
-                                       {{ $items->description}} 
-                                    </p>
-                                </div>
-                                {{-- Button --}}
-                                <div>
-                                    <button class="cursor-pointer text-xl font-medium text-[#003f5e]">Read More</button>
-                                </div>
-                            </div>
+
+                    {{-- Card --}}
+                    <div class="border-2 border-[#e6ecf0] h-auto xl:h-[400px] flex flex-col md:flex-row
+                        {{ $loop->index % 2 === 1 ? 'md:flex-row-reverse' : '' }}">
+
+                        {{-- Image --}}
+                        <div class="w-full md:w-1/4 bg-gray-600 relative">
+                            <img src="{{ asset($items->image) }}" alt=""
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-[#082f42]/70"></div>
+
+                            {{-- <p class="absolute inset-0 flex flex-col items-center justify-center
+                                    text-white font-semibold text-center px-3 bg-black/40">
+                                {{ $items->created_at->format('d') }} <br>
+                                {{ $items->created_at->format('M') }} | {{ $items->created_at->format('D') }}<br>
+                                {{ $items->event_time }} <br><br>
+                                {{ $items->event_type }}
+                            </p> --}}
                         </div>
+
+                        {{-- Text --}}
+                        <div class="grid w-full md:w-[60%] py-10 px-4 md:px-10 gap-y-8">
+                            <div class="flex items-center space-x-2">
+                                <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">
+                                    {{ $items->category }}
+                                </h2>
+                                <div class="bg-[#edc01c] h-1 w-6"></div>
+                            </div>
+
+                            <h1 class="text-[#141826] text-3xl font-semibold">
+                                {{ $items->title }}
+                            </h1>
+
+                            <p class="text-[#141826] font-normal text-lg leading-relaxed">
+                                {{ $items->description }}
+                            </p>
+                        </div>
+
                     </div>
                 </div>
-               @endforeach
-              
+                @endforeach
+
             </div>
             {{-- Button Back and Next --}}
-            <div class="flex justify-between px-12 text-[#003f5e] text-[16px] md:text-xl font-semibold">
+            {{-- <div class="flex justify-between px-12 text-[#003f5e] text-[16px] md:text-xl font-semibold">
                 <a href="">
                     <button>Previous Events</button>
                 </a>
@@ -313,7 +310,7 @@
                 <a href="">
                     <button>Next Events</button>
                 </a>
-            </div>
+            </div> --}}
             @component('components.footer')
             @endcomponent
         </div>

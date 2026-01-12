@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
@@ -33,6 +34,25 @@ Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
 Route::get('membership/exclusive-peer-groups', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
 
+// Route::post('/chair-contact', [ChairContactController::class, 'store'])
+//     ->name('chair.contact.store');
+
+// Store
+Route::post('/chair-contact', [ChairContactController::class, 'store'])
+    ->name('chair.contact.store');
+
+// View all (index)
+Route::get('/chair-contact', [ChairContactController::class, 'index'])
+    ->name('chair.contact.index');
+
+// View single (detail)
+Route::get('/chair-contact/{id}', [ChairContactController::class, 'show'])
+    ->name('chair.contact.show');
+
+// Delete
+Route::delete('/chair-contact/{id}', [ChairContactController::class, 'destroy'])
+    ->name('chair.contact.destroy');
+    
 
 // Event
 Route::get('events', [ClientController::class, 'events'])->name('events');

@@ -32,7 +32,7 @@
                 </div>
             </div>
         </section>
-        <div class="flex flex-col justify-center items-center bg-[#003f5e] w-full md:h-[300px] h-auto text-[#ffffff] text-4xl font-2xl text-center space-y-8">
+        <div class="flex flex-col justify-center items-center bg-[#68875d] w-full md:h-[300px] h-auto text-[#ffffff] text-4xl font-2xl text-center space-y-8">
             <h1 class="text-[22px] md:text-3xl px-8 py-4">The Best Exclusive Peer Groups for CEOs of $5M+ Companies</h1>
             <p class="text-[18px] md:text-xl font-normal max-w-5xl mx-auto text-left px-4 py-4">
                 Conventional networking events and business groups do not address the issues many CEOs face. 
@@ -67,7 +67,7 @@
                 <table class="w-full border-collapse">
                     <!-- Header -->
                     <thead>
-                        <tr class="bg-[#003f5e] text-[#f5c400] text-center">
+                        <tr class="bg-[#68875d] text-[#ffffff] text-center">
                             <th class="px-6 py-6 text-[20px] font-semibold border border-white">
                                 What Matters to You
                             </th>
@@ -191,7 +191,7 @@
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('home') }}#member-form"
                 class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                text-[#003F5F] bg-white rounded 
+                text-[#000000] bg-white rounded 
                 transition-all duration-300 ease-in-out
                 hover:bg-[#68875d] hover:text-white font-semibold">
 
@@ -305,7 +305,7 @@
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('home') }}#member-form"
                 class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                text-[#003F5F] bg-white rounded 
+                text-[#000000] bg-white rounded 
                 transition-all duration-300 ease-in-out
                 hover:bg-[#68875d] hover:text-white font-semibold">
 
@@ -321,10 +321,10 @@
         <div class="max-w-7xl mx-auto bg-amber-200 text-left">
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
-                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Strategic Decision Velocity</h1>
+                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Strategic Decision Velocity</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                        In our guided peer-to-peer setting, solve challenges faster 
                        using proven frameworks that move from problem identification 
@@ -336,10 +336,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
-                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Risk Assessment & Blind Spot Identification</h1>
+                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Risk Assessment & Blind Spot Identification</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         Peers spot potential pitfalls and opportunities you might miss when you’re too close to the problem, 
                         drawing from their own experience navigating situations like yours.
@@ -348,10 +348,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
-                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Leadership Team Development</h1>
+                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Leadership Team Development</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         Valuable insights from peers can help you build a high-performing executive team with the right roles to 
                         help you achieve your vision and navigate leadership transitions more effectively.
@@ -360,10 +360,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
-                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Market Expansion & Growth Challenges</h1>
+                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Market Expansion & Growth Challenges</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         When you’re considering new markets or scaling operations, fellow CEOs can share obstacles they 
                         encountered and the specific moves that actually worked versus what looked good on paper.
@@ -372,10 +372,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#00233d] w-[25%] h-40">
-                    <h1 class="text-[#edc01c] text-xl md:text-3xl md:w-[90%]">Crisis Navigation & Pivoting</h1>
+                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Crisis Navigation & Pivoting</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#003f5e] w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                        Crisis moments demand immediate action when the usual playbook doesn’t apply. 
                        CEOs who’ve weathered major disruptions understand what it 
@@ -404,7 +404,7 @@
         <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">
             {{-- Card 1 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-center">
+                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-center">
                     Group Composition Standards
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
@@ -416,7 +416,7 @@
 
             {{-- Card 2 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
                     Professional Facilitation
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
@@ -429,7 +429,7 @@
             </div>
             {{-- card 3 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
                     Accountability Systems
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
@@ -440,7 +440,7 @@
             </div>
             <!-- Card 4 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
                     Time Investment Design
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
@@ -453,7 +453,7 @@
             </div>
             {{-- Card 5 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
                     Member Diversity
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
@@ -467,7 +467,7 @@
 
             {{-- Card 6 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#003f5e] text-xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-[#000000] text-xl xl:text-xl font-bold mb-4 text-left">
                     Proven Track Record
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
@@ -482,7 +482,7 @@
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('home') }}#member-form"
                 class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                text-[#003F5F] bg-white rounded 
+                text-[#000000] bg-white rounded 
                 transition-all duration-300 ease-in-out
                 hover:bg-[#68875d] hover:text-white font-semibold">
 
@@ -494,7 +494,7 @@
             </a>
         </div>
         {{-- Why High-Performing CEOs Choose GrowthMaster --}}
-        <section class="bg-[#0b3f5c] text-white py-20">
+        <section class="bg-[#68875d] text-white py-20">
         <div class="max-w-7xl mx-auto px-6">
 
             <!-- Heading -->
@@ -521,9 +521,9 @@
                 <div class="gap-6 relative left-8">
                     <div class="flex justify-start items-center space-x-2">
                         <div class="w-12 h-12">
-                            <img src="{{ asset('assets/img-icon/1.png') }}" alt="" class="w-full h-full object-cover">
+                            {{-- <img src="{{ asset('assets/img-icon/1.png') }}" alt="" class="w-full h-full object-cover"> --}}
                         </div>
-                        <h3 class="text-yellow-400 font-semibold mb-2">
+                        <h3 class="text-[#ffffff] font-semibold mb-2">
                             Objective Insight for Critical Decisions
                         </h3>
                     </div>
@@ -540,9 +540,9 @@
                 <div class="gap-6 relative left-8">
                     <div class="flex justify-start items-center space-x-2">
                         <div class="w-12 h-12">
-                            <img src="{{ asset('assets/img-icon/2.png') }}" alt="" class="w-full h-full object-cover">
+                            {{-- <img src="{{ asset('assets/img-icon/2.png') }}" alt="" class="w-full h-full object-cover"> --}}
                         </div>
-                        <h3 class="text-yellow-400 font-semibold mb-2">
+                        <h3 class="text-[#ffffff] font-semibold mb-2">
                             Confidence in Major Transitions
                         </h3>
                     </div>
@@ -558,9 +558,9 @@
                 <div class="gap-6 relative left-8">
                     <div class="flex justify-start items-center space-x-2">
                         <div class="w-12 h-12">
-                            <img src="{{ asset('assets/img-icon/3.png') }}" alt="" class="w-full h-full object-cover">
+                            {{-- <img src="{{ asset('assets/img-icon/3.png') }}" alt="" class="w-full h-full object-cover"> --}}
                         </div>
-                        <h3 class="text-yellow-400 font-semibold mb-2">
+                        <h3 class="text-[#ffffff] font-semibold mb-2">
                             Stronger Voices at the Table
                         </h3>
                     </div>
@@ -576,9 +576,9 @@
                 <div class="gap-6 relative left-8">
                     <div class="flex justify-start items-center space-x-2">
                         <div class="w-12 h-12">
-                            <img src="{{ asset('assets/img-icon/4.png') }}" alt="" class="w-full h-full object-cover">
+                            {{-- <img src="{{ asset('assets/img-icon/4.png') }}" alt="" class="w-full h-full object-cover"> --}}
                         </div>
-                        <h3 class="text-yellow-400 font-semibold mb-2">
+                        <h3 class="text-[#ffffff] font-semibold mb-2">
                            Guidance from Seasoned Leaders
                         </h3>
                     </div>
@@ -594,9 +594,9 @@
                 <div class="gap-6 relative left-8">
                     <div class="flex justify-start items-center space-x-2">
                         <div class="w-12 h-12">
-                            <img src="{{ asset('assets/img-icon/5.png') }}" alt="" class="w-full h-full object-cover">
+                            {{-- <img src="{{ asset('assets/img-icon/5.png') }}" alt="" class="w-full h-full object-cover"> --}}
                         </div>
-                        <h3 class="text-yellow-400 font-semibold mb-2">
+                        <h3 class="text-[#ffffff] font-semibold mb-2">
                             Clarity Through Proven Frameworks
                         </h3>
                     </div>
@@ -612,9 +612,9 @@
                 <div class="gap-6 relative left-8">
                     <div class="flex justify-start items-center space-x-2">
                         <div class="w-12 h-12">
-                            <img src="{{ asset('assets/img-icon/6.png') }}" alt="" class="w-full h-full object-cover">
+                            {{-- <img src="{{ asset('assets/img-icon/6.png') }}" alt="" class="w-full h-full object-cover"> --}}
                         </div>
-                        <h3 class="text-yellow-400 font-semibold mb-2">
+                        <h3 class="text-[#ffffff] font-semibold mb-2">
                              Accountability that Drives Results
                         </h3>
                     </div>

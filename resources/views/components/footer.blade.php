@@ -1,9 +1,9 @@
 <section class="relative w-full">
-    <div class="w-full h-auto bg-[#003F5F] flex flex-col px-4 py-8 xl:px-45 xl:py-30 md:px-6 md:py-24 space-y-12">
+    <div class="w-full h-auto bg-[#68875d] flex flex-col px-4 py-8 xl:px-45 xl:py-30 md:px-6 md:py-24 space-y-12">
         <div class="space-y-8">
             {{-- logo --}}
             <div>
-                <img src="{{ asset('assets/logo.png') }}" alt="" class="w-24 h-24 rounded-full">
+                <img src="{{ asset('assets/logo-1.png') }}" alt="" class="w-24 h-24">
             </div>
             {{-- menu of footer --}}
             <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-y-6 text-[#ffffff] font-meduim">

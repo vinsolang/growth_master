@@ -67,11 +67,11 @@
                     Solo Coaching</h1>
                 <div class="flex flex-col md:flex-col lg:flex-row justify-center items-center gap-8">
                     {{-- Card 1 --}}
-                    <div class="bg-[#003F5F] w-[380px] h-[600px] space-y-4 py-10">
+                    <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
                         <div class="flex justify-center items-center">
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-91.png" alt="">
                         </div>
-                        <div class="text-center text-[#edc01c] text-[22px] px-8 py-2">
+                        <div class="text-center text-[#ffffff] text-[22px] px-8 py-2">
                             <h2>Real-world guidance for high-stakes decisions</h2>
                         </div>
                         <div class="text-[#ffffff] text-[17px] text-left px-10 py-8">
@@ -81,11 +81,11 @@
                         </div>
                     </div>
                     {{-- Card 2 --}}
-                    <div class="bg-[#003F5F] w-[380px] h-[600px] space-y-4 py-10">
+                    <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
                         <div class="flex justify-center items-center">
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-84.png" alt="">
                         </div>
-                        <div class="text-center text-[#edc01c] text-[22px] px-8 py-2">
+                        <div class="text-center text-[#ffffff] text-[22px] px-8 py-2">
                             <h2>Designed for your growth stage</h2>
                         </div>
                         <div class="text-[#ffffff] text-[17px] text-left px-10 py-8">
@@ -96,11 +96,11 @@
                         </div>
                     </div>
                     {{-- Card 3 --}}
-                    <div class="bg-[#003F5F] w-[380px] h-[600px] space-y-4 py-10">
+                    <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
                         <div class="flex justify-center items-center">
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-89.png" alt="">
                         </div>
-                        <div class="text-center text-[#edc01c] text-[22px] px-8 py-2">
+                        <div class="text-center text-[#ffffff] text-[22px] px-8 py-2">
                             <h2>Highly selective membership at every stage</h2>
                         </div>
                         <div class="text-[#ffffff] text-[17px] text-left px-10 py-8">

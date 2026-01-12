@@ -53,7 +53,7 @@
 
                     <!-- OVERLAY -->
                     <div class="md:absolute inset-0 flex justify-center items-center px-4">
-                        <div class="bg-[#003f5e]/95 w-full xl:w-[85%] xl:h-[85%] h-auto 
+                        <div class="bg-[#68875d]/95 w-full xl:w-[85%] xl:h-[85%] h-auto 
                            px-6 md:px-12 lg:px-20 rounded-lg py-12">
 
                             <!-- Title -->

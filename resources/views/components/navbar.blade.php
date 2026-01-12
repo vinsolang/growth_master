@@ -10,11 +10,11 @@
 
             <!-- Logo -->
             <a href="{{ route('home') }}">
-                <img src="{{ asset('assets/logo.png') }}" alt="logo" class="w-[100px] h-[70px] object-cover">
+                <img src="{{ asset('assets/logo-1.png') }}" alt="logo" class="w-[70px] h-[70px] object-cover">
             </a>
 
             <!-- Desktop Menu -->
-            <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px]" id="navLinks">
+            <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px] md:px-12" id="navLinks">
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="{{URL('/membership')}}" class="flex items-center">
                         Membership
@@ -22,7 +22,7 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
+                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
                             <a href="{{URL('/membership')}}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Why Join
                                 GrowthMaster</a>
@@ -42,10 +42,8 @@
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="{{ route('events') }}" class="flex items-center">
                         Events
-                        <i
-                            class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
-                    <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
+                    {{-- <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
                             <a href="{{ route('events') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster Event</a>
@@ -56,7 +54,7 @@
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster
                                 webinars</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </li>
                 {{-- <li class="hover:text-[#EDC11C] cursor-pointer">Resources</li> --}}
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
@@ -66,7 +64,7 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
+                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
                             <a href="{{ route('what.is.growth') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">What is Growth Master?</a>
                             <a href="{{ route('Laws.of.eadership') }}"
@@ -84,13 +82,13 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
+                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
                             <a href="{{ route('chair.growth') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Lead a Group</a>
                             <a href="{{ route('ceo.coa.qual') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Chair Qualifications</a>
-                            <a href="{{ route('chair.profile') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Meet Our Growth Master Chairs</a>
+                            {{-- <a href="{{ route('chair.profile') }}"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Meet Our Growth Master Chairs</a> --}}
                             <a href="{{ route('chair.application') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Apply to be a Growth Master Chair</a>
                         </div>
@@ -101,13 +99,23 @@
 
         <!-- Right Section -->
         <div class="flex items-center gap-5">
-            <a href="{{ route('home') }}#member-form">
-                <button
-                class="py-4 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white hidden md:block rounded font-medium">
-                Become a Member
-            </button>
-
-            </a>
+            @if (Request::routeIs('chair.*','ceo.coa.qual'))
+                {{-- When user is on chair pages --}}
+                <a href="#chair-form">
+                    <button
+                        class="py-4 px-6 bg-[#68875d] text-white hover:bg-[#003F5F] hidden md:block rounded font-medium">
+                        Become a Chair
+                    </button>
+                </a>
+            @else
+                {{-- Default (member) --}}
+                <a href="{{ route('home') }}#member-form">
+                    <button
+                        class="py-4 px-6 bg-[#68875d] text-white hover:bg-[#003F5F] hidden md:block rounded font-medium">
+                        Become a Member
+                    </button>
+                </a>
+            @endif
             <div class="hidden flex items-center gap-2 cursor-pointer">
                 <i id="searchIcon" class="fa-solid fa-magnifying-glass text-xl text-white"></i>
                 <span id="searchText" class="hidden md:block text-white">Search</span>
@@ -136,26 +144,26 @@
                 <li><a href="{{URL('/membership')}}" class="block hover:text-[#EDC11C]">Why Join GrowthMaster</a></li>
                 <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">Our Approach</a></li>
                 <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">Our Programs</a></li>
-                <li><a href="{{ route('review') }}" class="block hover:text-[#EDC11C]">GrowthMaster Reviews</a></li>
-                <li><a href="{{ route('form.input')}}" class="block hover:text-[#EDC11C]">Become a Member</a></li>
+                {{-- <li><a href="{{ route('review') }}" class="block hover:text-[#EDC11C]">GrowthMaster Reviews</a></li> --}}
+                <li><a href="{{ route('home')}}#member-form" class="block hover:text-[#EDC11C]">Become a Member</a></li>
             </ul>
         </li>
 
         <!-- Events -->
         <li>
-            <button onclick="toggleMobileDropdown('mobileEvents')"
+            <a href="{{ route('events') }}"
                 class="flex justify-between items-center w-full font-semibold">
                 Events
-                <i class="fas fa-chevron-down transition-transform duration-300"></i>
-            </button>
+                
+            </a>
 
-            <ul id="mobileEvents" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="{{ route('events') }}" class="block hover:text-[#EDC11C]">GrowthMaster Event</a></li>
+            {{-- <ul id="mobileEvents" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
+                <li><a  class="block hover:text-[#EDC11C]">GrowthMaster Event</a></li>
                 <li><a href="{{ route('ceo.climb.events') }}" class="block hover:text-[#EDC11C]">CEO Climb Event</a>
                 </li>
                 <li><a href="{{ route('research.center.webinar') }}" class="block hover:text-[#EDC11C]">Webinars</a>
                 </li>
-            </ul>
+            </ul> --}}
         </li>
 
         <!-- Normal Links -->
@@ -185,8 +193,8 @@
             <ul id="mobileChair" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="{{ route('chair.growth') }}" class="block hover:text-[#EDC11C]">Lead a Group</a></li>
                 <li><a href="{{ route('ceo.coa.qual') }}" class="block hover:text-[#EDC11C]">Chair Qualifications</a></li>
-                <li><a href="" class="block hover:text-[#EDC11C]">Meet Our Growth Master Chairs</a></li>
-                <li><a href="" class="block hover:text-[#EDC11C]">Apply to be a Growth Master Chair</a></li>
+                {{-- <li><a href="" class="block hover:text-[#EDC11C]">Meet Our Growth Master Chairs</a></li> --}}
+                <li><a href="{{ route('chair.application') }}" class="block hover:text-[#EDC11C]">Apply to be a Growth Master Chair</a></li>
             </ul>
         </li>
     </ul>

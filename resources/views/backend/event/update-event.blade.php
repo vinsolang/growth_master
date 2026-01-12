@@ -61,12 +61,12 @@
                                     <textarea name="description" class="form-control" id="" >{{ $event->description }}</textarea>
                                 </div>
                 
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-12 d-none">
                                     <label for="formFile" class="form-label text-[#0F4634]">Event Time</label>
                                     <input type="text" name="event_time" class="form-control" value="{{ $event->event_time }}">
                                 </div>
 
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-12 d-none">
                                     <label for="formFile" class="form-label text-[#0F4634]">Event Type</label>
                                      <input class="form-control" type="text" name="event_type" value="{{ $event->event_type }}"/>
                                 </div>

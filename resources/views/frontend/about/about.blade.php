@@ -50,12 +50,12 @@
                 </p>
             </div>
             {{-- Logo --}}
-            <div class="w-64 h-64 mx-auto">
+            {{-- <div class="w-64 h-64 mx-auto">
                 <img src="{{ asset('assets/logo.png') }}" alt="LOGO" class="object-cover">
-            </div>
+            </div> --}}
 
             {{-- @@@@  --}}
-            <div class="bg-[#124d6b] gap-10 md:gap-10 lg:gap-20 xl:gap-20 p-12">
+            {{-- <div class="bg-[#124d6b] gap-10 md:gap-10 lg:gap-20 xl:gap-20 p-12">
                 <div class="text-white py-12 px-4 sm:px-6 lg:px-8">
                     <div class="max-w-7xl mx-auto">
                         <div class="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-80 md:gap-20">
@@ -93,7 +93,14 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+
+            {{-- Vision, Mission, Care value --}}
+            <div class="py-12">
+                @include('frontend.include.vis-mis-core')
             </div>
+
+
             <div class="py-2">
                 <h1 class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     The Growth Master story: 65 years of cultivating success
@@ -205,22 +212,7 @@
                     @endforeach
                 </div>
             </div>
-
-            {{-- Our Members at a Glance --}}
-            <div class="space-y-6">
-                <h1 class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
-                     Our Members at a Glance
-                </h1>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Growth Master members represent nearly every industry across a range of small to large businesses. 
-                    This diversity is key to furnishing advisory boards of members from non-competing industries, 
-                    and providing you with relevant expertise, regardless of your industry or company size.
-                </p>
-                {{-- image member --}}
-                <div class="w-[90%] md:w-[70%] mx-auto">
-                    <img src="https://www.vistage.com/wp-content/uploads/2019/09/Our-members-at-a-glance.jpg" alt="" class="w-full object-cover">
-                </div>
-            </div>
+        
 
             {{-- Inquire About Membership --}}
             <div class="space-y-6">
@@ -238,143 +230,7 @@
                 </p>
                 {{-- Form Contact information --}}
                 <div>
-                    <form action="">
-                        <div class="max-w-7xl mx-auto p-6">
-                            <!-- ================= Contact Information ================= -->
-                            <h2 class="text-xl font-semibold mb-2">Contact Information</h2>
-                            <hr class="mb-6 w-1/2 border-gray-300">
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
-
-                                <!-- First Name -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">
-                                        First name <span class="text-orange-500">*</span>
-                                    </label>
-                                    <input type="text"
-                                        class="w-full h-12 bg-[#e9eff2] rounded-md px-4 focus:outline-none">
-                                </div>
-
-                                <!-- Last Name -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">
-                                        Last name <span class="text-orange-500">*</span>
-                                    </label>
-                                    <input type="text"
-                                        class="w-full h-12 bg-[#e9eff2] rounded-md px-4 focus:outline-none">
-                                </div>
-
-                                <!-- Business Email -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">
-                                        Business email <span class="text-orange-500">*</span>
-                                    </label>
-                                    <input type="email"
-                                        class="w-full h-12 bg-[#e9eff2] rounded-md px-4 focus:outline-none">
-                                </div>
-
-                                <!-- Mobile Phone -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">
-                                        Mobile phone <span class="text-orange-500">*</span>
-                                    </label>
-                                    <input type="tel"
-                                        class="w-full h-12 bg-[#e9eff2] rounded-md px-4 focus:outline-none">
-                                </div>
-
-                                <!-- Postal Code -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">
-                                        Postal Code <span class="text-orange-500">*</span>
-                                    </label>
-                                    <input type="text"
-                                        class="w-full h-12 bg-[#e9eff2] rounded-md px-4 focus:outline-none">
-                                </div>
-
-                            </div>
-
-                            <!-- ================= Company Information ================= -->
-                            <h2 class="text-xl font-semibold mt-12 mb-2">Company Information</h2>
-                            <hr class="mb-6 w-1/2 border-gray-300">
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
-
-                                <!-- Company -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">
-                                        Company <span class="text-orange-500">*</span>
-                                    </label>
-                                    <input type="text"
-                                        class="w-full h-12 bg-[#e9eff2] rounded-md px-4 focus:outline-none">
-                                </div>
-
-                                <!-- Professional Role -->
-                                <div>
-                                    <label class="flex items-center text-sm font-medium mb-2 gap-1">
-                                        Professional Role <span class="text-orange-500">*</span>
-                                        <span class="w-4 h-4 flex items-center justify-center text-xs text-white bg-gray-600 rounded-full cursor-pointer">?</span>
-                                    </label>
-                                    <select class="w-full h-12 bg-[#e9eff2] text-gray-600 rounded-md px-4 focus:outline-none font-semibold">
-                                        <option value="">Please select</option>
-                                        <option value="">Founder/Owner</option>
-                                        <option value="">Chief Executive/President/GM</option>
-                                        <option value="">C-level (non-CEO), Executive VP</option>
-                                        <option value="">Vice President/Division Head</option>
-                                        <option value="">Director</option>
-                                        <option value="">Manager</option>
-                                        <option value="">Consultant/Business Development/Sales</option>
-                                        <option value="">Other (non-managerial)</option>
-                                    </select>
-                                </div>
-
-                                <!-- Revenue -->
-                                <div class="space-y-8">
-                                    <label class="flex items-center text-sm font-medium mb-2 gap-1">
-                                        Recent annual sales revenue <span class="text-orange-500">*</span>
-                                        <span class="w-4 h-4 flex items-center justify-center text-xs text-white bg-gray-600 rounded-full cursor-pointer">?</span>
-                                    </label>
-                                    <select class="w-full h-12 bg-[#e9eff2] text-gray-600 rounded-md px-4 focus:outline-none font-semibold">
-                                        <option value="">Please select</option>
-                                        <option value="">Less than 500k</option>
-                                        <option value="">500 - 999k</option>
-                                        <option value="">1-4 Million</option>
-                                        <option value="">5-9 Million</option>
-                                        <option value="">10-20 Million</option>
-                                        <option value="">21-49 Million</option>
-                                        <option value="">50-99 Million</option>
-                                        <option value="">100-249 Million</option>
-                                        <option value="">250-499 Million</option>
-                                        <option value="">500-999 Million</option>
-                                        <option value="">500-999 Million</option>
-                                    </select>
-                                    {{--Question --}}
-                                    <hr class="mb-6 border-gray-300">
-                                    <select class="w-full h-12 bg-[#e9eff2] text-gray-600 rounded-md px-4 focus:outline-none font-semibold">
-                                        <option value="">How did you hear about Growth Master?</option>
-                                        <option value="">I was referred by another Growth Master Member</option>
-                                        <option value="">I was referred by a Growth Master Chair</option>
-                                        <option value="">I was referred by a Growth Master Speaker</option>
-                                        <option value="">I found Growth Master on Google</option>
-                                        <option value="">I saw an ad on social media</option>
-                                        <option value="">Other</option>
-                                    </select>
-                                    <hr class="mb-6 border-gray-300">
-                                    <p class="text-gray-600 rounded-md px-4 font-semibold"> 
-                                        * Indicates Response Required <br/>
-                                         Message and data rates may apply.
-                                    </p>
-                                </div>
-
-                            </div>
-                           
-                        </div>
-                        {{-- Button Become a Member --}}
-                        <div class="flex justify-center text-xl">
-                            <a href="{{ route('form.input') }}" class="inline-flex items-center justify-center w-72 h-14 bg-[#edc01c] font-semibold tracking-wider uppercase">
-                                Become a member
-                            </a>
-                        </div>
-                    </form>
+                    @include('frontend.include.form')
                 </div>
             </div>
             @component('components.footer')

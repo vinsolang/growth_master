@@ -127,7 +127,7 @@
         </div>
 
         {{-- Elevate Your Team with Leadership Development Programs --}}
-        <section class="w-full bg-[#003f5e] py-16 px-4 md:px-12 lg:px-24">
+        <section class="w-full bg-[#68875d] py-16 px-4 md:px-12 lg:px-24">
             <!-- Title -->
             <h1 class="text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight text-center text-[#ffffff]">
                 Elevate Your Team with Leadership Development Programs
@@ -141,7 +141,7 @@
                 </p>
 
                 <!-- Highlight line -->
-                <h2 class="text-[#f5c400] text-[20px] md:text-[22px] font-semibold">
+                <h2 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold">
                     Strengthen leadership at every level of your organization
                 </h2>
 
@@ -153,7 +153,7 @@
                 </p>
 
                 <!-- Sub heading -->
-                <h3 class="text-[#f5c400] text-[18px] md:text-[20px] font-semibold">
+                <h3 class="text-[#ffffff] text-[18px] md:text-[20px] font-semibold">
                     Match development to leadership responsibility for:
                 </h3>
 
@@ -188,13 +188,13 @@
              <div class="max-w-6xl mx-auto mt-12 border border-gray-300">
                 <!-- Header -->
                 <div class="grid grid-cols-2">
-                    <div class="bg-[#003A57] py-5 text-center border-r border-gray-300">
-                        <h2 class="text-[#FFC300] text-xl font-bold">
+                    <div class="bg-[#68875d] py-5 text-center border-r border-gray-300">
+                        <h2 class="text-[#ffffff] text-xl font-bold">
                             The Investment
                         </h2>
                     </div>
-                    <div class="bg-[#003A57] py-5 text-center">
-                        <h2 class="text-[#FFC300] text-xl font-bold">
+                    <div class="bg-[#68875d] py-5 text-center">
+                        <h2 class="text-[#ffffff] text-xl font-bold">
                             The Results
                         </h2>
                     </div>

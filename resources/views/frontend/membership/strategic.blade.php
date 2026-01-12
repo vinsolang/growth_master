@@ -11,7 +11,7 @@
     <!-- Responsive Table Wrapper -->
    <div class="overflow-x-hidden mt-10 px-3">
     <table class="border-collapse border border-gray-400 w-full max-w-[900px] mx-[-10px] md:mx-auto text-left">
-        <thead class="bg-[#003F5F] text-[#FFC000]">
+        <thead class="bg-[#68875d] text-[#ffffff]">
             <tr>
                 <th class="border border-gray-300 py-3 px-4 text-center text-[14px] md:text-[20px] lg:text-[24px] font-semibold">
                     Challenges
@@ -93,10 +93,10 @@
 
     <div class="flex justify-center items-center mt-10">
         <a href="{{ route('form.input') }}"
-            class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#003F5F]
-            text-[#003F5F] bg-white rounded 
+            class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#68875d]
+            text-[#68875d] bg-white rounded 
             transition-all duration-300 ease-in-out
-            hover:bg-[#003F5F] hover:text-white">
+            hover:bg-[#68875d] hover:text-white">
 
             Become A Member
 
@@ -126,9 +126,9 @@
         <div class="flex flex-col md:flex-row justify-center items-start md:items-stretch gap-8 mt-10">
 
             <!-- Card 1 -->
-            <div class="bg-[#003F5F] py-10 px-8 text-center md:w-[350px] rounded-lg">
+            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
                 <i class="fa-solid fa-user text-white text-[36px]"></i>
-                <h1 class="text-[#FFC000] text-[20px] md:text-[22px] font-semibold mt-3">Who thrives with GrowthMaster</h1>
+                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">Who thrives with GrowthMaster</h1>
 
                 <p class="text-start text-white mt-4">
                     • You generate million dollars in annual revenue and face the operational complexity that comes
@@ -143,9 +143,9 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-[#003F5F] py-10 px-8 text-center md:w-[350px] rounded-lg">
+            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
                 <i class="fa-solid fa-user text-white text-[36px]"></i>
-                <h1 class="text-[#FFC000] text-[20px] md:text-[22px] font-semibold mt-3">Why members succeed</h1>
+                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">Why members succeed</h1>
 
                 <p class="text-start text-white mt-4">
                     • GrowthMaster members grow their companies faster than non-members and stay in business longer than
@@ -158,9 +158,9 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-[#003F5F] py-10 px-8 text-center md:w-[350px] rounded-lg">
+            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
                 <i class="fa-solid fa-user text-white text-[36px]"></i>
-                <h1 class="text-[#FFC000] text-[20px] md:text-[22px] font-semibold mt-3">What you gain</h1>
+                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">What you gain</h1>
 
                 <p class="text-start text-white mt-4">
                     • Access to certified mentors who challenge your thinking and accelerate your decision-making.

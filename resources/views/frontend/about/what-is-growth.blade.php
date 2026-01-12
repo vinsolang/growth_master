@@ -50,51 +50,12 @@
                     confidential peer advisory groups and executive coaching sessions.
                 </p>
             </div>
-            {{-- Logo --}}
-            <div class="w-64 h-64 mx-auto">
-                <img src="{{ asset('assets/logo.png') }}" alt="LOGO" class="object-cover">
+            
+            {{-- Vision, Mission, Care value --}}
+            <div class="py-12">
+                @include('frontend.include.vis-mis-core')
             </div>
 
-            {{-- @@@@  --}}
-            <div class="bg-[#124d6b] gap-10 md:gap-10 lg:gap-20 xl:gap-20 p-12">
-                <div class="text-white py-12 px-4 sm:px-6 lg:px-8">
-                    <div class="max-w-7xl mx-auto">
-                        <div class="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-80 md:gap-20">
-
-                            <div class="text-center">
-                                <h2 class="text-4xl sm:text-6xl font-semibold text-white mb-2">
-                                45,000
-                                </h2>
-                                <p class="text-xl sm:text-2xl font-semibold tracking-wide mb-4">
-                                member
-                                </p>
-                                <p class="bg-[#edc01c] w-12 h-0.5 flex mx-auto">
-                                </p>
-                            </div>
-
-                            <div class="text-center">
-                                <h2 class="text-4xl sm:text-6xl font-semibold text-white mb-2">
-                                40
-                                </h2>
-                                <p class="text-xl sm:text-2xl font-semibold tracking-wide mb-4">
-                                countries
-                                </p>
-                                <p class="bg-[#edc01c] w-12 h-0.5 flex mx-auto"></p>
-                            </div>
-
-                            <div class="text-center">
-                                <h2 class="text-4xl sm:text-6xl font-semibold text-white mb-2">
-                                65+
-                                </h2>
-                                <p class="text-xl sm:text-2xl font-semibold tracking-wide mb-4">
-                                years
-                                </p>
-                                <p class="bg-[#edc01c] w-12 h-0.5 flex mx-auto"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="py-2">
                 <h1 class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     The Growth Master story: 65 years of cultivating success

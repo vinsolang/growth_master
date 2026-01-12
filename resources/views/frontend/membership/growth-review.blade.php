@@ -51,8 +51,8 @@
             <div class="flex justify-center items-center">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center max-w-8xl mx-auto md:px-40">
                     {{-- Card Shadow 1 --}}
-                    <div class="shadow-2xl bg-[#003f5e] text-white px-10 py-16 space-y-6">
-                        <h1 class="text-[#edc01c] text-2xl font-semibold">THE ACQUISITION ROUTE</h1>
+                    <div class="shadow-2xl bg-[#68875d] text-white px-10 py-16 space-y-6">
+                        <h1 class="text-[#ffffff] text-2xl font-semibold">THE ACQUISITION ROUTE</h1>
                         <p class="text-lg">
                             Sean Forman hit a home run, creating Sports Reference, a leader in sports data. 
                             Today, his business is used in front offices and cited by media giants like ESPN. 
@@ -108,8 +108,8 @@
                         </div>
                     </div>
                     {{-- Card Shadow 4 --}}
-                    <div class="shadow-2xl bg-[#003f5e] text-white px-10 py-16 space-y-6">
-                        <h1 class="text-[#edc01c] text-2xl font-semibold">THE ACQUISITION ROUTE</h1>
+                    <div class="shadow-2xl bg-[#68875d] text-white px-10 py-16 space-y-6">
+                        <h1 class="text-[#ffffff] text-2xl font-semibold">THE ACQUISITION ROUTE</h1>
                         <p class="text-lg">
                             Sean Forman hit a home run, creating Sports Reference, a leader in sports data. 
                             Today, his business is used in front offices and cited by media giants like ESPN. 
