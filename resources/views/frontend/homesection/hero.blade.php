@@ -329,23 +329,23 @@
 </div>
 {{-- The Most Comprehensive CEO Coaching Platform --}}
 <section class="relative w-full py-24">
-    <div class="bg-[#003f5e] w-full lg:h-[950px]">
+    <div class="bg-[#68875d] w-full lg:h-[950px]">
         <h1 class="text-[20px] text-white text-center md:text-[30px] lg:text-[45px] font-semibold max-w-[1500px] mx-auto leading-tight py-24">
             The Most Comprehensive CEO Coaching Platform
         </h1>
         <div class="flex lg:flex-row md:flex-col flex-col items-center justify-between px-4 lg:px-40">
             {{-- Text --}}
             <div class="lg:w-[40%] space-y-4">
-                <p class="text-[#edc01c] text-lg md:text-xl font-medium">Peer Group Experience</p>
+                <p class="text-[#ffffff] text-lg md:text-xl font-medium">Peer Group Experience</p>
                 <p class="text-white text-lg md:text-xl font-medium">
                     Local, noncompeting peers meet monthly to process pressing issues in a confidential environment. 
                     You also get insights on salient topics from trusted experts.
                 </p>
-                <p class="text-[#edc01c] text-lg md:text-xl font-medium">A Trusted Chair Guides Your Group</p>
+                <p class="text-[#ffffff] text-lg md:text-xl font-medium">A Trusted Chair Guides Your Group</p>
                 <p class="text-white text-lg md:text-xl font-medium">
                     Your Chair keeps your group meetings productive and provides monthly one-to-one coaching to keep you accountable.
                 </p>
-                <p class="text-[#edc01c] text-lg md:text-xl font-medium">Proprietary Issue Processing</p>
+                <p class="text-[#ffffff] text-lg md:text-xl font-medium">Proprietary Issue Processing</p>
                 <p class="text-white text-lg md:text-xl font-medium">
                    A proven methodology to help you clarify challenges, identify root problems, vet your solutions, and determine action plans.
                 </p>
