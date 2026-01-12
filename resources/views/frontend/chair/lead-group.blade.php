@@ -20,7 +20,7 @@
                 impact—guide leaders, enjoy schedule freedom and build your legacy.
             </p>
 
-            <a href="{{ route('application') }}">
+            <a href="#chair-form">
                 <button
                     class="mt-6 py-5 px-8 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold leading-relaxed tracking-widest uppercase">
                     lead a group
