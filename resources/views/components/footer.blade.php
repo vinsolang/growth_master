@@ -51,7 +51,7 @@
                             (Street 1019), Phnom Penh Thmey, Khan Sen Sok, Phnom Penh City, Kingdom of Cambodia.
                         </p>
                         <p class="font-bold">Hours</p>
-                        <p>Everyday: 8:00AM–5:00PM</p>
+                        <p>Everyday: 8:00AM – 5:00PM</p>
                         <p class="font-bold">Tel: 015 55 44 41 / 012 401 909</p>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
 
             <!-- Text content (padding allowed here) -->
             <div
-                class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white space-y-4">
+                class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white space-y-4 bg-black/50">
 
                 <h1 class="text-[18px] md:text-[20px] lg:text-[25px] font-normal mb-3 md:px-10 xl:px-12 lg:-mt-4">
                     About Growth Master
