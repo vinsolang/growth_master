@@ -77,11 +77,11 @@
             {{-- copy right --}}
             <div class="flex flex-col lg:flex-row gap-x-8 text-[#ffffff] font-meduim text-[14px]">
                 <p class="font-bold">© 2025 Growthmaster Headquarter’s Address</p>
-                <p>Privacy Policy</p>
+                {{-- <p>Privacy Policy</p>
                 <p>Confidentiality Pledge</p>
                 <p>Terms of Use</p>
                 <p>Contact Us</p>
-                <p>Sitemap</p>
+                <p>Sitemap</p> --}}
             </div>
         </div>
     </div>
