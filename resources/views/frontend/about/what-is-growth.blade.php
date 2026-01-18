@@ -8,7 +8,7 @@
         <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
-            <img src="https://www.vistage.com/wp-content/uploads/2020/05/Group-of-executives-laugh-at-table-during-business-meeting.jpg"
+            <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/476130730_610434091608946_2648315335922836771_n-1280x800.jpg"
                 class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
 
             <!-- Dark overlay (matches image exactly) -->
@@ -33,9 +33,9 @@
             <div class=""></div>
             {{-- Type of About Growth Master --}}
             <!-- BUTTON SECTION -->
-            <div id="growthMenuWrapper" class="relative">
+            {{-- <div id="growthMenuWrapper" class="relative">
                 @include('frontend.about.button-section-menu-about')
-            </div>
+            </div> --}}
 
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
@@ -56,11 +56,11 @@
                 @include('frontend.include.vis-mis-core')
             </div>
 
-            <div class="py-2">
+            {{-- <div class="py-2">
                 <h1 class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     The Growth Master story: 65 years of cultivating success
                 </h1>
-                {{-- Growth Master of story --}}
+             
                 @php
                     $cards = [
                     [
@@ -82,7 +82,7 @@
 
                         <div class="flex flex-col lg:flex-row items-center lg:space-y-0 space-y-4">
 
-                            {{-- IMAGE --}}
+                    
                             <div class="lg:w-[40%] w-full lg:h-[350px] order-1
                                 {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}
                             ">
@@ -90,7 +90,7 @@
                                     class="w-full h-full object-cover">
                             </div>
 
-                            {{-- TEXT --}}
+                           
                             <div class="flex justify-center items-center bg-[#ededed] lg:w-[60%] w-full lg:h-[480px] order-2
                                 {{ $index % 2 == 0 ? 'lg:order-2' : 'lg:order-1' }}
                             ">
@@ -103,10 +103,10 @@
 
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
             
             {{-- Powers performance --}}
-            <div class="space-y-10">
+            {{-- <div class="space-y-10">
                 <h1 class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     Growth Master powers performance
                 </h1>
@@ -116,7 +116,7 @@
                     of Dun & Bradstreet data.
                 </p>
 
-                {{-- Video --}}
+              
                 @php
                     $videos = [
                     [
@@ -140,7 +140,7 @@
 
                         <div class="flex flex-col lg:flex-row items-center lg:space-y-0 space-y-4">
 
-                            {{-- video --}}
+                            
                             <div class="relative lg:left-10 lg:w-[40%] w-full lg:h-[350px] order-1
                                
                             ">
@@ -148,14 +148,14 @@
                                     class="w-full h-full object-cover">
                             </div>
 
-                            {{-- TEXT --}}
+                            
                             <div class="flex flex-col justify-center bg-[#ededed] lg:w-[60%] w-full lg:h-[480px] order-2 space-y-6 lg:py-0 py-6
                                
                             ">
                                 <p class="text-left lg:max-w-[70%] mx-auto text-[#000000] md:text-xl text-[18px] px-4">
                                     {{ $video['text'] }}
                                 </p>
-                                {{-- link yellow --}}
+                               
                                 <div class="bg-[#edc01c] h-1 w-24 lg:ml-[138px] lg:mt-0 ml-4"></div>
                                 <div class="lg:ml-[138px] space-y-4 lg:px-0 px-4">
                                     <h1 class="text-2xl font-semibold">{{ $video['title'] }}</h1>
@@ -166,10 +166,10 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Our Members at a Glance --}}
-            <div class="space-y-6">
+            {{-- <div class="space-y-6">
                 <h1 class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
                      Our Members at a Glance
                 </h1>
@@ -178,11 +178,11 @@
                     This diversity is key to furnishing advisory boards of members from non-competing industries, 
                     and providing you with relevant expertise, regardless of your industry or company size.
                 </p>
-                {{-- image member --}}
+               
                 <div class="w-[90%] md:w-[70%] mx-auto">
                     <img src="https://www.vistage.com/wp-content/uploads/2019/09/Our-members-at-a-glance.jpg" alt="" class="w-full object-cover">
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Inquire About Membership --}}
             <div class="space-y-6">

@@ -21,30 +21,26 @@
                         <li><a href="{{ route('about') }}">About Growth Master</a></li>
                         <li><a href="{{ route('what.is.growth') }}">What is Growth Master</a></li>
                         <li><a href="">Worldwide Locations</a></li>
-                        <li><a href="">Careers</a></li>
+                        {{-- <li><a href="">Careers</a></li> --}}
                     </ul>
                 </div>
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Apply for Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
                         <li><a href="{{ route('home') }}#member-form">Become a Member</a></li>
-                        <li><a href="">Become a Mentor</a></li>
-                        <li><a href="">Become a Speaker</a></li>
-                        <li><a href="">Become a Licensee</a></li>
-                        <li><a href="">Become a Sponsor</a></li>
-                        <li><a href="">Referral Program</a></li>
+                        <li><a href="{{ route('chair.growth') }}#chair-form">Become a Chair</a></li>
                     </ul>
                 </div>
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Popular Events Joined by CEO </h1>
                     <ul class="space-y-2 text-[14px]">
-                        {{-- <li><a href="">Finance for Non-finance </a></li> --}}
-                        <li><a href="">Tariffs Resource Center</a>
+                        <li><a href="{{ route('home') }}#event-finan">Finance for Non-finance </a></li>
+                        {{-- <li><a href="">Tariffs Resource Center</a>
                         <li><a href="">Free Executive Coaching Course</a></li>
                         <li><a href="{{ route('ceo.climp') }}">CEO Climb Events</a></li>
                         <li><a href="{{ route('Laws.of.eadership') }}">The CEO’s 7 Laws of Leadership</a></li>
                         <li><a href="">Leadership Resource & PDFs</a></li>
-                        <li><a href="">Diversity and Inclusion</a></li>
+                        <li><a href="">Diversity and Inclusion</a></li> --}}
                     </ul>
                 </div>
                 <div class="space-y-2">
@@ -56,8 +52,7 @@
                         </p>
                         <p class="font-bold">Hours</p>
                         <p>Everyday: 8:00AM–5:00PM</p>
-                        <p class="font-bold">Tel:</p>
-                        <p>015 55 44 41 / 012 401 909</p>
+                        <p class="font-bold">Tel: 015 55 44 41 / 012 401 909</p>
                     </div>
                 </div>
             </div>

@@ -5,9 +5,10 @@
     @endcomponent
     <div class=" w-full h-[80vh] relative  ">
         <!-- Video Banner -->
-        <video src="https://www.vistage.com/wp-content/uploads/2025/05/bg-chair-info.mp4" autoplay loop muted
+        {{-- <video src="https://www.vistage.com/wp-content/uploads/2025/05/bg-chair-info.mp4" autoplay loop muted
             class="w-full h-full object-cover">
-        </video>
+        </video> --}}
+        <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3540-768x512.jpg" alt="" class="w-full h-full object-cover">
 
         <!-- Overlay Content -->
         <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
@@ -33,12 +34,12 @@
         @php
             $cards = [
                 [
-                    'image' => 'https://www.vistage.com/wp-content/uploads/2025/07/Now-build-leaders.webp',
+                    'image' => 'https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3405-768x512.jpg',
                     'text' => 'Becoming a Growth Master Chair represents the pinnacle of executive coaching—a prestigious role reserved for accomplished leaders who understand what it means to carry P&L responsibility, lead through uncertainty and guide others through the challenges you’ve already mastered.',
                     'title' => 'You’ve built companies. Now build leaders.'
                 ],
                 [
-                    'image' => 'https://www.vistage.com/wp-content/uploads/2025/07/The-Most-Rewarding-Path-Beyond-The-C-Suite.webp',
+                    'image' => 'https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3406-768x512.jpg',
                     'text' => 'Unlike generic coaching certifications that treat everyone the same, the Growth Master Chair role is designed specifically for executives who’ve walked the path today’s CEOs are navigating. You’re not learning to coach from textbooks—you’re sharing hard-won experience with business leaders who face the same pressures you once conquered.',
                     'title' => 'The Most Rewarding Path Beyond The C-Suite'
                 ],

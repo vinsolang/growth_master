@@ -8,7 +8,7 @@
         <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
-            <img src="https://www.vistage.com/wp-content/uploads/2020/10/climb-hero.jpg"
+            <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/475905094_610433964942292_2902757783636686740_n-1280x800.jpg"
                 class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
 
             <!-- Dark overlay (matches image exactly) -->

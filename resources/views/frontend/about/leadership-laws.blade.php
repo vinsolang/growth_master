@@ -8,7 +8,7 @@
         <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
-            <img src="https://www.vistage.com/wp-content/uploads/2020/10/Journey-to-the-Summit.jpg"
+            <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/476341864_610433894942299_7957939987115653297_n-1024x682.jpg"
                 class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
 
             <!-- Dark overlay (matches image exactly) -->
@@ -51,9 +51,9 @@
             <div class=""></div>
             {{-- Type of About Growth Master --}}
             {{-- <!-- BUTTON SECTION --> --}}
-            <div id="growthMenuWrapper" class="relative">
+            {{-- <div id="growthMenuWrapper" class="relative">
                 @include('frontend.about.button-section-menu-about')
-            </div>
+            </div> --}}
 
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
@@ -76,11 +76,11 @@
                 </p>
             </div>
             {{-- Block Image for poster --}}
-            <div class="">
+            <div class="lg:ml-28">
                 @php
                     $cards = [
                         [
-                            'image' => 'https://www.vistage.com/wp-content/uploads/2020/10/climb-growth.jpg',
+                            'image' => 'https://cac-center.edu.kh/wp-content/uploads/2025/05/475764412_610434131608942_8875000787547266503_n-768x512.jpg',
                             'text' => 'Great leaders pursue leadership excellence with the commitment of a world-class athlete. They know it’s a challenging, continuous journey that requires hard work and determined attention.
 
                                                                             They reject shortcuts and take ownership of their development.
@@ -90,14 +90,13 @@
                             'title' => '1. Reject shortcuts'
                         ],
                         [
-                            'image' => 'https://www.vistage.com/wp-content/uploads/2020/10/climb-Carve-out-space.jpg',
-                            'text' => 'Great leaders pursue leadership excellence with the commitment of a world-class athlete. They know it’s a challenging, continuous journey that requires hard work and determined attention.
+                            'image' => 'https://cac-center.edu.kh/wp-content/uploads/2025/05/475764412_610434131608942_8875000787547266503_n-768x512.jpg',
+                            'text' => 'Successful leaders routinely carve out time and space away from everyday business issues to reflect, acquire new knowledge and focus on strategy.
 
-                                                                            They reject shortcuts and take ownership of their development.
+This discipline allows them to gain the clarity and perspective they need to navigate the day-to-day challenges while keeping their company on course for long-term success.
 
-                                                                            They bring rigor and grit, working hard to hone their expertise and committing their whole selves to continual improvement. They push themselves to learn more, grow further and reach higher elevations.
-                                                                            ',
-                            'title' => '1. Reject shortcuts'
+They fight the instinct to always be in “go” mode, forcing themselves to take time for thoughtful decisions.',
+                            'title' => '2. Create space to work on the business'
                         ],
                     ];
                 @endphp
@@ -105,7 +104,7 @@
                     @foreach($cards as $index => $card)
 
                         <div
-                            class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#d9ebf4] w-[90%]">
+                            class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#d9ebf4] w-full lg:w-[90%] md:h-[700px]">
 
                             {{-- TEXT --}}
                             <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
@@ -114,7 +113,7 @@
                                 <h1 class="text-[#000000] lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
                                     {{ $card['title'] }}
                                 </h1>
-                                <p class="text-left text-[#454545] md:text-xl text-[18px] px-4 md:px-12">
+                                <p class="text-left text-[#454545] md:text-xl text-[14px] px-4 md:px-12">
                                     {{ $card['text'] }}
                                 </p>
                             </div>
@@ -132,7 +131,7 @@
             </div>
 
             {{-- Powers performance --}}
-            <div class="space-y-10">
+            {{-- <div class="space-y-10">
                 <h1
                     class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     Growth Master powers performance
@@ -143,7 +142,7 @@
                     of Dun & Bradstreet data.
                 </p>
 
-                {{-- Video --}}
+                
                 @php
                     $videos = [
                         [
@@ -167,21 +166,21 @@
 
                         <div class="flex flex-col lg:flex-row items-center lg:space-y-0 space-y-4">
 
-                            {{-- video --}}
+                           
                             <div class="relative lg:left-10 lg:w-[40%] w-full lg:h-[350px] order-1
 
                                             ">
                                 <img src="{{ $video['video'] }}" class="w-full h-full object-cover">
                             </div>
 
-                            {{-- TEXT --}}
+                            
                             <div class="flex flex-col justify-center bg-[#ededed] lg:w-[60%] w-full lg:h-[480px] order-2 space-y-6 lg:py-0 py-6
 
                                             ">
                                 <p class="text-left lg:max-w-[70%] mx-auto text-[#000000] md:text-xl text-[18px] px-4">
                                     {{ $video['text'] }}
                                 </p>
-                                {{-- link yellow --}}
+                                
                                 <div class="bg-[#edc01c] h-1 w-24 lg:ml-[138px] lg:mt-0 ml-4"></div>
                                 <div class="lg:ml-[138px] space-y-4 lg:px-0 px-4">
                                     <h1 class="text-2xl font-semibold">{{ $video['title'] }}</h1>
@@ -192,10 +191,10 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Our Members at a Glance --}}
-            <div class="space-y-6">
+            {{-- <div class="space-y-6">
                 <h1
                     class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     Our Members at a Glance
@@ -205,12 +204,12 @@
                     This diversity is key to furnishing advisory boards of members from non-competing industries,
                     and providing you with relevant expertise, regardless of your industry or company size.
                 </p>
-                {{-- image member --}}
+                
                 <div class="w-[90%] md:w-[70%] mx-auto">
                     <img src="https://www.vistage.com/wp-content/uploads/2019/09/Our-members-at-a-glance.jpg" alt=""
                         class="w-full object-cover">
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Inquire About Membership --}}
             <div class="space-y-6">
