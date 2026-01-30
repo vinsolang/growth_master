@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\BannerController;
 use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
 use App\Http\Controllers\backend\FAQsController;
@@ -129,4 +130,5 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('program', OurProgramController::class);
     // Events
     Route::resource('event', EventsController::class);
+    Route::resource('banner', BannerController::class);
 });

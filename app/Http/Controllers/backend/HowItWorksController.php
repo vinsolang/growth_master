@@ -79,6 +79,7 @@ class HowItWorksController extends Controller
         'title' => $request->title,
         'description' => $request->description,
         'button_text' => $request->button_text,
+        'image' => $imageName
     ]);
 
     return redirect()->route('work.index')->with('success', 'Updated successfully!');
