@@ -25,8 +25,16 @@
                             <div class="row">
                                 <input type="hidden" name="update_id" value="{{ $banner->id }}">
                                 <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Name</label>
+                                    <input class="form-control" type="text" name="title" value="{{ $banner->title }}" readonly />
+                                </div>
+                                <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Title</label>
-                                    <input class="form-control" type="text" name="title" value="{{ $banner->title }}" />
+                                    <input class="form-control" type="text" name="name" value="{{ $banner->name }}" />
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Content</label>
+                                    <textarea name="content" id="content" class="form-control">{{ $banner->content }}</textarea>
                                 </div>
                                 
                                 <div class="mb-5 col-12">

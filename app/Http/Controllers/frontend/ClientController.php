@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Banner;
 use App\Models\Events;
 use App\Models\FAQs;
 use App\Models\HelpSection;
@@ -16,57 +17,70 @@ class ClientController extends Controller
         $showApproach = HowItWorks::all();
         $showHelpSection = HelpSection::all();
         $showFAQs = FAQs::all();
+        $getBanner = Banner::all();
         return view('frontend.membership.our-aproach', compact(
             'showApproach', 
             'showHelpSection',
-            'showFAQs'  
+            'showFAQs',
+            'getBanner'
         ));
     }
     public function memberShipPrograms(){
         $showProgram = Program::all();
         $showFAQs = FAQs::all();
-        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs'));
+        $getBanner = Banner::all();
+        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs','getBanner'));
     }
-     public function growthReview(){
+     public function growthReview(){    
         $showFAQs = FAQs::all();
-        return view('frontend.membership.growth-review', compact('showFAQs'));
+        $getBanner = Banner::all();
+        return view('frontend.membership.growth-review', compact('showFAQs', 'getBanner'));
     }
      public function ExclusivePeerGroups(){
-        return view('frontend.membership.exclusive-peer-groups');
+        $getBanner = Banner::all();
+        return view('frontend.membership.exclusive-peer-groups', compact('getBanner'));
     }
 
     //  Event
      public function events(){
         $showEvents = Events::all();
-        return view('frontend.events.event', compact('showEvents'));
+        $getBanner = Banner::all();
+        return view('frontend.events.event', compact('showEvents', 'getBanner'));
 
     }
     public function ceoClimbEvents(){
-        return view('frontend.events.ceo-clime-event');
+          $getBanner = Banner::all();
+        return view('frontend.events.ceo-clime-event', compact('getBanner'));
     }
     public function researchCenterWebinar(){
-        return view('frontend.events.growth-webinars');
+          $getBanner = Banner::all();
+        return view('frontend.events.growth-webinars', compact('getBanner'));
     }
     // Become A member Ship
     public function membershipApplication(){
-        return view('frontend.becom-a-member.becom-member');
+          $getBanner = Banner::all();
+        return view('frontend.becom-a-member.becom-member',compact('getBanner'));
     }
 
     // Chair
     public function growthMasterChair(){
-        return view('frontend.chair.lead-group');
+          $getBanner = Banner::all();
+        return view('frontend.chair.lead-group', compact('getBanner'));
     }
     public function CEOCoachingQual(){
-        return view('frontend.chair.chair-qualifition');
+          $getBanner = Banner::all();
+        return view('frontend.chair.chair-qualifition',compact('getBanner'));
     }
 
      public function ChairProfile(){
-        return view('frontend.chair.meet-our-growth');
+       $getBanner = Banner::all();
+        return view('frontend.chair.meet-our-growth', compact('getBanner'));
     }
     
 
     public function ChairApplication(){
-        return view('frontend.chair.apply-to-growthmaster');
+          $getBanner = Banner::all();
+        return view('frontend.chair.apply-to-growthmaster', compact('getBanner'));
     }
 
     

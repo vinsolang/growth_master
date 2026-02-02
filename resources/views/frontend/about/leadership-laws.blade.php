@@ -8,8 +8,15 @@
         <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
-            <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/476341864_610433894942299_7957939987115653297_n-1024x682.jpg"
-                class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
+            {{-- <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/476341864_610433894942299_7957939987115653297_n-1024x682.jpg"
+                class="w-full h-full object-cover px-4 md:px-8 xl:px-12"> --}}
+                  @if(!empty($getBanner) && $getBanner[8]->title === 'leadership')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[8]->image) }}"
+                        class="w-full h-full object-cover px-4 md:px-8 xl:px-12"
+                        alt="Hero Image"
+                    >
+                @endif
 
             <!-- Dark overlay (matches image exactly) -->
             {{-- <div class="absolute inset-0 bg-black/50 w-[95%] h-full object-cover md:px-10 xl:px-20"></div> --}}
@@ -19,17 +26,19 @@
                 class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white space-y-4 bg-black/50">
 
                 <h1 class="text-[18px] md:text-[20px] lg:text-[25px] font-normal mb-3 md:px-10 xl:px-12 lg:-mt-4">
-                    About Growth Master
+                   @if(!empty($getBanner) && $getBanner[8]->title === 'leadership')
+                            {{ $getBanner[8]->name }}
+                            @endif
                 </h1>
 
                 <p
                     class="text-[25px] md:text-[50px] lg:text-[60px] font-semibold max-w-[940px] leading-tight mb-3 md:px-10 xl:px-12 md:py-4">
-                    Living the CEO’s 7 Laws of Leadership
+                      @if(!empty($getBanner) && $getBanner[8]->title === 'leadership')
+                            {!! nl2br(e(value: $getBanner[8]->content)) !!}
+                            @endif
                 </p>
 
-                <h1 class="text-[18px] md:text-[20px] lg:text-[25px] font-bold mb-3 md:px-10 xl:px-12 lg:-mt-4">
-                    If you’re ready for the climb of a lifetime, use these leadership laws to guide your decisions
-                </h1>
+              
                 {{-- Buuton Free for PDF --}}
                 <div class="flex flex-col justify-center items-center mt-10 md:px-10 xl:px-12">
                     <button class="group py-6 px-12 text-[16px] md:text-[18px] border border-[#003F5F]

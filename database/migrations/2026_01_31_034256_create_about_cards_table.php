@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('about_cards', function (Blueprint $table) {
             $table->id();
-            $table->string('title');  
-            $table->string('image');   
-            $table->timestamp('created_at')->useCurrent();
+    $table->foreignId('about_section_id')->constrained()->cascadeOnDelete();
+    $table->string('icon')->nullable();
+    $table->string('title');
+    $table->text('description');
+     $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
@@ -25,7 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('about_cards');
     }
 };
-

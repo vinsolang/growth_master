@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutCardController;
+use App\Http\Controllers\Admin\AboutSectionController;
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\BannerController;
@@ -7,6 +9,8 @@ use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
+use App\Http\Controllers\backend\HomeCardController;
+use App\Http\Controllers\backend\HomeTextController;
 use App\Http\Controllers\backend\HowItWorksController;
 use App\Http\Controllers\backend\OurApproachController;
 use App\Http\Controllers\backend\OurProgramController;
@@ -15,7 +19,10 @@ use App\Http\Controllers\frontend\AboutGrowthControll;
 use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
 use App\Http\Controllers\MembershipController;
+use App\Models\Banner;
 use App\Models\FAQs;
+use App\Models\HomeText;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /* ============================================================================================
@@ -23,11 +30,21 @@ use Illuminate\Support\Facades\Route;
 ============================================================================================== */
 Route::get('/', function () {
       $showFAQs = FAQs::all();
-    return view('frontend.home', compact('showFAQs'));
+      $getBanner = Banner::all();
+      $getTeam = DB::table('team')->get();
+    return view('frontend.home', compact(
+        'showFAQs',
+        'getBanner',
+        'getTeam'
+        ));
 })->name('home');
+
+
+
 // Member ship
 Route::get('membership', function () {
-    return view('frontend.membership');
+    $getBanner = Banner::all();
+    return view('frontend.membership', compact('getBanner'));
 })->name('membership');
 Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])->name('approach');
 Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
@@ -131,4 +148,7 @@ Route::middleware(['auth'])->group(function(){
     // Events
     Route::resource('event', EventsController::class);
     Route::resource('banner', BannerController::class);
+    Route::resource('home-text', HomeTextController::class);    
+    Route::resource('home-card', HomeCardController::class);
+
 });

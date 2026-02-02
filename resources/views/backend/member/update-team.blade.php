@@ -23,6 +23,11 @@
 
                             <div class="row">
                                 <input type="hidden" name="update_id" value="{{$row[0]->id}}">
+                                 <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Title</label>
+                                    <input class="form-control" type="text" name="update_title"
+                                        value="{{ $row[0]->title }}" />
+                                </div>
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Name</label>
                                     <input class="form-control" type="text" name="update_name"

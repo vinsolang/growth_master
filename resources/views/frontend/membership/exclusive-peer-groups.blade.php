@@ -8,19 +8,30 @@
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
                 <!-- Hero Image -->
-                <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3422-1600x800.jpg" class="w-full h-full object-cover" alt="Hero Image">
+                {{-- <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3422-1600x800.jpg" class="w-full h-full object-cover" alt="Hero Image"> --}}
+                @if(!empty($getBanner) && $getBanner[5]->title === 'exclusive peer group')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[5]->image) }}"
+                        class="w-full h-full object-cover"
+                        alt="Hero Image"
+                    >
+                @endif
                 <div class="absolute inset-0 bg-black/40 w-full h-full"></div>
                 <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-30 text-white">
 
                     <h1
                         class="text-[30px] md:w-3xl text-start md:text-[35px] font-semibold max-w-[940px] leading-tight">
-                        Exclusive CEO Peer Groups from Growth Master
+                        @if(!empty($getBanner) && $getBanner[5]->title === 'exclusive peer group')
+                            {{ $getBanner[5]->name }}
+                            @endif
                     </h1>
 
                     <p
                         class="text-[16px] md:w-2xl text-start md:text-[18px] mt-5 font-regular max-w-[940px] leading-tight">
-                        As a CEO leading a $5M+ company, you need strategic input from peers who understand the leadership climb
+                          @if(!empty($getBanner) && $getBanner[5]->title === 'exclusive peer group')
+                            {!! nl2br(e(value: $getBanner[5]->content)) !!}
+                            @endif
                     </p>
 
                     <a href="{{ route('home') }}#member-form">

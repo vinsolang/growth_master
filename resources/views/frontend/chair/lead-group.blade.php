@@ -3,22 +3,32 @@
 @section('content')
     @component('components.navbar')
     @endcomponent
-    <div class=" w-full h-[80vh] relative  ">
+    <div class=" w-full h-[100vh] relative  ">
         <!-- Video Banner -->
         {{-- <video src="https://www.vistage.com/wp-content/uploads/2025/05/bg-chair-info.mp4" autoplay loop muted
             class="w-full h-full object-cover">
         </video> --}}
-        <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3540-768x512.jpg" alt="" class="w-full h-full object-cover">
+       
+          @if(!empty($getBanner) && $getBanner[10]->title === 'lead group')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[10]->image) }}"
+                        class="w-full h-full object-cover"
+                        alt="Hero Image"
+                    >
+                @endif
 
         <!-- Overlay Content -->
-        <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
+        <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white bg-black/50">
 
             <h1 class="text-[22px] text-left md:text-[35px] lg:text-[45px] font-semibold max-w-[940px] leading-tight">
-                Become an Executive Coach
+               @if(!empty($getBanner) && $getBanner[10]->title === 'lead group')
+                            {{ $getBanner[10]->name }}
+                            @endif
             </h1>
             <p class="leading-relaxed text-xl max-w-3xl text-[#ffffff] text-left">
-                Ready to become an executive coach? Join Growth Master as a Chair to turn hard-won CEO experience into lasting
-                impact—guide leaders, enjoy schedule freedom and build your legacy.
+                 @if(!empty($getBanner) && $getBanner[10]->title === 'lead group')
+                            {!! nl2br(e(value: $getBanner[10]->content)) !!}
+                            @endif
             </p>
 
             <a href="#chair-form">

@@ -79,6 +79,7 @@ class OurTeamController extends Controller
         // ]);
 
         $update_id = $request->input('update_id');
+        $update_title = $request->input('update_title');
         $update_name = $request->input('update_name');
         $update_position = $request->input('update_position');
         $update_bio = $request->input('update_bio');
@@ -95,6 +96,7 @@ class OurTeamController extends Controller
         }
 
         $result = DB::table('team')->where('id', $update_id)->update([
+            'title' => $update_title,
             'name' => $update_name,
             'position' => $update_position,
             'bio' => $update_bio,

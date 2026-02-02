@@ -149,6 +149,28 @@
             </ul>
           </li> --}}
 
+           <!-- Admin -->
+          {{-- <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-group"></i>
+                  <div>Home</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="{{ route('home-text.index') }}" class="menu-link">
+                          <div>Content</div>
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="" class="menu-link">
+                          <div>Card</div>
+                      </a>
+                  </li>
+              </ul>
+          </li> --}}
+
+
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-images"></i>
@@ -161,7 +183,7 @@
                   <div data-i18n="Without menu">View Banner</div>
                 </a>
               </li>
-              <li class="menu-item">
+              <li class="menu-item d-none">
                 <a href="{{ route('banner.create') }}" class="menu-link">
                   <div data-i18n="Without menu">Add Member</div>
                 </a>
@@ -182,7 +204,7 @@
                   <div data-i18n="Without menu">View Member</div>
                 </a>
               </li>
-              <li class="menu-item">
+              <li class="menu-item d-none">
                 <a href="{{ route('add_team') }}" class="menu-link">
                   <div data-i18n="Without menu">Add Member</div>
                 </a>

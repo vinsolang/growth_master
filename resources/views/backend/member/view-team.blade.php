@@ -15,6 +15,7 @@
                         <thead>
                             <tr>
                                 <th>Profile</th>
+                                <th>Title</th>
                                 <th>Name</th>
                                 <th>Position</th>
                                 <th>BIO</th>
@@ -29,11 +30,14 @@
                                     <td>
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/team/{{ $team->profile }}" alt="Avatar" class="rounded-circle"
-                                                style="width: 50px;
+                                                style="width: 250px;
                                                                                 object-fit: cover;
                                                                                 border-radius: 0px !important;
                                                                             ">
                                         </ul>
+                                    </td>
+                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                        <strong>{{ $team->title }}</strong>
                                     </td>
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
                                         <strong>{{ $team->name }}</strong>
@@ -84,7 +88,7 @@
                                             <div class="dropdown-menu dropdown-menu-end">
                                                 <a class="dropdown-item" href="{{ route('update.team', ['id' => $team->id]) }}"><i
                                                         class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                <a href="javascript:void(0);" class="dropdown-item remove-post-key"
+                                                <a href="javascript:void(0);" class="dropdown-item remove-post-key d-none"
                                                     data-id="{{ $team->id }}" data-bs-toggle="modal"
                                                     data-bs-target="#basicModal">
                                                     <i class="bx bx-trash me-1"></i> Delete

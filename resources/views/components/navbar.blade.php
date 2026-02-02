@@ -65,7 +65,7 @@
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#68875d] text-white mt-10 text-[14px]">
-                            <a href="{{ route('what.is.growth') }}"
+                            <a href="{{ route('about') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">What is Growth Master?</a>
                             <a href="{{ route('Laws.of.eadership') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">7 Laws of Leadership</a>

@@ -8,8 +8,14 @@
         <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
-            <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/475905094_610433964942292_2902757783636686740_n-1280x800.jpg"
-                class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
+            
+              @if(!empty($getBanner) && $getBanner[9]->title === 'climb')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[9]->image) }}"
+                        class="w-full h-full object-cover px-4 md:px-8 xl:px-12"
+                        alt="Hero Image"
+                    >
+                @endif
 
             <!-- Dark overlay (matches image exactly) -->
             {{-- <div class="absolute inset-0 bg-black/50 w-[95%] h-full object-cover md:px-10 xl:px-20"></div> --}}
@@ -18,12 +24,16 @@
             <div class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white bg-black/50">
 
                 <h1 class="text-[16px] md:text-[18px] lg:text-[25px] font-normal mb-3 md:px-10 xl:px-12 lg:-mt-4">
-                    What Is the Climb?
+                    @if(!empty($getBanner) && $getBanner[9]->title === 'climb')
+                            {{ $getBanner[9]->name }}
+                            @endif
                 </h1>
 
                 <p
                     class="text-[25px] md:text-[45px] lg:text-[55px] font-semibold max-w-[940px] leading-tight mb-3 md:px-10 xl:px-12 md:py-20">
-                    Endless. Limitless. The Journey of a Growth Master leader is life-long.
+                      @if(!empty($getBanner) && $getBanner[9]->title === 'climb')
+                            {!! nl2br(e(value: $getBanner[9]->content)) !!}
+                            @endif
                 </p>
             </div>
         </div>

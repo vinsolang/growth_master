@@ -8,29 +8,35 @@
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
                 <!-- Hero Image -->
-                <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC08045-scaled.jpg" class="w-full h-full object-cover" alt="Hero Image">
+                {{-- <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC08045-scaled.jpg" class="w-full h-full object-cover" alt="Hero Image"> --}}
+                @if(!empty($getBanner) && $getBanner[3]->title === 'our program')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[3]->image) }}"
+                        class="w-full h-full object-cover"
+                        alt="Hero Image"
+                    >
+                @endif
+
+
                 <div class="absolute inset-0 bg-black/40 w-full h-full"></div>
                 <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-20 text-white bg-black/50">
 
                     <h1
                         class="text-[30px] md:w-3xl text-start md:text-[35px] font-semibold max-w-[940px] leading-tight">
-                        Executive Coaching Services & Leadership Programs
+                        @if(!empty($getBanner) && $getBanner[3]->title === 'our program')
+                            {{ $getBanner[3]->name }}
+                            @endif
                     </h1>
 
                     <p
                         class="text-[16px] md:w-2xl text-start md:text-[18px] mt-5 font-regular max-w-[940px] leading-tight">
-                        Whether you’re a CEO seeking strategic peer advisory or looking to strengthen your leadership team, GrowthMaster offers programs designed for varying levels of responsibility and organizational complexity.
+                         @if(!empty($getBanner) && $getBanner[3]->title === 'our program')
+                          
+                                {!! nl2br(e(value: $getBanner[3]->content )) !!}
+                            @endif
                     </p>
 
-                    <p
-                        class="text-[16px] md:w-2xl text-start mt-5 md:text-[18px] font-regular max-w-[940px] leading-tight">
-                        All programs offer the same foundational benefits of the GrowthMaster platform and professionally facilitated peer groups, but the context and scale of the challenges discussed are aligned with your business revenue and role.
-                    </p>
-                    <p
-                        class="text-[16px] md:w-2xl text-start mt-5 md:text-[18px] font-regular max-w-[940px] leading-tight">
-                        Find the right program fit for you and your team.
-                    </p>
 
                     <a href="#program-form">
                         <button

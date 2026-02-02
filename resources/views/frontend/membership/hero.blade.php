@@ -1,30 +1,30 @@
 @section('title', 'Why Join GrowthMaster for business coaching')
 <div class=" w-full h-screen relative  ">
     <!-- Hero Image -->
-    <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_5776-1536x1024.jpg" class="w-full h-full object-cover" alt="Hero Image">
+    {{-- <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_5776-1536x1024.jpg" class="w-full h-full object-cover" alt="Hero Image"> --}}
+     @if(!empty($getBanner) && $getBanner[1]->title === 'membership')
+        <img 
+            src="{{ asset('assets/banner/' . $getBanner[1]->image) }}"
+            class="w-full h-full object-cover"
+            alt="Hero Image"
+        >
+    @endif
 
     <!-- Overlay Content -->
     <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-30 text-white bg-black/50">
 
         <h1 class="text-[22px] text-start md:text-[35px] lg:text-[45px] font-semibold max-w-[940px] leading-tight">
-            Why Join GrowthMaster for business coaching
+            @if(!empty($getBanner) && $getBanner[1]->title === 'membership')
+            {{ $getBanner[1]->name }}
+            @endif
         </h1>
 
         <p class="text-[16px] text-start md:text-[18px] mt-5 lg:text-[25px] font-regular max-w-[940px] leading-tight">
-            When you’re leading million dollars
-            company, you need
-            insights from leaders who’ve walked this path.
-
+            @if(!empty($getBanner) && $getBanner[1]->title === 'membership')
+            
+                {!! nl2br(e(value: $getBanner[1]->content)) !!}
+            @endif
         </p>
-
-        <p class="text-[16px] text-start mt-5 md:text-[18px] lg:text-[25px] font-regular max-w-[940px] leading-tight">
-            When you’re leading million dollars
-            You’ve built a successful business, but the higher you climb, the fewer people truly understand the weight
-            of
-            your choices.
-
-        </p>
-
         <a href="{{ route('home') }}#member-form">
             <button class="mt-6 py-5 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
             GET IN TOUCH

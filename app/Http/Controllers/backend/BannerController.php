@@ -50,6 +50,8 @@ class BannerController extends Controller
 {
     $request->validate([
         'title' => 'required|string|max:255',
+        'name' => 'required|string|max:255',
+        'content' => 'nullable|string|',
         'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
     ]);
 
@@ -71,6 +73,8 @@ class BannerController extends Controller
     //  Update text fields
     $banner->update([
         'title' => $request->title,
+        'name' => $request->name,
+        'content' => $request->content,
         // 'image' => $request->$imageName
     ]);
 

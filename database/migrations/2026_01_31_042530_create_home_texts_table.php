@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('banners', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');  
-            $table->string('image');   
-            $table->timestamp('created_at')->useCurrent();
+        Schema::create('home_texts', function (Blueprint $table) {
+           $table->string('title');
+    $table->text('description');
+     $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
@@ -25,7 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('home_texts');
     }
 };
-

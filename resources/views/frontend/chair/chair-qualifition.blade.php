@@ -8,22 +8,32 @@
         <div class="relative w-full h-[40vh] md:h-screen top-40">
 
             <!-- Background Image (NO padding!) -->
-            <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3367-768x512.jpg"
-                class="w-full h-full object-cover px-4 md:px-8 xl:px-12">
+            
+              @if(!empty($getBanner) && $getBanner[11]->title === 'chair qualifications')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[11]->image) }}"
+                        class="w-full h-full object-cover px-4 md:px-8 xl:px-12"
+                        alt="Hero Image"
+                    >
+                @endif
 
             <!-- Dark overlay (matches image exactly) -->
             {{-- <div class="absolute inset-0 bg-black/50 w-[95%] h-full object-cover md:px-10 xl:px-20"></div> --}}
 
             <!-- Text content (padding allowed here) -->
-            <div class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white">
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white bg-black/50">
 
                 <h1 class="text-[16px] md:text-[18px] lg:text-[25px] font-normal mb-3 md:px-10 xl:px-12">
-                    CEO Coaching Qualifications
+                    @if(!empty($getBanner) && $getBanner[11]->title === 'chair qualifications')
+                            {{ $getBanner[11]->name }}
+                            @endif
                 </h1>
 
                 <p
                     class="text-[22px] md:text-[45px] lg:text-[55px] font-semibold max-w-[940px] leading-tight mb-3 md:px-10 xl:px-12">
-                    Do you have what it takes?
+                     @if(!empty($getBanner) && $getBanner[11]->title === 'chair qualifications')
+                            {!! nl2br(e(value: $getBanner[11]->content)) !!}
+                            @endif
                 </p>
 
             </div>

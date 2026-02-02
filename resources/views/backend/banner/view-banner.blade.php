@@ -16,6 +16,8 @@
                             <tr>
                                 <th>Image</th>
                                 <th>Name</th>
+                                <th>Title</th>
+                                <th>Content</th>
                                 <th>Created at</th>
                                 <th>Actions</th>
                             </tr>
@@ -35,6 +37,17 @@
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
                                         <strong>{{ $items->title }}</strong>
                                     </td>
+                                   <td>
+                                        <div class="max-w-56 h-24 overflow-y-auto whitespace-pre-line text-sm font-semibold">
+                                            {{ $items->name }}
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="max-w-56 h-32 overflow-y-auto whitespace-pre-line text-sm">
+                                            {{ $items->content }}
+                                        </div>
+                                    </td>
 
                                     <td><span class="badge bg-label-primary me-1">{{ $items->created_at }}</span></td>
 
@@ -47,7 +60,7 @@
                                             <div class="dropdown-menu dropdown-menu-end">
                                                 <a class="dropdown-item" href="{{ route('banner.edit', $items->id) }}"><i
                                                         class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                 <a href="javascript:void(0);" class="dropdown-item remove-post-key"
+                                                 <a href="javascript:void(0);" class="dropdown-item remove-post-key d-none"
                                                     data-id="{{ $items->id }}" data-bs-toggle="modal"
                                                     data-bs-target="#basicModal">
                                                     <i class="bx bx-trash me-1"></i> Delete

@@ -8,25 +8,33 @@
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
                 <!-- Hero Image -->
-                <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC07389-59-768x512.jpg" class="w-full h-full object-cover" alt="Hero Image">
+                {{-- <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC07389-59-768x512.jpg" class="w-full h-full object-cover" alt="Hero Image"> --}}
+                @if(!empty($getBanner) && $getBanner[4]->title === 'growthmaster review')
+                    <img 
+                        src="{{ asset('assets/banner/' . $getBanner[4]->image) }}"
+                        class="w-full h-full object-cover"
+                        alt="Hero Image"
+                    >
+                @endif
                 <div class="absolute inset-0 bg-black/40 w-full h-full"></div>
                 <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-40 md:py-20 md:top-30 text-white">
 
                     <h1
                         class="text-[30px] md:w-3xl text-start md:text-[35px] font-semibold max-w-[940px] leading-tight">
-                        Growth Master Reviews
+                         @if(!empty($getBanner) && $getBanner[4]->title === 'growthmaster review')
+                            {{ $getBanner[4]->name }}
+                            @endif
                     </h1>
 
                     <p
                         class="text-[16px] md:w-2xl text-start md:text-[18px] mt-5 font-regular max-w-[940px] leading-tight">
-                        Real stories from CEOs who’ve been where you are.
+                          @if(!empty($getBanner) && $getBanner[4]->title === 'growthmaster review')
+                            {!! nl2br(e(value: $getBanner[4]->content)) !!}
+                            @endif
                     </p>
 
-                    <p
-                        class="text-[16px] md:w-2xl text-start mt-5 md:text-[18px] font-regular max-w-[940px] leading-tight">
-                        Whether you’re a CEO scaling a team rapidly, navigating your first leadership role or steering through crisis, the reviews below come from Vistage members who faced the same crossroads you’re experiencing now.
-                    </p>
+                   
 
                     <a href="#review-form">
                         <button

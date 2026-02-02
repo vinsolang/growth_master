@@ -1,13 +1,20 @@
 <div class=" w-full h-[80vh] relative  ">
     <!-- Hero Image -->
-    <img src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC09713-1600x800.jpg"
-        class="w-full h-full object-cover" alt="Hero Image">
+    @if(!empty($getBanner) && $getBanner[0]->title === 'home')
+        <img 
+            src="{{ asset('assets/banner/' . $getBanner[0]->image) }}"
+            class="w-full h-full object-cover"
+            alt="Hero Image"
+        >
+    @endif
 
     <!-- Overlay Content -->
-    <div class="absolute inset-0 flex flex-col justify-center items-center px-6 md:px-16 lg:px-24 text-white">
+    <div class="absolute inset-0 flex flex-col justify-center items-center px-6 md:px-16 lg:px-24 text-white bg-black/50">
 
         <h1 class="text-[22px] text-center md:text-[35px] lg:text-[45px] font-semibold max-w-[1500px] leading-tight">
-            The World’s Largest CEO Coaching & Peer Advisory Organization
+            @if(!empty($getBanner) && $getBanner[0]->title === 'home')
+                {{ $getBanner[0]->name }}
+            @endif
         </h1>
 
         <a href="#member-form">
@@ -164,50 +171,35 @@
 {{-- Team Memeder --}}
 
 <div class="py-12">
-    <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Real Growth Stories From Growth Master Members</h1>
+    <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">{{ $getTeam[0]->title }}</h1>
 </div>
 
 <section class="relative w-full">
     <div class="max-w-7xl mx-auto space-x-6 flex justify-center items-center md:flex-row flex-col">
         {{-- profile --}}
         <div class="md:w-[35%]">
-            <img src="{{ asset('assets/profile/1765335800-founder.jpg') }}" alt="" class="w-full h-full object-cover">
+            {{-- <img src="{{ asset('assets/profile/1765335800-founder.jpg') }}" alt="" class="w-full h-full object-cover"> --}}
+            <img src="{{ asset('assets/team/'. $getTeam[0]->profile) }}" alt="" class="w-full h-full object-cover">
         </div>
         {{-- text dscription --}}
         <div class="md:w-[60%]">
             <div class="py-4 lg:px-0 px-8">
-                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">san rithy</h2>
-                <p class="text-[#333333] text-lg leading-tight">Founder, Cambodia Accounting Club(CAC)</p>
-                <p class="text-[#333333] text-lg leading-tight">Shareholder, Acclime</p>
+                <h2 class="text-[#e6b34b] text-xl font-bold uppercase tracking-wider">{{ $getTeam[0]->name }}</h2>
+                <p class="text-[#333333] text-lg leading-tight">{!! nl2br(e($getTeam[0]->position)) !!}</p>
+                {{-- <p class="text-[#333333] text-lg leading-tight">Shareholder, Acclime</p> --}}
             </div>
             <hr class="bg-[#333333] w-full hidden lg:block">
             <div class="py-4 lg:px-0 px-8">
                 <h1 class="font-bold uppercase text-[#333333]">short bio:</h1>
                 <p class="text-[#333333] text-lg leading-relaxed">
-                    Mr. SAN Rithy is a Certified Public Accountant (CPA) and an esteemed member of both the KICPAA and
-                    IPA Australia. Besides being a shareholder of
-                    Acclime, a leading international corporate services firm, co-founder of Cambodia Accounting Club
-                    (CAC) which has more than 1000 menbers, he is also recognized
-                    as an SME coach in shaping family business to next level.
-                </p>
-                <p class="text-[#333333] text-lg leading-relaxed mt-4">
-                    With over <span class="font-bold">20 years </span> of experience in accounting, Taxation, and
-                    Financial Management, Mr. Rithy has also spent more than a decade
-                    advancing <span class="font-bold">Human Resource Development</span> across industries. His ability
-                    to distill complex financial and operational
-                    challenges into actionable strategies has earned him recognition as a trusted <span
-                        class="font-bold">Speaker, Trainer,</span> and <span class="font-bold">SME Investor.</span>
+                    {!! nl2br(e($getTeam[0]->bio)) !!}
                 </p>
             </div>
 
             <div class="mt-8 pt-4 border-t border-[#333333]/20 lg:px-0 px-8">
                 <h1 class="font-bold uppercase text-[#333333]">highlight</h1>
                 <p class="text-[#3333333] text-lg">
-                    One of this most notable achievements includes leading the transformation of a locally owned
-                    business into a globally
-                    integrated enterprise under this <span class="font-bold">Acclime</span> brand demonstrating his
-                    vission, strategic acument,
-                    and commitment to excellence
+                    {!! nl2br(e(value: $getTeam[0]->highlight)) !!}
                 </p>
             </div>
         </div>
