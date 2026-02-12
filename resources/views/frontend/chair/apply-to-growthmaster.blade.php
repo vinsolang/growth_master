@@ -15,7 +15,7 @@
         @component('components.navbar')
         @endcomponent
 
-        <section class="py-40">
+        <section class="mt-40">
         <h1 class="text-[#000000] text-2xl md:text-4xl text-center font-semibold py-6 px-4">
             Apply to Become a Growth Master Chair
         </h1>
@@ -145,7 +145,7 @@
                 </div>
             </form>
         </div>
-        <div class="py-24">
+        <div class="mt-24">
              @component('components.footer')
             @endcomponent
         </div>
