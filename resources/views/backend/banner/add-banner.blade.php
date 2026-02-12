@@ -44,9 +44,17 @@
                         <div class="card-body">
 
                             <div class="row">
-                                <div class="mb-3 col-12">
-                                    <label for="formFile" class="form-label text-[#0F4634]">title</label>
+                                 <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Name</label>
                                     <input class="form-control" type="text" name="title" />
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Title</label>
+                                    <input class="form-control" type="text" name="name" />
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Content</label>
+                                    <textarea name="content" id="content" class="form-control"></textarea>
                                 </div>
                                 <!-- ADD: no old image initially -->
                                 <div class="mb-5 col-12">
@@ -54,8 +62,8 @@
 
                                     <div class="flex justify-between items-center">
                                         <label class="uploader flex flex-col items-center justify-center w-[400px] h-[300px]
-                       border-2 border-dashed border-[#0F4634]/40 cursor-pointer bg-[#F9FAFB] hover:bg-[#F3F4F6]
-                       transition relative overflow-hidden">
+                                            border-2 border-dashed border-[#0F4634]/40 cursor-pointer bg-[#F9FAFB] hover:bg-[#F3F4F6]
+                                            transition relative overflow-hidden">
 
                                             <!-- Preview (empty for add) -->
                                             <img class="preview-image hidden absolute inset-0 m-auto w-[350px] h-[200px] object-cover"
@@ -83,7 +91,6 @@
                                         </label>
                                     </div>
                                 </div>
-
 
                             </div>
                             <div class="flex gap-3">

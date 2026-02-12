@@ -8,11 +8,10 @@ use Illuminate\Http\Request;
 
 class HomeTextController extends Controller
 {
-     public function index()
+    public function index()
     {
-        // FIX: Standardized variable name to $contactUs for clarity
-        $hometexts = HomeText::all(); // Changed get() to all() - both work, but all() is often preferred for full retrieval.
-        return view('backend.home-text.view-text', compact('hometexts'));
+        $hometext = HomeText::all();
+        return view('backend.home-text.view-text', compact('hometext'));
     }
 
     public function create()
@@ -23,13 +22,13 @@ class HomeTextController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
         ]);
 
-        HomeText::create($request->all());
+        HomeText::create($request->only('title', 'description'));
 
-        return redirect()->route('home-card.index')->with('success', 'Added successfully!');
+        return redirect()->route('htext.index')->with('success', 'Added successfully!');
     }
 
     public function edit(HomeText $hometext)
@@ -37,18 +36,26 @@ class HomeTextController extends Controller
         return view('backend.home-text.update-text', compact('hometext'));
     }
 
-    public function update(Request $request, HomeText $hometext)
+  public function update(Request $request, HomeText $hometext) 
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'description' => 'required|string|max:255',
+    ]);
+
+    $hometext->update([
+        'title' => $request->title,
+        'description' => $request->description,
+    ]);
+
+    return redirect()->route('htext.index')->with('success', 'Updated successfully!');
+}
+
+    public function destroy(HomeText $hometext)
     {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-        ]);
+        $hometext->delete();
 
-        $hometext->update($request->all());
-
-        return redirect()->route('home-card.index')->with('success', 'Updated successfully!');
+        return redirect()->route('htext.index')->with('success', 'Deleted successfully!');
     }
-
-    // FIX: Renamed the parameter variable to $contact for consistency with edit/update methods
    
 }

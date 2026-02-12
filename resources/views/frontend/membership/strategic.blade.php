@@ -1,16 +1,172 @@
+<style>
+    /* Wrapper */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Table */
+.ck-content table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #d1d5db;
+    font-family: inherit;
+}
+
+/* Header */
+.ck-content table thead {
+    background-color: #68875d; /* Match image green */
+}
+
+.ck-content table thead th {
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 22px;
+    background-color: #68875d;
+    border: 1px solid #d1d5db;
+}
+
+/* Body Cells */
+.ck-content table tbody td {
+    padding: 22px 24px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    line-height: 1.8;
+    vertical-align: middle;
+}
+
+/* First Column (Challenges) */
+.ck-content table tbody td:first-child {
+    width: 22%;
+    font-weight: 500;
+}
+
+/* Second & Third Columns */
+.ck-content table tbody td:nth-child(2),
+.ck-content table tbody td:nth-child(3) {
+    width: 39%;
+}
+
+/* Row Background (Light Gray like image) */
+.ck-content table tbody tr {
+    background-color: #f9fafb;
+}
+
+/* Slight alternate effect (optional but closer to image) */
+.ck-content table tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ck-content table thead th {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .ck-content table tbody td {
+        font-size: 13px;
+        padding: 14px;
+    }
+}
+
+</style>
 <div class="mt-10 px-4">
 
     <h1 class="text-center text-[22px] md:text-[30px] text-black font-bold">
-        Strategic Input From Peers Who Understand the Stakes
+         {{ $getContent[0]->title_1 }}
     </h1>
 
     <p class="text-center text-[15px] md:text-[20px] mt-5">
-        Here’s what changes when you have access to strategic peer input:
+        {!! nl2br(e($getContent[0]->description_1)) !!}
     </p>
 
     <!-- Responsive Table Wrapper -->
-   <div class="overflow-x-hidden mt-10 px-3">
-    <table class="border-collapse border border-gray-400 w-full max-w-[900px] mx-[-10px] md:mx-auto text-left">
+    <div class="ck-content overflow-x-hidden mt-10 px-3">
+        <div class="ck-content overflow-x-auto max-w-5xl mx-auto">
+            {!! $getContent[0]->table !!}
+        </div>
+    <p class="mt-5 text-center text-[16px] md:text-[18px] max-w-[700px] mx-auto px-3">
+        {!! nl2br(e($getContent[0]->text)) !!}
+    </p>
+
+    <div class="flex justify-center items-center mt-10">
+        <a href="{{ route('form.input') }}"
+            class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#68875d]
+            text-[#68875d] bg-white rounded 
+            transition-all duration-300 ease-in-out
+            hover:bg-[#68875d] hover:text-white">
+
+            Become A Member
+
+            <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
+                <i class="fa-solid fa-angle-right"></i>
+            </span>
+        </a>
+    </div>
+</div>
+
+
+  <div class="mt-10 px-4">
+
+    <!-- Heading -->
+    <h1 class="text-center text-black font-semibold text-[22px] md:text-[28px] lg:text-[32px] max-w-[900px] mx-auto">
+        {{ $getContent[0]->title_2 }}
+    </h1>
+
+    <p class="mt-5 text-[16px] md:text-[18px] text-left max-w-[850px] mx-auto">
+         {!! nl2br(e($getContent[0]->description_3)) !!}
+    </p>
+
+    <!-- Cards Section -->
+    <div class="mt-10">
+        <div class="flex flex-col md:flex-row justify-center items-start md:items-stretch gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
+                <i class="fa-solid fa-user text-white text-[36px]"></i>
+                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3"> {{ $getContent[0]->title_card_1 }}</h1>
+
+                <p class="text-start text-white mt-4">
+                    {!! nl2br(e($getContent[0]->desc_card_1)) !!}
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
+                <i class="fa-solid fa-user text-white text-[36px]"></i>
+                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">{{ $getContent[0]->title_card_2 }}</h1>
+
+                <p class="text-start text-white mt-4">
+                    
+                    {!! nl2br(e($getContent[0]->desc_card_2)) !!}
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
+                <i class="fa-solid fa-user text-white text-[36px]"></i>
+                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">{{ $getContent[0]->title_card_3 }}</h1>
+
+                <p class="text-start text-white mt-4">
+                 
+                    {!! nl2br(e($getContent[0]->desc_card_3)) !!}
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+{{-- <table class="border-collapse border border-gray-400 w-full max-w-[900px] mx-[-10px] md:mx-auto text-left">
         <thead class="bg-[#68875d] text-[#ffffff]">
             <tr>
                 <th class="border border-gray-300 py-3 px-4 text-center text-[14px] md:text-[20px] lg:text-[24px] font-semibold">
@@ -84,99 +240,4 @@
                 </td>
             </tr>
         </tbody>
-    </table>
-
-    <p class="mt-5 text-center text-[16px] md:text-[18px] max-w-[700px] mx-auto px-3">
-        The difference between good decisions and great decisions often comes down to perspective.
-        Growth Master gives you access to the perspectives that matter most.
-    </p>
-
-    <div class="flex justify-center items-center mt-10">
-        <a href="{{ route('form.input') }}"
-            class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#68875d]
-            text-[#68875d] bg-white rounded 
-            transition-all duration-300 ease-in-out
-            hover:bg-[#68875d] hover:text-white">
-
-            Become A Member
-
-            <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
-                <i class="fa-solid fa-angle-right"></i>
-            </span>
-        </a>
-    </div>
-</div>
-
-
-  <div class="mt-10 px-4">
-
-    <!-- Heading -->
-    <h1 class="text-center text-black font-semibold text-[22px] md:text-[28px] lg:text-[32px] max-w-[900px] mx-auto">
-        Ready to join the most trusted peer advisory network for growth-minded CEOs?
-    </h1>
-
-    <p class="mt-5 text-[16px] md:text-[18px] text-center max-w-[900px] mx-auto">
-        You didn’t build a successful company by accepting average results. The same principle applies to your
-        leadership development. While many CEOs pursue traditional executive leadership coaching, GrowthMaster isn’t
-        for every leader—and that’s by design.
-    </p>
-
-    <!-- Cards Section -->
-    <div class="mt-10">
-        <div class="flex flex-col md:flex-row justify-center items-start md:items-stretch gap-8 mt-10">
-
-            <!-- Card 1 -->
-            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
-                <i class="fa-solid fa-user text-white text-[36px]"></i>
-                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">Who thrives with GrowthMaster</h1>
-
-                <p class="text-start text-white mt-4">
-                    • You generate million dollars in annual revenue and face the operational complexity that comes
-                    with that scale.
-                </p>
-                <p class="text-start text-white mt-3">
-                    • You make decisions that affect significant numbers of employees and substantial capital.
-                </p>
-                <p class="text-start text-white mt-3">
-                    • Most importantly, you’re committed to growth—for your business and for yourself as a leader.
-                </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
-                <i class="fa-solid fa-user text-white text-[36px]"></i>
-                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">Why members succeed</h1>
-
-                <p class="text-start text-white mt-4">
-                    • GrowthMaster members grow their companies faster than non-members and stay in business longer than
-                    the average company.
-                </p>
-                <p class="text-start text-white mt-3">
-                    • This is executive leadership coaching that pays for itself. When you're making million-dollar
-                    decisions, proven frameworks and peer insights matter.
-                </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
-                <i class="fa-solid fa-user text-white text-[36px]"></i>
-                <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">What you gain</h1>
-
-                <p class="text-start text-white mt-4">
-                    • Access to certified mentors who challenge your thinking and accelerate your decision-making.
-                </p>
-                <p class="text-start text-white mt-3">
-                    • A trusted peer group that gives you perspectives you can’t get anywhere else.
-                </p>
-                <p class="text-start text-white mt-3">
-                    • A proven path for leading more effectively and scaling with confidence.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-
-</div>
+    </table> --}}

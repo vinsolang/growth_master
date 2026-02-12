@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class HomeCard extends Model
 {
+    use HasFactory;
     protected $table = 'home_cards';
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['image','title', 'description'];
 }

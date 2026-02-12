@@ -3,12 +3,17 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\ApproachContent;
 use App\Models\Banner;
 use App\Models\Events;
 use App\Models\FAQs;
 use App\Models\HelpSection;
 use App\Models\HowItWorks;
+use App\Models\PeerGroupContent;
 use App\Models\Program;
+use App\Models\ProgramContent;
+use App\Models\ReviewPageContent;
+use App\Models\WhyJoinGrowthMaster;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -18,27 +23,33 @@ class ClientController extends Controller
         $showHelpSection = HelpSection::all();
         $showFAQs = FAQs::all();
         $getBanner = Banner::all();
+        $getContent = ApproachContent::all();
         return view('frontend.membership.our-aproach', compact(
             'showApproach', 
             'showHelpSection',
             'showFAQs',
-            'getBanner'
+            'getBanner',
+            'getContent'
         ));
     }
     public function memberShipPrograms(){
         $showProgram = Program::all();
         $showFAQs = FAQs::all();
         $getBanner = Banner::all();
-        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs','getBanner'));
+        $getContent = WhyJoinGrowthMaster::first();
+        $getContentProgram = ProgramContent::all();
+        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs','getBanner','getContent','getContentProgram'));
     }
      public function growthReview(){    
         $showFAQs = FAQs::all();
         $getBanner = Banner::all();
-        return view('frontend.membership.growth-review', compact('showFAQs', 'getBanner'));
+        $getContent = ReviewPageContent::all();
+        return view('frontend.membership.growth-review', compact('showFAQs', 'getBanner','getContent'));
     }
      public function ExclusivePeerGroups(){
         $getBanner = Banner::all();
-        return view('frontend.membership.exclusive-peer-groups', compact('getBanner'));
+        $getContent = PeerGroupContent::all();
+        return view('frontend.membership.exclusive-peer-groups', compact('getBanner','getContent'));
     }
 
     //  Event
@@ -58,8 +69,9 @@ class ClientController extends Controller
     }
     // Become A member Ship
     public function membershipApplication(){
-          $getBanner = Banner::all();
-        return view('frontend.becom-a-member.becom-member',compact('getBanner'));
+        $getBanner = Banner::all();
+        $getContent = WhyJoinGrowthMaster::first();
+        return view('frontend.becom-a-member.becom-member',compact('getBanner','getContent'));
     }
 
     // Chair
@@ -83,5 +95,9 @@ class ClientController extends Controller
         return view('frontend.chair.apply-to-growthmaster', compact('getBanner'));
     }
 
+    public function sitemap(){
+        $getBanner = Banner::all();
+        return view('components.sitemap', compact('getBanner'));
+    }
     
 }

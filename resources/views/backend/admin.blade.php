@@ -49,7 +49,9 @@
   {{--
   <script src="{{ asset('js/') }}"></script> --}}
   <script src="{{ asset('js/config.js') }}"></script>
-
+ <!-- CKEditor 5 Classic CDN -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 </head>
 
 <body>
@@ -149,28 +151,6 @@
             </ul>
           </li> --}}
 
-           <!-- Admin -->
-          {{-- <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class="menu-icon tf-icons bx bx-group"></i>
-                  <div>Home</div>
-              </a>
-
-              <ul class="menu-sub">
-                  <li class="menu-item">
-                      <a href="{{ route('home-text.index') }}" class="menu-link">
-                          <div>Content</div>
-                      </a>
-                  </li>
-                  <li class="menu-item">
-                      <a href="" class="menu-link">
-                          <div>Card</div>
-                      </a>
-                  </li>
-              </ul>
-          </li> --}}
-
-
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-images"></i>
@@ -185,23 +165,55 @@
               </li>
               <li class="menu-item d-none">
                 <a href="{{ route('banner.create') }}" class="menu-link">
-                  <div data-i18n="Without menu">Add Member</div>
+                  <div data-i18n="Without menu">Add Banner</div>
                 </a>
               </li>
             </ul>
+          </li>
+
+          <!-- Admin -->
+          <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-home"></i>
+                  <div>Home</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="{{ route('homecontent') }}" class="menu-link">
+                          <div>Content</div>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+          <!-- Member ship -->
+          <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-trending-up"></i>
+                  <div>Why Join</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="{{ route('whyjoin') }}" class="menu-link">
+                          <div>Content</div>
+                      </a>
+                  </li>
+              </ul>
           </li>
 
           <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-group"></i>
-              <div data-i18n="Layouts">Member</div>
+              <div data-i18n="Layouts">People</div>
             </a>
 
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="{{ route('view_team') }}" class="menu-link">
-                  <div data-i18n="Without menu">View Member</div>
+                  <div data-i18n="Without menu">View People</div>
                 </a>
               </li>
               <li class="menu-item d-none">
@@ -219,16 +231,22 @@
               <i class="menu-icon tf-icons bx bx-git-branch"></i>
               <div data-i18n="Layouts">Approach</div>
             </a>
-
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('approachcontent') }}" class="menu-link">
+                  <div data-i18n="Without menu">Edit Content</div>
+                </a>
+              </li>
+            </ul>
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="{{ route('work.index') }}" class="menu-link">
-                  <div data-i18n="Without menu">View</div>
+                  <div data-i18n="Without menu">View Block</div>
                 </a>
               </li>
               <li class="menu-item">
                 <a href="{{ route('work.create') }}" class="menu-link">
-                  <div data-i18n="Without menu">Add</div>
+                  <div data-i18n="Without menu">Add Block</div>
                 </a>
               </li>
             </ul>
@@ -243,6 +261,13 @@
 
             <ul class="menu-sub">
               <li class="menu-item">
+                <a href="{{ route('programcontent') }}" class="menu-link">
+                  <div data-i18n="Without menu">Content Program</div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-sub">
+              <li class="menu-item">
                 <a href="{{ route('program.index') }}" class="menu-link">
                   <div data-i18n="Without menu">View Program</div>
                 </a>
@@ -250,6 +275,38 @@
               <li class="menu-item">
                 <a href="{{ route('program.create') }}" class="menu-link">
                   <div data-i18n="Without menu">Add Program</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+           <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+             <i class="menu-icon tf-icons bx bx-search-alt"></i>
+              <div data-i18n="Layouts">Page Review</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('reviewcontent') }}" class="menu-link">
+                  <div data-i18n="Without menu">Content Page</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+           <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+             <i class="menu-icon tf-icons bx bx-search-alt"></i>
+              <div data-i18n="Layouts">PagePeerGroup</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('peergroupcontent') }}" class="menu-link">
+                  <div data-i18n="Without menu">Content Page</div>
                 </a>
               </li>
             </ul>
@@ -339,20 +396,34 @@
             </ul>
           </li> --}}
           <!-- Layouts -->
-          <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-check-shield"></i>
-              <div data-i18n="Layouts">Submitting</div>
+          <li class="menu-item relative">
+            <a href="javascript:void(0);" class="menu-link menu-toggle flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="menu-icon tf-icons bx bx-check-shield"></i>
+                    <div data-i18n="Layouts">Submitting</div>
+                </div>
+
+                {{-- Notification Badge --}}
+                @php
+                    $submittingCount = \App\Models\Membership::count(); // total submissions
+                @endphp
+                @if($submittingCount > 0)
+                    <span class="inline-flex relative -top-2 items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-600 rounded-full">
+                        {{ $submittingCount }}
+                    </span>
+                @endif
             </a>
 
             <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="{{ route('memberships.index') }}" class="menu-link">
-                  <div data-i18n="Without menu">View</div>
-                </a>
-              </li>
+                <li class="menu-item">
+                    <a href="{{ route('memberships.index') }}" class="menu-link">
+                        <div data-i18n="Without menu">View</div>
+                    </a>
+                </li>
             </ul>
-          </li>
+        </li>
+
+
 
           <!-- Layouts -->
           <li class="menu-item">

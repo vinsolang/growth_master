@@ -34,7 +34,10 @@
 </div>
 
 <div class="flex flex-col  justify-center  items-center mt-10  gap-10">
-    <p class="text-start text-[#343434] mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">Traditional
+     <p class="text-start text-[#343434] mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">
+        {!! nl2br(e($getContent[0]->content)) !!}
+    </p>
+    {{-- <p class="text-start text-[#343434] mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">Traditional
         business coaching focuses on personal development through one-on-one sessions with a certified
         coach. While valuable for building management skills, this approach falls short when you’re evaluating a
         major acquisition, considering international expansion or navigating partnership disputes. And while your
@@ -52,7 +55,7 @@
         leader AND provide an integrated suite of tools that seamlessly connects financial health analytics with
         strategic insights across Sales, Operations, and Human Resource Management (HRM), ensuring targeted,
         profitable growth.
-    </p>
+    </p> --}}
 </div>
 
   <div class="relative h-[50vh] mt-10">
@@ -63,14 +66,11 @@
   <div class="absolute inset-0  flex flex-col justify-center items-center lg:items-end px-6 md:px-16 lg:px-24 text-white text-right">
 
     <h1 class="text-[20px] md:text-[35px] lg:text-[40px] font-semibold leading-tight max-w-[900px]">
-        The Cost of Leading In Isolation
+        {{ $getContent[0]->title }}
     </h1>
 
     <p class="mt-5 text-[15px] ps-5 lg:ps-25 text-white  text-start font-bold md:text-[17px] lg:text-[20px]  leading-tight lg:mx-[70px] max-w-[600px]">
-        Most business owners make critical choices in isolation, relying on intuition and limited internal perspectives.
-        The cost of getting it wrong isn’t just financial—it affects hundreds of employees, millions in revenue,
-        and years of strategic positioning. As a leader at this level, you need advice from mentors or peer owners
-        who’ve faced comparable stakes with their own capital on the line.
+        {!! nl2br(e($getContent[0]->description)) !!}
     </p>
 
 </div>

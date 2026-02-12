@@ -4,24 +4,32 @@ use App\Http\Controllers\Admin\AboutCardController;
 use App\Http\Controllers\Admin\AboutSectionController;
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\AppraochContentController;
 use App\Http\Controllers\backend\BannerController;
 use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
 use App\Http\Controllers\backend\HomeCardController;
+use App\Http\Controllers\backend\HomeComtentController;
 use App\Http\Controllers\backend\HomeTextController;
 use App\Http\Controllers\backend\HowItWorksController;
 use App\Http\Controllers\backend\OurApproachController;
 use App\Http\Controllers\backend\OurProgramController;
 use App\Http\Controllers\backend\OurTeamController;
+use App\Http\Controllers\backend\PeerGroupContentController;
+use App\Http\Controllers\backend\ProgramContentController;
+use App\Http\Controllers\backend\ReviewPageContentController;
+use App\Http\Controllers\backend\WhyJoinGrowthMasterController;
 use App\Http\Controllers\frontend\AboutGrowthControll;
 use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
 use App\Http\Controllers\MembershipController;
 use App\Models\Banner;
 use App\Models\FAQs;
+use App\Models\HomeContent;
 use App\Models\HomeText;
+use App\Models\WhyJoinGrowthMaster;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -32,10 +40,12 @@ Route::get('/', function () {
       $showFAQs = FAQs::all();
       $getBanner = Banner::all();
       $getTeam = DB::table('team')->get();
+      $getHomeContent = HomeContent::all();
     return view('frontend.home', compact(
         'showFAQs',
         'getBanner',
-        'getTeam'
+        'getTeam',
+        'getHomeContent'
         ));
 })->name('home');
 
@@ -43,14 +53,60 @@ Route::get('/', function () {
 
 // Member ship
 Route::get('membership', function () {
+    $getContent = WhyJoinGrowthMaster::all();
     $getBanner = Banner::all();
-    return view('frontend.membership', compact('getBanner'));
+    return view('frontend.membership', compact('getBanner','getContent'));
 })->name('membership');
 Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])->name('approach');
 Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
 Route::get('membership/exclusive-peer-groups', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
+Route::get('per-to-per', function(){
+     $getBanner = Banner::all();
+    return view('frontend.sitemap.per-to-per-matoring', compact('getBanner'));
+})->name('per.to.per');
+
+Route::get('chief-executive-coaching-program', function(){
+     $getBanner = Banner::all();
+    return view('frontend.sitemap.program.chief-executive-coaching-program', compact('getBanner'));
+})->name('chief.executive.coaching.program');
+Route::get('small-business-program', function(){
+     $getBanner = Banner::all();
+      $showFAQs = FAQs::all();
+    return view('frontend.sitemap.program.small-business-program', compact('getBanner','showFAQs'));
+})->name('small.business.program');
+
+Route::get('trusted-advisor-program', function(){
+     $getBanner = Banner::all();
+      $showFAQs = FAQs::all();
+    return view('frontend.sitemap.program.trusted-advisor-program', compact('getBanner','showFAQs'));
+})->name('trusted.advisor.program');
+
+Route::get('key-executive-program', function(){
+     $getBanner = Banner::all();
+      $showFAQs = FAQs::all();
+    return view('frontend.sitemap.program.key-executive-program', compact('getBanner','showFAQs'));
+})->name('key.executive.program');
+
+Route::get('advancing-leader-program', function(){
+     $getBanner = Banner::all();
+      $showFAQs = FAQs::all();
+    return view('frontend.sitemap.program.advancing-leader-program', compact('getBanner','showFAQs'));
+})->name('advancing.leader.program');
+
+Route::get('emerging-leader-program', function(){
+     $getBanner = Banner::all();
+      $showFAQs = FAQs::all();
+    return view('frontend.sitemap.program.emerging-leader-program', compact('getBanner','showFAQs'));
+})->name('emerging.leader.program');
+
+Route::get('growth-master-inside-program', function(){
+    $getBanner = Banner::all();
+    $showFAQs = FAQs::all();
+    return view('frontend.sitemap.program.growth-master-inside-program', compact('getBanner','showFAQs'));
+})->name('growth.master.inside.program');
+
 
 // Route::post('/chair-contact', [ChairContactController::class, 'store'])
 //     ->name('chair.contact.store');
@@ -88,6 +144,8 @@ Route::get('about-growth/what-is-growth-master', [AboutGrowthControll::class, 'w
 Route::get('about-growth/leadership-laws/', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
 Route::get('about-growth/ceo-climp/', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
 
+// sitemap
+Route::get('sitemap', [ClientController::class, 'sitemap'])->name('sitemap');
 
 // Submite Become a member
 Route::resource('memberships', MembershipController::class)
@@ -148,7 +206,29 @@ Route::middleware(['auth'])->group(function(){
     // Events
     Route::resource('event', EventsController::class);
     Route::resource('banner', BannerController::class);
-    Route::resource('home-text', HomeTextController::class);    
-    Route::resource('home-card', HomeCardController::class);
+
+    // Why Join Growth Master
+    Route::get('whyjoin', [WhyJoinGrowthMasterController::class, 'whyjoin'])->name('whyjoin');
+    Route::post('whyjoin/add', [WhyJoinGrowthMasterController::class, 'Submitwhyjoin'])->name('submit.whyjoin');
+
+    // Home
+    Route::get('homecontent', [HomeComtentController::class, 'homeContent'])->name('homecontent');
+    Route::post('homecontent/add', [HomeComtentController::class, 'SubmitHomeContent'])->name('submit.homecontent');
+
+    // Approach Content
+    Route::get('approachcontent', [AppraochContentController::class, 'approachcontent'])->name('approachcontent');
+    Route::post('approachcontent/add', [AppraochContentController::class, 'SubmitApproachContent'])->name('submit.approachcontent');
+
+    // Program Content
+    Route::get('programcontent', [ProgramContentController::class, 'programcontent'])->name('programcontent');
+    Route::post('programcontent/add', [ProgramContentController::class, 'SubmitProgramContent'])->name('submit.programcontent');
+
+    // Review Content
+    Route::get('reviewcontent', [ReviewPageContentController::class, 'reviewcontent'])->name('reviewcontent');
+    Route::post('reviewcontent/add', [ReviewPageContentController::class, 'SubmitReviewcontent'])->name('submit.reviewcontent');
+
+    // Peer Group Content
+    Route::get('peergroupcontent', [PeerGroupContentController::class, 'peergroupcontent'])->name('peergroupcontent');
+    Route::post('peergroupcontent/add', [PeerGroupContentController::class, 'SubmitPeerGroupContent'])->name('submit.peergroupcontent');
 
 });

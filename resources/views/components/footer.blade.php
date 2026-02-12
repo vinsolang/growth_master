@@ -80,8 +80,10 @@
                 {{-- <p>Privacy Policy</p>
                 <p>Confidentiality Pledge</p>
                 <p>Terms of Use</p>
-                <p>Contact Us</p>
-                <p>Sitemap</p> --}}
+                <p>Contact Us</p> --}}
+                <a href="{{ route('sitemap') }}" class="font-semibold">
+                    <p>Sitemap</p>
+                </a>
             </div>
         </div>
     </div>

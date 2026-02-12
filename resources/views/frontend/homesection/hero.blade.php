@@ -28,10 +28,9 @@
 
 {{-- Why Growth-Focused CEOs Choose Growth Master --}}
 <div class="py-12">
-    <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Why Growth-Focused CEOs Choose Growth Master</h1>
+    <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">{{ $getHomeContent[0]->title }}</h1>
     <p class="max-w-[70%] mx-auto text-[#333333] text-xl md:text-2xl text-left py-6">
-        CEOs and business owners need battle-tested insights from leaders who’ve navigated uncertainty before, 
-        and strategic guidance that’s proven to work in any economic environment.
+         {!! nl2br(e($getHomeContent[0]->description)) !!}
     </p>
 
     <section class="bg-white py-16">
@@ -47,12 +46,11 @@
                     <img src="https://www.vistage.com/wp-content/uploads/2025/10/icon-Group-20.png" alt="">
                     </div>
                     <h3 class="text-xl md:text-2xl font-semibold text-[#003f5e] mb-3">
-                    Proven History of Impact
+                        {{ $getHomeContent[0]->title_card_1 }}
                     </h3>
                     <p class="text-[#333333] leading-relaxed text-lg md:text-xl">
-                    Trusted peers. An accomplished mentor. A confidential forum.
-                    World-class resources. Solo coaching does not come close to the
-                    scope and depth of the Growth Master experience.
+                
+                         {!! nl2br(e($getHomeContent[0]->desc_card_1)) !!}
                     </p>
                 </div>
 
@@ -65,12 +63,11 @@
                     <img src="https://www.vistage.com/wp-content/uploads/2025/10/icon-Group-29.png" alt="">
                     </div>
                     <h3 class="text-xl md:text-2xl font-semibold text-[#003f5e] mb-3">
-                        Built on Purpose
+                       {{ $getHomeContent[0]->title_card_2 }}
                     </h3>
                     <p class="text-[#333333] leading-relaxed text-lg md:text-xl">
-                        There are no shortcuts to great leadership. Every tool, resource,
-                        and exchange is designed to help members make better decisions
-                        that drive better outcomes.
+            
+                         {!! nl2br(e($getHomeContent[0]->desc_card_2)) !!}
                     </p>
                 </div>
 
@@ -83,12 +80,11 @@
                     <img src="https://www.vistage.com/wp-content/uploads/2025/10/icon-Group-16.png" alt="">
                     </div>
                     <h3 class="text-xl md:text-2xl font-semibold text-[#003f5e] mb-3">
-                        Selective Membership
+                        {{ $getHomeContent[0]->title_card_3 }}
                     </h3>
                     <p class="text-[#333333] text-lg md:text-xl leading-relaxed">
-                        Our Chairs carefully select members. CEOs and business owners of
-                        $5M+ companies who are committed to their leadership climb, just
-                        like you.
+                        
+                         {!! nl2br(e($getHomeContent[0]->desc_card_3)) !!}
                     </p>
                 </div>
 
@@ -101,12 +97,11 @@
                     <img src="https://www.vistage.com/wp-content/uploads/2025/10/icon-Group-18.png" alt="">
                     </div>
                     <h3 class="text-xl md:text-2xl font-semibold text-[#003f5e] mb-3">
-                    Clear, Measurable ROI
+                    {{ $getHomeContent[0]->title_card_4 }}
                     </h3>
                     <p class="text-[#333333] text-lg md:text-xl leading-relaxed">
-                    Growth Master is an investment that pays off. Members see it as the best
-                    way to protect and grow their business, helping them reach their
-                    goals through better leadership.
+                  
+                     {!! nl2br(e($getHomeContent[0]->desc_card_4)) !!}
                     </p>
                 </div>
 
@@ -119,12 +114,11 @@
                     <img src="https://www.vistage.com/wp-content/uploads/2025/10/icon-Group-31.png" alt="">
                     </div>
                     <h3 class="text-xl md:text-2xl font-semibold text-[#003f5e] mb-3">
-                    Local Impact, Global Reach
+                   {{ $getHomeContent[0]->title_card_5 }}
                     </h3>
                     <p class="text-[#333333] text-lg md:text-xl leading-relaxed">
-                    We combine local, close-knit groups with a global network. Our
-                    local Chairs build strong, trusted communities where leaders
-                    openly tackle challenges and grow.
+                   
+                     {!! nl2br(e($getHomeContent[0]->desc_card_5)) !!}
                     </p>
                 </div>
 
@@ -137,12 +131,11 @@
                     <img src="https://www.vistage.com/wp-content/uploads/2025/10/icon-Group-22.png" alt="">
                     </div>
                     <h3 class="text-xl md:text-2xl font-semibold text-[#003f5e] mb-3">
-                        Best-in-Class Coaches
+                        {{ $getHomeContent[0]->title_card_6 }}
                     </h3>
                     <p class="text-[#333333] text-lg md:text-2xl leading-relaxed">
-                        Growth Master Chairs are accomplished leaders who have completed a
-                        rigorous coaching academy. They use proven methods that lead to
-                        real results.
+                       
+                        {!! nl2br(e($getHomeContent[0]->desc_card_6)) !!}
                     </p>
                 </div>
 
@@ -323,28 +316,18 @@
 <section class="relative w-full py-24">
     <div class="bg-[#68875d] w-full lg:h-[950px]">
         <h1 class="text-[20px] text-white text-center md:text-[30px] lg:text-[45px] font-semibold max-w-[1500px] mx-auto leading-tight py-24">
-            The Most Comprehensive CEO Coaching Platform
+            {{ $getHomeContent[0]->title_1 }}
         </h1>
         <div class="flex lg:flex-row md:flex-col flex-col items-center justify-between px-4 lg:px-40">
             {{-- Text --}}
             <div class="lg:w-[40%] space-y-4">
-                <p class="text-[#ffffff] text-lg md:text-xl font-medium">Peer Group Experience</p>
-                <p class="text-white text-lg md:text-xl font-medium">
-                    Local, noncompeting peers meet monthly to process pressing issues in a confidential environment. 
-                    You also get insights on salient topics from trusted experts.
-                </p>
-                <p class="text-[#ffffff] text-lg md:text-xl font-medium">A Trusted Chair Guides Your Group</p>
-                <p class="text-white text-lg md:text-xl font-medium">
-                    Your Chair keeps your group meetings productive and provides monthly one-to-one coaching to keep you accountable.
-                </p>
-                <p class="text-[#ffffff] text-lg md:text-xl font-medium">Proprietary Issue Processing</p>
-                <p class="text-white text-lg md:text-xl font-medium">
-                   A proven methodology to help you clarify challenges, identify root problems, vet your solutions, and determine action plans.
+                <p class="text-[#ffffff] text-lg md:text-xl font-medium">
+                    {!! nl2br(e($getHomeContent[0]->description_1)) !!}
                 </p>
             </div>
             {{-- Image --}}
             <div class="lg:w-[60%]">
-                <img src="https://www.vistage.com/wp-content/uploads/2025/11/CEO-Coaching-graph-1024x782.png" alt="">
+                <img src="{{ asset('storage/' . $getHomeContent[0]->image) }}" alt="">
             </div>
         </div>
         <p class="text-center text-white text-md md:text-lg font-semibold py-4">
@@ -355,7 +338,7 @@
 </section>
 {{-- Event Blog --}}
 <div class="relative w-full" id="event-finan">
-    <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Experience Growth Master Before You Join</h1>
+    <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">{{ $getHomeContent[0]->sub_title_event }}</h1>
     <section class="max-w-7xl mx-auto px-4 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
@@ -363,21 +346,21 @@
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img
-                    src="https://cac-center.edu.kh/wp-content/uploads/2025/05/DSC09958-1536x1024.jpg"
+                    src="{{ asset('storage/'. $getHomeContent[0]->img_card_event_1) }}"
                     alt="Small Business"
                     class="w-full h-[230px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
 
             <h3 class="mt-5 text-xl font-bold text-[#003F5F] leading-snug">
-                CEO Climb Events
+                {{ $getHomeContent[0]->title_event_1 }}
             </h3>
             <p class="text-[#333333] font-medium text-md md:text-lg">
-                Monthly events designed for ambitious leaders ready to take their companies and leadership to the next level.
+                 {!! nl2br(e($getHomeContent[0]->desc_card_event_1)) !!}
             </p>
 
             <p class="mt-2 text-gray-500 text-sm">
-                January 6, 2026
+                {{ $getHomeContent[0]->updated_at->format('d, M, Y') }}
             </p>
         </div>
 
@@ -385,21 +368,21 @@
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img
-                    src="https://cac-center.edu.kh/wp-content/uploads/2025/05/IMG_5861-1536x1024.jpg"
+                    src="{{ asset('storage/'. $getHomeContent[0]->img_card_event_2) }}"
                     alt="Small Business"
                     class="w-full h-[230px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
 
             <h3 class="mt-5 text-xl font-bold text-[#003F5F] leading-snug">
-                The 6 Habits of World-Class CEOs
+                {{ $getHomeContent[0]->title_event_2 }}
             </h3>
             <p class="text-[#333333] font-medium text-md md:text-lg">
-                Essential practices and frameworks used by our most successful members. Transform your leadership with these proven habits.
+                 {!! nl2br(e($getHomeContent[0]->desc_card_event_2)) !!}
             </p>
 
             <p class="mt-2 text-gray-500 text-sm">
-                December 18, 2025
+                {{ $getHomeContent[0]->updated_at->format('d, M, Y') }}
             </p>
         </div>
 
@@ -407,22 +390,21 @@
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img
-                    src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3367-768x512.jpg"
+                    src="{{ asset('storage/'. $getHomeContent[0]->img_card_event_3) }}"
                     alt="Small Business"
                     class="w-full h-[230px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
 
             <h3 class="mt-5 text-xl font-bold text-[#003F5F] leading-snug">
-                Growth Master Small Business CEO Confidence Index
+                 {{ $getHomeContent[0]->title_event_3 }}
             </h3>
             <p class="text-[#333333] font-medium text-md md:text-lg">
-                In partnership with The Wall Street Journal, this monthly survey measures the sentiment of U.S. 
-                small business leaders about the economy, prospects, and expansion plans.
+                 {!! nl2br(e($getHomeContent[0]->desc_card_event_3)) !!}
             </p>
 
             <p class="mt-2 text-gray-500 text-sm">
-                January 6, 2026
+                {{ $getHomeContent[0]->updated_at->format('d, M, Y') }}
             </p>
         </div>
 

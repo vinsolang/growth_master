@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('home_cards', function (Blueprint $table) {
-               $table->id();
-    $table->string('title');
-    $table->text('description');
-     $table->timestamp('created_at')->useCurrent();
+            $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }

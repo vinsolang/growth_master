@@ -46,31 +46,15 @@
             </div>
 
             <div class="flex flex-col justify-center  items-center mt-10  gap-10">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10">A Proven, Comprehensive Path to
-                    Success</h1>
+                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10">{{ $getContent[0]->title }}</h1>
                 <p
                     class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
-                    You’ve reached a level of success where traditional business advice feels generic, and the stakes of
-                    your decisions demand more than intuition. Executive coaching alone can’t deliver the transformation
-                    that world-class leaders need.
-                </p>
-                <p
-                    class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
-                    GrowthMaster is the authority in guided peer advisory coaching – a proven system purpose-built for deep
-                    leadership transformation. No one else offers a more comprehensive method for making better decisions,
-                    getting better outcomes and becoming a better leader.
-                </p>
-                <p
-                    class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
-                    For more than 65 years, top executives and owners of small and mid-sized businesses have relied on our
-                    unique coaching model. It’s a proven approach that helped member companies operate for 21+ years on
-                    average, while most businesses fail within 5 years.
+                    {!! nl2br(e($getContent[0]->content)) !!}
                 </p>
             </div>
 
             <div class="relative mt-10 space-y-8">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-14">Why Peer Advisory Groups Outperform
-                    Solo Coaching</h1>
+                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-14">{{ $getContent[0]->title_on_card }}</h1>
                 <div class="flex flex-col md:flex-col lg:flex-row justify-center items-center gap-8">
                     {{-- Card 1 --}}
                     <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
@@ -78,12 +62,12 @@
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-91.png" alt="">
                         </div>
                         <div class="text-center text-[#ffffff] text-[22px] px-8 py-2">
-                            <h2>Real-world guidance for high-stakes decisions</h2>
+                            <h2>{{ $getContent[0]->title_card_1 }}</h2>
                         </div>
                         <div class="text-[#ffffff] text-[17px] text-left px-10 py-8">
-                            <p>Whether you’re navigating your first major acquisition, preparing for succession or scaling
-                                through economic uncertainty, you need guidance from experienced leaders who’ve faced
-                                comparable challenges on their own leadership development path.</p>
+                            <p>
+                                {!! nl2br(e($getContent[0]->desc_card_1)) !!}
+                            </p>
                         </div>
                     </div>
                     {{-- Card 2 --}}
@@ -92,13 +76,10 @@
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-84.png" alt="">
                         </div>
                         <div class="text-center text-[#ffffff] text-[22px] px-8 py-2">
-                            <h2>Designed for your growth stage</h2>
+                            <h2>{{ $getContent[0]->title_card_2 }}</h2>
                         </div>
                         <div class="text-[#ffffff] text-[17px] text-left px-10 py-8">
-                            <p>GrowthMaster’s peer advisory groups are designed to support CEOs at different stages of
-                                growth – from those managing their first $1M+ company to executives leading
-                                multi-million-dollar enterprises – by providing a space where issues can be processed in a
-                                group setting, giving you the benefit of collective insights from your peers.</p>
+                            <p>{!! nl2br(e($getContent[0]->desc_card_2)) !!}</p>
                         </div>
                     </div>
                     {{-- Card 3 --}}
@@ -107,11 +88,10 @@
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-89.png" alt="">
                         </div>
                         <div class="text-center text-[#ffffff] text-[22px] px-8 py-2">
-                            <h2>Highly selective membership at every stage</h2>
+                            <h2>{{ $getContent[0]->title_card_3 }}</h2>
                         </div>
                         <div class="text-[#ffffff] text-[17px] text-left px-10 py-8">
-                            <p>We vet members so that only those truly committed to the leadership climb and helping others
-                                succeed gain membership.</p>
+                            <p>{!! nl2br(e($getContent[0]->desc_card_3)) !!}</p>
                         </div>
                     </div>
                 </div>
@@ -133,21 +113,11 @@
 
             <div class="flex flex-col  justify-center items-center mt-10 gap-10">
                 <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10">
-                    Why Peer Advisory Groups Outperform Traditional Consulting
+                    {{ $getContent[0]->title_1 }}
                 </h1>
                 <p
                     class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
-                    Most business advice comes from people who’ve never carried your level of responsibility. Consultants
-                    offer theoretical frameworks. Your internal team provides operational insight but lacks strategic
-                    distance. Your GrowthMaster peers bring something different:
-                    real-world experience making decisions that affect hundreds of employees and millions in revenue.
-                </p>
-                <p
-                    class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
-                    When you’re evaluating a $10M acquisition or considering international expansion,
-                    you need input from leaders who’ve carried the weight of decisions like these.
-                    This isn’t about generic best practices. It’s about learning from executives who’ve already solved the
-                    problems you’re facing.
+                   {!! nl2br(e($getContent[0]->content_1)) !!}
                 </p>
             </div>
 
@@ -210,12 +180,11 @@
                 </div>
             <div class="relative w-full space-y-4">
                 <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
-                    What Makes Peer Advisory Groups More Effective Than Other Leadership Development
+                   {{ $getContent[0]->title_2 }}
                 </h1>
                 <p
                     class="text-start text-[#343434] font-regular text-[14px] md:text-[18px] px-6 xl:px-50 md:px-16">
-                    Peer advisory groups address the root challenge of leadership issues: the isolation that comes with executive responsibility. 
-                    As the final decision-maker, you need more than advice from internal advisors or business coaches who lack executive experience
+                   {!! nl2br(e($getContent[0]->created_at)) !!}
                 </p>
                 
               @foreach ($showHelpSection as $index => $item)

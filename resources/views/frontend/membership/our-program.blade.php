@@ -4,6 +4,51 @@
     @component('components.navbar')
 
     @endcomponent
+    <style>
+          .ck-content ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+    }
+
+    .ck-content ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+    }
+    </style>
+    <style>
+.custom-program-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-program-table th,
+.custom-program-table td {
+    border: 1px solid #d1d5db;
+    width: 50%;
+}
+
+/* Header row (works even without <th>) */
+.custom-program-table table tr:first-child td,
+.custom-program-table table tr:first-child th {
+    background-color: #68875d !important;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Body rows */
+.custom-program-table table tr:not(:first-child) td {
+    background-color: #f3f4f6;
+    padding: 32px 28px;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+
+</style>
+
     <div class="space-y-10">
         <section class="relative w-full">
             <div class="w-full h-[110vh] md:h-screen relative">
@@ -48,13 +93,14 @@
             </div>
         </section>
         <div class="text-[#333333] text-4xl font-2xl text-center space-y-8">
-            <h1>Programs for CEOs, Presidents, Founders, & Owners</h1>
-            <p class="text-xl font-normal max-w-5xl mx-auto text-left">Designed for CEOs, Presidents, Founders, Owners, or first-time CEOs, these GrowthMaster programs provide unparalleled peer advisory and executive coaching for leaders navigating the complexities of business.</p>
-            <p class="text-xl font-normal max-w-5xl mx-auto text-left">They are ideal for those with a formal management team and established departments, processes, and systems in place. Our members are driven by a desire to learn, identify and resolve blind spots, and significantly enhance their leadership ability.</p>
-            <h1>How GrowthMaster Helped Karen Norheim Define Her CEO Journey</h1>
+            <h1>{{ $getContentProgram[0]->title }}</h1>
+            <p class="text-xl font-normal max-w-5xl mx-auto text-left">
+                {!! nl2br(e($getContentProgram[0]->description)) !!}
+            </p>
+            <h1>{{ $getContentProgram[0]->title_1 }}</h1>
             {{-- Video --}}
             <div class="flex justify-center items-center">
-                <video src="{{ asset('assets/vedo.mp4') }}"></video>
+                <img src="{{ asset('storage/'. $getContentProgram[0]->image) }}" alt="">
             </div>
             {{-- Button Join out Programs --}}
             <div class="flex justify-center items-center mt-10">
@@ -136,105 +182,28 @@
         <section class="w-full bg-[#68875d] py-16 px-4 md:px-12 lg:px-24">
             <!-- Title -->
             <h1 class="text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight text-center text-[#ffffff]">
-                Elevate Your Team with Leadership Development Programs
+                {{ $getContentProgram[0]->title_2 }}
             </h1>
             <div class="max-w-6xl mx-auto text-white space-y-10 py-6">
 
                 <!-- Intro paragraph -->
                 <p class="text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
-                    For CEOs who want to accelerate growth and protect their business, 
-                    Leadership Development Programs drive the transformation of employees throughout their organization.
+                    {!! $getContentProgram[0]->description_2 !!}
                 </p>
-
-                <!-- Highlight line -->
-                <h2 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold">
-                    Strengthen leadership at every level of your organization
-                </h2>
-
-                <!-- Description -->
-                <p class="text-[16px] md:text-[18px] leading-relaxed max-w-5xl">
-                    Adapted from the proven Growth Master model for how world-class leaders learn, each program is purpose-built to 
-                    develop employees based on your goals and deliver measurable results through guided peer advisory, 
-                    coaching, and curated education.
-                </p>
-
-                <!-- Sub heading -->
-                <h3 class="text-[#ffffff] text-[18px] md:text-[20px] font-semibold">
-                    Match development to leadership responsibility for:
-                </h3>
-
-                <!-- Bullet list -->
-                <ul class="list-disc pl-6 space-y-4 text-[16px] md:text-[18px] max-w-4xl">
-                    <li>
-                        Senior executives who need strategic thinking skills beyond their functional expertise
-                    </li>
-                    <li>
-                        Experienced managers ready to lead complex initiatives and develop others
-                    </li>
-                    <li>
-                        Rising stars who show potential but need comprehensive leadership training
-                    </li>
-                    <li>
-                        Entire teams requiring aligned leadership culture and collaborative skills
-                    </li>
-                </ul>
 
             </div>
         </section>
         {{-- Join 45,000 Leaders Who’ve Chosen Strategic Accountability --}}
         <section class="relative w-full">
             <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
-                Join 45,000 Leaders Who’ve Chosen Strategic Accountability Over Going It Alone
+                {{ $getContentProgram[0]->title_3 }}
             </h1>
             <p class="text-[#343434] text-lg max-w-[70%] mx-auto text-left">
-                Being at the top doesn’t have to mean leading in isolation. Whether you need peer insights for high-stakes decisions or want to develop your team’s leadership capabilities, 
-                Growth Master provides a structured support system that transforms how you lead and how your organization performs.
+                 {!! nl2br(e($getContentProgram[0]->description_3)) !!}
             </p>
 
-             <div class="max-w-6xl mx-auto mt-12 border border-gray-300">
-                <!-- Header -->
-                <div class="grid grid-cols-2">
-                    <div class="bg-[#68875d] py-5 text-center border-r border-gray-300">
-                        <h2 class="text-[#ffffff] text-xl font-bold">
-                            The Investment
-                        </h2>
-                    </div>
-                    <div class="bg-[#68875d] py-5 text-center">
-                        <h2 class="text-[#ffffff] text-xl font-bold">
-                            The Results
-                        </h2>
-                    </div>
-                </div>
-
-                <!-- Row 1 -->
-                <div class="grid grid-cols-2 border-t border-gray-300 text-lg">
-                    <div class="p-6 border-r border-gray-300 text-gray-900">
-                        Strategic peer advisory and professional executive coaching.
-                    </div>
-                    <div class="p-6 text-gray-900">
-                        Growth Master members grow their companies 2.2x faster than non-members.
-                    </div>
-                </div>
-
-                <!-- Row 2 (Gray background) -->
-                <div class="grid grid-cols-2 bg-gray-100 border-t border-gray-300 text-lg">
-                    <div class="p-6 border-r border-gray-300 text-gray-900">
-                        Proven frameworks for complex decision-making facilitation.
-                    </div>
-                    <div class="p-6 text-gray-900">
-                        Member businesses operate 4x longer than the average U.S. company.
-                    </div>
-                </div>
-
-                <!-- Row 3 -->
-                <div class="grid grid-cols-2 border-t border-gray-300 text-lg">
-                    <div class="p-6 border-r border-gray-300 text-gray-900">
-                        Leadership development at every organizational level.
-                    </div>
-                    <div class="p-6 text-gray-900">
-                        Proven guidance that generates ROI through improved outcomes.
-                    </div>
-                </div>
+             <div class="max-w-6xl mx-auto mt-12 border border-gray-300 custom-program-table">
+                {!! $getContentProgram[0]->table !!}
             </div>
 
         </section>

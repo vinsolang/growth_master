@@ -46,12 +46,9 @@
             </div>
         </section>
         <div class="text-[#333333] text-4xl font-2xl text-center space-y-8">
-            <h1>Scaling CEOs: From $5M to $25M and Beyond</h1>
+            <h1>{{ $getContent[0]->title }}</h1>
             <p class="text-xl font-normal max-w-5xl mx-auto text-left">
-                When your company hits the $5M mark, everything changes. You can’t be everywhere at once anymore, 
-                but letting go feels impossible. You need systems, processes and people who can execute your vision without 
-                constant oversight. Most importantly, 
-                you need strategic guidance from leaders who’ve successfully navigated this exact transition.
+                {!! nl2br(e($getContent[0]->description)) !!}
             </p>
         </div>
         {{-- Block Card Shadow --}}
@@ -60,74 +57,58 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center max-w-8xl mx-auto md:px-40">
                     {{-- Card Shadow 1 --}}
                     <div class="shadow-2xl bg-[#68875d] text-white px-10 py-16 space-y-6">
-                        <h1 class="text-[#ffffff] text-2xl font-semibold">THE ACQUISITION ROUTE</h1>
+                        <h1 class="text-[#ffffff] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_1 }}</h1>
                         <p class="text-lg">
-                            Sean Forman hit a home run, creating Sports Reference, a leader in sports data. 
-                            Today, his business is used in front offices and cited by media giants like ESPN. 
-                            Moreover, he acquired the sports version of Wordle, Immaculate Grid, growing their total audience to more than 20 
-                            million unique users each month and their revenue by 350% over the last three years.
+                           {!! nl2br(e($getContent[0]->desc_card_1)) !!}
                         </p>
                         <div class="text-2xl font-semibold">
-                            <h2>Sean Forman</h2>
-                            <h3>President</h3>
-                            <h3>Sports Reference, LLC.</h3>
+                            <h2 class="uppercase">{{ $getContent[0]->name_card_1 }}</h2>
+                            <p class="text-xl">{!! nl2br(e($getContent[0]->positioin_card_1)) !!}</p>
                         </div>
                     </div>
                     {{-- Card Shadow 2 --}}
                     <div class="bg-white shadow-[0_12px_30px_rgba(0,0,0,0.25)] p-10 px-10 py-16 space-y-6">
-                        <h1 class="text-[#003f5e] text-2xl font-semibold">THE 700% GROWTH STORY</h1>
+                        <h1 class="text-[#003f5e] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_2 }}</h1>
                         <p class="text-lg text-[#333333]">
-                            Sean Forman hit a home run, creating Sports Reference, a leader in sports data. 
-                            Today, his business is used in front offices and cited by media giants like ESPN. 
-                            Moreover, he acquired the sports version of Wordle, Immaculate Grid, growing their total audience to more than 20 
-                            million unique users each month and their revenue by 350% over the last three years.
+                            {!! nl2br(e($getContent[0]->desc_card_2)) !!}
                         </p>
                         <div class="flex space-x-6 text-2xl font-semibold text-gray-500">
                             {{-- Profile --}}
-                            <div class="w-24 h-24 rounded-full">
-                                <img src="https://www.vistage.com/wp-content/uploads/2025/09/Ed-Barry.png" alt="" class="w-full h-full object-cover">
+                            <div class="w-20 h-20 rounded-full">
+                                <img src="{{ asset('storage/'. $getContent[0]->profile_card_2) }}" alt="" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h2 class="text-[#003f5e]">Sean Forman</h2>
-                                <h3>President</h3>
-                                <h3>Sports Reference, LLC.</h3>
+                                <h2 class="text-[#003f5e] uppercase">{{ $getContent[0]->name_card_2 }}</h2>
+                                <p class="text-xl">{!! nl2br(e($getContent[0]->positioin_card_2)) !!}</p>
                             </div>
                         </div>
                     </div>
                     {{-- Card Shadow 3 --}}
                     <div class="bg-white shadow-[0_12px_30px_rgba(0,0,0,0.25)] p-10 px-10 py-16 space-y-6">
-                        <h1 class="text-[#003f5e] text-2xl font-semibold">THE 700% GROWTH STORY</h1>
+                        <h1 class="text-[#003f5e] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_3 }}</h1>
                         <p class="text-lg text-[#333333]">
-                            Sean Forman hit a home run, creating Sports Reference, a leader in sports data. 
-                            Today, his business is used in front offices and cited by media giants like ESPN. 
-                            Moreover, he acquired the sports version of Wordle, Immaculate Grid, growing their total audience to more than 20 
-                            million unique users each month and their revenue by 350% over the last three years.
+                            {!! nl2br(e($getContent[0]->desc_card_3)) !!}
                         </p>
                         <div class="flex space-x-6 text-2xl font-semibold text-gray-500">
                             {{-- Profile --}}
-                            <div class="w-24 h-24 rounded-full">
-                                <img src="https://www.vistage.com/wp-content/uploads/2025/09/Alicia-McLaughlin.png" alt="" class="w-full h-full object-cover">
+                            <div class="w-20 h-20 rounded-full">
+                                <img src="{{ asset('storage/'. $getContent[0]->profile_card_3) }}" alt="" class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h2 class="text-[#003f5e]">Sean Forman</h2>
-                                <h3>President</h3>
-                                <h3>Sports Reference, LLC.</h3>
+                               <h2 class="text-[#003f5e] uppercase">{{ $getContent[0]->name_card_3 }}</h2>
+                                <p class="text-xl">{!! nl2br(e($getContent[0]->positioin_card_3)) !!}</p>
                             </div>
                         </div>
                     </div>
                     {{-- Card Shadow 4 --}}
                     <div class="shadow-2xl bg-[#68875d] text-white px-10 py-16 space-y-6">
-                        <h1 class="text-[#ffffff] text-2xl font-semibold">THE ACQUISITION ROUTE</h1>
+                        <h1 class="text-[#ffffff] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_4 }}</h1>
                         <p class="text-lg">
-                            Sean Forman hit a home run, creating Sports Reference, a leader in sports data. 
-                            Today, his business is used in front offices and cited by media giants like ESPN. 
-                            Moreover, he acquired the sports version of Wordle, Immaculate Grid, growing their total audience to more than 20 
-                            million unique users each month and their revenue by 350% over the last three years.
+                           {!! nl2br(e($getContent[0]->desc_card_4)) !!}
                         </p>
                         <div class="text-2xl font-semibold">
-                            <h2>Sean Forman</h2>
-                            <h3>President</h3>
-                            <h3>Sports Reference, LLC.</h3>
+                            <h2 class="text-[#ffffff] uppercase">{{ $getContent[0]->name_card_4 }}</h2>
+                            <p class="text-xl">{!! nl2br(e($getContent[0]->positioin_card_4)) !!}</p>
                         </div>
                     </div>
                 </div>
