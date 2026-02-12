@@ -10,7 +10,7 @@
   <title>@yield('site-title')</title>
   <meta name="description" content="" />
   <!-- Favicon -->
-  <link rel="icon"  href="{{ asset('assets/logo.png') }}" />
+  <link rel="icon"  href="{{ asset('assets/logo-1.png') }}" />
   <!-- Fonts -->
   <link rel="preconnect" href="{{url('https://fonts.googleapis.com')}}" />
   <link rel="preconnect" href="{{url('https://fonts.gstatic.com')}}" crossorigin />
