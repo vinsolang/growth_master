@@ -358,7 +358,6 @@
             <p class="text-[#333333] font-medium text-md md:text-lg">
                  {!! nl2br(e($getHomeContent[0]->desc_card_event_1)) !!}
             </p>
-
             <p class="mt-2 text-gray-500 text-sm">
                 {{ $getHomeContent[0]->updated_at->format('d, M, Y') }}
             </p>

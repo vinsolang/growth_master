@@ -1,0 +1,157 @@
+
+<?php $__env->startSection('content'); ?>
+    <div class="content-wrapper">
+        <?php $__env->startSection('site-title'); ?>
+            Admin | List Post
+        <?php $__env->stopSection(); ?>
+        <?php $__env->startSection('page-main-title'); ?>
+            LIST TEAMS
+        <?php $__env->stopSection(); ?>
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="card">
+                <div class="table-responsive text-nowrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Profile</th>
+                                <th>Title</th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>BIO</th>
+                                <th>Highlight</th>
+                                <th>Created at</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                            <?php $__currentLoopData = $row; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $team): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                    <td>
+                                        <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                            <img src="../assets/team/<?php echo e($team->profile); ?>" alt="Avatar" class="rounded-circle"
+                                                style="width: 250px;
+                                                                                object-fit: cover;
+                                                                                border-radius: 0px !important;
+                                                                            ">
+                                        </ul>
+                                    </td>
+                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                        <strong><?php echo e($team->title); ?></strong>
+                                    </td>
+                                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                        <strong><?php echo e($team->name); ?></strong>
+                                    </td>
+                                    <td><?php echo e($team->position); ?></td>
+                                    <td>
+                                        <span class="short-text">
+                                            <?php echo e(\Illuminate\Support\Str::words($team->bio, 5)); ?>
+
+                                        </span>
+
+                                        <span class="full-text hidden">
+                                            <?php echo e($team->bio); ?>
+
+                                        </span>
+
+                                        <?php if(str_word_count($team->bio) > 20): ?>
+                                            <a href="javascript:void(0)" class="read-more text-blue-600 text-sm"
+                                                onclick="toggleText(this)">
+                                                Read more
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
+
+                                    <td>
+                                        <span class="short-text">
+                                            <?php echo e(\Illuminate\Support\Str::words($team->highlight, 5)); ?>
+
+                                        </span>
+
+                                        <span class="full-text hidden">
+                                            <?php echo e($team->highlight); ?>
+
+                                        </span>
+
+                                        <?php if(str_word_count($team->highlight) > 20): ?>
+                                            <a href="javascript:void(0)" class="read-more text-blue-600 text-sm"
+                                                onclick="toggleText(this)">
+                                                Read more
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
+
+                                    <td><span class="badge bg-label-primary me-1"><?php echo e($team->created_at); ?></span></td>
+
+                                    <td>
+                                        <div class="dropdown position-static">
+                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown">
+                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="<?php echo e(route('update.team', ['id' => $team->id])); ?>"><i
+                                                        class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                <a href="javascript:void(0);" class="dropdown-item remove-post-key d-none"
+                                                    data-id="<?php echo e($team->id); ?>" data-bs-toggle="modal"
+                                                    data-bs-target="#basicModal">
+                                                    <i class="bx bx-trash me-1"></i> Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <form action="<?php echo e(route('remove.our.team')); ?>" method="post">
+                    <?php echo csrf_field(); ?>
+                    <div class="modal fade" id="basicModal" tabindex="-1" style="display: none;" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1">Are you sure to remove this post?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="hidden" class="remove-val" name="remove_id" id="remove_id">
+                                    <button type="submit" class="btn btn-danger">Confirm</button>
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+            <hr class="my-5" />
+        </div>
+        <!-- / Content -->
+    </div>
+    </div>
+
+<script>
+function toggleText(el) {
+    const td = el.closest('td');
+    const shortText = td.querySelector('.short-text');
+    const fullText = td.querySelector('.full-text');
+
+    if (fullText.classList.contains('hidden')) {
+        shortText.classList.add('hidden');
+        fullText.classList.remove('hidden');
+        el.innerText = 'Read less';
+    } else {
+        shortText.classList.remove('hidden');
+        fullText.classList.add('hidden');
+        el.innerText = 'Read more';
+    }
+}
+</script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/member/view-team.blade.php ENDPATH**/ ?>
