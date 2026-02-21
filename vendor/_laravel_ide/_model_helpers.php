@@ -3247,6 +3247,8 @@ namespace App\Models {
     /**
      * App\Models\HomeContent
      *
+     * @property string $desc_bolow
+     * @property string $title_below
      * @property \Illuminate\Support\Carbon $updated_at
      * @property \Illuminate\Support\Carbon $created_at
      * @property string $img_card_event_3
@@ -3307,6 +3309,8 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereImgCardEvent3($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereUpdatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereTitleBelow($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereDescBolow($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent query()

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\Banner;
 use App\Models\CEOClimb;
+use App\Models\HomeContent;
 use App\Models\Leadership;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,9 @@ class AboutGrowthControll extends Controller
 {
     public function aboutGrowth(){
         $getBanner = Banner::all();
+         $getHomeContent = HomeContent::all();
         $getContent = AboutUs::all();
-        return view('frontend.about.about', compact('getBanner', 'getContent'));
+        return view('frontend.about.about', compact('getBanner', 'getContent', 'getHomeContent'));
     }
 
     // What is Growth Master
@@ -26,13 +28,15 @@ class AboutGrowthControll extends Controller
     public function leaderShip(){
           $getBanner = Banner::all();
           $getCotentPage = Leadership::all();
-        return view('frontend.about.leadership-laws',compact('getBanner','getCotentPage'));
+           $getHomeContent = HomeContent::all();
+        return view('frontend.about.leadership-laws',compact('getBanner','getCotentPage', 'getHomeContent'));
     }
 
     // CEO Climp
     public function CeoClimp(){
         $getItem = CEOClimb::all();
+         $getHomeContent = HomeContent::all();
           $getBanner = Banner::all();
-        return view('frontend.about.ceo-climp',compact('getBanner','getItem'));
+        return view('frontend.about.ceo-climp',compact('getBanner','getItem', 'getHomeContent'));
     }
 }

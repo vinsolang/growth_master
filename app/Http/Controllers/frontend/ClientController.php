@@ -8,6 +8,7 @@ use App\Models\Banner;
 use App\Models\Events;
 use App\Models\FAQs;
 use App\Models\HelpSection;
+use App\Models\HomeContent;
 use App\Models\HowItWorks;
 use App\Models\PeerGroupContent;
 use App\Models\Program;
@@ -24,12 +25,14 @@ class ClientController extends Controller
         $showFAQs = FAQs::all();
         $getBanner = Banner::all();
         $getContent = ApproachContent::all();
+         $getHomeContent = HomeContent::all();
         return view('frontend.membership.our-aproach', compact(
             'showApproach', 
             'showHelpSection',
             'showFAQs',
             'getBanner',
-            'getContent'
+            'getContent',
+            'getHomeContent'
         ));
     }
     public function memberShipPrograms(){
@@ -38,13 +41,15 @@ class ClientController extends Controller
         $getBanner = Banner::all();
         $getContent = WhyJoinGrowthMaster::first();
         $getContentProgram = ProgramContent::all();
-        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs','getBanner','getContent','getContentProgram'));
+         $getHomeContent = HomeContent::all();
+        return view('frontend.membership.our-program', compact('showProgram', 'showFAQs','getBanner','getContent','getContentProgram', 'getHomeContent'));
     }
      public function growthReview(){    
         $showFAQs = FAQs::all();
         $getBanner = Banner::all();
         $getContent = ReviewPageContent::all();
-        return view('frontend.membership.growth-review', compact('showFAQs', 'getBanner','getContent'));
+         $getHomeContent = HomeContent::all();
+        return view('frontend.membership.growth-review', compact('showFAQs', 'getBanner','getContent', 'getHomeContent'));
     }
      public function ExclusivePeerGroups(){
         $getBanner = Banner::all();

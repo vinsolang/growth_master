@@ -213,22 +213,7 @@
         </div>
         {{-- From Contact --}}
         <section class="relative w-full">
-            <div class="space-y-4" id="program-form">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
-                    Become a Growth Master Member
-                </h1>
-                <p class="text-[#333333] text-lg md:text-xl text-left max-w-[60%] mx-auto">
-                    With Growth Master you’re joining a powerful community of high-caliber executives who challenge each other, 
-                    inspire each other and share their perspectives 
-                    to help each other make better decisions, become better leaders and achieve better outcomes.
-                </p>
-                <p class="text-[#333333] text-lg md:text-xl text-center">
-                    Take your success to a new level. Complete the form below to find out if you qualify.
-                </p>
-            </div>
-            <div class="py-6">
-                @include('frontend.include.form')
-            </div>
+            @include('frontend.include.form')
         </section>
         <div>
             @component('components.footer')

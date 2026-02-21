@@ -54,6 +54,9 @@ class HomeComtentController extends Controller
             'img_card_event_1' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'img_card_event_2' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'img_card_event_3' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+
+            'desc_bolow' => 'nullable|string',
+            'title_below' => 'nullable|string',
         ]);
 
         // Get existing record or create

@@ -40,5 +40,8 @@ class HomeContent extends Model
         'img_card_event_1',
         'img_card_event_2',
         'img_card_event_3',
+
+        'title_below',
+        'desc_bolow',
     ];
 }

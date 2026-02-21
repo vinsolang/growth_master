@@ -63,7 +63,7 @@
                                         <label for="formFile" class="form-label text-[#0F4634]">Section Card 1</label>
                                         <div class="mb-3 col-12">
                                             <input class="form-control" type="text" name="title_card_1"
-                                                value="{{ $getSectionHome->title_1 }}" placeholder="Title" />
+                                                value="{{ $getSectionHome->title_card_1 }}" placeholder="Title" />
                                         </div>
                                         <div class="mb-3 col-12">
                                             <textarea name="desc_card_1" class="form-control" id="desc_card_1"
@@ -245,6 +245,18 @@
                                             name="img_card_event_3"
                                             id="img_card_event_3"
                                             accept="image/*">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 col-12 border border-[#0F4634]">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Text below FAQs</label>
+                                    <div class="mb-3 col-12">
+                                        <input class="form-control" type="text" name="title_below" value="{{ $getSectionHome->title_below }}"
+                                            placeholder="Title" />
+                                    </div>
+                                    <div class="mb-3 col-12">
+                                        <textarea name="desc_bolow" class="form-control" id="desc_bolow"
+                                            placeholder="Description">{{ $getSectionHome->desc_bolow }}</textarea>
                                     </div>
                                 </div>
 
