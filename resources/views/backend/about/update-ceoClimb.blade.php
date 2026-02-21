@@ -138,10 +138,10 @@
                                             {{-- img_card_3 Preview --}}
                                             <div class="mb-2">
                                                 <img id="previewimg_card_3"
-                                                    src="{{ isset($leaderships->img_card_3) ? asset('storage/'.$leaderships->img_card_3) : '' }}"
+                                                    src="{{ isset($ceo->img_card_3) ? asset('storage/'.$ceo->img_card_3) : '' }}"
                                                     width="150"
                                                     class="rounded border"
-                                                    style="display: {{ isset($leaderships->img_card_3) ? 'block' : 'none' }};">
+                                                    style="display: {{ isset($ceo->img_card_3) ? 'block' : 'none' }};">
                                             </div>
 
                                             {{-- File Input --}}
