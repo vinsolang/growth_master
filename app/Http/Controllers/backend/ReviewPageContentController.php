@@ -47,37 +47,53 @@ class ReviewPageContentController extends Controller
             $data = new ReviewPageContent();
         }
 
-        // ===== Upload Profile Card 2 =====
-        if ($request->hasFile('profile_card_2')) {
+        $uploadPath = public_path('assets/page-review');
 
-            if ($data->profile_card_2 && Storage::disk('public')->exists($data->profile_card_2)) {
-                Storage::disk('public')->delete($data->profile_card_2);
-            }
+// Create folder if not exists
+if (!file_exists($uploadPath)) {
+    mkdir($uploadPath, 0755, true);
+}
 
-            $path2 = $request->file('profile_card_2')
-                ->store('page-review', 'public');
+// ===============================
+// UPLOAD PROFILE CARD 2
+// ===============================
+if ($request->hasFile('profile_card_2')) {
 
-            $data->profile_card_2 = $path2;
-        }
+    // Delete old image if exists
+    if ($data->profile_card_2 && file_exists(public_path($data->profile_card_2))) {
+        unlink(public_path($data->profile_card_2));
+    }
 
-        // ===== Upload Profile Card 3 =====
-        if ($request->hasFile('profile_card_3')) {
+    $file = $request->file('profile_card_2');
+    $fileName = time() . '_card_2.' . $file->getClientOriginalExtension();
+    $file->move($uploadPath, $fileName);
 
-            if ($data->profile_card_3 && Storage::disk('public')->exists($data->profile_card_3)) {
-                Storage::disk('public')->delete($data->profile_card_3);
-            }
+    $data->profile_card_2 = 'assets/page-review/' . $fileName;
+}
 
-            $path3 = $request->file('profile_card_3')
-                ->store('page-review', 'public');
+// ===============================
+// UPLOAD PROFILE CARD 3
+// ===============================
+if ($request->hasFile('profile_card_3')) {
 
-            $data->profile_card_3 = $path3;
-        }
+    if ($data->profile_card_3 && file_exists(public_path($data->profile_card_3))) {
+        unlink(public_path($data->profile_card_3));
+    }
 
-        // Fill other fields
-        $data->fill($request->except(['profile_card_2','profile_card_3']));
+    $file = $request->file('profile_card_3');
+    $fileName = time() . '_card_3.' . $file->getClientOriginalExtension();
+    $file->move($uploadPath, $fileName);
 
-        $data->save();
+    $data->profile_card_3 = 'assets/page-review/' . $fileName;
+}
 
-        return redirect()->back()->with('success', 'Page Review updated successfully!');
+// ===============================
+// UPDATE OTHER FIELDS
+// ===============================
+$data->fill($request->except(['profile_card_2', 'profile_card_3']));
+
+$data->save();
+
+return redirect()->back()->with('success', 'Page Review updated successfully!');
     }
 }

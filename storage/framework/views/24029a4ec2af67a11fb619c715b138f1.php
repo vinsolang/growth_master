@@ -100,7 +100,7 @@
                                         
                                         <div class="mb-2">
                                             <img id="previewprofile_card_2"
-                                                src="<?php echo e(isset($getContent->profile_card_2) ? asset('storage/'.$getContent->profile_card_2) : ''); ?>"
+                                                src="<?php echo e(isset($getContent->profile_card_2) ? asset($getContent->profile_card_2) : ''); ?>"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: <?php echo e(isset($getContent->profile_card_2) ? 'block' : 'none'); ?>;">
@@ -137,7 +137,7 @@
                                         
                                         <div class="mb-2">
                                             <img id="previewprofile_card_3"
-                                                src="<?php echo e(isset($getContent->profile_card_3) ? asset('storage/'.$getContent->profile_card_3) : ''); ?>"
+                                                src="<?php echo e(isset($getContent->profile_card_3) ? asset($getContent->profile_card_3) : ''); ?>"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: <?php echo e(isset($getContent->profile_card_3) ? 'block' : 'none'); ?>;">

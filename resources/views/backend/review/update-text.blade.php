@@ -99,7 +99,7 @@
                                         {{-- Image Preview --}}
                                         <div class="mb-2">
                                             <img id="previewprofile_card_2"
-                                                src="{{ isset($getContent->profile_card_2) ? asset('storage/'.$getContent->profile_card_2) : '' }}"
+                                                src="{{ isset($getContent->profile_card_2) ? asset($getContent->profile_card_2) : '' }}"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: {{ isset($getContent->profile_card_2) ? 'block' : 'none' }};">
@@ -136,7 +136,7 @@
                                         {{-- profile_card_3 Preview --}}
                                         <div class="mb-2">
                                             <img id="previewprofile_card_3"
-                                                src="{{ isset($getContent->profile_card_3) ? asset('storage/'.$getContent->profile_card_3) : '' }}"
+                                                src="{{ isset($getContent->profile_card_3) ? asset($getContent->profile_card_3) : '' }}"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: {{ isset($getContent->profile_card_3) ? 'block' : 'none' }};">

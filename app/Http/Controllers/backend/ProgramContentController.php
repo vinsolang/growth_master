@@ -39,27 +39,41 @@ class ProgramContentController extends Controller
         $getContent = new ProgramContent();
     }
 
-    // Handle Image Upload
-    if ($request->hasFile('image')) {
+    // Define upload path
+$uploadPath = public_path('assets/program');
 
-        //  Delete old image if exists
-        if ($getContent->image && Storage::disk('public')->exists($getContent->image)) {
-            Storage::disk('public')->delete($getContent->image);
-        }
+// Create folder if not exists
+if (!file_exists($uploadPath)) {
+    mkdir($uploadPath, 0755, true);
+}
 
-        // Store new image
-        $imagePath = $request->file('image')->store('program', 'public');
+// ===============================
+// HANDLE IMAGE UPLOAD
+// ===============================
+if ($request->hasFile('image')) {
 
-        // Save new image path
-        $getContent->image = $imagePath;
+    // Delete old image if exists
+    if ($getContent->image && file_exists(public_path($getContent->image))) {
+        unlink(public_path($getContent->image));
     }
 
-    // Update other fields
-    $getContent->fill($request->except('image'));
+    $file = $request->file('image');
+    $fileName = time() . '_program.' . $file->getClientOriginalExtension();
 
-    $getContent->save();
+    $file->move($uploadPath, $fileName);
 
-        return redirect()->back()->with('success', 'Content updated successfully!');
+    // Save relative path
+    $getContent->image = 'assets/program/' . $fileName;
+}
+
+// ===============================
+// UPDATE OTHER FIELDS
+// ===============================
+$getContent->fill($request->except('image'));
+
+$getContent->save();
+
+return redirect()->back()->with('success', 'Content updated successfully!');
 
     }
        

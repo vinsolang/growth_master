@@ -75,12 +75,12 @@
                   <?php
                         $cards = [
                             [
-                                'image' => asset('storage/' . $getCotentPage[0]->img_card_1),
+                                'image' => asset($getCotentPage[0]->img_card_1),
                                 'text'  => $getCotentPage[0]->desc_card_1,
                                 'title' => $getCotentPage[0]->title_card_1,
                             ],
                             [
-                                'image' => asset('storage/' . $getCotentPage[0]->img_card_2),
+                                'image' => asset($getCotentPage[0]->img_card_2),
                                 'text'  => $getCotentPage[0]->desc_card_2,
                                 'title' => $getCotentPage[0]->title_card_2,
                             ],

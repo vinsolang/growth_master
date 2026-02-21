@@ -52,41 +52,52 @@ class LeadershipController extends Controller
             'img_card_2'
         ]));
 
-        $uploadPath = 'home-content';
+        $uploadPath = public_path('assets/leaderships');
 
-        // ===============================
-        // MAIN IMAGE
-        // ===============================
-        if ($request->hasFile('image')) {
+// Create folder if not exists
+if (!file_exists($uploadPath)) {
+    mkdir($uploadPath, 0755, true);
+}
 
-            if ($leaderships->image && Storage::disk('public')->exists($leaderships->image)) {
-                Storage::disk('public')->delete($leaderships->image);
-            }
+// ===============================
+// MAIN IMAGE
+// ===============================
+if ($request->hasFile('image')) {
 
-            $leaderships->image = $request->file('image')
-                ->store($uploadPath, 'public');
+    if ($leaderships->image && file_exists(public_path($leaderships->image))) {
+        unlink(public_path($leaderships->image));
+    }
+
+    $file = $request->file('image');
+    $fileName = time() . '_main.' . $file->getClientOriginalExtension();
+    $file->move($uploadPath, $fileName);
+
+    $leaderships->image = 'assets/leaderships/' . $fileName;
+}
+
+// ===============================
+// CARD IMAGES
+// ===============================
+for ($i = 1; $i <= 2; $i++) {
+
+    $fieldName = "img_card_$i";
+
+    if ($request->hasFile($fieldName)) {
+
+        if ($leaderships->$fieldName && file_exists(public_path($leaderships->$fieldName))) {
+            unlink(public_path($leaderships->$fieldName));
         }
 
-        // ===============================
-        // CARD IMAGES
-        // ===============================
-        for ($i = 1; $i <= 2; $i++) {
+        $file = $request->file($fieldName);
+        $fileName = time() . "_card_$i." . $file->getClientOriginalExtension();
+        $file->move($uploadPath, $fileName);
 
-            $fieldName = "img_card_$i";
+        $leaderships->$fieldName = 'assets/leaderships/' . $fileName;
+    }
+}
 
-            if ($request->hasFile($fieldName)) {
+$leaderships->save();
 
-                if ($leaderships->$fieldName && Storage::disk('public')->exists($leaderships->$fieldName)) {
-                    Storage::disk('public')->delete($leaderships->$fieldName);
-                }
-
-                $leaderships->$fieldName = $request->file($fieldName)
-                    ->store($uploadPath, 'public');
-            }
-        }
-
-        $leaderships->save();
-
-        return redirect()->back()->with('success', 'Content updated successfully!');
+return redirect()->back()->with('success', 'Content updated successfully!');
     }
 }

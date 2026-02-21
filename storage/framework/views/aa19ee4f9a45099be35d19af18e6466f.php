@@ -7,7 +7,7 @@
     <?php $__env->stopSection(); ?>
 
     <?php $__env->startSection('page-main-title'); ?>
-        UPDATE APPROACH OF CONTENT
+        UPDATE PROGRAM OF CONTENT
     <?php $__env->stopSection(); ?>
 
     <div class="content-wrapper">
@@ -71,7 +71,7 @@
                                         
                                         <div class="mb-2">
                                             <img id="previewImage"
-                                                src="<?php echo e(isset($getContent->image) ? asset('storage/'.$getContent->image) : ''); ?>"
+                                                src="<?php echo e(isset($getContent->image) ? asset($getContent->image) : ''); ?>"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: <?php echo e(isset($getContent->image) ? 'block' : 'none'); ?>;">

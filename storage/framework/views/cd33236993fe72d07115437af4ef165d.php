@@ -103,7 +103,7 @@
             <h1><?php echo e($getContentProgram[0]->title_1); ?></h1>
             
             <div class="flex justify-center items-center">
-                <img src="<?php echo e(asset('storage/'. $getContentProgram[0]->image)); ?>" alt="">
+                <img src="<?php echo e(asset($getContentProgram[0]->image)); ?>" alt="">
             </div>
             
             <div class="flex justify-center items-center mt-10">

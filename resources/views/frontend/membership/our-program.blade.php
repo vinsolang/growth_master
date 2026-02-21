@@ -100,7 +100,7 @@
             <h1>{{ $getContentProgram[0]->title_1 }}</h1>
             {{-- Video --}}
             <div class="flex justify-center items-center">
-                <img src="{{ asset('storage/'. $getContentProgram[0]->image) }}" alt="">
+                <img src="{{ asset($getContentProgram[0]->image) }}" alt="">
             </div>
             {{-- Button Join out Programs --}}
             <div class="flex justify-center items-center mt-10">

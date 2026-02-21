@@ -241,7 +241,7 @@
             </div>
             
             <div class="lg:w-[60%]">
-                <img src="<?php echo e(asset('storage/' . $getHomeContent[0]->image)); ?>" alt="">
+                <img src="<?php echo e(asset( $getHomeContent[0]->image)); ?>" alt="">
             </div>
         </div>
         <p class="text-center text-white text-md md:text-lg font-semibold py-4">
@@ -260,7 +260,7 @@
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img
-                    src="<?php echo e(asset('storage/'. $getHomeContent[0]->img_card_event_1)); ?>"
+                    src="<?php echo e(asset($getHomeContent[0]->img_card_event_1)); ?>"
                     alt="Small Business"
                     class="w-full h-[230px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -284,7 +284,7 @@
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img
-                    src="<?php echo e(asset('storage/'. $getHomeContent[0]->img_card_event_2)); ?>"
+                    src="<?php echo e(asset($getHomeContent[0]->img_card_event_2)); ?>"
                     alt="Small Business"
                     class="w-full h-[230px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -309,7 +309,7 @@
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img
-                    src="<?php echo e(asset('storage/'. $getHomeContent[0]->img_card_event_3)); ?>"
+                    src="<?php echo e(asset($getHomeContent[0]->img_card_event_3)); ?>"
                     alt="Small Business"
                     class="w-full h-[230px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />

@@ -94,30 +94,47 @@ class PeerGroupContentController extends Controller
         // storage/app/public/home-content
         // ===============================
 
-        $uploadPath = 'peergroup-content';
+        $uploadPath = public_path('assets/peergroup');
 
-        
-        if ($request->hasFile('img_card1')) {
+// Create folder if not exists
+if (!file_exists($uploadPath)) {
+    mkdir($uploadPath, 0755, true);
+}
 
-            if ($peergroup->img_card1 && Storage::disk('public')->exists($peergroup->img_card1)) {
-                Storage::disk('public')->delete($peergroup->img_card1);
-            }
+// ===============================
+// CARD 1
+// ===============================
+if ($request->hasFile('img_card1')) {
 
-            $peergroup->img_card1 = $request->file('img_card1')
-                ->store($uploadPath, 'public');
-        }
-         if ($request->hasFile('img_card2')) {
+    if ($peergroup->img_card1 && file_exists(public_path($peergroup->img_card1))) {
+        unlink(public_path($peergroup->img_card1));
+    }
 
-            if ($peergroup->img_card2 && Storage::disk('public')->exists($peergroup->img_card2)) {
-                Storage::disk('public')->delete($peergroup->img_card2);
-            }
+    $file = $request->file('img_card1');
+    $fileName = time() . '_card1.' . $file->getClientOriginalExtension();
+    $file->move($uploadPath, $fileName);
 
-            $peergroup->img_card2 = $request->file('img_card2')
-                ->store($uploadPath, 'public');
-        }
+    $peergroup->img_card1 = 'assets/peergroup/' . $fileName;
+}
 
-        $peergroup->save();
+// ===============================
+// CARD 2
+// ===============================
+if ($request->hasFile('img_card2')) {
 
-        return redirect()->back()->with('success', 'Content updated successfully!');
+    if ($peergroup->img_card2 && file_exists(public_path($peergroup->img_card2))) {
+        unlink(public_path($peergroup->img_card2));
+    }
+
+    $file = $request->file('img_card2');
+    $fileName = time() . '_card2.' . $file->getClientOriginalExtension();
+    $file->move($uploadPath, $fileName);
+
+    $peergroup->img_card2 = 'assets/peergroup/' . $fileName;
+}
+
+$peergroup->save();
+
+return redirect()->back()->with('success', 'Content updated successfully!');
     }
 }

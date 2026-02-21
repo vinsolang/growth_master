@@ -53,19 +53,27 @@ class CEOClimbController extends Controller
             'img_card_2'
         ]));
 
-        $uploadPath = 'home-content';
+        $uploadPath = public_path('assets/ceo');
+
+        // Create folder if not exists
+        if (!file_exists($uploadPath)) {
+            mkdir($uploadPath, 0755, true);
+        }
 
         // ===============================
         // MAIN IMAGE
         // ===============================
         if ($request->hasFile('image')) {
 
-            if ($ceo->image && Storage::disk('public')->exists($ceo->image)) {
-                Storage::disk('public')->delete($ceo->image);
+            if ($ceo->image && file_exists(public_path($ceo->image))) {
+                unlink(public_path($ceo->image));
             }
 
-            $ceo->image = $request->file('image')
-                ->store($uploadPath, 'public');
+            $file = $request->file('image');
+            $fileName = time() . '_main.' . $file->getClientOriginalExtension();
+            $file->move($uploadPath, $fileName);
+
+            $ceo->image = 'assets/ceo/' . $fileName;
         }
 
         // ===============================
@@ -77,12 +85,15 @@ class CEOClimbController extends Controller
 
             if ($request->hasFile($fieldName)) {
 
-                if ($ceo->$fieldName && Storage::disk('public')->exists($ceo->$fieldName)) {
-                    Storage::disk('public')->delete($ceo->$fieldName);
+                if ($ceo->$fieldName && file_exists(public_path($ceo->$fieldName))) {
+                    unlink(public_path($ceo->$fieldName));
                 }
 
-                $ceo->$fieldName = $request->file($fieldName)
-                    ->store($uploadPath, 'public');
+                $file = $request->file($fieldName);
+                $fileName = time() . "_card_$i." . $file->getClientOriginalExtension();
+                $file->move($uploadPath, $fileName);
+
+                $ceo->$fieldName = 'assets/ceo/' . $fileName;
             }
         }
 

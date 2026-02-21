@@ -144,7 +144,7 @@
                                             
                                             <div class="mb-2">
                                                 <img id="previewImage"
-                                                    src="<?php echo e(isset($getSectionHome->image) ? asset('storage/'.$getSectionHome->image) : ''); ?>"
+                                                    src="<?php echo e(isset($getSectionHome->image) ? asset($getSectionHome->image) : ''); ?>"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: <?php echo e(isset($getSectionHome->image) ? 'block' : 'none'); ?>;">
@@ -179,7 +179,7 @@
                                         
                                         <div class="mb-2">
                                             <img id="previewimg_card_event_1"
-                                                src="<?php echo e(isset($getSectionHome->img_card_event_1) ? asset('storage/'.$getSectionHome->img_card_event_1) : ''); ?>"
+                                                src="<?php echo e(isset($getSectionHome->img_card_event_1) ? asset($getSectionHome->img_card_event_1) : ''); ?>"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: <?php echo e(isset($getSectionHome->img_card_event_1) ? 'block' : 'none'); ?>;">
@@ -206,7 +206,7 @@
                                         
                                         <div class="mb-2">
                                             <img id="previewimg_card_event_2"
-                                                src="<?php echo e(isset($getSectionHome->img_card_event_2) ? asset('storage/'.$getSectionHome->img_card_event_2) : ''); ?>"
+                                                src="<?php echo e(isset($getSectionHome->img_card_event_2) ? asset($getSectionHome->img_card_event_2) : ''); ?>"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: <?php echo e(isset($getSectionHome->img_card_event_2) ? 'block' : 'none'); ?>;">
@@ -234,7 +234,7 @@
                                         
                                         <div class="mb-2">
                                             <img id="previewimg_card_event_3"
-                                                src="<?php echo e(isset($getSectionHome->img_card_event_3) ? asset('storage/'.$getSectionHome->img_card_event_3) : ''); ?>"
+                                                src="<?php echo e(isset($getSectionHome->img_card_event_3) ? asset($getSectionHome->img_card_event_3) : ''); ?>"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: <?php echo e(isset($getSectionHome->img_card_event_3) ? 'block' : 'none'); ?>;">

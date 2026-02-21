@@ -75,7 +75,7 @@
                         <div class="flex space-x-6 text-2xl font-semibold text-gray-500">
                             {{-- Profile --}}
                             <div class="w-20 h-20 rounded-full">
-                                <img src="{{ asset('storage/'. $getContent[0]->profile_card_2) }}" alt="" class="w-full h-full rounded-full object-cover">
+                                <img src="{{ asset($getContent[0]->profile_card_2) }}" alt="" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
                                 <h2 class="text-[#003f5e] uppercase">{{ $getContent[0]->name_card_2 }}</h2>
@@ -92,7 +92,7 @@
                         <div class="flex space-x-6 text-2xl font-semibold text-gray-500">
                             {{-- Profile --}}
                             <div class="w-20 h-20 rounded-full">
-                                <img src="{{ asset('storage/'. $getContent[0]->profile_card_3) }}" alt="" class="w-full h-full object-cover">
+                                <img src="{{ asset($getContent[0]->profile_card_3) }}" alt="" class="w-full h-full object-cover">
                             </div>
                             <div>
                                <h2 class="text-[#003f5e] uppercase">{{ $getContent[0]->name_card_3 }}</h2>

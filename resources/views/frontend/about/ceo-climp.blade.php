@@ -54,7 +54,7 @@
                 <div class="w-full md:max-w-sm lg:h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                     <!-- Image -->
                     <div class="h-[220px] w-full overflow-hidden">
-                        <img src="{{ asset('storage/' . $getItem[0]->img_card_1) }}" alt="Growing faster"
+                        <img src="{{ asset($getItem[0]->img_card_1) }}" alt="Growing faster"
                             class="w-full h-full object-cover" />
                     </div>
 
@@ -74,7 +74,7 @@
                 <div class="w-full md:max-w-sm lg:h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                     <!-- Image -->
                     <div class="h-[220px] w-full overflow-hidden">
-                        <img src="{{ asset('storage/' . $getItem[0]->img_card_2) }}" alt="Growing faster"
+                        <img src="{{ asset( $getItem[0]->img_card_2) }}" alt="Growing faster"
                             class="w-full h-full object-cover" />
                     </div>
 
@@ -94,7 +94,7 @@
                 <div class="w-full md:max-w-sm lg:h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                     <!-- Image -->
                     <div class="h-[220px] w-full overflow-hidden">
-                        <img src="{{ asset('storage/' . $getItem[0]->img_card_3) }}" alt="Growing faster"
+                        <img src="{{ asset($getItem[0]->img_card_3) }}" alt="Growing faster"
                             class="w-full h-full object-cover" />
                     </div>
 

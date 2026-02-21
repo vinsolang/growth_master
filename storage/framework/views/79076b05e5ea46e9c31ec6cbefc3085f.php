@@ -129,11 +129,11 @@
                 $showProgram = [
                     [
                          'desc' => $getContent[0]->desc_card1 ?? '',
-                        'image' => asset('storage/' . ($getContent[0]->img_card1 ?? '')),
+                        'image' => asset( $getContent[0]->img_card1 ?? ''),
                     ],
                     [
                          'desc' => $getContent[0]->desc_card2 ?? '',
-                        'image' => asset('storage/' . ($getContent[0]->img_card2 ?? '')),
+                        'image' => asset( $getContent[0]->img_card2 ?? ''),
                     ],
                 ];
             ?>

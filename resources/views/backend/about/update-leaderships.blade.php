@@ -69,7 +69,7 @@
                                             {{-- img_card_1 Preview --}}
                                             <div class="mb-2">
                                                 <img id="previewimg_card_1"
-                                                    src="{{ isset($leaderships->img_card_1) ? asset('storage/'.$leaderships->img_card_1) : '' }}"
+                                                    src="{{ isset($leaderships->img_card_1) ? asset($leaderships->img_card_1) : '' }}"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: {{ isset($leaderships->img_card_1) ? 'block' : 'none' }};">
@@ -101,7 +101,7 @@
                                             {{-- img_card_2 Preview --}}
                                             <div class="mb-2">
                                                 <img id="previewimg_card_2"
-                                                    src="{{ isset($leaderships->img_card_2) ? asset('storage/'.$leaderships->img_card_2) : '' }}"
+                                                    src="{{ isset($leaderships->img_card_2) ? asset($leaderships->img_card_2) : '' }}"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: {{ isset($leaderships->img_card_2) ? 'block' : 'none' }};">

@@ -75,38 +75,52 @@ class HomeComtentController extends Controller
         // storage/app/public/home-content
         // ===============================
 
-        $uploadPath = 'home-content';
+        $uploadPath = public_path('assets/home-content');
 
-        // Single main image
-        if ($request->hasFile('image')) {
+// Create folder if not exists
+if (!file_exists($uploadPath)) {
+    mkdir($uploadPath, 0755, true);
+}
 
-            if ($homeContent->image && Storage::disk('public')->exists($homeContent->image)) {
-                Storage::disk('public')->delete($homeContent->image);
-            }
+// ===============================
+// MAIN IMAGE
+// ===============================
+if ($request->hasFile('image')) {
 
-            $homeContent->image = $request->file('image')
-                ->store($uploadPath, 'public');
+    if ($homeContent->image && file_exists(public_path($homeContent->image))) {
+        unlink(public_path($homeContent->image));
+    }
+
+    $file = $request->file('image');
+    $fileName = time() . '_main.' . $file->getClientOriginalExtension();
+    $file->move($uploadPath, $fileName);
+
+    $homeContent->image = 'assets/home-content/' . $fileName;
+}
+
+// ===============================
+// EVENT IMAGES
+// ===============================
+for ($i = 1; $i <= 3; $i++) {
+
+    $fieldName = "img_card_event_$i";
+
+    if ($request->hasFile($fieldName)) {
+
+        if ($homeContent->$fieldName && file_exists(public_path($homeContent->$fieldName))) {
+            unlink(public_path($homeContent->$fieldName));
         }
 
-        // Event Images (Loop for clean code)
-        for ($i = 1; $i <= 3; $i++) {
+        $file = $request->file($fieldName);
+        $fileName = time() . "_event_$i." . $file->getClientOriginalExtension();
+        $file->move($uploadPath, $fileName);
 
-            $fieldName = "img_card_event_$i";
+        $homeContent->$fieldName = 'assets/home-content/' . $fileName;
+    }
+}
 
-            if ($request->hasFile($fieldName)) {
+$homeContent->save();
 
-                // Delete old image
-                if ($homeContent->$fieldName && Storage::disk('public')->exists($homeContent->$fieldName)) {
-                    Storage::disk('public')->delete($homeContent->$fieldName);
-                }
-
-                $homeContent->$fieldName = $request->file($fieldName)
-                    ->store($uploadPath, 'public');
-            }
-        }
-
-        $homeContent->save();
-
-        return redirect()->back()->with('success', 'Content updated successfully!');
+return redirect()->back()->with('success', 'Content updated successfully!');
     }
 }

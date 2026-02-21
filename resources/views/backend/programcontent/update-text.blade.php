@@ -7,7 +7,7 @@
     @endsection
 
     @section('page-main-title')
-        UPDATE APPROACH OF CONTENT
+        UPDATE PROGRAM OF CONTENT
     @endsection
 
     <div class="content-wrapper">
@@ -70,7 +70,7 @@
                                         {{-- Image Preview --}}
                                         <div class="mb-2">
                                             <img id="previewImage"
-                                                src="{{ isset($getContent->image) ? asset('storage/'.$getContent->image) : '' }}"
+                                                src="{{ isset($getContent->image) ? asset($getContent->image) : '' }}"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: {{ isset($getContent->image) ? 'block' : 'none' }};">

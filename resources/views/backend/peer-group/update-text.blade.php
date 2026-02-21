@@ -88,8 +88,8 @@
                                      <div class="mb-3 col-12">
                                         {{-- Image Preview --}}
                                         <div class="mb-2">
-                                            <img id="previewimg_card1"
-                                                src="{{ isset($getContent->img_card1) ? asset('storage/'.$getContent->img_card1) : '' }}"
+                                            <img id="preview_card1"
+                                                src="{{ isset($getContent->img_card1) ? asset($getContent->img_card1) : '' }}"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: {{ isset($getContent->img_card1) ? 'block' : 'none' }};">
@@ -114,8 +114,8 @@
                                      <div class="mb-3 col-12">
                                         {{-- Image Preview --}}
                                         <div class="mb-2">
-                                            <img id="previewimg_card2"
-                                                src="{{ isset($getContent->img_card2) ? asset('storage/'.$getContent->img_card2) : '' }}"
+                                            <img id="preview_card2"
+                                                src="{{ isset($getContent->img_card2) ? asset($getContent->img_card2) : '' }}"
                                                 width="150"
                                                 class="rounded border"
                                                 style="display: {{ isset($getContent->img_card2) ? 'block' : 'none' }};">
@@ -343,8 +343,8 @@
             });
 </script>
 <script>
-document.getElementById('previewimg_card2').addEventListener('change', function(event) {
-    const preview = document.getElementById('previewpreviewimg_card2');
+document.getElementById('img_card1').addEventListener('change', function(event) {
+    const preview = document.getElementById('preview_card1');
     const file = event.target.files[0];
 
     if (file) {
@@ -358,8 +358,8 @@ document.getElementById('previewimg_card2').addEventListener('change', function(
 });
 </script>
 <script>
-document.getElementById('previewimg_card1').addEventListener('change', function(event) {
-    const preview = document.getElementById('previewpreviewimg_card1');
+document.getElementById('img_card2').addEventListener('change', function(event) {
+    const preview = document.getElementById('preview_card2');
     const file = event.target.files[0];
 
     if (file) {

@@ -73,7 +73,7 @@
                                             {{-- img_card_1 Preview --}}
                                             <div class="mb-2">
                                                 <img id="previewimg_card_1"
-                                                    src="{{ isset($ceo->img_card_1) ? asset('storage/'.$ceo->img_card_1) : '' }}"
+                                                    src="{{ isset($ceo->img_card_1) ? asset($ceo->img_card_1) : '' }}"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: {{ isset($ceo->img_card_1) ? 'block' : 'none' }};">
@@ -105,7 +105,7 @@
                                             {{-- img_card_2 Preview --}}
                                             <div class="mb-2">
                                                 <img id="previewimg_card_2"
-                                                    src="{{ isset($ceo->img_card_2) ? asset('storage/'.$ceo->img_card_2) : '' }}"
+                                                    src="{{ isset($ceo->img_card_2) ? asset($ceo->img_card_2) : '' }}"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: {{ isset($ceo->img_card_2) ? 'block' : 'none' }};">
@@ -138,7 +138,7 @@
                                             {{-- img_card_3 Preview --}}
                                             <div class="mb-2">
                                                 <img id="previewimg_card_3"
-                                                    src="{{ isset($ceo->img_card_3) ? asset('storage/'.$ceo->img_card_3) : '' }}"
+                                                    src="{{ isset($ceo->img_card_3) ? asset($ceo->img_card_3) : '' }}"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: {{ isset($ceo->img_card_3) ? 'block' : 'none' }};">

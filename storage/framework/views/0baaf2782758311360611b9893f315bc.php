@@ -70,7 +70,7 @@
                                             
                                             <div class="mb-2">
                                                 <img id="previewimg_card_1"
-                                                    src="<?php echo e(isset($leaderships->img_card_1) ? asset('storage/'.$leaderships->img_card_1) : ''); ?>"
+                                                    src="<?php echo e(isset($leaderships->img_card_1) ? asset($leaderships->img_card_1) : ''); ?>"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: <?php echo e(isset($leaderships->img_card_1) ? 'block' : 'none'); ?>;">
@@ -102,7 +102,7 @@
                                             
                                             <div class="mb-2">
                                                 <img id="previewimg_card_2"
-                                                    src="<?php echo e(isset($leaderships->img_card_2) ? asset('storage/'.$leaderships->img_card_2) : ''); ?>"
+                                                    src="<?php echo e(isset($leaderships->img_card_2) ? asset($leaderships->img_card_2) : ''); ?>"
                                                     width="150"
                                                     class="rounded border"
                                                     style="display: <?php echo e(isset($leaderships->img_card_2) ? 'block' : 'none'); ?>;">
