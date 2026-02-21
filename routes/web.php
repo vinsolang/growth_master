@@ -3,9 +3,11 @@
 use App\Http\Controllers\Admin\AboutCardController;
 use App\Http\Controllers\Admin\AboutSectionController;
 use App\Http\Controllers\auth\AuthController;
+use App\Http\Controllers\backend\AboutUsController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\AppraochContentController;
 use App\Http\Controllers\backend\BannerController;
+use App\Http\Controllers\backend\CEOClimbController;
 use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
 use App\Http\Controllers\backend\FAQsController;
@@ -14,6 +16,7 @@ use App\Http\Controllers\backend\HomeCardController;
 use App\Http\Controllers\backend\HomeComtentController;
 use App\Http\Controllers\backend\HomeTextController;
 use App\Http\Controllers\backend\HowItWorksController;
+use App\Http\Controllers\backend\LeadershipController;
 use App\Http\Controllers\backend\OurApproachController;
 use App\Http\Controllers\backend\OurProgramController;
 use App\Http\Controllers\backend\OurTeamController;
@@ -230,5 +233,17 @@ Route::middleware(['auth'])->group(function(){
     // Peer Group Content
     Route::get('peergroupcontent', [PeerGroupContentController::class, 'peergroupcontent'])->name('peergroupcontent');
     Route::post('peergroupcontent/add', [PeerGroupContentController::class, 'SubmitPeerGroupContent'])->name('submit.peergroupcontent');
+
+    // About Us
+    Route::get('about/page', [AboutUsController::class, 'about'])->name('about.admin');
+    Route::post('about/add/page', [AboutUsController::class, 'SubmitAbout'])->name('submit.about');
+
+    // Leadership  leaderships
+    Route::get('leaderships/page', [LeadershipController::class, 'leaderships'])->name('leaderships.admin');
+    Route::post('leaderships/add/page', [LeadershipController::class, 'SubmitLeaderships'])->name('submit.leaderships');
+
+    // c_e_o_climbs
+    Route::get('c_e_o_climbs/page', [CEOClimbController::class, 'c_e_o_climbs'])->name('c_e_o_climbs');
+    Route::post('c_e_o_climbs/add/page', [CEOClimbController::class, 'Submitc_e_o_climbs'])->name('submit.c_e_o_climbs');
 
 });

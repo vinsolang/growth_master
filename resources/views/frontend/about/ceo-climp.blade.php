@@ -41,19 +41,12 @@
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    The journey to true leadership isn’t easy. Like climbing Denali, K2 or Everest, it’s the challenge of a
-                    lifetime. It’s for those with enough grit and commitment to do what only a few can do.
-                </p>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    While each CEO’s journey up the mountain is their own…They don’t have to do it alone.
-                </p>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    While your next leadership peak is yours to define, our process helps you get there.
+                     {!! nl2br(e(value: $getItem[0]->description)) !!}
                 </p>
             </div>
             {{-- Logo --}}
             <div class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-5xl px-4">
-                <h1>Growth Master knows this climb.</h1>
+                <h1> {!! nl2br(e(value: $getItem[0]->title)) !!}</h1>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center gap-8">
@@ -61,20 +54,18 @@
                 <div class="w-full md:max-w-sm lg:h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                     <!-- Image -->
                     <div class="h-[220px] w-full overflow-hidden">
-                        <img src="https://www.vistage.com/wp-content/uploads/2020/10/a-history-of-success.jpg" alt="Growing faster"
+                        <img src="{{ asset('storage/' . $getItem[0]->img_card_1) }}" alt="Growing faster"
                             class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Content -->
                     <div class="p-6">
                         <h3 class="text-[#003a5d] font-bold text-xl leading-snug mb-4">
-                            Helping CEOs climb for 65 years
+                               {!! nl2br(e(value: $getItem[0]->title_card_1)) !!}
                         </h3>
 
                         <p class="text-gray-600 text-base leading-relaxed">
-                           We’ve seen this climb over and over for more than 65 years. 
-                           Brave men and women running SMB companies against all odds. 
-                           Helping each other be better.
+                               {!! nl2br(e(value: $getItem[0]->desc_card_1)) !!}
                         </p>
                     </div>
                 </div>
@@ -83,20 +74,18 @@
                 <div class="w-full md:max-w-sm lg:h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                     <!-- Image -->
                     <div class="h-[220px] w-full overflow-hidden">
-                        <img src="https://www.vistage.com/wp-content/uploads/2020/10/shared-path.jpg" alt="Growing faster"
+                        <img src="{{ asset('storage/' . $getItem[0]->img_card_2) }}" alt="Growing faster"
                             class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Content -->
                     <div class="p-6">
                         <h3 class="text-[#003a5d] font-bold text-xl leading-snug mb-4">
-                           More than 45,000 other CEOs climb with you
+                        {!! nl2br(e(value: $getItem[0]->title_card_2)) !!}
                         </h3>
 
                         <p class="text-gray-600 text-base leading-relaxed">
-                           Growth Master leaders step up to help one another, applying core beliefs, 
-                           insights and best practices that have made their climbs more successful. 
-                           Follow in the footsteps of 45,000+ business leaders worldwide.
+                         {!! nl2br(e(value: $getItem[0]->desc_card_2)) !!}
                         </p>
                     </div>
                 </div>
@@ -105,22 +94,18 @@
                 <div class="w-full md:max-w-sm lg:h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                     <!-- Image -->
                     <div class="h-[220px] w-full overflow-hidden">
-                        <img src="https://www.vistage.com/wp-content/uploads/2020/10/climb-business-sky.jpg" alt="Growing faster"
+                        <img src="{{ asset('storage/' . $getItem[0]->img_card_3) }}" alt="Growing faster"
                             class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Content -->
                     <div class="p-6">
                         <h3 class="text-[#003a5d] font-bold text-xl leading-snug mb-4">
-                            Growing 4.6% faster and climbing higher
+                           {!! nl2br(e(value: $getItem[0]->title_card_3)) !!}
                         </h3>
 
                         <p class="text-gray-600 text-base leading-relaxed">
-                            Growth Master CEO members grew their annual revenue on average by
-                            <span class="font-semibold text-gray-700">4.6%</span> in 2020,
-                            while nonmembers with comparable small and midsize businesses
-                            saw revenue decrease by
-                            <span class="font-semibold text-gray-700">4.7%</span>.
+                          {!! nl2br(e(value: $getItem[0]->desc_card_3)) !!}
                         </p>
                     </div>
                 </div>

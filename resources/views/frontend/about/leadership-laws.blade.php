@@ -67,48 +67,25 @@
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    At Growth Master, these leadership laws guide our organization’s members and leaders. As a CEO,
-                    you are in the business of making decisions and it’s the outcome of those decisions that define your
-                    success.
-                    So how do you rise to the challenge day after day, year over year?
-                </p>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    This leadership path has been traveled by 250,000+ top performing business leaders for more than 65
-                    years.
-                    It requires a daily climb, constant rigor and a lifelong commitment.
-                    But the journey is well worth the effort, for it will bring you to peaks you never thought possible.
-                </p>
-                <p
-                    class="max-w-7xl mx-auto text-left text-[#333333] font-bold font-regular text-[17px] md:text-[20px] px-4">
-                    These 7 fundamental truths are how world-class leaders and peak
-                    performers take their businesses — and their lives — to a whole new level:
+                      {!! nl2br(e(value: $getCotentPage[0]->description)) !!}
                 </p>
             </div>
             {{-- Block Image for poster --}}
             <div class="lg:ml-28">
-                @php
-                    $cards = [
-                        [
-                            'image' => 'https://cac-center.edu.kh/wp-content/uploads/2025/05/475764412_610434131608942_8875000787547266503_n-768x512.jpg',
-                            'text' => 'Great leaders pursue leadership excellence with the commitment of a world-class athlete. They know it’s a challenging, continuous journey that requires hard work and determined attention.
-
-                                                                            They reject shortcuts and take ownership of their development.
-
-                                                                            They bring rigor and grit, working hard to hone their expertise and committing their whole selves to continual improvement. They push themselves to learn more, grow further and reach higher elevations.
-                                                                            ',
-                            'title' => '1. Reject shortcuts'
-                        ],
-                        [
-                            'image' => 'https://cac-center.edu.kh/wp-content/uploads/2025/05/475764412_610434131608942_8875000787547266503_n-768x512.jpg',
-                            'text' => 'Successful leaders routinely carve out time and space away from everyday business issues to reflect, acquire new knowledge and focus on strategy.
-
-This discipline allows them to gain the clarity and perspective they need to navigate the day-to-day challenges while keeping their company on course for long-term success.
-
-They fight the instinct to always be in “go” mode, forcing themselves to take time for thoughtful decisions.',
-                            'title' => '2. Create space to work on the business'
-                        ],
-                    ];
-                @endphp
+                  @php
+                        $cards = [
+                            [
+                                'image' => asset('storage/' . $getCotentPage[0]->img_card_1),
+                                'text'  => $getCotentPage[0]->desc_card_1,
+                                'title' => $getCotentPage[0]->title_card_1,
+                            ],
+                            [
+                                'image' => asset('storage/' . $getCotentPage[0]->img_card_2),
+                                'text'  => $getCotentPage[0]->desc_card_2,
+                                'title' => $getCotentPage[0]->title_card_2,
+                            ],
+                        ];
+                    @endphp
                 <div class="flex flex-col space-y-7">
                     @foreach($cards as $index => $card)
 
@@ -123,7 +100,7 @@ They fight the instinct to always be in “go” mode, forcing themselves to tak
                                     {{ $card['title'] }}
                                 </h1>
                                 <p class="text-left text-[#454545] md:text-xl text-[14px] px-4 md:px-12">
-                                    {{ $card['text'] }}
+                                     {!! nl2br(e($card['text'])) !!}
                                 </p>
                             </div>
                             {{-- IMAGE --}}
@@ -224,17 +201,12 @@ They fight the instinct to always be in “go” mode, forcing themselves to tak
             <div class="space-y-6">
                 <h1
                     class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
-                    Inquire About Membership
+                    {{ $getCotentPage[0]->title_1 }}
                 </h1>
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    With Growth Master you’re joining a powerful community of high-caliber
-                    executives who challenge each other, inspire each other and share
-                    their perspectives to help each other make better decisions,
-                    become better leaders and achieve better outcomes.
+                    {!! nl2br(e(value: $getCotentPage[0]->description_1)) !!}
                 </p>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Take your success to a new level. Complete the form below to find out if you qualify.
-                </p>
+                
                 {{-- Form Contact information --}}
                 <div>
                    @include('frontend.include.form')

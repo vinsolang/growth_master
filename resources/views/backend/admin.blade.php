@@ -280,7 +280,37 @@
             </ul>
           </li>
 
-           <!-- Layouts -->
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+             <i class="menu-icon tf-icons bx bx-search-alt"></i>
+              <div data-i18n="Layouts">About</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('about.admin') }}" class="menu-link">
+                  <div data-i18n="Without menu">What is a Growth Master</div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('leaderships.admin') }}" class="menu-link">
+                  <div data-i18n="Without menu">7 Leadership</div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('c_e_o_climbs') }}" class="menu-link">
+                  <div data-i18n="Without menu">The CEO Climb</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
              <i class="menu-icon tf-icons bx bx-search-alt"></i>
@@ -296,7 +326,7 @@
             </ul>
           </li>
 
-           <!-- Layouts -->
+          <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
              <i class="menu-icon tf-icons bx bx-search-alt"></i>

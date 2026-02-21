@@ -51,13 +51,10 @@
             <div class="space-y-6">
                 {{-- Title --}}
                 <h1 class="text-[#000000] max-w-7xl mx-auto text-left text-3xl md:text-4xl xl:text-5xl px-4">
-                    Helping high-integrity leaders make great decisions that benefit their companies, families and communities.
+                    {!! nl2br(e(value: $getContent[0]->title)) !!}
                 </h1>
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Growth Master is the world’s largest executive coaching organization for small and midsize businesses.
-                    For more than 65 years we’ve been helping CEOs, business owners and key executives solve their toughest
-                    challenges through a comprehensive approach to success. At the heart of our proven formula is
-                    confidential peer advisory groups and executive coaching sessions.
+                    {!! nl2br(e(value: $getContent[0]->desc)) !!}
                 </p>
             </div>
             {{-- Logo --}}
@@ -225,17 +222,12 @@
             {{-- Inquire About Membership --}}
             <div class="space-y-6">
                 <h1 class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
-                    Inquire About Membership
+                   {!! nl2br(e(value: $getContent[0]->title_1)) !!}
                 </h1>
                 <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    With Growth Master you’re joining a powerful community of high-caliber 
-                    executives who challenge each other, inspire each other and share 
-                    their perspectives to help each other make better decisions, 
-                    become better leaders and achieve better outcomes.
+                   {!! nl2br(e(value: $getContent[0]->desc_2)) !!}
                 </p>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Take your success to a new level. Complete the form below to find out if you qualify.
-                </p>
+              
                 {{-- Form Contact information --}}
                 <div>
                     @include('frontend.include.form')

@@ -3,14 +3,18 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
 use App\Models\Banner;
+use App\Models\CEOClimb;
+use App\Models\Leadership;
 use Illuminate\Http\Request;
 
 class AboutGrowthControll extends Controller
 {
     public function aboutGrowth(){
         $getBanner = Banner::all();
-        return view('frontend.about.about', compact('getBanner'));
+        $getContent = AboutUs::all();
+        return view('frontend.about.about', compact('getBanner', 'getContent'));
     }
 
     // What is Growth Master
@@ -21,12 +25,14 @@ class AboutGrowthControll extends Controller
     //7 Laws of Leadership
     public function leaderShip(){
           $getBanner = Banner::all();
-        return view('frontend.about.leadership-laws',compact('getBanner'));
+          $getCotentPage = Leadership::all();
+        return view('frontend.about.leadership-laws',compact('getBanner','getCotentPage'));
     }
 
     // CEO Climp
     public function CeoClimp(){
+        $getItem = CEOClimb::all();
           $getBanner = Banner::all();
-        return view('frontend.about.ceo-climp',compact('getBanner'));
+        return view('frontend.about.ceo-climp',compact('getBanner','getItem'));
     }
 }
