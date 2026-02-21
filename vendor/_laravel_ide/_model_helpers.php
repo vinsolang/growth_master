@@ -1323,6 +1323,34 @@ namespace App\Models {
     /**
      * App\Models\CEOClimb
      *
+     * @property \Illuminate\Support\Carbon $updated_at
+     * @property \Illuminate\Support\Carbon $created_at
+     * @property string $img_card_3
+     * @property string $desc_card_3
+     * @property string $title_card_3
+     * @property string $img_card_2
+     * @property string $desc_card_2
+     * @property string $title_card_2
+     * @property string $img_card_1
+     * @property string $desc_card_1
+     * @property string $title_card_1
+     * @property string $title
+     * @property string $description
+     * @property int $id
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereDescription($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereTitle($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereTitleCard1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereDescCard1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereImgCard1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereTitleCard2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereDescCard2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereImgCard2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereTitleCard3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereDescCard3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereImgCard3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<CEOClimb>|CEOClimb query()

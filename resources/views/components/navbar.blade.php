@@ -28,8 +28,8 @@
                                 GrowthMaster</a>
                             <a href="{{ route('approach') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Approach</a>
-                            <a href="{{ route('program') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Programs</a>
+                            {{-- <a href="{{ route('program') }}"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Programs</a> --}}
                             <a href="{{ route('review') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster Reviews</a>
                             <a href="{{ route('exclusive.peer.groups') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Exclusive Peer
@@ -39,6 +39,13 @@
                         </div>
                     </div>
                 </li>
+                
+                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                    <a href="{{ route('program') }}" class="flex items-center">
+                        Our Programs
+                    </a>
+                </li>
+
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="{{ route('events') }}" class="flex items-center">
                         Events
