@@ -183,10 +183,10 @@
             </button>
 
             <ul id="mobileAbout" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="{{ route('what.is.growth') }}" class="block hover:text-[#EDC11C]">What is Growth Master?</a></li>
+                <li><a href="{{ route('about') }}" class="block hover:text-[#EDC11C]">What is Growth Master?</a></li>
                 <li><a href="{{ route('Laws.of.eadership') }}" class="block hover:text-[#EDC11C]">7 Laws of Leadership</a>
                 </li>
-                <li><a href="" class="block hover:text-[#EDC11C]">The CEO Climp</a>
+                <li><a href="{{ route('ceo.climp') }}" class="block hover:text-[#EDC11C]">The CEO Climp</a>
                 </li>
             </ul>
         </li>
