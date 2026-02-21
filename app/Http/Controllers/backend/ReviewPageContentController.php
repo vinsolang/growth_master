@@ -16,30 +16,30 @@ class ReviewPageContentController extends Controller
 
     public function SubmitReviewcontent(Request $request){
         $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string',
             'description' => 'required|string',
 
-            'title_card_1' => 'nullable|string|max:255',
+            'title_card_1' => 'nullable|string',
             'desc_card_1' => 'nullable|string',
-            'name_card_1' => 'nullable|string|max:255',
-            'positioin_card_1' => 'nullable|string|max:255',
+            'name_card_1' => 'nullable|string',
+            'positioin_card_1' => 'nullable|string',
 
-            'title_card_2' => 'nullable|string|max:255',
+            'title_card_2' => 'nullable|string',
             'desc_card_2' => 'nullable|string',
-            'name_card_2' => 'nullable|string|max:255',
-            'positioin_card_2' => 'nullable|string|max:255',
+            'name_card_2' => 'nullable|string',
+            'positioin_card_2' => 'nullable|string',
             'profile_card_2' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
 
-            'title_card_3' => 'nullable|string|max:255',
+            'title_card_3' => 'nullable|string',
             'desc_card_3' => 'nullable|string',
-            'name_card_3' => 'nullable|string|max:255',
-            'positioin_card_3' => 'nullable|string|max:255',
+            'name_card_3' => 'nullable|string',
+            'positioin_card_3' => 'nullable|string',
             'profile_card_3' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
 
-            'title_card_4' => 'nullable|string|max:255',
+            'title_card_4' => 'nullable|string',
             'desc_card_4' => 'nullable|string',
-            'name_card_4' => 'nullable|string|max:255',
-            'positioin_card_4' => 'nullable|string|max:255',
+            'name_card_4' => 'nullable|string',
+            'positioin_card_4' => 'nullable|string',
         ]);
 
         $data = ReviewPageContent::first();

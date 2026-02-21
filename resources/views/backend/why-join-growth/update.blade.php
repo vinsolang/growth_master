@@ -50,7 +50,7 @@
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Text on Image</label>
                                     <div class="mb-3 col-12">
-                                        <input class="form-control" type="text" name="title" value="{{ $whyJoin->title }}" placeholder="Title"/>
+                                        <textarea class="form-control" type="text" name="title" value="" placeholder="Title">{{ $whyJoin->title }}</textarea>
                                     </div>
                                     <div class="mb-3 col-12">
                                         <textarea name="description" class="form-control" id="description" placeholder="Description">{{ $whyJoin->description }}</textarea>

@@ -17,13 +17,13 @@ class PeerGroupContentController extends Controller
     public function SubmitPeerGroupContent(Request $request){
         $request->validate([
 
-            'title' => 'nullable|string|max:255',
+            'title' => 'nullable|string',
             'description' => 'nullable|string',
             'description_1' => 'nullable|string',
 
             'table' => 'nullable|string',
 
-            'title_2' => 'nullable|string|max:255',
+            'title_2' => 'nullable|string',
             'description_2' => 'nullable|string',
 
             'img_card1' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -32,11 +32,11 @@ class PeerGroupContentController extends Controller
             'img_card2' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'desc_card2' => 'nullable|string',
 
-            'title_t1' => 'nullable|string|max:255',
-            'title_t2' => 'nullable|string|max:255',
-            'title_t3' => 'nullable|string|max:255',
-            'title_t4' => 'nullable|string|max:255',
-            'title_t5' => 'nullable|string|max:255',
+            'title_t1' => 'nullable|string',
+            'title_t2' => 'nullable|string',
+            'title_t3' => 'nullable|string',
+            'title_t4' => 'nullable|string',
+            'title_t5' => 'nullable|string',
 
             'desc_t1' => 'nullable|string',
             'desc_t2' => 'nullable|string',
@@ -44,15 +44,15 @@ class PeerGroupContentController extends Controller
             'desc_t4' => 'nullable|string',
             'desc_t5' => 'nullable|string',
 
-            'title_3' => 'nullable|string|max:255',
+            'title_3' => 'nullable|string',
             'description_3' => 'nullable|string',
 
-            'title_c1' => 'nullable|string|max:255',
-            'title_c2' => 'nullable|string|max:255',
-            'title_c3' => 'nullable|string|max:255',
-            'title_c4' => 'nullable|string|max:255',
-            'title_c5' => 'nullable|string|max:255',
-            'title_c6' => 'nullable|string|max:255',
+            'title_c1' => 'nullable|string',
+            'title_c2' => 'nullable|string',
+            'title_c3' => 'nullable|string',
+            'title_c4' => 'nullable|string',
+            'title_c5' => 'nullable|string',
+            'title_c6' => 'nullable|string',
 
             'desc_c1' => 'nullable|string',
             'desc_c2' => 'nullable|string',
@@ -61,15 +61,15 @@ class PeerGroupContentController extends Controller
             'desc_c5' => 'nullable|string',
             'desc_c6' => 'nullable|string',
 
-            'title_4' => 'nullable|string|max:255',
+            'title_4' => 'nullable|string',
             'description_4' => 'nullable|string',
 
-            'title_g1' => 'nullable|string|max:255',
-            'title_g2' => 'nullable|string|max:255',
-            'title_g3' => 'nullable|string|max:255',
-            'title_g4' => 'nullable|string|max:255',
-            'title_g5' => 'nullable|string|max:255',
-            'title_g6' => 'nullable|string|max:255',
+            'title_g1' => 'nullable|string',
+            'title_g2' => 'nullable|string',
+            'title_g3' => 'nullable|string',
+            'title_g4' => 'nullable|string',
+            'title_g5' => 'nullable|string',
+            'title_g6' => 'nullable|string',
 
             'desc_g1' => 'nullable|string',
             'desc_g2' => 'nullable|string',

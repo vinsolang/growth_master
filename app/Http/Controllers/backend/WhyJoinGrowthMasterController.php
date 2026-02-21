@@ -15,21 +15,21 @@ class WhyJoinGrowthMasterController extends Controller
     public function Submitwhyjoin(Request $request){
         $request->validate([
             'content' => 'nullable|string',
-            'title' => 'nullable|string|max:255',
+            'title' => 'nullable|string',
             'description' => 'nullable|string',
 
-            'title_1' => 'nullable|string|max:255',
+            'title_1' => 'nullable|string',
             'description_1' => 'nullable|string',
 
             'table' => 'nullable|string',
             'text' => 'nullable|string',
 
-            'title_2' => 'nullable|string|max:255',
+            'title_2' => 'nullable|string',
             'description_3' => 'nullable|string',
 
-            'title_card_1' => 'nullable|string|max:255',
-            'title_card_2' => 'nullable|string|max:255',
-            'title_card_3' => 'nullable|string|max:255',
+            'title_card_1' => 'nullable|string',
+            'title_card_2' => 'nullable|string',
+            'title_card_3' => 'nullable|string',
 
             'desc_card_1' => 'nullable|string',
             'desc_card_2' => 'nullable|string',

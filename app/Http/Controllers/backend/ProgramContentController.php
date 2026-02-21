@@ -16,17 +16,17 @@ class ProgramContentController extends Controller
 
     public function SubmitProgramContent(Request $request){
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
+            'title' => 'nullable|string',
+            'description' => 'nullable|string',
 
-            'title_1' => 'nullable|string|max:255',
+            'title_1' => 'nullable|string',
 
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
 
-            'title_2' => 'nullable|string|max:255',
+            'title_2' => 'nullable|string',
             'description_2' => 'nullable|string',
 
-            'title_3' => 'nullable|string|max:255',
+            'title_3' => 'nullable|string',
             'description_3' => 'nullable|string',
 
             'table' => 'nullable|string',
