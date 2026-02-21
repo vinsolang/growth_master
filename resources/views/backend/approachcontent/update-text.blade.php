@@ -93,7 +93,7 @@
                                         <label for="formFile" class="form-label text-[#0F4634]">Section Card 3</label>
                                         <div class="mb-3 col-12">
                                             <input class="form-control" type="text" name="title_card_3"
-                                                value="{{ $getContent->title }}" placeholder="title_card_3" />
+                                                value="{{ $getContent->title_card_3 }}" placeholder="title_card_3" />
                                         </div>
                                         <div class="mb-3 col-12">
                                             <textarea name="desc_card_3" class="form-control" id="desc_card_3"
