@@ -13,9 +13,10 @@
     <!-- Overlay Content -->
     <div class="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-30 text-white bg-black/50">
 
-        <h1 class="text-[22px] text-start md:text-[35px] lg:text-[45px] font-semibold max-w-[940px] leading-tight">
+        <h1 class="text-[20px] text-start md:text-[30px] lg:text-[40px] font-semibold max-w-[940px] leading-tight">
             @if(!empty($getBanner) && $getBanner[1]->title === 'membership')
-            {{ $getBanner[1]->name }}
+            {{-- {{ $getBanner[1]->name }} --}}
+            {!! nl2br(e(value: $getBanner[1]->name)) !!}
             @endif
         </h1>
 

@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Title</label>
-                                    <input class="form-control" type="text" name="name" value="{{ $banner->name }}" />
+                                    <textarea class="form-control" type="text" name="name">{{ $banner->name }}</textarea>
                                 </div>
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Content</label>

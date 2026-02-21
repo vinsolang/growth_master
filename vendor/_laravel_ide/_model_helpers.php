@@ -3889,6 +3889,108 @@ namespace App\Models {
     /**
      * App\Models\PeerGroupContent
      *
+     * @property \Illuminate\Support\Carbon $updated_at
+     * @property \Illuminate\Support\Carbon $created_at
+     * @property string $desc_g6
+     * @property string $desc_g5
+     * @property string $desc_g4
+     * @property string $desc_g3
+     * @property string $desc_g2
+     * @property string $desc_g1
+     * @property string $title_g6
+     * @property string $title_g5
+     * @property string $title_g4
+     * @property string $title_g3
+     * @property string $title_g2
+     * @property string $title_g1
+     * @property string $description_4
+     * @property string $title_4
+     * @property string $desc_c6
+     * @property string $desc_c5
+     * @property string $desc_c4
+     * @property string $desc_c3
+     * @property string $desc_c2
+     * @property string $desc_c1
+     * @property string $title_c6
+     * @property string $title_c5
+     * @property string $title_c4
+     * @property string $title_c3
+     * @property string $title_c2
+     * @property string $title_c1
+     * @property string $description_3
+     * @property string $title_3
+     * @property string $desc_t5
+     * @property string $desc_t4
+     * @property string $desc_t3
+     * @property string $desc_t2
+     * @property string $desc_t1
+     * @property string $title_t5
+     * @property string $title_t4
+     * @property string $title_t3
+     * @property string $title_t2
+     * @property string $title_t1
+     * @property string $img_card2
+     * @property string $desc_card2
+     * @property string $desc_card1
+     * @property string $img_card1
+     * @property string $description_2
+     * @property string $title_2
+     * @property string $table
+     * @property string $description_1
+     * @property string $description
+     * @property string $title
+     * @property int $id
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitle($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescription($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescription1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTable($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitle2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescription2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereImgCard1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescCard1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescCard2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereImgCard2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleT1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleT2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleT3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleT4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleT5($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescT1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescT2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescT3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescT4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescT5($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitle3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescription3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleC1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleC2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleC3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleC4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleC5($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleC6($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescC1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescC2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescC3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescC4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescC5($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescC6($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitle4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescription4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleG1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleG2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleG3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleG4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleG5($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereTitleG6($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescG1($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescG2($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescG3($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescG4($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescG5($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereDescG6($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<PeerGroupContent>|PeerGroupContent query()
