@@ -137,10 +137,18 @@
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="<?php echo e(URL('/membership')); ?>" class="block hover:text-[#EDC11C]">Why Join GrowthMaster</a></li>
                 <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]">Our Approach</a></li>
-                <li><a href="<?php echo e(route('program')); ?>" class="block hover:text-[#EDC11C]">Our Programs</a></li>
+                
                 
                 <li><a href="<?php echo e(route('home')); ?>#member-form" class="block hover:text-[#EDC11C]">Become a Member</a></li>
             </ul>
+        </li>
+
+        <!-- Events -->
+        <li>
+            <a href="<?php echo e(route('program')); ?>"
+                class="flex justify-between items-center w-full font-semibold">
+                Our Programs  
+            </a>
         </li>
 
         <!-- Events -->
@@ -164,10 +172,10 @@
             </button>
 
             <ul id="mobileAbout" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="<?php echo e(route('what.is.growth')); ?>" class="block hover:text-[#EDC11C]">What is Growth Master?</a></li>
+                <li><a href="<?php echo e(route('about')); ?>" class="block hover:text-[#EDC11C]">What is Growth Master?</a></li>
                 <li><a href="<?php echo e(route('Laws.of.eadership')); ?>" class="block hover:text-[#EDC11C]">7 Laws of Leadership</a>
                 </li>
-                <li><a href="" class="block hover:text-[#EDC11C]">The CEO Climp</a>
+                <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]">The CEO Climp</a>
                 </li>
             </ul>
         </li>

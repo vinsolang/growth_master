@@ -150,10 +150,18 @@
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="{{URL('/membership')}}" class="block hover:text-[#EDC11C]">Why Join GrowthMaster</a></li>
                 <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">Our Approach</a></li>
-                <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">Our Programs</a></li>
+                {{-- <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">Our Programs</a></li> --}}
                 {{-- <li><a href="{{ route('review') }}" class="block hover:text-[#EDC11C]">GrowthMaster Reviews</a></li> --}}
                 <li><a href="{{ route('home')}}#member-form" class="block hover:text-[#EDC11C]">Become a Member</a></li>
             </ul>
+        </li>
+
+        <!-- Events -->
+        <li>
+            <a href="{{ route('program') }}"
+                class="flex justify-between items-center w-full font-semibold">
+                Our Programs  
+            </a>
         </li>
 
         <!-- Events -->

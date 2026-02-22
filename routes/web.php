@@ -61,7 +61,7 @@ Route::get('membership', function () {
     return view('frontend.membership', compact('getBanner','getContent'));
 })->name('membership');
 Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])->name('approach');
-Route::get('membership/programs', [ClientController::class, 'memberShipPrograms'])->name('program');
+Route::get('programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
 Route::get('membership/exclusive-peer-groups', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
