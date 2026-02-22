@@ -50,6 +50,7 @@ class HomeComtentController extends Controller
             'desc_card_event_1' => 'nullable|string',
             'desc_card_event_2' => 'nullable|string',
             'desc_card_event_3' => 'nullable|string',
+            'description_bg' => 'nullable|string',
 
             'img_card_event_1' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'img_card_event_2' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',

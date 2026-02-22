@@ -27,6 +27,7 @@ class HomeContent extends Model
         'title_1',
         'description_1',
         'image',
+        'description_bg',
 
            
         'sub_title_event',

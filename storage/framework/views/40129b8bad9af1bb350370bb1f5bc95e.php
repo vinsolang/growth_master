@@ -158,6 +158,10 @@
                                                 accept="image/*">
                                         </div>
                                     </div>
+                                    <div class="mb-3 col-12">
+                                        <textarea name="description_bg" class="form-control" id="description_bg"
+                                            placeholder="Description"><?php echo e($getSectionHome->description_bg); ?></textarea>
+                                    </div>
 
                                 <div class="mb-3 col-12 border border-[#0F4634]">
                                     <label for="formFile" class="form-label text-[#0F4634]">Section Event Finane</label>

@@ -226,7 +226,7 @@
 </div>
 
 <section class="relative w-full py-24">
-    <div class="bg-[#68875d] w-full lg:h-[950px]">
+    <div class="bg-[#68875d] w-full h-auto">
         <h1 class="text-[20px] text-white text-center md:text-[30px] lg:text-[45px] font-semibold max-w-[1500px] mx-auto leading-tight py-24">
             <?php echo e($getHomeContent[0]->title_1); ?>
 
@@ -241,13 +241,15 @@
             </div>
             
             <div class="lg:w-[60%]">
-                <img src="<?php echo e(asset( $getHomeContent[0]->image)); ?>" alt="">
+                <img src="<?php echo e(asset( $getHomeContent[0]->image)); ?>" alt="" class="w-full h-full object-cover">
             </div>
         </div>
-        <p class="text-center text-white text-md md:text-lg font-semibold py-4">
-            Interested in the Growth Master coaching platform? 
-            <a class="font-bold underline" href="<?php echo e(route('approach')); ?>">Learn how it works.</a>
-        </p>
+       <div class="flex justify-center items-center">
+            <a href="<?php echo e(route('approach')); ?>" class="text-center text-white text-md md:text-lg font-semibold py-4">
+                <?php echo nl2br(e($getHomeContent[0]->description_bg)); ?>
+
+            </a>
+       </div>
     </div>  
 </section>
 

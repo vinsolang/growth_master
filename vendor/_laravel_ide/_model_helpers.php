@@ -3261,6 +3261,7 @@ namespace App\Models {
      * @property string $title_event_2
      * @property string $title_event_1
      * @property string $sub_title_event
+     * @property string $description_bg
      * @property string $image
      * @property string $description_1
      * @property string $title_1
@@ -3297,6 +3298,7 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereTitle1($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereDescription1($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereImage($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereDescriptionBg($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereSubTitleEvent($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereTitleEvent1($value)
      * @method static \Illuminate\Database\Eloquent\Builder<HomeContent>|HomeContent whereTitleEvent2($value)

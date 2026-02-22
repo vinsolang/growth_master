@@ -314,7 +314,7 @@
 </div>
 {{-- The Most Comprehensive CEO Coaching Platform --}}
 <section class="relative w-full py-24">
-    <div class="bg-[#68875d] w-full lg:h-[950px]">
+    <div class="bg-[#68875d] w-full h-auto">
         <h1 class="text-[20px] text-white text-center md:text-[30px] lg:text-[45px] font-semibold max-w-[1500px] mx-auto leading-tight py-24">
             {{ $getHomeContent[0]->title_1 }}
         </h1>
@@ -327,13 +327,14 @@
             </div>
             {{-- Image --}}
             <div class="lg:w-[60%]">
-                <img src="{{ asset( $getHomeContent[0]->image) }}" alt="">
+                <img src="{{ asset( $getHomeContent[0]->image) }}" alt="" class="w-full h-full object-cover">
             </div>
         </div>
-        <p class="text-center text-white text-md md:text-lg font-semibold py-4">
-            Interested in the Growth Master coaching platform? 
-            <a class="font-bold underline" href="{{ route('approach') }}">Learn how it works.</a>
-        </p>
+       <div class="flex justify-center items-center">
+            <a href="{{ route('approach') }}" class="text-center text-white text-md md:text-lg font-semibold py-4">
+                {!! nl2br(e($getHomeContent[0]->description_bg)) !!}
+            </a>
+       </div>
     </div>  
 </section>
 {{-- Event Blog --}}
