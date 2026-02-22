@@ -8,6 +8,7 @@
                 alt="" class="w-full h-full object-cover">
         </div>
         {{-- Description --}}
+          {{-- Description --}}
         <div class="flex justify-center items-center lg:w-[60%] lg:h-[480px] bg-[#ededed]">
             <p class="text-left lg:max-w-[70%] mx-auto text-[#454545] md:text-xl text-[18px] px-4">It started simply
                 enough: Businessman Bob Nourse brought together
