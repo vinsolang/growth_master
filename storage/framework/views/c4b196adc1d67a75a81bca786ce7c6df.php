@@ -244,7 +244,7 @@
                 <img src="<?php echo e(asset( $getHomeContent[0]->image)); ?>" alt="" class="w-full h-full object-cover">
             </div>
         </div>
-       <div class="flex justify-center items-center">
+       <div class="justify-center items-center hidden">
             <a href="<?php echo e(route('approach')); ?>" class="text-center text-white text-md md:text-lg font-semibold py-4">
                 <?php echo nl2br(e($getHomeContent[0]->description_bg)); ?>
 
@@ -258,7 +258,7 @@
     <section class="max-w-7xl mx-auto px-4 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-        <!-- Card 1 -->
+        <!-- Card 111 -->
         <div class="group">
             <div class="overflow-hidden rounded-lg">
                 <img

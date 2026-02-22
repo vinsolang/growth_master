@@ -330,7 +330,7 @@
                 <img src="{{ asset( $getHomeContent[0]->image) }}" alt="" class="w-full h-full object-cover">
             </div>
         </div>
-       <div class="flex justify-center items-center">
+       <div class="justify-center items-center hidden">
             <a href="{{ route('approach') }}" class="text-center text-white text-md md:text-lg font-semibold py-4">
                 {!! nl2br(e($getHomeContent[0]->description_bg)) !!}
             </a>

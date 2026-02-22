@@ -17,6 +17,7 @@ use App\Http\Controllers\backend\HomeComtentController;
 use App\Http\Controllers\backend\HomeTextController;
 use App\Http\Controllers\backend\HowItWorksController;
 use App\Http\Controllers\backend\LeadershipController;
+use App\Http\Controllers\backend\NavbarMenuController;
 use App\Http\Controllers\backend\OurApproachController;
 use App\Http\Controllers\backend\OurProgramController;
 use App\Http\Controllers\backend\OurTeamController;
@@ -32,6 +33,7 @@ use App\Models\Banner;
 use App\Models\FAQs;
 use App\Models\HomeContent;
 use App\Models\HomeText;
+use App\Models\NavbarMenu;
 use App\Models\WhyJoinGrowthMaster;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -44,11 +46,13 @@ Route::get('/', function () {
       $getBanner = Banner::all();
       $getTeam = DB::table('team')->get();
       $getHomeContent = HomeContent::all();
+      $getMenu = NavbarMenu::all();
     return view('frontend.home', compact(
         'showFAQs',
         'getBanner',
         'getTeam',
-        'getHomeContent'
+        'getHomeContent',
+        'getMenu'
         ));
 })->name('home');
 
@@ -57,8 +61,9 @@ Route::get('/', function () {
 // Member ship
 Route::get('membership', function () {
     $getContent = WhyJoinGrowthMaster::all();
+     $getMenu = NavbarMenu::all();
     $getBanner = Banner::all();
-    return view('frontend.membership', compact('getBanner','getContent'));
+    return view('frontend.membership', compact('getBanner','getContent', 'getMenu'));
 })->name('membership');
 Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])->name('approach');
 Route::get('programs', [ClientController::class, 'memberShipPrograms'])->name('program');
@@ -246,4 +251,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('c_e_o_climbs/page', [CEOClimbController::class, 'c_e_o_climbs'])->name('c_e_o_climbs');
     Route::post('c_e_o_climbs/add/page', [CEOClimbController::class, 'Submitc_e_o_climbs'])->name('submit.c_e_o_climbs');
 
+    // Menu
+    Route::get('menu/page', [NavbarMenuController::class, 'menu'])->name('menu');
+    Route::post('menu/add/page', [NavbarMenuController::class, 'SubmitMenu'])->name('submit.menu');
 });

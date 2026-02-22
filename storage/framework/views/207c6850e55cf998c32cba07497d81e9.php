@@ -109,6 +109,22 @@
             </ul>
           </li>
 
+           <!-- Menu -->
+          <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-home"></i>
+                  <div>Menu</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="<?php echo e(route('menu')); ?>" class="menu-link">
+                          <div>View Menu</div>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
           <!-- Admin -->
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">

@@ -17,74 +17,99 @@
             <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px] md:px-12" id="navLinks">
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="<?php echo e(URL('/membership')); ?>" class="flex items-center">
-                        Membership
+                        <?php echo e($getMenu[0]->menu_1); ?>
+
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#68875d] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(URL('/membership')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Why Join
-                                GrowthMaster</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_2); ?></a>
                             <a href="<?php echo e(route('approach')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Approach</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_3); ?></a>
                             
                             <a href="<?php echo e(route('review')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster Reviews</a>
-                            <a href="<?php echo e(route('exclusive.peer.groups')); ?>" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Exclusive Peer
-                                Groups</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_4); ?></a>
+                            <a href="<?php echo e(route('exclusive.peer.groups')); ?>" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_5); ?></a>
                             <a href="<?php echo e(route('form.input')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Become a Member</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_6); ?></a>
                         </div>
                     </div>
                 </li>
                 
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="<?php echo e(route('program')); ?>" class="flex items-center">
-                        Our Programs
+                       <?php echo e($getMenu[0]->menu_7); ?>
+
+                        <i
+                            class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
+                    <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
+                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                            <a href="<?php echo e(route('program')); ?>"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
+                                <?php echo e($getMenu[0]->menu_8); ?>
+
+                            </a>
+                            <a href="https://www.kicpaa.org/en/atq-program/"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
+                                <?php echo e($getMenu[0]->menu_9); ?>
+
+                            </a>
+                            
+                            <a href="<?php echo e(route('review')); ?>"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
+                                <?php echo e($getMenu[0]->menu_10); ?>
+
+                            </a>
+                        </div>
+                    </div>
                 </li>
 
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="<?php echo e(route('events')); ?>" class="flex items-center">
-                        Events
+                        <?php echo e($getMenu[0]->menu_11); ?>
+
                     </a>
                     
                 </li>
                 
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="<?php echo e(route('about')); ?>" class="flex items-center">
-                        About
+                        <?php echo e($getMenu[0]->menu_12); ?>
+
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#68875d] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(route('about')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">What is Growth Master?</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_13); ?></a>
                             <a href="<?php echo e(route('Laws.of.eadership')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">7 Laws of Leadership</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_14); ?></a>
                             <a href="<?php echo e(route('ceo.climp')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">The CEO Climp</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_15); ?></a>
                         </div>
                     </div>
                 </li>
 
                 <li class="group relative hover:text-[#EDC11C] cursor-pointer">
                     <a href="<?php echo e(route('chair.growth')); ?>" class="flex items-center">
-                        Chair
+                        <?php echo e($getMenu[0]->menu_16); ?>
+
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#68875d] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(route('chair.growth')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Lead a Group</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_17); ?></a>
                             <a href="<?php echo e(route('ceo.coa.qual')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Chair Qualifications</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_18); ?></a>
                             
                             <a href="<?php echo e(route('chair.application')); ?>"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Apply to be a Growth Master Chair</a>
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_19); ?></a>
                         </div>
                     </div>
                 </li>
@@ -130,32 +155,44 @@
         <li>
             <button onclick="toggleMobileDropdown('mobileMembership')"
                 class="flex justify-between items-center w-full font-semibold">
-                Membership
+                <?php echo e($getMenu[0]->menu_1); ?>
+
                 <i class="fas fa-chevron-down transition-transform duration-300"></i>
             </button>
 
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="<?php echo e(URL('/membership')); ?>" class="block hover:text-[#EDC11C]">Why Join GrowthMaster</a></li>
-                <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]">Our Approach</a></li>
+                <li><a href="<?php echo e(URL('/membership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_2); ?></a></li>
+                <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_3); ?></a></li>
                 
-                
-                <li><a href="<?php echo e(route('home')); ?>#member-form" class="block hover:text-[#EDC11C]">Become a Member</a></li>
+                <li><a href="<?php echo e(route('review')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_4); ?></a></li>
+                <li><a href="<?php echo e(route('exclusive.peer.groups')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_5); ?></a></li>
+                <li><a href="<?php echo e(route('home')); ?>#member-form" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_6); ?></a></li>
             </ul>
         </li>
 
-        <!-- Events -->
+        <!-- Our Programs  -->
+
         <li>
-            <a href="<?php echo e(route('program')); ?>"
+            <button onclick="toggleMobileDropdown('mobileProgram')"
                 class="flex justify-between items-center w-full font-semibold">
-                Our Programs  
-            </a>
+                <?php echo e($getMenu[0]->menu_7); ?>
+
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+            </button>
+
+            <ul id="mobileProgram" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
+                <li><a href="<?php echo e(route('program')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_8); ?></a></li>
+                <li><a href="https://www.kicpaa.org/en/atq-program/" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_9); ?></a></li>
+                <li><a href="#" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_10); ?></a></li>
+            </ul>
         </li>
 
         <!-- Events -->
         <li>
             <a href="<?php echo e(route('events')); ?>"
                 class="flex justify-between items-center w-full font-semibold">
-                Events
+                <?php echo e($getMenu[0]->menu_11); ?>
+
                 
             </a>
 
@@ -167,30 +204,32 @@
         <li>
             <button onclick="toggleMobileDropdown('mobileAbout')"
                 class="flex justify-between items-center w-full font-semibold">
-                About
+                <?php echo e($getMenu[0]->menu_12); ?>
+
                 <i class="fas fa-chevron-down transition-transform duration-300"></i>
             </button>
 
             <ul id="mobileAbout" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="<?php echo e(route('about')); ?>" class="block hover:text-[#EDC11C]">What is Growth Master?</a></li>
-                <li><a href="<?php echo e(route('Laws.of.eadership')); ?>" class="block hover:text-[#EDC11C]">7 Laws of Leadership</a>
+                <li><a href="<?php echo e(route('about')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_13); ?></a></li>
+                <li><a href="<?php echo e(route('Laws.of.eadership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_14); ?></a>
                 </li>
-                <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]">The CEO Climp</a>
+                <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_15); ?></a>
                 </li>
             </ul>
         </li>
         <li>
             <button onclick="toggleMobileDropdown('mobileChair')"
                 class="flex justify-between items-center w-full font-semibold">
-                Chair
+                <?php echo e($getMenu[0]->menu_16); ?>
+
                 <i class="fas fa-chevron-down transition-transform duration-300"></i>
             </button>
 
             <ul id="mobileChair" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="<?php echo e(route('chair.growth')); ?>" class="block hover:text-[#EDC11C]">Lead a Group</a></li>
-                <li><a href="<?php echo e(route('ceo.coa.qual')); ?>" class="block hover:text-[#EDC11C]">Chair Qualifications</a></li>
+                <li><a href="<?php echo e(route('chair.growth')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_17); ?></a></li>
+                <li><a href="<?php echo e(route('ceo.coa.qual')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_18); ?></a></li>
                 
-                <li><a href="<?php echo e(route('chair.application')); ?>" class="block hover:text-[#EDC11C]">Apply to be a Growth Master Chair</a></li>
+                <li><a href="<?php echo e(route('chair.application')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_19); ?></a></li>
             </ul>
         </li>
     </ul>

@@ -157,11 +157,7 @@
                                                 accept="image/*">
                                         </div>
                                     </div>
-                                    {{-- <div class="mb-3 col-12">
-                                        <textarea name="description_bg" class="form-control" id="description_bg"
-                                            placeholder="Description">{{ $getSectionHome->description_bg }}</textarea>
-                                    </div> --}}
-                                    <div class="mb-3 col-12">
+                                    <div class="mb-3 col-12 d-none">
                                         <textarea name="description_bg" class="form-control" id="description_bg"
                                             placeholder="Description">{{ $getSectionHome->description_bg }}</textarea>
                                     </div>
