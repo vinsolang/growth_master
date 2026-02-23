@@ -25,16 +25,17 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Description</th>
-                                <th>Event Time</th>
+                                <th>Event Date</th>
                                 <th>Event Type</th>
-                                <th>Created At</th>
+                                <th>Link of Event</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
 
                         <tbody class="table-border-bottom-0">
                             <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
+                                <tr  class="clickable-row" data-href="<?php echo e(route('event.edit', $items->id)); ?>"
+                                    style="cursor:pointer;">
                                     
                                     <td>
                                         <?php if($items->image): ?>
@@ -93,8 +94,6 @@
                                     <td>
                                         <?php echo e($items->event_date); ?>
 
-                                        <br>
-                                        <small class="text-muted"><?php echo e($items->event_time); ?></small>
                                     </td>
 
                                     
@@ -104,12 +103,13 @@
 
                                         </span>
                                     </td>
-
-                                    
                                     <td>
-                                        <?php echo e($items->created_at->format('d M Y')); ?>
+                                        <span class="badge bg-label-info">
+                                            <?php echo e(ucfirst($items->link)); ?>
 
+                                        </span>
                                     </td>
+                                  
 
                                     
                                     <td>
@@ -192,6 +192,14 @@
         });
     });
 </script>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/event/view-event.blade.php ENDPATH**/ ?>

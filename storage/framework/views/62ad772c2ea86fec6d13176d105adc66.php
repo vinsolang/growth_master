@@ -32,7 +32,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                             <?php $__currentLoopData = $programs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
+                                <tr  class="clickable-row" data-href="<?php echo e(route('program.edit', $items->id)); ?>"
+                                    style="cursor:pointer;">
                                     <td>
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/our_program/<?php echo e($items->image); ?>" alt="Avatar" class="rounded-circle"
@@ -161,5 +162,14 @@
     });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/our-program/view-program.blade.php ENDPATH**/ ?>

@@ -32,7 +32,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                             @foreach ($programs as $items)
-                                <tr>
+                                <tr  class="clickable-row" data-href="{{ route('program.edit', $items->id) }}"
+                                    style="cursor:pointer;">
                                     <td>
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/our_program/{{ $items->image }}" alt="Avatar" class="rounded-circle"
@@ -158,4 +159,13 @@
     });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 @endsection

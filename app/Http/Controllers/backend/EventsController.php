@@ -32,12 +32,15 @@ class EventsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            //  'desc_of_event' =>  'nullable|date',
+            // 'title_of_event' =>  'nullable|date',
             'title'       => 'required|string|max:255',
             'category'    => 'nullable|string|max:150',
             'description' => 'nullable|string',
             'event_date'  => 'nullable|date',
             'event_time'  => 'required|string',
             'event_type'  => 'required|string',
+             'link'  => 'required|string',
             'image'       => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
@@ -92,12 +95,15 @@ class EventsController extends Controller
     public function update(Request $request, Events $event)
     {
         $request->validate([
+            // 'desc_of_event' =>  'nullable|date',
+            // 'title_of_event' =>  'nullable|date',
             'title'       => 'required|string|max:255',
             'category'    => 'nullable|string|max:150',
             'description' => 'nullable|string',
             'event_date'  => 'nullable|date',
             'event_time'  => 'required',
             'event_type'  => 'required|string',
+            'link'  => 'required|string',
             'image'       => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 

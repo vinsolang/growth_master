@@ -151,19 +151,28 @@
             </ul>
           </li> --}}
 
+           <!-- Menu -->
           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <a href="{{ route('menu') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-menu"></i>
+                  <div>Menu</div>
+              </a>
+          </li>
+
+
+          <li class="menu-item">
+            <a href="{{ route('banner.index') }}" class="menu-link">
               <i class="menu-icon tf-icons bx bx-images"></i>
               <div data-i18n="Layouts">Banner</div>
             </a>
 
-            <ul class="menu-sub">
+            <ul class="menu-sub d-none">
               <li class="menu-item">
                 <a href="{{ route('banner.index') }}" class="menu-link">
                   <div data-i18n="Without menu">View Banner</div>
                 </a>
               </li>
-              <li class="menu-item d-none">
+              <li class="menu-item">
                 <a href="{{ route('banner.create') }}" class="menu-link">
                   <div data-i18n="Without menu">Add Banner</div>
                 </a>
@@ -171,56 +180,167 @@
             </ul>
           </li>
 
-           <!-- Menu -->
-          <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class="menu-icon tf-icons bx bx-home"></i>
-                  <div>Menu</div>
-              </a>
-
-              <ul class="menu-sub">
-                  <li class="menu-item">
-                      <a href="{{ route('menu') }}" class="menu-link">
-                          <div>View Menu</div>
-                      </a>
-                  </li>
-              </ul>
-          </li>
-
+          
           <!-- Admin -->
           <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <a href="{{ route('homecontent') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-home"></i>
                   <div>Home</div>
               </a>
-
-              <ul class="menu-sub">
-                  <li class="menu-item">
-                      <a href="{{ route('homecontent') }}" class="menu-link">
-                          <div>Content</div>
-                      </a>
-                  </li>
-              </ul>
           </li>
 
           <!-- Member ship -->
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-trending-up"></i>
-                  <div>Why Join</div>
+                  <div>{{ $getMenu[0]->menu_1 }}</div>
               </a>
 
               <ul class="menu-sub">
                   <li class="menu-item">
                       <a href="{{ route('whyjoin') }}" class="menu-link">
-                          <div>Content</div>
+                          <div>{{ $getMenu[0]->menu_2 }}</div>
                       </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="{{ route('approachcontent') }}" class="menu-link">
+                      <div data-i18n="Without menu">{{ $getMenu[0]->menu_3 }}</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="{{ route('reviewcontent') }}" class="menu-link">
+                      <div data-i18n="Without menu">{{ $getMenu[0]->menu_4 }}</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="{{ route('peergroupcontent') }}" class="menu-link">
+                      <div data-i18n="Without menu">{{ $getMenu[0]->menu_5 }}</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <div data-i18n="Without menu">{{ $getMenu[0]->menu_6 }}</div>
+                    </a>
                   </li>
               </ul>
           </li>
 
           <!-- Layouts -->
           <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-clipboard"></i>
+              <div data-i18n="Layouts">{{ $getMenu[0]->menu_7 }}</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('programcontent') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_8 }}</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.kicpaa.org/en/atq-program/" class="menu-link" target="_blank">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_9 }}</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_10 }}</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="{{ route('event.index') }}" class="menu-link">
+             <i class="menu-icon tf-icons bx bx-calendar-event"></i>
+              <div data-i18n="Layouts">{{ $getMenu[0]->menu_11 }}</div>
+            </a>
+          </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+             <i class="menu-icon tf-icons bx bx-search-alt"></i>
+              <div data-i18n="Layouts">{{ $getMenu[0]->menu_12 }}</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('about.admin') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_13 }}</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="{{ route('leaderships.admin') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_14 }}</div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('c_e_o_climbs') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_15 }}</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+           <!-- Layouts -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-check-shield"></i>
+              <div data-i18n="Layouts">{{ $getMenu[0]->menu_16 }}</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('leadgroup') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_17 }}</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="{{ route('mentorsqualifications') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_18 }}</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_19 }}</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="{{ route('view_faqs') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-help-circle"></i>
+              <div data-i18n="Layouts">FAQs</div>
+            </a>
+          </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="{{ route('helpsction.index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-support"></i>
+              <div data-i18n="Layouts">Help Section</div>
+            </a>
+          </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="{{ route('view_team') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-group"></i>
+              <div data-i18n="Layouts">People</div>
+            </a>
+          </li>
+
+
+
+{{-- ========================================================================= --}}
+          <!-- Layouts -->
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-group"></i>
               <div data-i18n="Layouts">People</div>
@@ -238,11 +358,11 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
           
           
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-git-branch"></i>
               <div data-i18n="Layouts">Approach</div>
@@ -266,10 +386,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-clipboard"></i>
               <div data-i18n="Layouts">Program</div>
@@ -324,10 +444,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
              <i class="menu-icon tf-icons bx bx-search-alt"></i>
               <div data-i18n="Layouts">Page Review</div>
@@ -340,10 +460,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
              <i class="menu-icon tf-icons bx bx-search-alt"></i>
               <div data-i18n="Layouts">PagePeerGroup</div>
@@ -356,11 +476,11 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-support"></i>
               <div data-i18n="Layouts">Help Section</div>
@@ -378,10 +498,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-help-circle"></i>
               <div data-i18n="Layouts">FAQs</div>
@@ -399,10 +519,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item">
+          {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
              <i class="menu-icon tf-icons bx bx-calendar-event"></i>
               <div data-i18n="Layouts">Event</div>
@@ -420,7 +540,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
           <!-- Layouts -->
           {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -486,6 +606,33 @@
               </li>
             </ul>
           </li>
+
+
+           <!-- Layouts -->
+          {{-- <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-check-shield"></i>
+              <div data-i18n="Layouts">Mentors</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('leadgroup') }}" class="menu-link">
+                  <div data-i18n="Without menu">Lead a Group</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="" class="menu-link">
+                  <div data-i18n="Without menu">Mentors Qualifications</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="" class="menu-link">
+                  <div data-i18n="Without menu">Apply to be a Mentor</div>
+                </a>
+              </li>
+            </ul>
+          </li> --}}
           
           <!-- Profile -->
           <li class="menu-item">

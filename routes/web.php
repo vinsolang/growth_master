@@ -17,6 +17,9 @@ use App\Http\Controllers\backend\HomeComtentController;
 use App\Http\Controllers\backend\HomeTextController;
 use App\Http\Controllers\backend\HowItWorksController;
 use App\Http\Controllers\backend\LeadershipController;
+use App\Http\Controllers\backend\LeadGroup;
+use App\Http\Controllers\backend\LeadGroupController;
+use App\Http\Controllers\backend\MentorsQualificationsController;
 use App\Http\Controllers\backend\NavbarMenuController;
 use App\Http\Controllers\backend\OurApproachController;
 use App\Http\Controllers\backend\OurProgramController;
@@ -254,4 +257,12 @@ Route::middleware(['auth'])->group(function(){
     // Menu
     Route::get('menu/page', [NavbarMenuController::class, 'menu'])->name('menu');
     Route::post('menu/add/page', [NavbarMenuController::class, 'SubmitMenu'])->name('submit.menu');
+
+    // leadgroup
+    Route::get('leadgroup/page', [LeadGroupController::class, 'leadgroup'])->name('leadgroup');
+    Route::post('leadgroup/add/page', [LeadGroupController::class, 'SubmitLeadgroup'])->name('submit.leadgroup');
+
+    // mentorsqualifications
+    Route::get('mentorsqualifications/page', [MentorsQualificationsController::class, 'mentorsqualifications'])->name('mentorsqualifications');
+    Route::post('mentorsqualifications/add/page', [MentorsQualificationsController::class, 'Submitmentorsqualifications'])->name('submit.mentorsqualifications');
 });

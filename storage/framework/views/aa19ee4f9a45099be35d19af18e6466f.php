@@ -12,6 +12,13 @@
 
     <div class="content-wrapper">
         <div class="container-xxl flex-grow-1 container-p-y">
+             <div class="flex gap-3 justify-end">
+                <a href="<?php echo e(route('program.index')); ?>">
+                    <input type="submit"
+                        class="px-6 py-2 border-2 border-[#0F4634] text-[#0F4634] font-semibold rounded-xl hover:bg-[#0F4634] hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200"
+                        value="view section block">
+                </a>
+            </div>
             <div class="col-xl-12">
 
                 <?php if(session('success')): ?>

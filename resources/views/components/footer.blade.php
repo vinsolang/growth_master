@@ -3,16 +3,21 @@
         <div class="space-y-8">
             {{-- logo --}}
             <div>
-                <img src="{{ asset('assets/logo-1.png') }}" alt="" class="w-24 h-24">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/logo-1.png') }}" alt="" class="w-24 h-24">
+                </a>
             </div>
             {{-- menu of footer --}}
             <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-y-6 text-[#ffffff] font-meduim">
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Explore Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="{{ route('membership') }}">Membership</a></li>
-                        <li><a href="{{ route('chair.growth') }}">Chair</a></li>
-                        <li><a href="{{ route('events') }}">Events</a></li>
+                        <li><a href="{{ route('membership') }}">{{ $getMenu[0]->menu_1 }}</a></li>
+                        <li><a href="{{ route('membership') }}">{{ $getMenu[0]->menu_2 }}</a></li>
+                        <li><a href="{{ route('approach') }}">{{ $getMenu[0]->menu_3 }}</a></li>
+                        <li><a href="{{ route('review') }}">{{ $getMenu[0]->menu_4 }}</a></li>
+                        <li><a href="{{ route('exclusive.peer.groups') }}">{{ $getMenu[0]->menu_5 }}</a></li>
+                        <li><a href="{{ route('form.input') }}">{{ $getMenu[0]->menu_6 }}</a></li>
                     </ul>
                 </div>
                 <div class="space-y-2">
@@ -27,7 +32,7 @@
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Apply for Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="{{ route('home') }}#member-form">Become a Member</a></li>
+                        <li><a href="{{ route('home') }}#member-form">{{ $getMenu[0]->menu_6 }}</a></li>
                         <li><a href="{{ route('chair.growth') }}#chair-form">Become a Chair</a></li>
                     </ul>
                 </div>

@@ -52,7 +52,7 @@
                                 <?php echo e($getMenu[0]->menu_8); ?>
 
                             </a>
-                            <a href="https://www.kicpaa.org/en/atq-program/"
+                            <a href="https://www.kicpaa.org/en/atq-program/" target="_blank"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
                                 <?php echo e($getMenu[0]->menu_9); ?>
 
@@ -182,7 +182,7 @@
 
             <ul id="mobileProgram" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="<?php echo e(route('program')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_8); ?></a></li>
-                <li><a href="https://www.kicpaa.org/en/atq-program/" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_9); ?></a></li>
+                <li><a href="https://www.kicpaa.org/en/atq-program/" target="_blank" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_9); ?></a></li>
                 <li><a href="#" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_10); ?></a></li>
             </ul>
         </li>

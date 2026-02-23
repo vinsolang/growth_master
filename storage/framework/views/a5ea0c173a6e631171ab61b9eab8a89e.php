@@ -5,7 +5,7 @@
         Admin | Update
     <?php $__env->stopSection(); ?>
     <?php $__env->startSection('page-main-title'); ?>
-        UPDATE PAGE WHY JOIN GROWTH MASTER
+        UPDATE PAGE
     <?php $__env->stopSection(); ?>
     
     <!-- Content wrapper -->
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                                  <div class="mb-3 col-12">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Section Card 2</label>
+                                    <label for="formFile" class="form-label text-[#0F4634]">Section Card 3</label>
                                     <div class="mb-3 col-12">
                                         <input class="form-control" type="text" name="title_card_3" value="<?php echo e($whyJoin->title_card_3); ?>" placeholder="Title"/>
                                     </div>

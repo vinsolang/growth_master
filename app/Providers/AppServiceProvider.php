@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-       View::composer('components.navbar', function ($view) {
+        View::composer(['components.navbar', 'components.footer', 'backend.admin'], function ($view) {
             $getMenu = NavbarMenu::all();
 
             $view->with('getMenu', $getMenu);

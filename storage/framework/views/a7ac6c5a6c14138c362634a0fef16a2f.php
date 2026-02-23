@@ -1,0 +1,92 @@
+
+
+<?php $__env->startSection('content'); ?>
+
+<?php $__env->startSection('site-title'); ?>
+    Admin | Update
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page-main-title'); ?>
+    UPDATE HELP SECTION
+<?php $__env->stopSection(); ?>
+
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="col-xl-12">
+
+            <form action="<?php echo e(route('helpsction.update', $helpsction->id)); ?>" method="post">
+                <?php echo csrf_field(); ?>
+                <?php echo method_field('PUT'); ?>
+                <input type="hidden" name="id" value="<?php echo e($helpsction->id); ?>">
+
+                <div class="card">
+                    <?php if(Session::has('message')): ?>
+                        <p class="text-danger text-center"><?php echo e(Session::get('message')); ?></p>
+                    <?php endif; ?>
+
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="mb-3 col-12">
+                                <label class="form-label text-[#0F4634]">Question</label>
+                                <textarea name="question" class="form-control" id="question"><?php echo e($helpsction->question); ?></textarea>
+                            </div>
+
+                           <div class="mb-3 col-12">
+                                <label class="form-label text-[#0F4634]">Answer</label>
+                                <textarea name="answer"
+                                        class="form-control"
+                                        id="answer"
+                                        rows="6"><?php echo $helpsction->answer; ?></textarea>
+                            </div>
+
+                            <div class="flex gap-3 mt-3">
+                                <a href="<?php echo e(route('helpsction.index')); ?>"
+                                    class="px-6 py-3 border-2 border-[#0F4634] text-[#0F4634] font-semibold rounded-xl hover:bg-[#0F4634] hover:text-white transition duration-200">
+                                    Cancel
+                                </a>
+
+                                <button type="submit"
+                                    class="px-6 py-3 bg-[#0F4634] text-white font-semibold rounded-xl hover:bg-[#052e21] transition duration-200">
+                                    Submit
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#answer'), {
+            toolbar: [
+                'heading',
+                '|',
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                '|',
+                'bulletedList',
+                'numberedList',
+                '|',
+                'link',
+                'blockQuote',
+                '|',
+                'undo',
+                'redo'
+            ]
+        })
+        .catch(error => console.error(error));
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/helpSection/update-help.blade.php ENDPATH**/ ?>

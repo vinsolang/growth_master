@@ -31,7 +31,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                             <?php $__currentLoopData = $howIsWorks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
+                                <tr  class="clickable-row" data-href="<?php echo e(route('work.edit', $items->id)); ?>"
+                                    style="cursor:pointer;">
                                     <td>
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/how_it_work/<?php echo e($items->image); ?>" alt="Avatar" class="rounded-circle"
@@ -157,5 +158,14 @@
     });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/howItWorks/view-work.blade.php ENDPATH**/ ?>

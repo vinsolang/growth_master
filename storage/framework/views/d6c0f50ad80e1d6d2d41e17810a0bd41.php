@@ -28,7 +28,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                              <?php $__currentLoopData = $helpSections; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $help): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
+                                <tr class="clickable-row" data-href="<?php echo e(route('helpsction.edit', $help->id)); ?>"
+                                    style="cursor:pointer;">
                                     <td><?php echo e($help->question); ?></td>
                                     <td><?php echo $help->answer; ?></td>
                                     <td>
@@ -103,5 +104,14 @@
             });
         });
     });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
 </script>
 <?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/helpSection/view-help.blade.php ENDPATH**/ ?>

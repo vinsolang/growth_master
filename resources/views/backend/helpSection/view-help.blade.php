@@ -28,7 +28,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                              @foreach ($helpSections as $help)
-                                <tr>
+                                <tr class="clickable-row" data-href="{{ route('helpsction.edit', $help->id) }}"
+                                    style="cursor:pointer;">
                                     <td>{{ $help->question }}</td>
                                     <td>{!! $help->answer !!}</td>
                                     <td>
@@ -103,4 +104,13 @@
             });
         });
     });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
 </script>

@@ -3,16 +3,21 @@
         <div class="space-y-8">
             
             <div>
-                <img src="<?php echo e(asset('assets/logo-1.png')); ?>" alt="" class="w-24 h-24">
+                <a href="<?php echo e(route('home')); ?>">
+                    <img src="<?php echo e(asset('assets/logo-1.png')); ?>" alt="" class="w-24 h-24">
+                </a>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-y-6 text-[#ffffff] font-meduim">
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Explore Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="<?php echo e(route('membership')); ?>">Membership</a></li>
-                        <li><a href="<?php echo e(route('chair.growth')); ?>">Chair</a></li>
-                        <li><a href="<?php echo e(route('events')); ?>">Events</a></li>
+                        <li><a href="<?php echo e(route('membership')); ?>"><?php echo e($getMenu[0]->menu_1); ?></a></li>
+                        <li><a href="<?php echo e(route('membership')); ?>"><?php echo e($getMenu[0]->menu_2); ?></a></li>
+                        <li><a href="<?php echo e(route('approach')); ?>"><?php echo e($getMenu[0]->menu_3); ?></a></li>
+                        <li><a href="<?php echo e(route('review')); ?>"><?php echo e($getMenu[0]->menu_4); ?></a></li>
+                        <li><a href="<?php echo e(route('exclusive.peer.groups')); ?>"><?php echo e($getMenu[0]->menu_5); ?></a></li>
+                        <li><a href="<?php echo e(route('form.input')); ?>"><?php echo e($getMenu[0]->menu_6); ?></a></li>
                     </ul>
                 </div>
                 <div class="space-y-2">
@@ -27,7 +32,7 @@
                 <div class="space-y-2">
                     <h1 class="italic text-gray-400 font-meduim text-[14px]">Apply for Growth Master:</h1>
                     <ul class="space-y-2 text-[14px]">
-                        <li><a href="<?php echo e(route('home')); ?>#member-form">Become a Member</a></li>
+                        <li><a href="<?php echo e(route('home')); ?>#member-form"><?php echo e($getMenu[0]->menu_6); ?></a></li>
                         <li><a href="<?php echo e(route('chair.growth')); ?>#chair-form">Become a Chair</a></li>
                     </ul>
                 </div>

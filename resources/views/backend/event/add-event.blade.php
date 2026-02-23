@@ -68,6 +68,14 @@
                                     <label for="formFile" class="form-label text-[#0F4634]">Event Type</label>
                                      <input class="form-control" type="text" name="event_type" />
                                 </div>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Link Of Event</label>
+                                     <input class="form-control" type="text" name="link" placeholder="https://example.com"/>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Event Date</label>
+                                     <input class="form-control" type="date" name="event_date" placeholder="10/Jan/2026"/>
+                                </div>
                                 <!-- ADD: no old image initially -->
                                 <div class="mb-5 col-12">
                                     <label class="block mb-2 text-sm font-medium text-[#0F4634]">Image</label>

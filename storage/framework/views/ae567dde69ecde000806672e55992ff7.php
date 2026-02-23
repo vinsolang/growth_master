@@ -26,7 +26,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                             <?php $__currentLoopData = $row; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $team): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
+                                <tr class="clickable-row" data-href="<?php echo e(route('update.team', ['id' => $team->id])); ?>"
+                                    style="cursor:pointer;"> 
                                     <td>
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/team/<?php echo e($team->profile); ?>" alt="Avatar" class="rounded-circle"
@@ -153,5 +154,14 @@ function toggleText(el) {
 }
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('backend.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Seed Media\Growth_Master\resources\views/backend/member/view-team.blade.php ENDPATH**/ ?>

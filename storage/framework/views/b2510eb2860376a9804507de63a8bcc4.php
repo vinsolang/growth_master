@@ -42,12 +42,7 @@
         </div>
         <div class="space-y-10">
             
-            <div class="text-[#333333] px-4 md:px-8 xl:px-12">
-                <p>The hardest climb is not Denali, K2 or even Everest. It isn’t at 24,000 feet. The hardest climb lies deep
-                    within. It’s the mental climb. Gain an insider’s edge to power your ascent with events purpose-built for
-                    driven CEOs and business owners. Learn from subject-matter experts and build connections with
-                    high-impact business leaders at Growth Master events.</p>
-            </div>
+            
 
             
             <div class="space-y-6">
@@ -61,7 +56,7 @@
             
             <div class="text-[#003f5e] font-semibold text-2xl px-12">
                 
-            <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl py-6">Growth Master Events</h1>
+            <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl py-6">Events</h1>
                 
               <?php $__currentLoopData = $showEvents; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="space-y-6">
@@ -70,7 +65,7 @@
                     <div class="flex justify-between items-center">
                         <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
                         <div class="text-center text-[#333333] text-xl">
-                            <h1><?php echo e($items->created_at->format('M Y')); ?></h1>
+                            <h1><?php echo e(\Carbon\Carbon::parse($items->event_date)->format('d M Y')); ?></h1>
                         </div>
                         <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
                     </div>
@@ -83,7 +78,7 @@
                         <div class="w-full md:w-1/4 bg-gray-600 relative">
                             <img src="<?php echo e(asset($items->image)); ?>" alt=""
                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-[#082f42]/70"></div>
+                            <div class="absolute inset-0"></div>
 
                             
                         </div>
@@ -107,6 +102,15 @@
                                 <?php echo e($items->description); ?>
 
                             </p>
+                            <div>
+                                <?php if($items->link): ?>
+                                    <a href="<?php echo e($items->link); ?>"
+                                    target="_blank"
+                                    class="">
+                                        Learn More <span>&rarr;</span>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
                         </div>
 
                     </div>

@@ -10,6 +10,7 @@ use App\Models\FAQs;
 use App\Models\HelpSection;
 use App\Models\HomeContent;
 use App\Models\HowItWorks;
+use App\Models\LeadGroup;
 use App\Models\PeerGroupContent;
 use App\Models\Program;
 use App\Models\ProgramContent;
@@ -82,7 +83,8 @@ class ClientController extends Controller
     // Chair
     public function growthMasterChair(){
           $getBanner = Banner::all();
-        return view('frontend.chair.lead-group', compact('getBanner'));
+          $getCantent = LeadGroup::all();
+        return view('frontend.chair.lead-group', compact('getBanner','getCantent'));
     }
     public function CEOCoachingQual(){
           $getBanner = Banner::all();

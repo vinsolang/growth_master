@@ -26,7 +26,8 @@
                         </thead>
                         <tbody class="table-border-bottom-0">
                             @foreach ($row as $team)
-                                <tr>
+                                <tr class="clickable-row" data-href="{{ route('update.team', ['id' => $team->id]) }}"
+                                    style="cursor:pointer;"> 
                                     <td>
                                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                             <img src="../assets/team/{{ $team->profile }}" alt="Avatar" class="rounded-circle"
@@ -149,4 +150,13 @@ function toggleText(el) {
 }
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 @endsection

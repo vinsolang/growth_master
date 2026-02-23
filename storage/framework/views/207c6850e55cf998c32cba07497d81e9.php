@@ -89,19 +89,28 @@
           <!-- Layouts -->
           
 
+           <!-- Menu -->
           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <a href="<?php echo e(route('menu')); ?>" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-menu"></i>
+                  <div>Menu</div>
+              </a>
+          </li>
+
+
+          <li class="menu-item">
+            <a href="<?php echo e(route('banner.index')); ?>" class="menu-link">
               <i class="menu-icon tf-icons bx bx-images"></i>
               <div data-i18n="Layouts">Banner</div>
             </a>
 
-            <ul class="menu-sub">
+            <ul class="menu-sub d-none">
               <li class="menu-item">
                 <a href="<?php echo e(route('banner.index')); ?>" class="menu-link">
                   <div data-i18n="Without menu">View Banner</div>
                 </a>
               </li>
-              <li class="menu-item d-none">
+              <li class="menu-item">
                 <a href="<?php echo e(route('banner.create')); ?>" class="menu-link">
                   <div data-i18n="Without menu">Add Banner</div>
                 </a>
@@ -109,50 +118,47 @@
             </ul>
           </li>
 
-           <!-- Menu -->
-          <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class="menu-icon tf-icons bx bx-home"></i>
-                  <div>Menu</div>
-              </a>
-
-              <ul class="menu-sub">
-                  <li class="menu-item">
-                      <a href="<?php echo e(route('menu')); ?>" class="menu-link">
-                          <div>View Menu</div>
-                      </a>
-                  </li>
-              </ul>
-          </li>
-
+          
           <!-- Admin -->
           <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <a href="<?php echo e(route('homecontent')); ?>" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-home"></i>
                   <div>Home</div>
               </a>
-
-              <ul class="menu-sub">
-                  <li class="menu-item">
-                      <a href="<?php echo e(route('homecontent')); ?>" class="menu-link">
-                          <div>Content</div>
-                      </a>
-                  </li>
-              </ul>
           </li>
 
           <!-- Member ship -->
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-trending-up"></i>
-                  <div>Why Join</div>
+                  <div><?php echo e($getMenu[0]->menu_1); ?></div>
               </a>
 
               <ul class="menu-sub">
                   <li class="menu-item">
                       <a href="<?php echo e(route('whyjoin')); ?>" class="menu-link">
-                          <div>Content</div>
+                          <div><?php echo e($getMenu[0]->menu_2); ?></div>
                       </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="<?php echo e(route('approachcontent')); ?>" class="menu-link">
+                      <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_3); ?></div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="<?php echo e(route('reviewcontent')); ?>" class="menu-link">
+                      <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_4); ?></div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="<?php echo e(route('peergroupcontent')); ?>" class="menu-link">
+                      <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_5); ?></div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_6); ?></div>
+                    </a>
                   </li>
               </ul>
           </li>
@@ -160,121 +166,85 @@
           <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-group"></i>
-              <div data-i18n="Layouts">People</div>
-            </a>
-
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('view_team')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">View People</div>
-                </a>
-              </li>
-              <li class="menu-item d-none">
-                <a href="<?php echo e(route('add_team')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Add Member</div>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          <!-- Layouts -->
-          <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-git-branch"></i>
-              <div data-i18n="Layouts">Approach</div>
-            </a>
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('approachcontent')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Edit Content</div>
-                </a>
-              </li>
-            </ul>
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('work.index')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">View Block</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="<?php echo e(route('work.create')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Add Block</div>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Layouts -->
-          <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-clipboard"></i>
-              <div data-i18n="Layouts">Program</div>
+              <div data-i18n="Layouts"><?php echo e($getMenu[0]->menu_7); ?></div>
             </a>
 
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="<?php echo e(route('programcontent')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Content Program</div>
-                </a>
-              </li>
-            </ul>
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('program.index')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">View Program</div>
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_8); ?></div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="<?php echo e(route('program.create')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Add Program</div>
+                <a href="https://www.kicpaa.org/en/atq-program/" class="menu-link" target="_blank">
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_9); ?></div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_10); ?></div>
                 </a>
               </li>
             </ul>
+          </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="<?php echo e(route('event.index')); ?>" class="menu-link">
+             <i class="menu-icon tf-icons bx bx-calendar-event"></i>
+              <div data-i18n="Layouts"><?php echo e($getMenu[0]->menu_11); ?></div>
+            </a>
           </li>
 
           <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
              <i class="menu-icon tf-icons bx bx-search-alt"></i>
-              <div data-i18n="Layouts">About</div>
+              <div data-i18n="Layouts"><?php echo e($getMenu[0]->menu_12); ?></div>
             </a>
-
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="<?php echo e(route('about.admin')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">What is a Growth Master</div>
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_13); ?></div>
                 </a>
               </li>
-            </ul>
-            <ul class="menu-sub">
               <li class="menu-item">
                 <a href="<?php echo e(route('leaderships.admin')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">7 Leadership</div>
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_14); ?></div>
                 </a>
               </li>
             </ul>
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="<?php echo e(route('c_e_o_climbs')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">The CEO Climb</div>
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_15); ?></div>
                 </a>
               </li>
             </ul>
           </li>
 
-          <!-- Layouts -->
+           <!-- Layouts -->
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-             <i class="menu-icon tf-icons bx bx-search-alt"></i>
-              <div data-i18n="Layouts">Page Review</div>
+              <i class="menu-icon tf-icons bx bx-check-shield"></i>
+              <div data-i18n="Layouts"><?php echo e($getMenu[0]->menu_16); ?></div>
             </a>
 
             <ul class="menu-sub">
               <li class="menu-item">
-                <a href="<?php echo e(route('reviewcontent')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Content Page</div>
+                <a href="<?php echo e(route('leadgroup')); ?>" class="menu-link">
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_17); ?></div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="<?php echo e(route('mentorsqualifications')); ?>" class="menu-link">
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_18); ?></div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="" class="menu-link">
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_19); ?></div>
                 </a>
               </li>
             </ul>
@@ -282,83 +252,56 @@
 
           <!-- Layouts -->
           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-             <i class="menu-icon tf-icons bx bx-search-alt"></i>
-              <div data-i18n="Layouts">PagePeerGroup</div>
-            </a>
-
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('peergroupcontent')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Content Page</div>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-          <!-- Layouts -->
-          <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-support"></i>
-              <div data-i18n="Layouts">Help Section</div>
-            </a>
-
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('helpsction.index')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">View</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="<?php echo e(route('helpsction.create')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Add</div>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Layouts -->
-          <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a href="<?php echo e(route('view_faqs')); ?>" class="menu-link">
               <i class="menu-icon tf-icons bx bx-help-circle"></i>
               <div data-i18n="Layouts">FAQs</div>
             </a>
-
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('view_faqs')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">View FAQs</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="<?php echo e(route('add_faqs')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Add FAQs</div>
-                </a>
-              </li>
-            </ul>
           </li>
 
           <!-- Layouts -->
           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-             <i class="menu-icon tf-icons bx bx-calendar-event"></i>
-              <div data-i18n="Layouts">Event</div>
+            <a href="<?php echo e(route('helpsction.index')); ?>" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-support"></i>
+              <div data-i18n="Layouts">Help Section</div>
             </a>
-
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="<?php echo e(route('event.index')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">View Event</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="<?php echo e(route('event.create')); ?>" class="menu-link">
-                  <div data-i18n="Without menu">Add Event</div>
-                </a>
-              </li>
-            </ul>
           </li>
+
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="<?php echo e(route('view_team')); ?>" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-group"></i>
+              <div data-i18n="Layouts">People</div>
+            </a>
+          </li>
+
+
+
+
+          <!-- Layouts -->
+          
+          
+          
+          <!-- Layouts -->
+          
+
+          <!-- Layouts -->
+          
+
+          <!-- Layouts -->
+          
+
+          <!-- Layouts -->
+          
+
+
+          <!-- Layouts -->
+          
+
+          <!-- Layouts -->
+          
+
+          <!-- Layouts -->
+          
           <!-- Layouts -->
           
           <!-- Layouts -->
@@ -407,6 +350,10 @@
               </li>
             </ul>
           </li>
+
+
+           <!-- Layouts -->
+          
           
           <!-- Profile -->
           <li class="menu-item">

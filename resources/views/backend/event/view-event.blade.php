@@ -25,16 +25,17 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Description</th>
-                                <th>Event Time</th>
+                                <th>Event Date</th>
                                 <th>Event Type</th>
-                                <th>Created At</th>
+                                <th>Link of Event</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
 
                         <tbody class="table-border-bottom-0">
                             @foreach ($events as $items)
-                                <tr>
+                                <tr  class="clickable-row" data-href="{{ route('event.edit', $items->id) }}"
+                                    style="cursor:pointer;">
                                     {{-- Image --}}
                                     <td>
                                         @if ($items->image)
@@ -86,11 +87,9 @@
                                         </div>
                                     </td>
 
-                                    {{-- Event Time --}}
+                                    {{-- Event Date --}}
                                     <td>
                                         {{ $items->event_date }}
-                                        <br>
-                                        <small class="text-muted">{{ $items->event_time }}</small>
                                     </td>
 
                                     {{-- Event Type --}}
@@ -99,11 +98,12 @@
                                             {{ ucfirst($items->event_type) }}
                                         </span>
                                     </td>
-
-                                    {{-- Created At --}}
                                     <td>
-                                        {{ $items->created_at->format('d M Y') }}
+                                        <span class="badge bg-label-info">
+                                            {{ ucfirst($items->link) }}
+                                        </span>
                                     </td>
+                                  
 
                                     {{-- Actions --}}
                                     <td>
@@ -186,5 +186,13 @@
         });
     });
 </script>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-row").forEach(function (row) {
+        row.addEventListener("click", function () {
+            window.location.href = this.dataset.href;
+        });
+    });
+});
+</script>
 @endsection

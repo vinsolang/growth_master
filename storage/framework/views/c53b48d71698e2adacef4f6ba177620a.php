@@ -44,14 +44,14 @@
         <?php
             $cards = [
                 [
-                    'image' => 'https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3405-768x512.jpg',
-                    'text' => 'Becoming a Growth Master Chair represents the pinnacle of executive coaching—a prestigious role reserved for accomplished leaders who understand what it means to carry P&L responsibility, lead through uncertainty and guide others through the challenges you’ve already mastered.',
-                    'title' => 'You’ve built companies. Now build leaders.'
+                    'image' => asset($getCantent[0]->img_b_1),
+                    'text'  => $getCantent[0]->desc_b_1,
+                    'title' => $getCantent[0]->title_b_1,
                 ],
                 [
-                    'image' => 'https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_3406-768x512.jpg',
-                    'text' => 'Unlike generic coaching certifications that treat everyone the same, the Growth Master Chair role is designed specifically for executives who’ve walked the path today’s CEOs are navigating. You’re not learning to coach from textbooks—you’re sharing hard-won experience with business leaders who face the same pressures you once conquered.',
-                    'title' => 'The Most Rewarding Path Beyond The C-Suite'
+                    'image' => asset($getCantent[0]->img_b_2),
+                    'text'  => $getCantent[0]->desc_b_2,
+                    'title' => $getCantent[0]->title_b_2,
                 ],
             ];
         ?>
@@ -70,7 +70,8 @@
 
                             </h1>
                             <p class="text-left text-[#454545] md:text-xl text-[18px] px-4 md:px-12">
-                                <?php echo e($card['text']); ?>
+                              
+                                 <?php echo nl2br(e($card['text'])); ?>
 
                             </p>
                         </div>
@@ -91,11 +92,12 @@
 
     <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
         <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
-            Why Accomplished Executives Choose the Chair Role
+            <?php echo e($getCantent[0]->title_1); ?>
+
         </h1>
         <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl">
-            Successful leaders don’t transition to coaching for surface-level reasons. The decision typically stems from
-            deeper motivations that go beyond traditional career advancement.
+           <?php echo nl2br(e($getCantent[0]->desc_1)); ?>
+
         </p>
 
         
@@ -103,97 +105,81 @@
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-center">
-                    Beyond Financial Success
+                    <?php echo e($getCantent[0]->title_cd_1); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    don’t just want a financially rewarding role,
-                    but are seeking something deeper: the ability to create lasting impact in other leaders’
-                    lives while building a career that offers both flexibility and fulfillment.
-                    After reaching traditional markers of success,
-                    many find themselves asking whether their work truly matters beyond the bottom line.
+                      <?php echo nl2br(e($getCantent[0]->d_cd_1)); ?>
+
                 </p>
             </div>
 
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    The Need for Purpose
+                   <?php echo e($getCantent[0]->title_cd_2); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    After years of building businesses, many executives crave
-                    work that feels meaningful on a personal level. You’ve spent
-                    decades focused on one organization’s growth. Now you can
-                    multiply that impact across dozens of companies and hundreds
-                    of employees. Coaching allows you to see direct
-                    results from your guidance—watching other leaders grow,
-                    make better decisions and transform their organizations.
+                       <?php echo nl2br(e($getCantent[0]->d_cd_2)); ?>
+
                 </p>
             </div>
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    The “What’s Next?” Moment
+                    <?php echo e($getCantent[0]->title_cd_3); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    Whether you’ve sold your company, reached retirement
-                    age but aren’t ready to retire or simply feel you’ve
-                    accomplished what you set out to do in traditional business,
-                    the Chair role offers a compelling answer to “what
-                    comes next?” You have too much energy to step away entirely,
-                    and you don’t want your hard-earned lessons to go to waste.
+                      <?php echo nl2br(e($getCantent[0]->d_cd_3)); ?>
+
                 </p>
             </div>
             <!-- Card 4 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Intellectual Challenge Without Operational Stress
+                     <?php echo e($getCantent[0]->title_cd_4); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    As a Chair, you face complex strategic challenges daily,
-                    but without the weight of execution on your shoulders.
-                    You get to think at the highest level while helping others
-                    navigate their operational realities. There’s no HR drama,
-                    no cash flow stress, no operational fires to fight—just pure
-                    strategic thinking and leadership development.
+                       <?php echo nl2br(e($getCantent[0]->d_cd_4)); ?>
+
                 </p>
             </div>
 
             <!-- Card 5 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    The Desire to Make an Impact
+                    <?php echo e($getCantent[0]->title_cd_5); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    After benefiting from mentors and advisors throughout your career,
-                    becoming a Chair lets you pay that forward. You remember the moments when someone’s guidance changed
-                    your trajectory.
-                    Now you can be that person for other leaders navigating challenges you’ve already solved.
+                       <?php echo nl2br(e($getCantent[0]->d_cd_5)); ?>
+
                 </p>
             </div>
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Lifestyle Flexibility
+                    <?php echo e($getCantent[0]->title_cd_6); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    The Chair role offers something rare for high-impact work:
-                    control over your schedule. You can build your practice around how you want to live,
-                    whether that means extended travel, family commitments or pursuing other interests.
-                    Many Chairs structure their calendar with dedicated time blocks for family and volunteering
-                    while maintaining a fulfilling professional practice.
+                       <?php echo nl2br(e($getCantent[0]->d_cd_6)); ?>
+
                 </p>
             </div>
 
             
-            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
+            <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full hidden">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Find Your Community
+                     <?php echo e($getCantent[0]->title_cd_7); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    Executive roles can be isolating. As a Chair, you join a community of
-                    fellow coaches who understand the weight of leadership. You’re surrounded by
-                    people who’ve walked similar paths and share your commitment to developing others.
-                    The camaraderie among Chairs often becomes one of the most unexpected benefits of the role.
+                       <?php echo nl2br(e($getCantent[0]->d_cd_7)); ?>
+
                 </p>
             </div>
         </div>
@@ -201,60 +187,60 @@
 
     <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
         <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
-            Your Role as a GrowthMaster Chair
+             <?php echo e($getCantent[0]->title_2); ?>
+
         </h1>
         <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl">
-            As a Growth Master Chair, you’ll work directly with CEOs to help them make better decisions and achieve measurable
-            growth.
-            The role combines facilitation and coaching with relationship-building in a structured framework.
+               <?php echo nl2br(e($getCantent[0]->desc_2)); ?>
+
         </p>
 
         <div class="max-8xl mx-auto bg-amber-200 text-left">
 
             <div class="flex">
                 <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
-                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Monthly Group Meetings</h1>
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_1); ?></h1>
                 </div>
                 <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
-                        Facilitate full-day sessions with up to 18 CEOs from non-competing companies,
-                        guiding structured problem-solving discussions where real business decisions get made.
+                           <?php echo nl2br(e($getCantent[0]->t_d_1)); ?>
+
                     </p>
                 </div>
             </div>
 
             <div class="flex">
                 <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
-                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">One-on-One Coaching</h1>
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_2); ?></h1>
                 </div>
                 <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
-                        Meet privately with each member monthly for personalized executive coaching on their most
-                        challenging leadership issues.
+                        <?php echo nl2br(e($getCantent[0]->t_d_2)); ?>
+
                     </p>
                 </div>
             </div>
 
             <div class="flex">
                 <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
-                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Peer Group Development</h1>
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_3); ?></h1>
                 </div>
                 <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
-                        With Growth Master support and guidance, you’ll strategically build your group by evaluating and selecting
-                        high-caliber executives who contribute to strong group dynamics and cultural alignment.
+                        <?php echo nl2br(e($getCantent[0]->t_d_3)); ?>
+
                     </p>
                 </div>
             </div>
 
             <div class="flex">
                 <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
-                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">Ongoing Learning</h1>
+                    <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_4); ?></h1>
                 </div>
                 <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
-                        Participate in Chair development events to collaborate with fellow Chairs and stay current with
-                        business trends through expert speaker programs.
+                        <?php echo nl2br(e($getCantent[0]->t_d_4)); ?>
+
                     </p>
                 </div>
             </div>
@@ -264,11 +250,12 @@
 
     <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
         <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
-            Why Chairs Choose GrowthMaster Over Going Solo
+             <?php echo e($getCantent[0]->title_3); ?>
+
         </h1>
         <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
-            While many accomplished executives consider independent coaching,
-            the Growth Master platform offers distinct advantages that accelerate success and reduce risk.
+           <?php echo nl2br(e($getCantent[0]->desc_3)); ?>
+
         </p>
 
         
@@ -276,61 +263,58 @@
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Proven Methodology
+                     <?php echo e($getCantent[0]->t_c_1); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    Instead of creating your own coaching framework, you get access to 65+
-                    years of refined processes that consistently produce results. The issue-processing model, group dynamics
-                    and accountability
-                    systems are all tested and proven to help CEOs make better decisions and drive measurable business
-                    outcomes.
+                 <?php echo nl2br(e($getCantent[0]->d_c_1)); ?>
+
                 </p>
             </div>
 
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Built-in Credibility
+                      <?php echo e($getCantent[0]->t_c_2); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    The Growth Master brand opens doors that would take years to open as an independent coach.
-                    CEOs know what Growth Master represents — 65 years of proven leadership development,
-                    coaching 250k business leaders — which accelerates your ability to build a quality practice.
+                    <?php echo nl2br(e($getCantent[0]->d_c_2)); ?>
+
                 </p>
             </div>
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Comprehensive Learning
+                       <?php echo e($getCantent[0]->t_c_3); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    You don’t have to have all the answers. The Chair Academy provides intensive
-                    preparation for your new role. You’ll learn facilitation techniques and coaching methodologies,
-                    plus business development approaches specifically designed for executive-level work.
+                       <?php echo nl2br(e($getCantent[0]->d_c_3)); ?>
+
                 </p>
             </div>
             <!-- Card 4 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Ongoing Support System
+                      <?php echo e($getCantent[0]->t_c_4); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    You’re not operating in isolation. The Chair community provides continuous support and shared resources,
-                    with access to first-party research and proprietary data normally
-                    only available to CEOs of Fortune 500 companies. You have experienced colleagues to turn to whenever
-                    needed.
+                       <?php echo nl2br(e($getCantent[0]->d_c_4)); ?>
+
                 </p>
             </div>
 
             <!-- Card 5 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
                 <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
-                    Established Infrastructure
+                       <?php echo e($getCantent[0]->t_c_5); ?>
+
                 </h1>
                 <p class="text-[#333333] text-lg leading-relaxed text-left">
-                    GrowthMaster handles marketing and administration, including back-office functions,
-                    allowing you to focus on what you do best: working with leaders.
-                    This eliminates the overhead of building a consulting practice from scratch.
+                       <?php echo nl2br(e($getCantent[0]->d_c_5)); ?>
+
                 </p>
             </div>
         </div>
@@ -342,11 +326,12 @@
             <!-- HEADER -->
             <div class="text-center max-w-4xl mx-auto mb-20">
                 <h1 class="text-4xl md:text-5xl font-semibold mb-6">
-                    Run Your Practice. On Your Terms.
+                       <?php echo e($getCantent[0]->title_4); ?>
+
                 </h1>
                 <p class="text-lg md:text-xl text-white/90 leading-relaxed">
-                    As a Growth Master Chair, you’ll create a lasting legacy while building a coaching
-                    practice that offers complete schedule flexibility.
+                       <?php echo nl2br(e($getCantent[0]->desc_4)); ?>
+
                 </p>
             </div>
 
@@ -365,12 +350,12 @@
                     </div>
                     <div>
                         <h3 class="text-[#ffffff] text-xl font-semibold mb-3">
-                            Own Your Practice:
+                              <?php echo e($getCantent[0]->t_bg_1); ?>
+
                         </h3>
                         <p class="text-white/90 leading-relaxed">
-                            You operate as an independent contractor, building a practice that
-                            suits your ambition. The larger your groups, the greater your income
-                            potential.
+                              <?php echo nl2br(e($getCantent[0]->d_bg_1)); ?>
+
                         </p>
                     </div>
                 </div>
@@ -387,12 +372,12 @@
                     </div>
                     <div>
                         <h3 class="text-[#ffffff] text-xl font-semibold mb-3">
-                            Lasting Legacy:
+                             <?php echo e($getCantent[0]->t_bg_2); ?>
+
                         </h3>
                         <p class="text-white/90 leading-relaxed">
-                            Create deep, lasting impact by elevating dozens of business leaders
-                            and lifting up your community— influence that extends far beyond
-                            your direct involvement.
+                            <?php echo nl2br(e($getCantent[0]->d_bg_2)); ?>
+
                         </p>
                     </div>
                 </div>
@@ -409,12 +394,12 @@
                     </div>
                     <div>
                         <h3 class="text-[#ffffff] text-xl font-semibold mb-3">
-                            Sustained Income & Freedom:
+                             <?php echo e($getCantent[0]->t_bg_3); ?>
+
                         </h3>
                         <p class="text-white/90 leading-relaxed">
-                            Build a practice that can generate income well into your retirement
-                            years with the flexibility to structure your schedule around your
-                            life priorities.
+                             <?php echo nl2br(e($getCantent[0]->d_bg_3)); ?>
+
                         </p>
                     </div>
                 </div>
@@ -431,12 +416,12 @@
                     </div>
                     <div>
                         <h3 class="text-[#ffffff] text-xl font-semibold mb-3">
-                            World-Class Support:
+                             <?php echo e($getCantent[0]->t_bg_4); ?>
+
                         </h3>
                         <p class="text-white/90 leading-relaxed">
-                            Access proven methodologies, comprehensive development and
-                            ongoing support that eliminates the trial-and-error of building
-                            an independent practice.
+                             <?php echo nl2br(e($getCantent[0]->d_bg_4)); ?>
+
                         </p>
                     </div>
                 </div>
@@ -629,10 +614,10 @@ unset($__errorArgs, $__bag); ?>
 
     
     <div class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-4xl px-4 py-8">
-        <h1>Growth Master Chairs Help Leaders Reach Their Full Potential.</h1>
+        <h1> <?php echo e($getCantent[0]->title_5); ?></h1>
     </div>
     <div class="text-[#000000] max-w-7xl mx-auto text-center text-2xl md:text-3xl xl:text-3xl px-4">
-        <h1>In return, they make a lifelong impact, enjoy limitless rewards and leave a lasting legacy.</h1>
+        <h1> <?php echo nl2br(e($getCantent[0]->desc_5)); ?></h1>
     </div>
 
     
@@ -644,7 +629,7 @@ unset($__errorArgs, $__bag); ?>
                 <!-- Avatar -->
                 <div class="flex justify-center mb-6">
                     <img
-                        src="<?php echo e(asset('assets/profile/1.png')); ?>"
+                        src="<?php echo e(asset($getCantent[0]->profile_him)); ?>"
                         alt="Ola Sage"
                         class="w-64 h-64 rounded-full object-cover"
                     />
@@ -652,23 +637,21 @@ unset($__errorArgs, $__bag); ?>
 
                 <!-- Name -->
                 <h2 class="text-2xl font-semibold text-gray-900 mb-2">
-                   san rithy
+                  <?php echo e($getCantent[0]->name); ?>
+
                 </h2>
 
                 <!-- Meta -->
                 <p class="text-gray-700 font-medium">
-                    Founder, Cambodia Accounting Club(CAC) <br />
-                    Shareholder, Acclime
+                     <?php echo nl2br(e($getCantent[0]->position)); ?>
+
                 </p>
-                <p class="text-gray-700 mb-8">
-                    Gowth Master Chair since 2019
-                </p>
+                
 
                 <!-- Quote -->
                 <p class="text-gray-600 text-lg leading-relaxed italic">
-                    “When I thought about retiring, I realized I still wanted to be
-                    involved in business. Being an executive coaching is not just
-                    something I do – it’s part of who I am.”
+                    <?php echo nl2br(e($getCantent[0]->desc_him)); ?>
+
                 </p>
             </div>
 
@@ -680,17 +663,19 @@ unset($__errorArgs, $__bag); ?>
                         class="w-full h-[480px] object-cover"
                         poster="https://cac-center.edu.kh/wp-content/uploads/2017/12/476130730_610434091608946_2648315335922836771_n-1280x800.jpg"
                     >
-                        <source src="<?php echo e(asset('assets/profile-chair.mp4')); ?>" type="video/mp4">
+                        <source src="<?php echo e(asset($getCantent[0]->vdo)); ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
 
                 <!-- Caption -->
                 <p class="mt-4 text-gray-800 text-2xl font-semibold">
-                    San Rithy,  Growth Master Chair since 2006
+                     <?php echo e($getCantent[0]->title_v); ?>
+
                 </p>
                 <p class="mt-4 text-gray-800 text-xl font-normal">
-                    “As a Growth Master Chair you help CEOs become better leaders, make better decisions and achieve better results.”
+                     <?php echo nl2br(e($getCantent[0]->desc_v)); ?>
+
                 </p>
             </div>
 
