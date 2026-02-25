@@ -40,7 +40,7 @@
                 @for ($i = 1; $i <= 6; $i++)
                     <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-start shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div class="flex justify-start mb-4">
-                            <img src="{{ $getHomeContent[0]->{"icon_card_$i"} ?? 'https://via.placeholder.com/50' }}" alt="">
+                            {{-- <img src="{{ $getHomeContent[0]->{"icon_card_$i"} ?? 'https://via.placeholder.com/50' }}" alt=""> --}}
                         </div>
                         <h3 class="text-xl md:text-2xl font-semibold text-blue-900 mb-3">
                             {{ $getHomeContent[0]->{"title_card_$i"} }}
@@ -55,6 +55,7 @@
         </div>
     </section>
 </div>
+{{-- Button Become a member --}}
 {{-- Button Become a member --}}
 <div class="flex justify-center items-center mt-10">
     <a href="#member-form"
