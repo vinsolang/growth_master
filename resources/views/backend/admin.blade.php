@@ -10,7 +10,7 @@
   <title>@yield('site-title')</title>
   <meta name="description" content="" />
   <!-- Favicon -->
-  <link rel="icon"  href="{{ asset('assets/logo-1.png') }}" />
+  <link rel="icon" href="{{ asset('assets/icon/CAC-02.jpg') }}" />
   <!-- Fonts -->
   <link rel="preconnect" href="{{url('https://fonts.googleapis.com')}}" />
   <link rel="preconnect" href="{{url('https://fonts.gstatic.com')}}" crossorigin />
@@ -108,7 +108,7 @@
               </svg>
             </span> --}}
             <div class="logo flex justify-center items-center py-10 ml-5">
-              <img src="{{ asset('assets/logo.png') }}" alt="" style="width: 90px; height: 90px;">
+              <img src="{{ asset('assets/icon/CAC-02.jpg') }}" alt="" style="width: 50px; height: 50px;">
             </div>
 
 
@@ -244,7 +244,7 @@
                 </a>
               </li>
               <li class="menu-item">
-                <a href="#" class="menu-link">
+                <a href="{{ route('programtext') }}" class="menu-link">
                   <div data-i18n="Without menu">{{ $getMenu[0]->menu_10 }}</div>
                 </a>
               </li>
@@ -305,7 +305,7 @@
                 </a>
               </li>
               <li class="menu-item">
-                <a href="" class="menu-link">
+                <a href="{{ route('apply') }}" class="menu-link">
                   <div data-i18n="Without menu">{{ $getMenu[0]->menu_19 }}</div>
                 </a>
               </li>

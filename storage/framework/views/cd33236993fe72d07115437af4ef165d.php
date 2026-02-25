@@ -30,7 +30,7 @@
 /* Header row (works even without <th>) */
 .custom-program-table table tr:first-child td,
 .custom-program-table table tr:first-child th {
-    background-color: #68875d !important;
+    background-color: #2A2D79 !important;
     color: white;
     font-weight: 600;
     text-align: center;
@@ -40,10 +40,10 @@
 
 /* Body rows */
 .custom-program-table table tr:not(:first-child) td {
-    background-color: #f3f4f6;
+    background-color: #DBDBDB;
     padding: 32px 28px;
     font-size: 18px;
-    color: #1f2937;
+    color: #2A2D79;
 }
 
 
@@ -87,16 +87,16 @@
 
                     <a href="#program-form">
                         <button
-                        class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
+                        class="mt-6 py-5 px-7 bg-red-600 text-white hover:bg-blue-900 hover:text-white rounded font-semibold w-max">
                         JOIN A PROGRAM
                     </button>
                     </a>
                 </div>
             </div>
         </section>
-        <div class="text-[#333333] text-4xl font-2xl text-center space-y-8">
+        <div class="text-blue-900 text-4xl font-2xl text-center space-y-8">
             <h1><?php echo e($getContentProgram[0]->title); ?></h1>
-            <p class="text-xl font-normal max-w-5xl mx-auto text-left">
+            <p class="text-blue-900 text-xl font-normal max-w-5xl mx-auto text-left">
                 <?php echo nl2br(e($getContentProgram[0]->description)); ?>
 
             </p>
@@ -108,10 +108,10 @@
             
             <div class="flex justify-center items-center mt-10">
                <a href="#program-form">
-                 <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                            text-[#68875d] bg-white rounded 
-                            transition-all duration-300 ease-in-out
-                            hover:bg-[#68875d] hover:text-white font-semibold">
+                 <button class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+        text-[#D82129] bg-white rounded 
+        transition-all duration-300 ease-in-out
+        hover:bg-[#D82129] hover:text-white font-semibold">
                     JOIN A PROGRAM
 
                     <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
@@ -129,7 +129,7 @@
                 <div
                     class="flex flex-col md:flex-row justify-center items-center
                         py-4 px-4 xl:py-16 xl:px-35 gap-8
-                        <?php echo e($index % 2 === 0 ? 'bg-[#f5f2f2]' : ''); ?>">
+                        <?php echo e($index % 2 === 0 ? 'bg-[#DBDBDB]' : ''); ?>">
 
                     
                     <div class="md:hidden w-full md:w-1/2 flex">
@@ -145,18 +145,18 @@
 
                     
                     <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
-                        <h3 class="text-[#333333] text-[16px] md:text-[20px]">
+                        <h3 class="text-blue-900 text-[16px] md:text-[20px]">
                             <?php echo e($program->audience); ?>
 
                         </h3>
 
-                        <h1 class="text-[#333333] text-[30px] lg:text-[35px]">
+                        <h1 class="text-blue-900 text-[30px] lg:text-[35px]">
                             <?php echo e($program->title); ?>
 
                         </h1>
 
-                        <p class="text-[#343434] text-[14px] md:text-[18px]">
-                            <?php echo e($program->description); ?>
+                        <p class="text-blue-900 text-[14px] md:text-[18px]">
+                            <?php echo nl2br( $program->description); ?>
 
                         </p>
 
@@ -186,7 +186,7 @@
         </div>
 
         
-        <section class="w-full bg-[#68875d] py-16 px-4 md:px-12 lg:px-24">
+        <section class="w-full bg-[#2A2D79] py-16 px-4 md:px-12 lg:px-24">
             <!-- Title -->
             <h1 class="text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight text-center text-[#ffffff]">
                 <?php echo e($getContentProgram[0]->title_2); ?>
@@ -204,11 +204,11 @@
         </section>
         
         <section class="relative w-full">
-            <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
+            <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
                 <?php echo e($getContentProgram[0]->title_3); ?>
 
             </h1>
-            <p class="text-[#343434] text-lg max-w-[70%] mx-auto text-left">
+            <p class="text-blue-900 text-lg max-w-[70%] mx-auto text-left">
                  <?php echo nl2br(e($getContentProgram[0]->description_3)); ?>
 
             </p>

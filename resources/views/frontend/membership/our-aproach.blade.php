@@ -38,7 +38,7 @@
 
                     <a href="#approach-form">
                         <button
-                        class="mt-6 py-5 px-7 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
+                        class="mt-6 py-5 px-7 bg-red-600 text-white hover:bg-blue-900 hover:text-white rounded font-semibold w-max">
                         JOIN A GROUP
                     </button>
                     </a>
@@ -46,18 +46,18 @@
             </div>
 
             <div class="flex flex-col justify-center  items-center mt-10  gap-10">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10">{{ $getContent[0]->title }}</h1>
+                <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-10">{{ $getContent[0]->title }}</h1>
                 <p
-                    class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
+                    class="text-start text-blue-900 mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
                     {!! nl2br(e($getContent[0]->content)) !!}
                 </p>
             </div>
 
             <div class="relative mt-10 space-y-8">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-14">{{ $getContent[0]->title_on_card }}</h1>
+                <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-14">{{ $getContent[0]->title_on_card }}</h1>
                 <div class="flex flex-col md:flex-col lg:flex-row justify-center items-center gap-8">
                     {{-- Card 1 --}}
-                    <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
+                    <div class="bg-[#2A2D79] w-[380px] h-[600px] space-y-4 py-10">
                         <div class="flex justify-center items-center">
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-91.png" alt="">
                         </div>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     {{-- Card 2 --}}
-                    <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
+                    <div class="bg-[#2A2D79] w-[380px] h-[600px] space-y-4 py-10">
                         <div class="flex justify-center items-center">
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-84.png" alt="">
                         </div>
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                     {{-- Card 3 --}}
-                    <div class="bg-[#68875d] w-[380px] h-[600px] space-y-4 py-10">
+                    <div class="bg-[#2A2D79] w-[380px] h-[600px] space-y-4 py-10">
                         <div class="flex justify-center items-center">
                             <img src="https://www.vistage.com/wp-content/uploads/2025/09/Group-89.png" alt="">
                         </div>
@@ -97,10 +97,10 @@
                 </div>
                 <div class="flex justify-center items-center mt-10">
                     <a href="#approach-form">
-                        <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                                text-[#68875d] bg-white rounded 
-                                transition-all duration-300 ease-in-out
-                                hover:bg-[#68875d] hover:text-white font-semibold">
+                        <button class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+                            text-[#D82129] bg-white rounded 
+                            transition-all duration-300 ease-in-out
+                            hover:bg-[#D82129] hover:text-white font-semibold">
                         JOIN A GROUP
 
                         <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
@@ -112,51 +112,53 @@
             </div>
 
             <div class="flex flex-col  justify-center items-center mt-10 gap-10">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10">
+                <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-10">
                     {{ $getContent[0]->title_1 }}
                 </h1>
                 <p
-                    class="text-start text-[#343434] mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
+                    class="text-start text-blue-900 mx-[40px] xl:mx-[250px] md:mx-[100px] font-regular text-[14px] md:text-[18px]">
                    {!! nl2br(e($getContent[0]->content_1)) !!}
                 </p>
             </div>
 
             {{-- block Group Items --}}
             <div class="relative w-full space-y-12 py-8">
-               
+
                 @foreach ($showApproach as $index => $section)
                     <div
                         class="flex flex-col md:flex-row justify-center items-center gap-8
-                        py-4 px-4 xl:py-16 xl:px-35
-                        {{ $index % 2 === 0 ? 'bg-[#f5f2f2]' : '' }}">
+                            py-4 px-4 xl:py-16 xl:px-35
+                            {{ $index % 2 === 0 ? 'bg-[#F4F1A1]' : 'bg-[#FFFFFF]' }} rounded-lg shadow-md">
 
                         {{-- IMAGE (LEFT for odd sections) --}}
                         @if ($index % 2 !== 0)
                             <div class="w-full md:w-1/2">
-                                <img src="{{ asset('assets/how_it_work/'. $section->image )}}" alt="">
+                                <img src="{{ asset('assets/how_it_work/'. $section->image )}}" alt=""
+                                    class="w-full h-full object-cover rounded-lg shadow-lg">
                             </div>
                         @endif
 
                         {{-- TEXT --}}
                         <div class="w-full md:w-1/2 space-y-3">
-                            <h1 class="text-[#000000] text-[16px] md:text-[20px]">
+                            <h1 class="text-[#2A2D79] text-[16px] md:text-[20px] font-semibold">
                                 {{ $index + 1 }}. {{ $section->title }}
                             </h1>
 
-                            <p class="text-[#343434] text-[14px] md:text-[18px]">
+                            <p class="text-[#2A2D79] text-[14px] md:text-[18px]">
                                 {{ $section->description }}
                             </p>
 
-                            <a href="#" class="text-[#003f5e] flex gap-2 font-semibold">
-                                <span class="hover:text-[#0c6c9b]">{{ $section->button_text }}</span>
+                            {{-- <a href="#" class="flex gap-2 font-semibold text-[#D82129] hover:text-[#1A8B43]">
+                                <span>{{ $section->button_text }}</span>
                                 <span class="arrow_r">&rarr;</span>
-                            </a>
+                            </a> --}}
                         </div>
 
                         {{-- IMAGE (RIGHT for even sections) --}}
                         @if ($index % 2 === 0)
                             <div class="w-full md:w-1/2">
-                                <img src="{{ asset('assets/how_it_work/'. $section->image )}}" alt="">
+                                <img src="{{ asset('assets/how_it_work/'. $section->image )}}" alt=""
+                                    class="w-full h-full object-cover rounded-lg shadow-lg">
                             </div>
                         @endif
 
@@ -166,10 +168,10 @@
             {{-- Button become a member --}}
             <div class="flex justify-center items-center mt-10">
                     <a href="#approach-form">
-                        <button class="group py-5 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                                text-[#68875d] bg-white rounded 
-                                transition-all duration-300 ease-in-out
-                                hover:bg-[#68875d] hover:text-white font-semibold">
+                        <button class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+                        text-[#D82129] bg-white rounded 
+                        transition-all duration-300 ease-in-out
+                        hover:bg-[#D82129] hover:text-white font-semibold">
                         JOIN A GROUP
 
                         <span class="ms-3 transition-all duration-300 ease-in-out group-hover:text-white">
@@ -179,11 +181,11 @@
                     </a>
                 </div>
             <div class="relative w-full space-y-4">
-                <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
+                <h1 class="text-center text-[#2A2D79] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
                    {{ $getContent[0]->title_2 }}
                 </h1>
                 <p
-                    class="text-start text-[#343434] font-regular text-[14px] md:text-[18px] px-6 xl:px-50 md:px-16">
+                    class="text-start text-[#2A2D79] font-regular text-[14px] md:text-[18px] px-6 xl:px-50 md:px-16">
                    {!! nl2br(e($getContent[0]->created_at)) !!}
                 </p>
                 
@@ -197,7 +199,7 @@
                         aria-controls="accordion-panel-{{ $index }}"
                         id="accordion-trigger-{{ $index }}"
                     >
-                        <h1 class="text-[#000000] text-[16px] md:text-[24px]">
+                        <h1 class="text-[#2A2D79] text-[16px] md:text-[24px]">
                             {{ $item->question }}
                         </h1>
 
@@ -212,7 +214,7 @@
                         id="accordion-panel-{{ $index }}"
                         class="accordion-panel overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out mt-2"
                     >
-                        <div class="py-4 text-[#343434] text-[14px] md:text-[18px]">
+                        <div class="py-4 text-[#2A2D79] text-[14px] md:text-[18px]">
                             {!! $item->answer !!}
                         </div>
                     </div>

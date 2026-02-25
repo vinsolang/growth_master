@@ -1,15 +1,15 @@
 
 <div class="space-y-4" id="member-form">
-        <h1 class="text-center text-[#000000] text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
+        <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
              <?php echo nl2br(e($getHomeContent[0]->title_below)); ?>
 
         </h1>
-        <p class="text-[#333333] text-lg md:text-xl text-left max-w-[60%] mx-auto">
+        <p class="text-blue-900 text-lg md:text-xl text-left max-w-[60%] mx-auto">
              <?php echo nl2br(e($getHomeContent[0]->desc_bolow)); ?>
 
         </p>
     </div>
-            <div class="py-6">
+            <div class="py-6 text-blue-900">
                 <form action="<?php echo e(route('memberships.store')); ?>" method="post">
                     <?php echo csrf_field(); ?>
                     <div class="max-w-7xl mx-auto p-6">
@@ -232,8 +232,8 @@ unset($__errorArgs, $__bag); ?>
                     
                     <div class="flex justify-center text-xl mt-10">
                         <button type="submit"
-                            class="inline-flex items-center justify-center w-72 h-14 bg-[#68875d] text-[#ffffff] font-semibold uppercase cursor-pointer">
-                            Become a member
+                            class="inline-flex items-center justify-center w-72 h-14 bg-red-600 hover:bg-blue-900 text-[#ffffff] font-semibold uppercase cursor-pointer">
+                            Become a member 
                         </button>
                     </div>
                 </form>

@@ -38,16 +38,16 @@
 
                     <a href="#review-form">
                         <button
-                        class="mt-6 py-6 px-8 bg-[#68875d] text-[#FFFFFF] hover:bg-[#003F5F] hover:text-white rounded font-bold w-max uppercase tracking-widest">
+                        class="mt-6 py-6 px-8 bg-red-600 text-white hover:bg-blue-900 hover:text-white rounded font-bold w-max uppercase tracking-widest">
                         BECOME A MEMBER
                     </button>
                     </a>
                 </div>
             </div>
         </section>
-        <div class="text-[#333333] text-4xl font-2xl text-center space-y-8">
+        <div class="text-blue-900 text-4xl font-2xl text-center space-y-8">
             <h1>{{ $getContent[0]->title }}</h1>
-            <p class="text-xl font-normal max-w-5xl mx-auto text-left">
+            <p class="text-blue-900 text-xl font-normal max-w-5xl mx-auto text-left">
                 {!! nl2br(e($getContent[0]->description)) !!}
             </p>
         </div>
@@ -56,7 +56,7 @@
             <div class="flex justify-center items-center">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center max-w-8xl mx-auto md:px-40">
                     {{-- Card Shadow 1 --}}
-                    <div class="shadow-2xl bg-[#68875d] text-white px-10 py-16 space-y-6">
+                    <div class="shadow-2xl bg-[#2A2D79] text-white px-10 py-16 space-y-6">
                         <h1 class="text-[#ffffff] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_1 }}</h1>
                         <p class="text-lg">
                            {!! nl2br(e($getContent[0]->desc_card_1)) !!}
@@ -68,8 +68,8 @@
                     </div>
                     {{-- Card Shadow 2 --}}
                     <div class="bg-white shadow-[0_12px_30px_rgba(0,0,0,0.25)] p-10 px-10 py-16 space-y-6">
-                        <h1 class="text-[#003f5e] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_2 }}</h1>
-                        <p class="text-lg text-[#333333]">
+                        <h1 class="text-blue-900 text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_2 }}</h1>
+                        <p class="text-lg text-blue-900">
                             {!! nl2br(e($getContent[0]->desc_card_2)) !!}
                         </p>
                         <div class="flex space-x-6 text-2xl font-semibold text-gray-500">
@@ -78,15 +78,15 @@
                                 <img src="{{ asset($getContent[0]->profile_card_2) }}" alt="" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h2 class="text-[#003f5e] uppercase">{{ $getContent[0]->name_card_2 }}</h2>
-                                <p class="text-xl">{!! nl2br(e($getContent[0]->positioin_card_2)) !!}</p>
+                                <h2 class="text-blue-900 uppercase">{{ $getContent[0]->name_card_2 }}</h2>
+                                <p class="text-xl text-blue-900">{!! nl2br(e($getContent[0]->positioin_card_2)) !!}</p>
                             </div>
                         </div>
                     </div>
                     {{-- Card Shadow 3 --}}
                     <div class="bg-white shadow-[0_12px_30px_rgba(0,0,0,0.25)] p-10 px-10 py-16 space-y-6">
-                        <h1 class="text-[#003f5e] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_3 }}</h1>
-                        <p class="text-lg text-[#333333]">
+                        <h1 class="text-blue-900 text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_3 }}</h1>
+                        <p class="text-lg text-blue-900">
                             {!! nl2br(e($getContent[0]->desc_card_3)) !!}
                         </p>
                         <div class="flex space-x-6 text-2xl font-semibold text-gray-500">
@@ -96,12 +96,12 @@
                             </div>
                             <div>
                                <h2 class="text-[#003f5e] uppercase">{{ $getContent[0]->name_card_3 }}</h2>
-                                <p class="text-xl">{!! nl2br(e($getContent[0]->positioin_card_3)) !!}</p>
+                                <p class="text-xl text-blue-900">{!! nl2br(e($getContent[0]->positioin_card_3)) !!}</p>
                             </div>
                         </div>
                     </div>
                     {{-- Card Shadow 4 --}}
-                    <div class="shadow-2xl bg-[#68875d] text-white px-10 py-16 space-y-6">
+                    <div class="shadow-2xl bg-[#2A2D79] text-white px-10 py-16 space-y-6">
                         <h1 class="text-[#ffffff] text-2xl font-semibold uppercase">{{ $getContent[0]->title_card_4 }}</h1>
                         <p class="text-lg">
                            {!! nl2br(e($getContent[0]->desc_card_4)) !!}

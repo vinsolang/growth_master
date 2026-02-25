@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AboutSectionController;
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\backend\AboutUsController;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\ApplyToBeController;
 use App\Http\Controllers\backend\AppraochContentController;
 use App\Http\Controllers\backend\BannerController;
 use App\Http\Controllers\backend\CEOClimbController;
@@ -26,6 +27,8 @@ use App\Http\Controllers\backend\OurProgramController;
 use App\Http\Controllers\backend\OurTeamController;
 use App\Http\Controllers\backend\PeerGroupContentController;
 use App\Http\Controllers\backend\ProgramContentController;
+use App\Http\Controllers\backend\ProgramGuaranteedController;
+use App\Http\Controllers\backend\ProramJobTextController;
 use App\Http\Controllers\backend\ReviewPageContentController;
 use App\Http\Controllers\backend\WhyJoinGrowthMasterController;
 use App\Http\Controllers\frontend\AboutGrowthControll;
@@ -68,8 +71,12 @@ Route::get('membership', function () {
     $getBanner = Banner::all();
     return view('frontend.membership', compact('getBanner','getContent', 'getMenu'));
 })->name('membership');
-Route::get('membership/our-approach', [ClientController::class, 'ourApproach'])->name('approach');
+Route::get('membership/cac-platform', [ClientController::class, 'ourApproach'])->name('approach');
 Route::get('programs', [ClientController::class, 'memberShipPrograms'])->name('program');
+
+Route::get('programs/guaranteed', [ClientController::class, 'memberShipGuaranteed'])->name('program.job');
+Route::get('programs/details{id}', [ClientController::class, 'ProgramDetails'])->name('program.details');
+
 Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
 Route::get('membership/exclusive-peer-groups', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
@@ -144,16 +151,16 @@ Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
 // Growth Master Chair
-Route::get('growthmaster/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
-Route::get('ceo-coaching-qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
-Route::get('growth-chair/chair-profile', [ClientController::class, 'ChairProfile'])->name('chair.profile');
-Route::get('chiar-application', [ClientController::class, 'ChairApplication'])->name('chair.application');
+Route::get('cac/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
+Route::get('qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
+Route::get('cac/chair-profile', [ClientController::class, 'ChairProfile'])->name('chair.profile');
+Route::get('application', [ClientController::class, 'ChairApplication'])->name('chair.application');
 
 // aboute
-Route::get('about-growth', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
-Route::get('about-growth/what-is-growth-master', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
-Route::get('about-growth/leadership-laws/', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
-Route::get('about-growth/ceo-climp/', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
+Route::get('about-cac', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
+Route::get('about-cac/what-is-growth-master', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
+Route::get('about-cac/leadership-laws/', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
+Route::get('about-cac/ceo-climp/', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
 
 // sitemap
 Route::get('sitemap', [ClientController::class, 'sitemap'])->name('sitemap');
@@ -265,4 +272,16 @@ Route::middleware(['auth'])->group(function(){
     // mentorsqualifications
     Route::get('mentorsqualifications/page', [MentorsQualificationsController::class, 'mentorsqualifications'])->name('mentorsqualifications');
     Route::post('mentorsqualifications/add/page', [MentorsQualificationsController::class, 'Submitmentorsqualifications'])->name('submit.mentorsqualifications');
+
+    // Apply to be
+    Route::get('apply/page', [ApplyToBeController::class, 'apply'])->name('apply');
+    Route::post('apply/add/page', [ApplyToBeController::class, 'Submitapply'])->name('submit.apply');
+
+    // program job
+    Route::get('programtext/page', [ProramJobTextController::class, 'programtext'])->name('programtext');
+    Route::post('programtext/add/page', [ProramJobTextController::class, 'SubmitProgramtext'])->name('submit.programtext');
+    
+    
+    // Program block content
+    Route::resource('job-guaranteed-program', ProgramGuaranteedController::class);
 });

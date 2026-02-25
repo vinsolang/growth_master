@@ -42,15 +42,11 @@
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 {{-- Title --}}
-                <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">
-                    Join an elite group of executive mentors
+                <h1 class="text-blue-900 text-center text-3xl md:text-4xl xl:text-5xl">
+                    {{ $getContentQl[0]->title }}
                 </h1>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
-                    Growth Master Chairs come with strong financial acumen, superb management skills and an innate entrepreneurial
-                    spirit.
-                    They’ve realized the kind of success to which most only aspire.
-                    Now, they have the opportunity to greatly impact the lives of other business leaders in their
-                    communities.
+                <p class="max-w-7xl mx-auto text-left text-blue-900 font-regular text-[17px] md:text-[20px] px-4">
+                   {{ nl2br($getContentQl[0]->description) }}
                 </p>
             </div>
 
@@ -58,17 +54,17 @@
 
                 <!-- IMAGE WRAPPER -->
                 <div class="relative w-full lg:h-full h-[800px] px-4 xl:px-12">
-                    <img src="https://www.vistage.com/wp-content/uploads/2019/09/2020-Hero-Small-group-in-business-meeting-at-a-couch.jpg"
+                    <img src="{{ asset($getContentQl[0]->bg_img) }}"
                         alt="" class="hidden md:flex w-full h-[400px] md:h-full object-cover rounded-lg" />
 
                     <!-- OVERLAY -->
                     <div class="md:absolute inset-0 flex justify-center items-center px-4">
-                        <div class="bg-[#68875d]/95 w-full xl:w-[85%] xl:h-[85%] h-auto 
+                        <div class="bg-[#2A2D79]/85 w-full xl:w-[85%] xl:h-[85%] h-auto 
                            px-6 md:px-12 lg:px-20 rounded-lg py-12">
 
                             <!-- Title -->
                             <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 md:mb-12">
-                                Chair Qualifications
+                                {{ $getContentQl[0]->title_bg }}
                             </h2>
 
                             <!-- Grid -->
@@ -82,8 +78,7 @@
                                         1
                                     </div>
                                     <p class="text-white text-base md:text-lg leading-relaxed max-w-md">
-                                        <span class="font-semibold">10+ years of C-level experience</span> with
-                                        $5M+ P&amp;L responsibility
+                                        {{ nl2br($getContentQl[0]->desc_1) }}
                                     </p>
                                 </div>
 
@@ -93,7 +88,7 @@
                                         4
                                     </div>
                                     <p class="text-white text-base md:text-lg leading-relaxed max-w-md">
-                                        Availability and drive to embark on building your own business.
+                                          {{ nl2br($getContentQl[0]->desc_4) }}
                                     </p>
                                 </div>
 
@@ -103,7 +98,7 @@
                                         2
                                     </div>
                                     <p class="text-white text-base md:text-lg leading-relaxed max-w-md">
-                                        Have a passion for mentoring others.
+                                         {{ nl2br($getContentQl[0]->desc_2) }}
                                     </p>
                                 </div>
 
@@ -113,7 +108,7 @@
                                         5
                                     </div>
                                     <p class="text-white text-base md:text-lg leading-relaxed max-w-md">
-                                        Have the ability to listen to—and challenge—CEOs and senior executives.
+                                         {{ nl2br($getContentQl[0]->desc_5) }}
                                     </p>
                                 </div>
 
@@ -123,7 +118,7 @@
                                         3
                                     </div>
                                     <p class="text-white text-base md:text-lg leading-relaxed max-w-md">
-                                        Be experienced in leading a high-performing team.
+                                          {{ nl2br($getContentQl[0]->desc_3) }}
                                     </p>
                                 </div>
 
@@ -133,7 +128,7 @@
                                         6
                                     </div>
                                     <p class="text-white text-base md:text-lg leading-relaxed max-w-md">
-                                        Have achieved great success and are driven to give back.
+                                          {{ nl2br($getContentQl[0]->desc_6) }}
                                     </p>
                                 </div>
 

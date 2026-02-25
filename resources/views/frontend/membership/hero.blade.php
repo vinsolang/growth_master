@@ -27,7 +27,7 @@
             @endif
         </p>
         <a href="{{ route('home') }}#member-form">
-            <button class="mt-6 py-5 px-6 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold w-max">
+            <button class="mt-6 py-5 px-6 bg-red-600 text-white hover:bg-blue-900 hover:text-white rounded font-semibold w-max">
             GET IN TOUCH
         </button>
         </a>
@@ -35,7 +35,7 @@
 </div>
 
 <div class="flex flex-col  justify-center  items-center mt-10  gap-10">
-     <p class="text-start text-[#343434] mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">
+     <p class="text-start text-blue-900 mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">
         {!! nl2br(e($getContent[0]->content)) !!}
     </p>
     {{-- <p class="text-start text-[#343434] mx-10 md:mx-[250px]  font-regular text-[17px] md:text-[20px]">Traditional

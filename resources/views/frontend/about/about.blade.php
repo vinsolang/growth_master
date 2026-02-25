@@ -50,10 +50,10 @@
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 {{-- Title --}}
-                <h1 class="text-[#000000] max-w-7xl mx-auto text-left text-3xl md:text-4xl xl:text-5xl px-4">
+                <h1 class="text-blue-900 max-w-7xl mx-auto text-left text-3xl md:text-4xl xl:text-5xl px-4">
                     {!! nl2br(e(value: $getContent[0]->title)) !!}
                 </h1>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
+                <p class="max-w-7xl mx-auto text-left text-blue-900 font-regular text-[17px] md:text-[20px] px-4">
                     {!! nl2br(e(value: $getContent[0]->desc)) !!}
                 </p>
             </div>
@@ -221,10 +221,10 @@
 
             {{-- Inquire About Membership --}}
             <div class="space-y-6">
-                <h1 class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
+                <h1 class="text-blue-900 md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
                    {!! nl2br(e(value: $getContent[0]->title_1)) !!}
                 </h1>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
+                <p class="max-w-7xl mx-auto text-left text-blue-900 font-regular text-[17px] md:text-[20px] px-4">
                    {!! nl2br(e(value: $getContent[0]->desc_2)) !!}
                 </p>
               

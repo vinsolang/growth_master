@@ -40,12 +40,12 @@
         <div class="space-y-10">
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
+                <p class="max-w-7xl mx-auto text-left text-blue-900 font-regular text-[17px] md:text-[20px] px-4">
                      {!! nl2br(e(value: $getItem[0]->description)) !!}
                 </p>
             </div>
             {{-- Logo --}}
-            <div class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-5xl px-4">
+            <div class="text-blue-900 max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-5xl px-4">
                 <h1> {!! nl2br(e(value: $getItem[0]->title)) !!}</h1>
             </div>
 
@@ -60,11 +60,11 @@
 
                     <!-- Content -->
                     <div class="p-6">
-                        <h3 class="text-[#003a5d] font-bold text-xl leading-snug mb-4">
+                        <h3 class="text-blue-900 font-bold text-xl leading-snug mb-4">
                                {!! nl2br(e(value: $getItem[0]->title_card_1)) !!}
                         </h3>
 
-                        <p class="text-gray-600 text-base leading-relaxed">
+                        <p class="text-blue-900 text-base leading-relaxed">
                                {!! nl2br(e(value: $getItem[0]->desc_card_1)) !!}
                         </p>
                     </div>
@@ -80,11 +80,11 @@
 
                     <!-- Content -->
                     <div class="p-6">
-                        <h3 class="text-[#003a5d] font-bold text-xl leading-snug mb-4">
+                        <h3 class="text-blue-900 font-bold text-xl leading-snug mb-4">
                         {!! nl2br(e(value: $getItem[0]->title_card_2)) !!}
                         </h3>
 
-                        <p class="text-gray-600 text-base leading-relaxed">
+                        <p class="text-blue-900 text-base leading-relaxed">
                          {!! nl2br(e(value: $getItem[0]->desc_card_2)) !!}
                         </p>
                     </div>
@@ -100,11 +100,11 @@
 
                     <!-- Content -->
                     <div class="p-6">
-                        <h3 class="text-[#003a5d] font-bold text-xl leading-snug mb-4">
+                        <h3 class="text-blue-900 font-bold text-xl leading-snug mb-4">
                            {!! nl2br(e(value: $getItem[0]->title_card_3)) !!}
                         </h3>
 
-                        <p class="text-gray-600 text-base leading-relaxed">
+                        <p class="text-blue-900 text-base leading-relaxed">
                           {!! nl2br(e(value: $getItem[0]->desc_card_3)) !!}
                         </p>
                     </div>

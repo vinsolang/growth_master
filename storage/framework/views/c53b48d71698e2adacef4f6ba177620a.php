@@ -33,7 +33,7 @@
 
             <a href="#chair-form">
                 <button
-                    class="mt-6 py-5 px-8 bg-[#68875d] text-[#ffffff] hover:bg-[#003F5F] hover:text-white rounded font-semibold leading-relaxed tracking-widest uppercase">
+                    class="mt-6 py-5 px-8 bg-red-600 text-white hover:bg-blue-900 hover:text-white rounded font-semibold leading-relaxed tracking-widest uppercase">
                     lead a group
                 </button>
             </a>
@@ -65,11 +65,11 @@
                         
                         <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[400px] order-2 space-y-10 md:py-0 py-4
                                                     <?php echo e($index % 2 == 0 ? 'lg:order-1' : 'lg:order-2'); ?>">
-                            <h1 class="text-[#000000] lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
+                            <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
                                 <?php echo e($card['title']); ?>
 
                             </h1>
-                            <p class="text-left text-[#454545] md:text-xl text-[18px] px-4 md:px-12">
+                            <p class="text-left text-blue-900 md:text-xl text-[18px] px-4 md:px-12">
                               
                                  <?php echo nl2br(e($card['text'])); ?>
 
@@ -91,11 +91,11 @@
     </div>
 
     <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
-        <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+        <h1 class="text-blue-900 lg:text-4xl text-2xl font-semibold">
             <?php echo e($getCantent[0]->title_1); ?>
 
         </h1>
-        <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl">
+        <p class="leading-relaxed text-xl text-blue-900 text-left mx-auto max-w-4xl">
            <?php echo nl2br(e($getCantent[0]->desc_1)); ?>
 
         </p>
@@ -104,11 +104,11 @@
         <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-center">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-center">
                     <?php echo e($getCantent[0]->title_cd_1); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                       <?php echo nl2br(e($getCantent[0]->d_cd_1)); ?>
 
                 </p>
@@ -116,33 +116,33 @@
 
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                    <?php echo e($getCantent[0]->title_cd_2); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_cd_2)); ?>
 
                 </p>
             </div>
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                     <?php echo e($getCantent[0]->title_cd_3); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                       <?php echo nl2br(e($getCantent[0]->d_cd_3)); ?>
 
                 </p>
             </div>
             <!-- Card 4 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                      <?php echo e($getCantent[0]->title_cd_4); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_cd_4)); ?>
 
                 </p>
@@ -150,22 +150,22 @@
 
             <!-- Card 5 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                     <?php echo e($getCantent[0]->title_cd_5); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_cd_5)); ?>
 
                 </p>
             </div>
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                     <?php echo e($getCantent[0]->title_cd_6); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_cd_6)); ?>
 
                 </p>
@@ -173,11 +173,11 @@
 
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full hidden">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                      <?php echo e($getCantent[0]->title_cd_7); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_cd_7)); ?>
 
                 </p>
@@ -186,11 +186,11 @@
     </div>
 
     <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
-        <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+        <h1 class="text-blue-900 lg:text-4xl text-2xl font-semibold">
              <?php echo e($getCantent[0]->title_2); ?>
 
         </h1>
-        <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl">
+        <p class="leading-relaxed text-xl text-blue-900 text-left mx-auto max-w-4xl">
                <?php echo nl2br(e($getCantent[0]->desc_2)); ?>
 
         </p>
@@ -198,10 +198,10 @@
         <div class="max-8xl mx-auto bg-amber-200 text-left">
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_1); ?></h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                            <?php echo nl2br(e($getCantent[0]->t_d_1)); ?>
 
@@ -210,10 +210,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_2); ?></h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         <?php echo nl2br(e($getCantent[0]->t_d_2)); ?>
 
@@ -222,10 +222,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_3); ?></h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         <?php echo nl2br(e($getCantent[0]->t_d_3)); ?>
 
@@ -234,10 +234,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#608544] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]"> <?php echo e($getCantent[0]->t_t_4); ?></h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#608544]/90 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/90 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         <?php echo nl2br(e($getCantent[0]->t_d_4)); ?>
 
@@ -249,11 +249,11 @@
 
 
     <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
-        <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+        <h1 class="text-blue-900 lg:text-4xl text-2xl font-semibold">
              <?php echo e($getCantent[0]->title_3); ?>
 
         </h1>
-        <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-4xl px-6">
+        <p class="leading-relaxed text-xl text-blue-900 text-left mx-auto max-w-4xl px-6">
            <?php echo nl2br(e($getCantent[0]->desc_3)); ?>
 
         </p>
@@ -262,11 +262,11 @@
         <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 md:grid-cols-2 h-auto px-4 gap-x-8">
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                      <?php echo e($getCantent[0]->t_c_1); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                  <?php echo nl2br(e($getCantent[0]->d_c_1)); ?>
 
                 </p>
@@ -274,33 +274,33 @@
 
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                       <?php echo e($getCantent[0]->t_c_2); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                     <?php echo nl2br(e($getCantent[0]->d_c_2)); ?>
 
                 </p>
             </div>
             
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                        <?php echo e($getCantent[0]->t_c_3); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_c_3)); ?>
 
                 </p>
             </div>
             <!-- Card 4 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                       <?php echo e($getCantent[0]->t_c_4); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_c_4)); ?>
 
                 </p>
@@ -308,11 +308,11 @@
 
             <!-- Card 5 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-2xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-2xl font-bold mb-4 text-left">
                        <?php echo e($getCantent[0]->t_c_5); ?>
 
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                        <?php echo nl2br(e($getCantent[0]->d_c_5)); ?>
 
                 </p>
@@ -320,7 +320,7 @@
         </div>
     </div>
 
-    <section class="bg-[#68875d] text-white py-20 px-6">
+    <section class="bg-[#2A2D79] text-white py-20 px-6">
         <div class="max-w-7xl mx-auto">
 
             <!-- HEADER -->
@@ -432,35 +432,25 @@
 
     
     <section>
-        <h1 class="text-[#000000] text-2xl md:text-4xl text-center font-semibold py-6">
-            Apply to Become a Growth Master Chair
-        </h1>
-        <p class="text-md md:text-lg text-[#333333] max-w-4xl mx-auto">
-            Growth Master Chairs mentor high-integrity executives, helping them make better decisions, 
-            become better leaders and achieve better results. To learn more about this opportunity, 
-            complete this short form and upload your resume/CV/biography. Our Chair selection team will contact you.
-        </p>
-        <div class="max-w-4xl mx-auto py-6">
-            <!-- Preferred Experience -->
-            <h2 class="text-2xl text-gray-900 mb-4">
-                Most Chairs have these qualities:
-            </h2>
+        <h1 class="text-blue-900 text-2xl md:text-4xl text-center font-semibold py-6">
+            <?php echo e($getTextofForm[0]->title); ?>
 
-            <ul class="list-disc pl-6 space-y-3 text-[#333333] leading-relaxed text-md md:text-lg">
-                <li>P&L responsibility exceeding $5 million</li>
-                <li>10+ years of executive experience</li>
-                <li>25+ people leader</li>
-                <li>Strong business acumen, communication skills, high EQ</li>
-                <li>Availability and drive to build their own business</li>
-            </ul>
+        </h1>
+        <p class="text-md md:text-lg text-blue-900 max-w-4xl mx-auto">
+            <?php echo nl2br($getTextofForm[0]->description); ?>
+
+        </p>
+        <div class="max-w-4xl mx-auto py-6 text-blue-900">
+             <?php echo ($getTextofForm[0]->desc_list); ?>
+
         </div>
 
         <div id="">
             <form action="<?php echo e(route('chair.contact.store')); ?>" method="POST" enctype="multipart/form-data">
                 <?php echo csrf_field(); ?>
-                <div class="max-w-7xl mx-auto p-6" id="chair-form">
+                <div class="max-w-7xl mx-auto p-6 text-blue-900" id="chair-form">
                     <!-- ================= Chair Contact Form ================= -->
-                    <h2 class="text-xl font-semibold mb-2">Chair Contact Form</h2>
+                    <h2 class="text-xl font-semibold mb-2">Contact Form</h2>
                     <hr class="mb-6 w-1/2 border-gray-300">
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
@@ -604,7 +594,7 @@ unset($__errorArgs, $__bag); ?>
 
                 <div class="flex justify-center text-xl mt-10">
                     <button type="submit"
-                        class="inline-flex items-center justify-center w-72 h-14 bg-[#68875d] text-[#ffffff] font-semibold uppercase cursor-pointer">
+                        class="inline-flex items-center justify-center w-72 h-14 bg-red-600 text-white hover:bg-blue-900 font-semibold uppercase cursor-pointer">
                         Become a member
                     </button>
                 </div>
@@ -613,10 +603,10 @@ unset($__errorArgs, $__bag); ?>
     </section>
 
     
-    <div class="text-[#000000] max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-4xl px-4 py-8">
+    <div class="text-blue-900 max-w-7xl mx-auto text-center text-3xl md:text-4xl xl:text-4xl px-4 py-8">
         <h1> <?php echo e($getCantent[0]->title_5); ?></h1>
     </div>
-    <div class="text-[#000000] max-w-7xl mx-auto text-center text-2xl md:text-3xl xl:text-3xl px-4">
+    <div class="text-blue-900 max-w-7xl mx-auto text-center text-2xl md:text-3xl xl:text-3xl px-4">
         <h1> <?php echo nl2br(e($getCantent[0]->desc_5)); ?></h1>
     </div>
 
@@ -636,20 +626,20 @@ unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <!-- Name -->
-                <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+                <h2 class="text-2xl font-semibold text-blue-900 mb-2">
                   <?php echo e($getCantent[0]->name); ?>
 
                 </h2>
 
                 <!-- Meta -->
-                <p class="text-gray-700 font-medium">
+                <p class="text-blue-900 font-medium">
                      <?php echo nl2br(e($getCantent[0]->position)); ?>
 
                 </p>
                 
 
                 <!-- Quote -->
-                <p class="text-gray-600 text-lg leading-relaxed italic">
+                <p class="text-blue-900 text-lg leading-relaxed italic">
                     <?php echo nl2br(e($getCantent[0]->desc_him)); ?>
 
                 </p>
@@ -669,11 +659,11 @@ unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <!-- Caption -->
-                <p class="mt-4 text-gray-800 text-2xl font-semibold">
+                <p class="mt-4 text-blue-900 text-2xl font-semibold">
                      <?php echo e($getCantent[0]->title_v); ?>
 
                 </p>
-                <p class="mt-4 text-gray-800 text-xl font-normal">
+                <p class="mt-4 text-blue-900 text-xl font-normal">
                      <?php echo nl2br(e($getCantent[0]->desc_v)); ?>
 
                 </p>
@@ -681,8 +671,6 @@ unset($__errorArgs, $__bag); ?>
 
         </div>
     </section>
-
-
 
 
    <div class="py-16">

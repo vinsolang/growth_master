@@ -254,26 +254,26 @@
                     <h1 class="text-4xl font-normal">< ></h1>
                     <h1>Today</h1>
                 </button> --}}
-            <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl py-6">Events</h1>
+            <h1 class="text-blue-900 text-center text-3xl md:text-4xl xl:text-5xl py-6">Events</h1>
                 
               @foreach ($showEvents as $items)
                 <div class="space-y-6">
 
                     {{-- Line --}}
                     <div class="flex justify-between items-center">
-                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
-                        <div class="text-center text-[#333333] text-xl">
+                        <div class="bg-[#DBDBDB] h-[0.8px] w-[25%] md:w-[38%]"></div>
+                        <div class="text-center text-blue-900 text-xl">
                             <h1>{{ \Carbon\Carbon::parse($items->event_date)->format('d M Y') }}</h1>
                         </div>
-                        <div class="bg-gray-500 h-[0.8px] w-[25%] md:w-[38%]"></div>
+                        <div class="bg-[#DBDBDB] h-[0.8px] w-[25%] md:w-[38%]"></div>
                     </div>
 
                     {{-- Card --}}
-                    <div class="border-2 border-[#e6ecf0] h-auto xl:h-[400px] flex flex-col md:flex-row
+                    <div class="border-2 border-[#DBDBDB] h-auto xl:h-[400px] flex flex-col md:flex-row
                         {{ $loop->index % 2 === 1 ? 'md:flex-row-reverse' : '' }}">
 
                         {{-- Image --}}
-                        <div class="w-full md:w-1/4 bg-gray-600 relative">
+                        <div class="w-full md:w-1/4 bg-[#DBDBDB] relative">
                             <img src="{{ asset($items->image) }}" alt=""
                                 class="w-full h-full object-cover">
                             <div class="absolute inset-0"></div>
@@ -290,17 +290,17 @@
                         {{-- Text --}}
                         <div class="grid w-full md:w-[60%] py-10 px-4 md:px-10 gap-y-8">
                             <div class="flex items-center space-x-2">
-                                <h2 class="uppercase text-[16px] text-[#141826] tracking-widest">
+                                <h2 class="uppercase text-[16px] text-blue-900 tracking-widest">
                                     {{ $items->category }}
                                 </h2>
-                                <div class="bg-[#edc01c] h-1 w-6"></div>
+                                <div class="bg-[#2A2D79] h-1 w-6"></div>
                             </div>
 
-                            <h1 class="text-[#141826] text-3xl font-semibold">
+                            <h1 class="text-blue-900 text-3xl font-semibold">
                                 {{ $items->title }}
                             </h1>
 
-                            <p class="text-[#141826] font-normal text-lg leading-relaxed">
+                            <p class="text-blue-900 font-normal text-lg leading-relaxed">
                                 {{ $items->description }}
                             </p>
                             <div>

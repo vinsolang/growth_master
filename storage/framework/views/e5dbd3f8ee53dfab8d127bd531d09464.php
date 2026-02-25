@@ -4,18 +4,16 @@
         <!-- Left Section -->
         <div class="flex items-center gap-3">
             <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="xl:hidden text-3xl text-white">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            
 
             <!-- Logo -->
             <a href="<?php echo e(route('home')); ?>">
-                <img src="<?php echo e(asset('assets/logo-1.png')); ?>" alt="logo" class="w-[70px] h-[70px] object-cover">
+                <img src="<?php echo e(asset('assets/icon/CAC-02.jpg')); ?>" alt="logo" class="w-[85px] h-[85px] object-contain">
             </a>
 
             <!-- Desktop Menu -->
             <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px] md:px-12" id="navLinks">
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="<?php echo e(URL('/membership')); ?>" class="flex items-center">
                         <?php echo e($getMenu[0]->menu_1); ?>
 
@@ -23,12 +21,11 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(URL('/membership')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_2); ?></a>
                             <a href="<?php echo e(route('approach')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_3); ?></a>
-                            
                             <a href="<?php echo e(route('review')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_4); ?></a>
                             <a href="<?php echo e(route('exclusive.peer.groups')); ?>" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_5); ?></a>
@@ -38,7 +35,7 @@
                     </div>
                 </li>
                 
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="<?php echo e(route('program')); ?>" class="flex items-center">
                        <?php echo e($getMenu[0]->menu_7); ?>
 
@@ -46,7 +43,7 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(route('program')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
                                 <?php echo e($getMenu[0]->menu_8); ?>
@@ -57,8 +54,7 @@
                                 <?php echo e($getMenu[0]->menu_9); ?>
 
                             </a>
-                            
-                            <a href="<?php echo e(route('review')); ?>"
+                            <a href="<?php echo e(route('program.job')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
                                 <?php echo e($getMenu[0]->menu_10); ?>
 
@@ -67,15 +63,13 @@
                     </div>
                 </li>
 
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="<?php echo e(route('events')); ?>" class="flex items-center">
                         <?php echo e($getMenu[0]->menu_11); ?>
 
                     </a>
-                    
                 </li>
-                
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="<?php echo e(route('about')); ?>" class="flex items-center">
                         <?php echo e($getMenu[0]->menu_12); ?>
 
@@ -83,7 +77,7 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(route('about')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_13); ?></a>
                             <a href="<?php echo e(route('Laws.of.eadership')); ?>"
@@ -94,7 +88,7 @@
                     </div>
                 </li>
 
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="<?php echo e(route('chair.growth')); ?>" class="flex items-center">
                         <?php echo e($getMenu[0]->menu_16); ?>
 
@@ -102,12 +96,11 @@
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="<?php echo e(route('chair.growth')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_17); ?></a>
                             <a href="<?php echo e(route('ceo.coa.qual')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_18); ?></a>
-                            
                             <a href="<?php echo e(route('chair.application')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_19); ?></a>
                         </div>
@@ -118,11 +111,11 @@
 
         <!-- Right Section -->
         <div class="flex items-center gap-5">
-            <?php if(Request::routeIs('chair.*','ceo.coa.qual')): ?>
+           <?php if(Request::routeIs('chair.*','ceo.coa.qual')): ?>
                 
                 <a href="#chair-form">
                     <button
-                        class="py-4 px-6 bg-[#68875d] text-white hover:bg-[#003F5F] hidden md:block rounded font-medium">
+                        class="py-4 px-6 bg-red-600 text-white hover:bg-blue-900 hidden md:inline-block rounded-lg font-medium transition-colors duration-300">
                         Become a Chair
                     </button>
                 </a>
@@ -130,7 +123,7 @@
                 
                 <a href="<?php echo e(route('home')); ?>#member-form">
                     <button
-                        class="py-4 px-6 bg-[#68875d] text-white hover:bg-[#003F5F] hidden md:block rounded font-medium">
+                        class="py-4 px-6 bg-red-600 text-white hover:bg-blue-900 hidden md:inline-block rounded-lg font-medium transition-colors duration-300">
                         Become a Member
                     </button>
                 </a>
@@ -140,9 +133,10 @@
                 <span id="searchText" class="hidden md:block text-white">Search</span>
             </div>
 
-            <div class="hidden flex items-center gap-2 cursor-pointer">
-                <i id="userIcon" class="fa-solid fa-user text-xl text-white"></i>
-                <a id="loginText" href="#" class="hidden md:block text-white">Login</a>
+            <div class="flex items-center gap-2 cursor-pointer">
+               <button id="menuBtn" class="xl:hidden text-3xl text-white">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             </div>
         </div>
     </div>

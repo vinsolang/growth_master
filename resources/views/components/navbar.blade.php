@@ -4,31 +4,29 @@
         <!-- Left Section -->
         <div class="flex items-center gap-3">
             <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="xl:hidden text-3xl text-white">
+            {{-- <button id="menuBtn" class="xl:hidden text-3xl text-white">
                 <i class="fa-solid fa-bars"></i>
-            </button>
+            </button> --}}
 
             <!-- Logo -->
             <a href="{{ route('home') }}">
-                <img src="{{ asset('assets/logo-1.png') }}" alt="logo" class="w-[70px] h-[70px] object-cover">
+                <img src="{{ asset('assets/icon/CAC-02.jpg') }}" alt="logo" class="w-[85px] h-[85px] object-contain">
             </a>
 
             <!-- Desktop Menu -->
             <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px] md:px-12" id="navLinks">
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="{{URL('/membership')}}" class="flex items-center">
                         {{ $getMenu[0]->menu_1 }}
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="{{URL('/membership')}}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_2 }}</a>
                             <a href="{{ route('approach') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_3 }}</a>
-                            {{-- <a href="{{ route('program') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Programs</a> --}}
                             <a href="{{ route('review') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_4 }}</a>
                             <a href="{{ route('exclusive.peer.groups') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_5 }}</a>
@@ -38,14 +36,14 @@
                     </div>
                 </li>
                 
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="{{ route('program') }}" class="flex items-center">
                        {{ $getMenu[0]->menu_7 }}
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="{{ route('program') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
                                 {{ $getMenu[0]->menu_8 }}
@@ -54,9 +52,7 @@
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
                                 {{ $getMenu[0]->menu_9 }}
                             </a>
-                            {{-- <a href="{{ route('program') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Our Programs</a> --}}
-                            <a href="{{ route('review') }}"
+                            <a href="{{ route('program.job') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">
                                 {{ $getMenu[0]->menu_10 }}
                             </a>
@@ -64,32 +60,19 @@
                     </div>
                 </li>
 
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="{{ route('events') }}" class="flex items-center">
                         {{ $getMenu[0]->menu_11 }}
                     </a>
-                    {{-- <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#003F5F] text-white mt-10 text-[14px]">
-                            <a href="{{ route('events') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster Event</a>
-                            <a href="{{ route('ceo.climb.events') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster CEO Climb
-                                Event</a>
-                            <a href="{{ route('research.center.webinar') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">GrowthMaster
-                                webinars</a>
-                        </div>
-                    </div> --}}
                 </li>
-                {{-- <li class="hover:text-[#EDC11C] cursor-pointer">Resources</li> --}}
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="{{ route('about') }}" class="flex items-center">
                         {{ $getMenu[0]->menu_12 }}
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="{{ route('about') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_13 }}</a>
                             <a href="{{ route('Laws.of.eadership') }}"
@@ -100,20 +83,18 @@
                     </div>
                 </li>
 
-                <li class="group relative hover:text-[#EDC11C] cursor-pointer">
+                <li class="group relative hover:text-[#D82129] cursor-pointer">
                     <a href="{{ route('chair.growth') }}" class="flex items-center">
                         {{ $getMenu[0]->menu_16 }}
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
-                        <div class="bg-[#68875d] text-white mt-10 text-[14px]">
+                        <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="{{ route('chair.growth') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_17 }}</a>
                             <a href="{{ route('ceo.coa.qual') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_18 }}</a>
-                            {{-- <a href="{{ route('chair.profile') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">Meet Our Growth Master Chairs</a> --}}
                             <a href="{{ route('chair.application') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_19 }}</a>
                         </div>
@@ -124,11 +105,11 @@
 
         <!-- Right Section -->
         <div class="flex items-center gap-5">
-            @if (Request::routeIs('chair.*','ceo.coa.qual'))
+           @if (Request::routeIs('chair.*','ceo.coa.qual'))
                 {{-- When user is on chair pages --}}
                 <a href="#chair-form">
                     <button
-                        class="py-4 px-6 bg-[#68875d] text-white hover:bg-[#003F5F] hidden md:block rounded font-medium">
+                        class="py-4 px-6 bg-red-600 text-white hover:bg-blue-900 hidden md:inline-block rounded-lg font-medium transition-colors duration-300">
                         Become a Chair
                     </button>
                 </a>
@@ -136,7 +117,7 @@
                 {{-- Default (member) --}}
                 <a href="{{ route('home') }}#member-form">
                     <button
-                        class="py-4 px-6 bg-[#68875d] text-white hover:bg-[#003F5F] hidden md:block rounded font-medium">
+                        class="py-4 px-6 bg-red-600 text-white hover:bg-blue-900 hidden md:inline-block rounded-lg font-medium transition-colors duration-300">
                         Become a Member
                     </button>
                 </a>
@@ -146,9 +127,10 @@
                 <span id="searchText" class="hidden md:block text-white">Search</span>
             </div>
 
-            <div class="hidden flex items-center gap-2 cursor-pointer">
-                <i id="userIcon" class="fa-solid fa-user text-xl text-white"></i>
-                <a id="loginText" href="#" class="hidden md:block text-white">Login</a>
+            <div class="flex items-center gap-2 cursor-pointer">
+               <button id="menuBtn" class="xl:hidden text-3xl text-white">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             </div>
         </div>
     </div>

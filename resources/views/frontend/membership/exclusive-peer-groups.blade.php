@@ -21,7 +21,7 @@
 /* Header row */
 .custom-program-table table tr:first-child td,
 .custom-program-table table tr:first-child th {
-    background-color: #68875d !important;
+    background-color: #2A2D79 !important;
     color: white;
     font-weight: 600;
     text-align: center;
@@ -31,10 +31,10 @@
 
 /* Body rows */
 .custom-program-table table tr:not(:first-child) td {
-    background-color: #f3f4f6;
+    background-color: #DBDBDB;
     padding: 32px 28px;
     font-size: 18px;
-    color: #1f2937;
+    color: #2A2D79;
 }
 
 
@@ -72,14 +72,14 @@
 
                     <a href="{{ route('home') }}#member-form">
                         <button
-                        class="mt-6 py-6 px-8 bg-[#68875d] text-[#FFFFFF] hover:bg-[#003F5F] hover:text-white rounded font-bold w-max uppercase tracking-widest">
+                        class="mt-6 py-6 px-8 bg-red-600 text-white hover:bg-blue-900 hover:text-white rounded font-bold w-max uppercase tracking-widest">
                         BECOME A MEMBER
                     </button>
                     </a>
                 </div>
             </div>
         </section>
-        <div class="flex flex-col justify-center items-center bg-[#68875d] w-full md:h-[300px] h-auto text-[#ffffff] text-4xl font-2xl text-center space-y-8">
+        <div class="flex flex-col justify-center items-center bg-[#2A2D79] w-full md:h-[300px] h-auto text-[#ffffff] text-4xl font-2xl text-center space-y-8">
             <h1 class="text-[22px] md:text-3xl px-8 py-4">{{ $getContent[0]->title }}</h1>
             <p class="text-[18px] md:text-xl font-normal max-w-5xl mx-auto text-left px-4 py-4">
                  {!! nl2br(e($getContent[0]->description)) !!}
@@ -87,7 +87,7 @@
         </div>
         {{-- Block Card Shadow --}}
         <div class="relative w-full py-12">
-            <p class="text-[#333333] text-[18px] md:text-xl font-normal max-w-5xl mx-auto text-left px-4 py-4">
+            <p class="text-blue-900 text-[18px] md:text-xl font-normal max-w-5xl mx-auto text-left px-4 py-4">
                 {!! nl2br(e($getContent[0]->description_1)) !!}
             </p>
         </div>
@@ -100,10 +100,10 @@
         {{-- Button Become a member --}}
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('home') }}#member-form"
-                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                text-[#000000] bg-white rounded 
-                transition-all duration-300 ease-in-out
-                hover:bg-[#68875d] hover:text-white font-semibold">
+                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+        text-[#D82129] bg-white rounded 
+        transition-all duration-300 ease-in-out
+        hover:bg-[#D82129] hover:text-white font-semibold">
 
                 Become A Member
 
@@ -114,8 +114,8 @@
         </div>
         {{-- Signs You’re Ready for an Exclusive Peer Group --}}
         <section class="relative w-full">
-            <h1 class="text-[#000000] text-2xl md:text-4xl text-center py-6">{{ $getContent[0]->title_2 }}</h1>
-            <p class="text-[#333333] text-xl md:2xl text-center py-4">
+            <h1 class="text-blue-900 text-2xl md:text-4xl text-center py-6">{{ $getContent[0]->title_2 }}</h1>
+            <p class="text-blue-900 text-xl md:2xl text-center py-4">
                  {!! nl2br(e($getContent[0]->description_2)) !!}
             </p>
             {{-- section text and image --}}
@@ -153,9 +153,9 @@
                         @endif
 
                         {{-- TEXT --}}
-                        <div class="w-full md:w-1/2 space-y-4 md:space-y-8">
+                        <div class="w-full md:w-1/2 space-y-4 md:space-y-8 !text-blue-900 ">
 
-                            <p class="text-[#343434] text-[16px] md:text-[18px]">
+                            <p class="text-[16px] md:text-[18px]">
                                 {!! $program['desc'] !!}
                             </p>
                         </div>
@@ -179,10 +179,10 @@
         {{-- Button Become a member --}}
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('home') }}#member-form"
-                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                text-[#000000] bg-white rounded 
-                transition-all duration-300 ease-in-out
-                hover:bg-[#68875d] hover:text-white font-semibold">
+                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+        text-[#D82129] bg-white rounded 
+        transition-all duration-300 ease-in-out
+        hover:bg-[#D82129] hover:text-white font-semibold">
 
                 Become A Member
 
@@ -196,10 +196,10 @@
         <div class="max-w-7xl mx-auto bg-amber-200 text-left">
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">{{ $getContent[0]->title_t1 }}</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                        {!! nl2br(e($getContent[0]->desc_t1)) !!}
                     </p>
@@ -207,10 +207,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">{{ $getContent[0]->title_t2 }}</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                        {!! nl2br(e($getContent[0]->desc_t2)) !!}
                     </p>
@@ -218,10 +218,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">{{ $getContent[0]->title_t3 }}</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         {!! nl2br(e($getContent[0]->desc_t3)) !!}
                     </p>
@@ -229,10 +229,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">{{ $getContent[0]->title_t4 }}</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                         {!! nl2br(e($getContent[0]->desc_t4)) !!}
                     </p>
@@ -240,10 +240,10 @@
             </div>
 
             <div class="flex">
-                <div class="flex justify-center items-center bg-[#68875d] w-[25%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79] w-[25%] h-40">
                     <h1 class="text-[#ffffff] text-xl md:text-3xl md:w-[90%]">{{ $getContent[0]->title_t5 }}</h1>
                 </div>
-                <div class="flex justify-center items-center bg-[#68875d]/95 w-[75%] h-40">
+                <div class="flex justify-center items-center bg-[#2A2D79]/95 w-[75%] h-40">
                     <p class="text-white text-[16px] md:text-xl md:w-[90%]">
                       {!! nl2br(e($getContent[0]->desc_t5)) !!}
                     </p>
@@ -253,10 +253,10 @@
 
         {{-- What to Evaluate When Choosing an Exclusive Peer Group --}}
         <div class="py-12 max-w-7xl mx-auto space-y-6 text-center">
-            <h1 class="text-[#000000] lg:text-4xl text-2xl font-semibold">
+            <h1 class="text-blue-900 lg:text-4xl text-2xl font-semibold">
                 {{ $getContent[0]->title_3 }}
             </h1>
-            <p class="leading-relaxed text-xl text-[#333333] text-left mx-auto max-w-6xl px-6">
+            <p class="leading-relaxed text-xl text-blue-900 text-left mx-auto max-w-6xl px-6">
                 {!! nl2br(e($getContent[0]->description_3)) !!}
             </p>
 
@@ -264,57 +264,57 @@
         <div class="py-8 max-w-8xl mx-auto space-x-4 space-y-6 grid grid-cols-1 lg:grid-cols-3 h-auto px-4 gap-x-8">
             {{-- Card 1 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-center">
+                <h1 class="text-blue-900 text-2xl xl:text-xl font-bold mb-4 text-center">
                      {{ $getContent[0]->title_c1 }}
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                      {{ $getContent[0]->desc_c1 }}
                 </p>
             </div>
 
             {{-- Card 2 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-xl font-bold mb-4 text-left">
                     {{ $getContent[0]->title_c2 }}
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                    {{ $getContent[0]->desc_c2 }}
                 </p>
             </div>
             {{-- card 3 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-xl font-bold mb-4 text-left">
                     {{ $getContent[0]->title_c3 }}
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                    {{ $getContent[0]->desc_c3 }}
                 </p>
             </div>
             <!-- Card 4 -->
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-xl font-bold mb-4 text-left">
                      {{ $getContent[0]->title_c4 }}
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                    {{ $getContent[0]->desc_c4 }}
                 </p>
             </div>
             {{-- Card 5 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-2xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-2xl xl:text-xl font-bold mb-4 text-left">
                     {{ $getContent[0]->title_c5 }}
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                     {{ $getContent[0]->desc_c5 }}
                 </p>
             </div>
 
             {{-- Card 6 --}}
             <div class="bg-[#f5f2f2] p-8 max-w-4xl w-full">
-                <h1 class="text-[#000000] text-xl xl:text-xl font-bold mb-4 text-left">
+                <h1 class="text-blue-900 text-xl xl:text-xl font-bold mb-4 text-left">
                     {{ $getContent[0]->title_c6 }}
                 </h1>
-                <p class="text-[#333333] text-lg leading-relaxed text-left">
+                <p class="text-blue-900 text-lg leading-relaxed text-left">
                      {{ $getContent[0]->desc_c6 }}
                 </p>
             </div>
@@ -323,10 +323,10 @@
         {{-- Button Become a member --}}
         <div class="flex justify-center items-center mt-10">
             <a href="{{ route('home') }}#member-form"
-                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#68875d]
-                text-[#000000] bg-white rounded 
-                transition-all duration-300 ease-in-out
-                hover:bg-[#68875d] hover:text-white font-semibold">
+                class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+        text-[#D82129] bg-white rounded 
+        transition-all duration-300 ease-in-out
+        hover:bg-[#D82129] hover:text-white font-semibold">
 
                 Become A Member
 
@@ -336,7 +336,7 @@
             </a>
         </div>
         {{-- Why High-Performing CEOs Choose GrowthMaster --}}
-        <section class="bg-[#68875d] text-white py-20">
+        <section class="bg-[#2A2D79] text-white py-20">
         <div class="max-w-7xl mx-auto px-6">
 
             <!-- Heading -->

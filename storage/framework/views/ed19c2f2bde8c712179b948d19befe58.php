@@ -19,7 +19,7 @@
             <form id="formAuthentication" class="mb-3" action="<?php echo e(route('submit.login')); ?>" method="POST">
               <?php echo csrf_field(); ?>
               <div class="mb-3 items-center">
-                <img src="<?php echo e(asset('assets/logo.png')); ?>" alt="" width="150px" height="150px" class="items-center block m-auto">
+                <img src="<?php echo e(asset('assets/icon/CAC-02.jpg')); ?>" alt="" width="100px" height="90px" class="items-center block m-auto">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email or Username</label>
@@ -60,7 +60,7 @@
                 <?php endif; ?>
               </div>
               <div class="mb-3">
-                <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                <button class="btn bg-[#D82129] text-white d-grid w-100" type="submit">Sign in</button>
               </div>
             </form>
 

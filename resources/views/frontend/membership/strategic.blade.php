@@ -1,5 +1,5 @@
 <style>
-    /* Wrapper */
+/* Wrapper */
 .table-wrapper {
     overflow-x: auto;
 }
@@ -10,29 +10,28 @@
     max-width: 1100px;
     margin: 0 auto;
     border-collapse: collapse;
-    border: 1px solid #d1d5db;
+    border: 1px solid #DBDBDB; /* Light Gray from branding */
     font-family: inherit;
 }
 
 /* Header */
 .ck-content table thead {
-    background-color: #68875d; /* Match image green */
+    background-color: #1A8B43; /* Green for success / brand growth */
 }
 
 .ck-content table thead th {
-    color: #ffffff;
+    color: #FFFFFF; /* White text for contrast */
     font-weight: 600;
     text-align: center;
     padding: 18px 20px;
     font-size: 22px;
-    background-color: #68875d;
-    border: 1px solid #d1d5db;
+    border: 1px solid #DBDBDB; /* Light Gray borders */
 }
 
 /* Body Cells */
 .ck-content table tbody td {
     padding: 22px 24px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #DBDBDB;
     font-size: 16px;
     line-height: 1.8;
     vertical-align: middle;
@@ -50,14 +49,14 @@
     width: 39%;
 }
 
-/* Row Background (Light Gray like image) */
+/* Row Background (Light Gray for readability) */
 .ck-content table tbody tr {
-    background-color: #f9fafb;
+    background-color: #F4F1A1; /* Soft Yellow for subtle warmth */
 }
 
-/* Slight alternate effect (optional but closer to image) */
+/* Slight alternate effect for clarity */
 .ck-content table tbody tr:nth-child(even) {
-    background-color: #f3f4f6;
+    background-color: #DBDBDB; /* Light Gray from branding */
 }
 
 /* Responsive */
@@ -76,11 +75,11 @@
 </style>
 <div class="mt-10 px-4">
 
-    <h1 class="text-center text-[22px] md:text-[30px] text-black font-bold">
+    <h1 class="text-center text-[22px] md:text-[30px] text-blue-900 font-bold">
          {{ $getContent[0]->title_1 }}
     </h1>
 
-    <p class="text-center text-[15px] md:text-[20px] mt-5">
+    <p class="text-center text-blue-900 text-[15px] md:text-[20px] mt-5">
         {!! nl2br(e($getContent[0]->description_1)) !!}
     </p>
 
@@ -89,16 +88,16 @@
         <div class="ck-content overflow-x-auto max-w-5xl mx-auto">
             {!! $getContent[0]->table !!}
         </div>
-    <p class="mt-5 text-center text-[16px] md:text-[18px] max-w-[700px] mx-auto px-3">
+    <p class="mt-5 text-center text-[16px] text-blue-900 md:text-[18px] max-w-[700px] mx-auto px-3">
         {!! nl2br(e($getContent[0]->text)) !!}
     </p>
 
     <div class="flex justify-center items-center mt-10">
         <a href="{{ route('form.input') }}"
-            class="group py-3 px-[25px] text-[16px] md:text-[18px] border border-[#68875d]
-            text-[#68875d] bg-white rounded 
-            transition-all duration-300 ease-in-out
-            hover:bg-[#68875d] hover:text-white">
+            class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]
+        text-[#D82129] bg-white rounded 
+        transition-all duration-300 ease-in-out
+        hover:bg-[#D82129] hover:text-white font-semibold">
 
             Become A Member
 
@@ -113,11 +112,11 @@
   <div class="mt-10 px-4">
 
     <!-- Heading -->
-    <h1 class="text-center text-black font-semibold text-[22px] md:text-[28px] lg:text-[32px] max-w-[900px] mx-auto">
+    <h1 class="text-center text-blue-900 font-semibold text-[22px] md:text-[28px] lg:text-[32px] max-w-[900px] mx-auto">
         {{ $getContent[0]->title_2 }}
     </h1>
 
-    <p class="mt-5 text-[16px] md:text-[18px] text-left max-w-[850px] mx-auto">
+    <p class="mt-5 text-blue-900 text-[16px] md:text-[18px] text-left max-w-[850px] mx-auto">
          {!! nl2br(e($getContent[0]->description_3)) !!}
     </p>
 
@@ -126,7 +125,7 @@
         <div class="flex flex-col md:flex-row justify-center items-start md:items-stretch gap-8 mt-10">
 
             <!-- Card 1 -->
-            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
+            <div class="bg-[#2A2D79] py-10 px-8 text-center md:w-[350px] rounded-lg">
                 <i class="fa-solid fa-user text-white text-[36px]"></i>
                 <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3"> {{ $getContent[0]->title_card_1 }}</h1>
 
@@ -136,7 +135,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
+            <div class="bg-[#2A2D79] py-10 px-8 text-center md:w-[350px] rounded-lg">
                 <i class="fa-solid fa-user text-white text-[36px]"></i>
                 <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">{{ $getContent[0]->title_card_2 }}</h1>
 
@@ -147,7 +146,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-[#68875d] py-10 px-8 text-center md:w-[350px] rounded-lg">
+            <div class="bg-[#2A2D79] py-10 px-8 text-center md:w-[350px] rounded-lg">
                 <i class="fa-solid fa-user text-white text-[36px]"></i>
                 <h1 class="text-[#ffffff] text-[20px] md:text-[22px] font-semibold mt-3">{{ $getContent[0]->title_card_3 }}</h1>
 

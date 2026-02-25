@@ -60,86 +60,62 @@
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Background Image</label>
                                     <div class="mb-3 col-12">
-                                        {{-- img_card_1 Preview --}}
+                                        {{-- bg_img Preview --}}
                                         <div class="mb-2">
-                                            <img id="previewimg_card_1"
-                                                src="{{ isset($qualifications->img_card_1) ? asset($qualifications->img_card_1) : '' }}"
+                                            <img id="previewbg_img"
+                                                src="{{ isset($qualifications->bg_img) ? asset($qualifications->bg_img) : '' }}"
                                                 width="150"
                                                 class="rounded border"
-                                                style="display: {{ isset($qualifications->img_card_1) ? 'block' : 'none' }};">
+                                                style="display: {{ isset($qualifications->bg_img) ? 'block' : 'none' }};">
                                         </div>
 
                                         {{-- File Input --}}
                                         <input class="form-control"
                                             type="file"
-                                            name="img_card_1"
-                                            id="img_card_1"
+                                            name="bg_img"
+                                            id="bg_img"
                                             accept="image/*">
                                     </div>
                                 </div>
 
-
-
-
-
-
-
-
                                 <div class="mb-3 col-12 border border-[#0F4634]">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Block 1</label>
+                                    <label for="formFile" class="form-label text-[#0F4634]">Title</label>
                                     <div class="mb-3 col-12">
-                                        <input class="form-control" type="text" name="title_card_1"
-                                            value="{{ $qualifications->title_card_1 }}" placeholder="Title" />
-                                    </div>
-                                    <div class="mb-3 col-12">
-                                        <textarea name="desc_card_1" class="form-control" id="desc_card_1"
-                                            placeholder="Description">{{ $qualifications->desc_card_1 }}</textarea>
+                                        <textarea name="title_bg" class="form-control" id="title_bg"
+                                            placeholder="Description">{{ $qualifications->title_bg }}</textarea>
                                     </div>
                                     
                                 </div>
 
                                  <div class="mb-3 col-12 border border-[#0F4634]">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Block 2</label>
+                                    <label for="formFile" class="form-label text-[#0F4634]">Text of 6</label>
+                                   
                                     <div class="mb-3 col-12">
-                                        <input class="form-control" type="text" name="title_card_2"
-                                            value="{{ $qualifications->title_card_2 }}" placeholder="Title" />
+                                        <textarea name="desc_1" class="form-control" id="desc_1"
+                                            placeholder="Description">{{ $qualifications->desc_1 }}</textarea>
                                     </div>
                                     <div class="mb-3 col-12">
-                                        <textarea name="desc_card_2" class="form-control" id="desc_card_2"
-                                            placeholder="Description">{{ $qualifications->desc_card_2 }}</textarea>
+                                        <textarea name="desc_2" class="form-control" id="desc_2"
+                                            placeholder="Description">{{ $qualifications->desc_2 }}</textarea>
                                     </div>
                                     <div class="mb-3 col-12">
-
-                                        <div class="mb-3 col-12">
-                                            {{-- img_card_2 Preview --}}
-                                            <div class="mb-2">
-                                                <img id="previewimg_card_2"
-                                                    src="{{ isset($qualifications->img_card_2) ? asset($qualifications->img_card_2) : '' }}"
-                                                    width="150"
-                                                    class="rounded border"
-                                                    style="display: {{ isset($qualifications->img_card_2) ? 'block' : 'none' }};">
-                                            </div>
-
-                                            {{-- File Input --}}
-                                            <input class="form-control"
-                                                type="file"
-                                                name="img_card_2"
-                                                id="img_card_2"
-                                                accept="image/*">
-                                        </div>
+                                        <textarea name="desc_3" class="form-control" id="desc_3"
+                                            placeholder="Description">{{ $qualifications->desc_3 }}</textarea>
                                     </div>
+                                    <div class="mb-3 col-12">
+                                        <textarea name="desc_4" class="form-control" id="desc_4"
+                                            placeholder="Description">{{ $qualifications->desc_4 }}</textarea>
+                                    </div>
+                                    <div class="mb-3 col-12">
+                                        <textarea name="desc_5" class="form-control" id="desc_5"
+                                            placeholder="Description">{{ $qualifications->desc_5 }}</textarea>
+                                    </div>
+                                    <div class="mb-3 col-12">
+                                        <textarea name="desc_6" class="form-control" id="desc_6"
+                                            placeholder="Description">{{ $qualifications->desc_6 }}</textarea>
+                                    </div>
+                                    
                                 </div>
-                                <div class="mb-3 col-12">
-                                        <label for="formFile" class="form-label text-[#0F4634]">Section Card 1</label>
-                                        <div class="mb-3 col-12">
-                                            <input class="form-control" type="text" name="title_1"
-                                                value="{{ $qualifications->title_1 }}" placeholder="Title" />
-                                        </div>
-                                        <div class="mb-3 col-12">
-                                            <textarea name="description_1" class="form-control" id="description_1"
-                                                placeholder="Description">{{ $qualifications->description_1 }}</textarea>
-                                        </div>
-                                    </div>
                             </div>
                             <div class="flex gap-3">
                                 <input type="submit"
@@ -154,33 +130,19 @@
         </div>
     </div>
 <script>
-document.getElementById('img_card_1').addEventListener('change', function(e){
-    const preview = document.getElementById('previewimg_card_1');
+document.getElementById('bg_img').addEventListener('change', function(e){
+    const preview = document.getElementById('previewbg_img');
     const file = e.target.files[0];
 
     if(file){
-        // Update preview to new img_card_1
+        // Update preview to new bg_img
         preview.src = URL.createObjectURL(file);
         preview.style.display = 'block';
     } else {
-        // Keep old img_card_1 if no file selected
-        preview.style.display = '{{ isset($qualifications->img_card_1) ? 'block' : 'none' }}';
+        // Keep old bg_img if no file selected
+        preview.style.display = '{{ isset($qualifications->bg_img) ? 'block' : 'none' }}';
     }
 });
 </script>
-<script>
-document.getElementById('img_card_2').addEventListener('change', function(e){
-    const preview = document.getElementById('previewimg_card_2');
-    const file = e.target.files[0];
 
-    if(file){
-        // Update preview to new img_card_2
-        preview.src = URL.createObjectURL(file);
-        preview.style.display = 'block';
-    } else {
-        // Keep old img_card_2 if no file selected
-        preview.style.display = '{{ isset($qualifications->img_card_2) ? 'block' : 'none' }}';
-    }
-});
-</script>
 @endsection

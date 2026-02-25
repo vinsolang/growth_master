@@ -16,35 +16,22 @@
         @endcomponent
 
         <section class="mt-40">
-        <h1 class="text-[#000000] text-2xl md:text-4xl text-center font-semibold py-6 px-4">
-            Apply to Become a Growth Master Chair
+        <h1 class="text-blue-900 text-2xl md:text-4xl text-center font-semibold py-6 px-4">
+            {{ $getContent[0]->title }}
         </h1>
-        <p class="text-md md:text-lg text-[#333333] max-w-4xl mx-auto px-4">
-            Growth Master Chairs mentor high-integrity executives, helping them make better decisions, 
-            become better leaders and achieve better results. To learn more about this opportunity, 
-            complete this short form and upload your resume/CV/biography. Our Chair selection team will contact you.
+        <p class="text-md md:text-lg !text-blue-900 max-w-4xl mx-auto px-4">
+            {!! nl2br($getContent[0]->description) !!}
         </p>
-        <div class="max-w-4xl mx-auto py-6 px-4">
-            <!-- Preferred Experience -->
-            <h2 class="text-2xl text-gray-900 mb-4">
-                Most Chairs have these qualities:
-            </h2>
-
-            <ul class="list-disc pl-6 space-y-3 text-[#333333] leading-relaxed text-md md:text-lg">
-                <li>P&L responsibility exceeding $5 million</li>
-                <li>10+ years of executive experience</li>
-                <li>25+ people leader</li>
-                <li>Strong business acumen, communication skills, high EQ</li>
-                <li>Availability and drive to build their own business</li>
-            </ul>
+        <div class="max-w-4xl mx-auto py-6 px-4 !text-blue-900">
+             {!! $getContent[0]->desc_list !!}
         </div>
 
         <div id="">
             <form action="{{ route('chair.contact.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="max-w-7xl mx-auto p-6" id="chair-form">
+                <div class="max-w-7xl mx-auto p-6 text-blue-900" id="chair-form">
                     <!-- ================= Chair Contact Form ================= -->
-                    <h2 class="text-xl font-semibold mb-2">Chair Contact Form</h2>
+                    <h2 class="text-xl font-semibold mb-2">Contact Form</h2>
                     <hr class="mb-6 w-1/2 border-gray-300">
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
@@ -118,7 +105,7 @@
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-                    <p class="text-[#333333] text-lg">OR</p>
+                    <p class="text-blue-900 text-lg">OR</p>
                     <div class="py-6 md:w-[50%]">
                         <label for="">Upload your resume or executive bio:</label>
                         <input type="file" name="cv" value="{{ old('cv') }}"
@@ -134,12 +121,12 @@
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-                    <p class="text-[#333333] text-lg">*Indicates Response Required</p>
+                    <p class="text-blue-900 text-lg">*Indicates Response Required</p>
                 </div>
 
                 <div class="flex justify-center text-xl mt-10">
                     <button type="submit"
-                        class="inline-flex items-center justify-center w-72 h-14 bg-[#68875d] text-[#ffffff] font-semibold uppercase cursor-pointer">
+                        class="inline-flex items-center justify-center w-72 h-14 bg-red-600 text-white hover:bg-blue-900 font-semibold uppercase cursor-pointer">
                         Become a member
                     </button>
                 </div>

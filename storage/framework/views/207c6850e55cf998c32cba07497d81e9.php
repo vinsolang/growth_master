@@ -10,7 +10,7 @@
   <title><?php echo $__env->yieldContent('site-title'); ?></title>
   <meta name="description" content="" />
   <!-- Favicon -->
-  <link rel="icon"  href="<?php echo e(asset('assets/logo-1.png')); ?>" />
+  <link rel="icon" href="<?php echo e(asset('assets/icon/CAC-02.jpg')); ?>" />
   <!-- Fonts -->
   <link rel="preconnect" href="<?php echo e(url('https://fonts.googleapis.com')); ?>" />
   <link rel="preconnect" href="<?php echo e(url('https://fonts.gstatic.com')); ?>" crossorigin />
@@ -64,7 +64,7 @@
           <a href="<?php echo e(route('home')); ?>" class="app-brand-link">
             
             <div class="logo flex justify-center items-center py-10 ml-5">
-              <img src="<?php echo e(asset('assets/logo.png')); ?>" alt="" style="width: 90px; height: 90px;">
+              <img src="<?php echo e(asset('assets/icon/CAC-02.jpg')); ?>" alt="" style="width: 50px; height: 50px;">
             </div>
 
 
@@ -182,7 +182,7 @@
                 </a>
               </li>
               <li class="menu-item">
-                <a href="#" class="menu-link">
+                <a href="<?php echo e(route('programtext')); ?>" class="menu-link">
                   <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_10); ?></div>
                 </a>
               </li>
@@ -243,7 +243,7 @@
                 </a>
               </li>
               <li class="menu-item">
-                <a href="" class="menu-link">
+                <a href="<?php echo e(route('apply')); ?>" class="menu-link">
                   <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_19); ?></div>
                 </a>
               </li>

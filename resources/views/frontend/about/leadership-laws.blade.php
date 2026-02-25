@@ -40,7 +40,7 @@
 
               
                 {{-- Buuton Free for PDF --}}
-                <div class="flex flex-col justify-center items-center mt-10 md:px-10 xl:px-12">
+                {{-- <div class="flex flex-col justify-center items-center mt-10 md:px-10 xl:px-12">
                     <button class="group py-6 px-12 text-[16px] md:text-[18px] border border-[#003F5F]
                                 text-[#000000] font-semibold bg-white rounded-t 
                                 transition-all duration-300 ease-in-out
@@ -52,7 +52,7 @@
                         </span>
                     </button>
                     <div class="bg-amber-500 h-1 rounded-t w-full"></div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="space-y-10">
@@ -66,7 +66,7 @@
 
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
+                <p class="max-w-7xl mx-auto text-left text-blue-900 font-regular text-[17px] md:text-[20px] px-4">
                       {!! nl2br(e(value: $getCotentPage[0]->description)) !!}
                 </p>
             </div>
@@ -90,16 +90,16 @@
                     @foreach($cards as $index => $card)
 
                         <div
-                            class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#d9ebf4] w-full lg:w-[90%] md:h-[700px]">
+                            class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] md:h-[700px]">
 
                             {{-- TEXT --}}
                             <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
                                                 {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}
                                             ">
-                                <h1 class="text-[#000000] lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
+                                <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
                                     {{ $card['title'] }}
                                 </h1>
-                                <p class="text-left text-[#454545] md:text-xl text-[14px] px-4 md:px-12">
+                                <p class="text-left text-blue-900 md:text-xl text-[14px] px-4 md:px-12">
                                      {!! nl2br(e($card['text'])) !!}
                                 </p>
                             </div>
@@ -200,10 +200,10 @@
             {{-- Inquire About Membership --}}
             <div class="space-y-6">
                 <h1
-                    class="text-[#000000] md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
+                    class="text-blue-900 md:max-w-7xl mx-auto md:text-left text-center text-3xl md:text-4xl xl:text-5xl px-4">
                     {{ $getCotentPage[0]->title_1 }}
                 </h1>
-                <p class="max-w-7xl mx-auto text-left text-[#343434] font-regular text-[17px] md:text-[20px] px-4">
+                <p class="max-w-7xl mx-auto text-left text-blue-900 font-regular text-[17px] md:text-[20px] px-4">
                     {!! nl2br(e(value: $getCotentPage[0]->description_1)) !!}
                 </p>
                 
