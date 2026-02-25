@@ -61,6 +61,7 @@
     </section>
 </div>
 
+
 <div class="flex justify-center items-center mt-10">
     <a href="#member-form"
         class="group py-3 px-[25px] text-[16px] md:text-[18px] border-2 border-[#D82129]

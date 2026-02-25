@@ -10,7 +10,7 @@
 
             <!-- Logo -->
             <a href="{{ route('home') }}">
-                <img src="{{ asset('assets/icon/CAC-02.jpg') }}" alt="logo" class="w-[85px] h-[85px] object-contain">
+                <img src="{{ asset('assets/icon/CAC-02.jpg') }}" alt="logo" class="h-[65px] w-[65px] md:w-[85px] md:h-[85px] object-contain">
             </a>
 
             <!-- Desktop Menu -->
@@ -169,7 +169,7 @@
             <ul id="mobileProgram" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_8 }}</a></li>
                 <li><a href="https://www.kicpaa.org/en/atq-program/" target="_blank" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_9 }}</a></li>
-                <li><a href="#" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_10 }}</a></li>
+                <li><a href="{{ route('program.job') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_10 }}</a></li>
             </ul>
         </li>
 
