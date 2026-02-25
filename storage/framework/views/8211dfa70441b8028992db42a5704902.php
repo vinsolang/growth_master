@@ -36,17 +36,17 @@
 
                 <div class="max-w-5xl mx-auto bg-white overflow-hidden">
 
-                    <div class="bg-[#68875d] text-white">
+                    <div class="bg-[#2A2D79] text-white">
                         <a href="<?php echo e(route('home')); ?>" class="block">
                             <div
-                                class="px-6 py-4 font-bold border-b border-[#30611f] hover:bg-[#65815b] transition-colors cursor-pointer">
+                                class="px-6 py-4 font-bold border-b border-[#2A2D79] hover:bg-[#65815b] transition-colors cursor-pointer">
                                 Home
                             </div>
                         </a>
 
                         <a href="<?php echo e(route('membership')); ?>" class="block">
                             <div
-                                class="px-6 py-4 font-bold border-b border-[#30611f] hover:bg-[#65815b] transition-colors cursor-pointer">
+                                class="px-6 py-4 font-bold border-b border-[#2A2D79] hover:bg-[#65815b] transition-colors cursor-pointer">
                                 Why Join Growth Master
                             </div>
                         </a>
@@ -110,18 +110,18 @@
                         </div>
 
                     </div>
-                    <div class="bg-[#68875d] text-white">
+                    <div class="bg-[#2A2D79] text-white">
                         <a href="<?php echo e(route('events')); ?>" class="block">
                             <div
-                                class="px-6 py-4 font-bold border-b border-[#30611f] hover:bg-[#65815b] transition-colors cursor-pointer">
+                                class="px-6 py-4 font-bold border-b border-[#2A2D79] hover:bg-[#65815b] transition-colors cursor-pointer">
                                 Events
                             </div>
                         </a>
                     </div>
-                    <div class="bg-[#68875d] text-white">
+                    <div class="bg-[#2A2D79] text-white">
                         <a href="<?php echo e(route('about')); ?>" class="block">
                             <div
-                                class="px-6 py-4 font-bold border-b border-[#30611f] hover:bg-[#65815b] transition-colors cursor-pointer">
+                                class="px-6 py-4 font-bold border-b border-[#2A2D79] hover:bg-[#65815b] transition-colors cursor-pointer">
                                 About Growth Master
                             </div>
                         </a>
@@ -150,10 +150,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="bg-[#68875d] text-white">
+                    <div class="bg-[#2A2D79] text-white">
                         <a href="<?php echo e(route('chair.growth')); ?>" class="block">
                             <div
-                                class="px-6 py-4 font-bold border-b border-[#30611f] hover:bg-[#65815b] transition-colors cursor-pointer">
+                                class="px-6 py-4 font-bold border-b border-[#2A2D79] hover:bg-[#65815b] transition-colors cursor-pointer">
                                 Chair
                             </div>
                         </a>
@@ -182,10 +182,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="bg-[#68875d] text-white">
+                    <div class="bg-[#2A2D79] text-white">
                         <div class="block">
                             <div
-                                class="px-6 py-4 font-bold border-b border-[#30611f] hover:bg-[#65815b] transition-colors cursor-pointer">
+                                class="px-6 py-4 font-bold border-b border-[#2A2D79] hover:bg-[#65815b] transition-colors cursor-pointer">
                                 Apply for Growth Master
                             </div>
                         </div>
