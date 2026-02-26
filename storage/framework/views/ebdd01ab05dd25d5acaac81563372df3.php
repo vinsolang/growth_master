@@ -14,11 +14,11 @@
         <?php $__env->startComponent('components.navbar'); ?>
         <?php echo $__env->renderComponent(); ?>
 
-        <div class="space-y-96">
-            <div class="relative w-full h-[80vh] md:h-screen top-16 py-24">
+        <div class="">
+            <div class="py-16">
                 <?php echo $__env->make('frontend.include.form', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
             </div>
-            <div class="relative md:top-20 top-128">
+            <div class="">
                 <?php $__env->startComponent('components.footer'); ?>
                 <?php echo $__env->renderComponent(); ?>
             </div>

@@ -14,11 +14,11 @@
         @component('components.navbar')
         @endcomponent
 
-        <div class="space-y-96">
-            <div class="relative w-full h-[80vh] md:h-screen top-16 py-24">
+        <div class="">
+            <div class="py-16">
                 @include('frontend.include.form')
             </div>
-            <div class="relative md:top-20 top-128">
+            <div class="">
                 @component('components.footer')
                 @endcomponent
             </div>

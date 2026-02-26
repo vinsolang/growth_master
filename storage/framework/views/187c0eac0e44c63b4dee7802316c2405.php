@@ -1,10 +1,10 @@
 
 <div class="space-y-4" id="member-form">
-        <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-10 px-6 xl:px-50 md:px-16">
+        <h1 class="text-center text-blue-900 text-[20px] md:text-[30px] mt-10 px-2 xl:px-50 md:px-10">
              <?php echo nl2br(e($getHomeContent[0]->title_below)); ?>
 
         </h1>
-        <p class="text-blue-900 text-lg md:text-xl text-left max-w-[60%] mx-auto">
+        <p class="text-blue-900 text-md md:text-xl text-left w-full lg:px-0 px-6 lg:max-w-[60%] mx-auto">
              <?php echo nl2br(e($getHomeContent[0]->desc_bolow)); ?>
 
         </p>
@@ -230,7 +230,7 @@ unset($__errorArgs, $__bag); ?>
                     </div>
                     
                     
-                    <div class="flex justify-center text-xl mt-10">
+                    <div class="flex justify-center text-xl pt-10">
                         <button type="submit"
                             class="inline-flex items-center justify-center w-72 h-14 bg-red-600 hover:bg-blue-900 text-[#ffffff] font-semibold uppercase cursor-pointer">
                             Become a member 
