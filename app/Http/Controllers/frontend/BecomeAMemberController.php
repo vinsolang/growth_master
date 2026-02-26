@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\HomeContent;
+use App\Models\NavbarMenu;
 use Illuminate\Http\Request;
 
 class BecomeAMemberController extends Controller
@@ -13,6 +14,7 @@ class BecomeAMemberController extends Controller
     }
     public function FormInputInfo(){
          $getHomeContent = HomeContent::all();
-        return view('frontend.form-input-information.form', compact('getHomeContent'));
+          $getMenu = NavbarMenu::all();
+        return view('frontend.form-input-information.form', compact('getHomeContent', 'getMenu'));
     }
 }

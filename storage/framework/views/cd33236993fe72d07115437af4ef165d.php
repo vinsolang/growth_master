@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Executive Coaching Services & Leadership Programs'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_8); ?>
 <?php $__env->startSection('content'); ?>
     <?php $__env->startComponent('components.navbar'); ?>
 

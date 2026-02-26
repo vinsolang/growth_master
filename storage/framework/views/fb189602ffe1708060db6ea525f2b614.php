@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Growth Master Reviews'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_4); ?>
 <?php $__env->startSection('content'); ?>
     <?php $__env->startComponent('components.navbar'); ?>
 

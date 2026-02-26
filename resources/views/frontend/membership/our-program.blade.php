@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Executive Coaching Services & Leadership Programs')
+@section('title', $getMenu[0]->menu_8)
 @section('content')
     @component('components.navbar')
 

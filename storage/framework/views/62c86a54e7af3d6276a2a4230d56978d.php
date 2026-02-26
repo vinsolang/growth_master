@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Peer Advisory Groups'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_3); ?>
 <?php $__env->startSection('content'); ?>
     <?php $__env->startComponent('components.navbar'); ?>
 

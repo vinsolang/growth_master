@@ -14,7 +14,7 @@
             <!-- Desktop Menu -->
             <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px] md:px-12" id="navLinks">
                 <li class="group relative hover:text-[#D82129] cursor-pointer">
-                    <a href="<?php echo e(URL('/membership')); ?>" class="flex items-center">
+                    <a href="<?php echo e(route ('membership')); ?>" class="flex items-center">
                         <?php echo e($getMenu[0]->menu_1); ?>
 
                         <i
@@ -22,7 +22,7 @@
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#D82129] text-white mt-10 text-[14px]">
-                            <a href="<?php echo e(URL('/membership')); ?>"
+                            <a href="<?php echo e(route('membership')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_2); ?></a>
                             <a href="<?php echo e(route('approach')); ?>"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]"><?php echo e($getMenu[0]->menu_3); ?></a>
@@ -155,7 +155,7 @@
             </button>
 
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="<?php echo e(URL('/membership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_2); ?></a></li>
+                <li><a href="<?php echo e(route('membership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_2); ?></a></li>
                 <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_3); ?></a></li>
                 
                 <li><a href="<?php echo e(route('review')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_4); ?></a></li>

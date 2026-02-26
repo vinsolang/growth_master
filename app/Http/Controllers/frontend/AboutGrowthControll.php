@@ -8,6 +8,7 @@ use App\Models\Banner;
 use App\Models\CEOClimb;
 use App\Models\HomeContent;
 use App\Models\Leadership;
+use App\Models\NavbarMenu;
 use Illuminate\Http\Request;
 
 class AboutGrowthControll extends Controller
@@ -16,7 +17,8 @@ class AboutGrowthControll extends Controller
         $getBanner = Banner::all();
          $getHomeContent = HomeContent::all();
         $getContent = AboutUs::all();
-        return view('frontend.about.about', compact('getBanner', 'getContent', 'getHomeContent'));
+         $getMenu = NavbarMenu::all();
+        return view('frontend.about.about', compact('getBanner', 'getContent', 'getHomeContent','getMenu'));
     }
 
     // What is Growth Master
@@ -29,7 +31,8 @@ class AboutGrowthControll extends Controller
           $getBanner = Banner::all();
           $getCotentPage = Leadership::all();
            $getHomeContent = HomeContent::all();
-        return view('frontend.about.leadership-laws',compact('getBanner','getCotentPage', 'getHomeContent'));
+           $getMenu = NavbarMenu::all();
+        return view('frontend.about.leadership-laws',compact('getBanner','getCotentPage', 'getHomeContent', 'getMenu'));
     }
 
     // CEO Climp
@@ -37,6 +40,7 @@ class AboutGrowthControll extends Controller
         $getItem = CEOClimb::all();
          $getHomeContent = HomeContent::all();
           $getBanner = Banner::all();
-        return view('frontend.about.ceo-climp',compact('getBanner','getItem', 'getHomeContent'));
+           $getMenu = NavbarMenu::all();
+        return view('frontend.about.ceo-climp',compact('getBanner','getItem', 'getHomeContent', 'getMenu'));
     }
 }

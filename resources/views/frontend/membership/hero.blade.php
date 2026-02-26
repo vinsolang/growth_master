@@ -1,4 +1,4 @@
-@section('title', 'Why Join GrowthMaster for business coaching')
+@section('title', $getMenu[0]->menu_2)
 <div class=" w-full h-screen relative  ">
     <!-- Hero Image -->
     {{-- <img src="https://cac-center.edu.kh/wp-content/uploads/2017/12/IMG_5776-1536x1024.jpg" class="w-full h-full object-cover" alt="Hero Image"> --}}

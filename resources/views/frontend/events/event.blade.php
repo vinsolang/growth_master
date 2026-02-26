@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Event')
+@section('title', $getMenu[0]->menu_11)
 @section('content')
     <div id="eventPage" class="space-y-45">
         @component('components.navbar')

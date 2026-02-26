@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'CEO’s 7 Laws of Leadership')
+@section('title', $getMenu[0]->menu_14)
 @section('content')
     <div id="eventPage" class="space-y-45">
         @component('components.navbar')

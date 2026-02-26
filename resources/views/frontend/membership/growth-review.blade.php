@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Growth Master Reviews')
+@section('title', $getMenu[0]->menu_4)
 @section('content')
     @component('components.navbar')
 

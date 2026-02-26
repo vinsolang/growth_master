@@ -65,21 +65,23 @@ Route::get('/', function () {
 
 
 // Member ship
-Route::get('membership', function () {
+Route::get('membership/why-choose-cac', function () {
     $getContent = WhyJoinGrowthMaster::all();
      $getMenu = NavbarMenu::all();
     $getBanner = Banner::all();
     return view('frontend.membership', compact('getBanner','getContent', 'getMenu'));
 })->name('membership');
 Route::get('membership/cac-platform', [ClientController::class, 'ourApproach'])->name('approach');
-Route::get('programs', [ClientController::class, 'memberShipPrograms'])->name('program');
+Route::get('cac-programs/certification-programs', [ClientController::class, 'memberShipPrograms'])->name('program');
 
-Route::get('programs/guaranteed', [ClientController::class, 'memberShipGuaranteed'])->name('program.job');
-Route::get('programs/details{id}', [ClientController::class, 'ProgramDetails'])->name('program.details');
+Route::get('cac-programs/job-guaranteed-programs', [ClientController::class, 'memberShipGuaranteed'])->name('program.job');
+Route::get('cac-programs/job-guaranteed-programs/details{id}', [ClientController::class, 'ProgramDetails'])->name('program.details');
 
-Route::get('membership/growth-reviews', [ClientController::class, 'growthReview'])->name('review');
+// Route::get('membership/{slug}', [ClientController::class, 'Membership']);
+
+Route::get('membership/cac-members-reviews', [ClientController::class, 'growthReview'])->name('review');
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
-Route::get('membership/exclusive-peer-groups', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
+Route::get('membership/exclusive-cfo-group', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
 Route::get('per-to-per', function(){
      $getBanner = Banner::all();
     return view('frontend.sitemap.per-to-per-matoring', compact('getBanner'));
@@ -151,16 +153,16 @@ Route::get('events', [ClientController::class, 'events'])->name('events');
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
 // Growth Master Chair
-Route::get('cac/chair',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
-Route::get('qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
+Route::get('mentors/lead-a-group',[ClientController::class, 'growthMasterChair'])->name('chair.growth');
+Route::get('mentors/qualifications', [ClientController::class, 'CEOCoachingQual'])->name('ceo.coa.qual');
 Route::get('cac/chair-profile', [ClientController::class, 'ChairProfile'])->name('chair.profile');
-Route::get('application', [ClientController::class, 'ChairApplication'])->name('chair.application');
+Route::get('mentors/apply-to-be-a-mentor', [ClientController::class, 'ChairApplication'])->name('chair.application');
 
 // aboute
-Route::get('about-cac', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
-Route::get('about-cac/what-is-growth-master', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
-Route::get('about-cac/leadership-laws/', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
-Route::get('about-cac/ceo-climp/', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
+Route::get('about-cac/what-is-cac', [AboutGrowthControll::class, 'aboutGrowth'])->name('about');
+Route::get('about-cac', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
+Route::get('about-cac/mstem-laws-of-career-success-factors', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
+Route::get('about-cac/the-leader-stairs', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
 
 // sitemap
 Route::get('sitemap', [ClientController::class, 'sitemap'])->name('sitemap');

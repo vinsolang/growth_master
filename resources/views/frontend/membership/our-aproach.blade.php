@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Peer Advisory Groups')
+@section('title', $getMenu[0]->menu_3)
 @section('content')
     @component('components.navbar')
 

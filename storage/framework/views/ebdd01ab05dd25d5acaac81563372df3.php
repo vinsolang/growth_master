@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Growth Master CEO CLIMB EVENTS'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_6); ?>
 <?php $__env->startSection('content'); ?>
     <style>
         .no-scrollbar::-webkit-scrollbar {

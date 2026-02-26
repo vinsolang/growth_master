@@ -9,43 +9,39 @@
         </div>
 
         {{-- Footer Menu --}}
-        <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-y-8 gap-x-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-y-8 gap-x-6">
             <div class="space-y-2">
-                <h2 class="text-yellow-200 italic text-sm font-semibold">{{ $getMenu[0]->menu_1 }}</h2>
+                <h2 class="text-yellow-200 italic text-sm font-semibold">Explore CAC:</h2>
                 <ul class="space-y-2 text-sm">
                     <li><a href="{{ route('membership') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_2 }}</a></li>
                     <li><a href="{{ route('approach') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_3 }}</a></li>
                     <li><a href="{{ route('review') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_4 }}</a></li>
                     <li><a href="{{ route('exclusive.peer.groups') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_5 }}</a></li>
-                    <li><a href="{{ route('form.input') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_6 }}</a></li>
+                     <li><a href="{{ route('program') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_8 }}</a></li>
+                    <li><a href="https://www.kicpaa.org/en/atq-program/" target="_blank" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_9 }}</a></li>
+                    <li><a href="{{ route('program.job') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_10 }}</a></li>
                 </ul>
             </div>
 
              <div class="space-y-2">
-                <h2 class="text-yellow-200 italic text-sm font-semibold">{{ $getMenu[0]->menu_7 }}</h2>
+                <h2 class="text-yellow-200 italic text-sm font-semibold">Learn About CAC:</h2>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="{{ route('program') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_8 }}</a></li>
-                    <li><a href="https://www.kicpaa.org/en/atq-program/" target="_blank" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_9 }}</a></li>
-                    <li><a href="{{ route('program.job') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_10 }}</a></li>
+                   
                     <li><a href="{{ route('events') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_11 }}</a></li>
-                </ul>
-            </div>
-
-            <div class="space-y-2">
-                <h2 class="text-yellow-200 italic text-sm font-semibold">{{ $getMenu[0]->menu_12 }}</h2>
-                <ul class="space-y-2 text-sm">
                     <li><a href="{{ route('about') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_13 }}</a></li>
                     <li><a href="{{ route('Laws.of.eadership') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_14 }}</a></li>
                     <li><a href="{{ route('ceo.climp') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_15 }}</a></li>
+                    <li><a href="{{ route('chair.growth') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_17 }}</a></li>
+                    <li><a href="{{ route('ceo.coa.qual') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_18 }}</a></li>
+                    {{-- <li><a href="{{ route('chair.application') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_19 }}</a></li> --}}
                 </ul>
             </div>
 
             <div class="space-y-2">
-                <h2 class="text-yellow-200 italic text-sm font-semibold"> {{ $getMenu[0]->menu_16 }}</h2>
+                <h2 class="text-yellow-200 italic text-sm font-semibold">Apply for CAC:</h2>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="{{ route('chair.growth') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_17 }}</a></li>
-                    <li><a href="{{ route('ceo.coa.qual') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_18 }}</a></li>
-                    <li><a href="{{ route('chair.application') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_19 }}</a></li>
+                     <li><a href="{{ route('form.input') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_6 }}</a></li>
+                     <li><a href="{{ route('chair.application') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_19 }}</a></li>
                 </ul>
             </div>
             <div class="space-y-2">

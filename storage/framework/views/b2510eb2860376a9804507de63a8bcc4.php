@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Event'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_11); ?>
 <?php $__env->startSection('content'); ?>
     <div id="eventPage" class="space-y-45">
         <?php $__env->startComponent('components.navbar'); ?>

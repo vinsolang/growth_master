@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'About Growth Master')
+@section('title',  $getMenu[0]->menu_13)
 @section('content')
     <div id="eventPage" class="space-y-45">
         @component('components.navbar')

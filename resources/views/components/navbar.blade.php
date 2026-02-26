@@ -16,14 +16,14 @@
             <!-- Desktop Menu -->
             <ul class="hidden xl:flex gap-10 text-white font-semibold text-[17px] md:px-12" id="navLinks">
                 <li class="group relative hover:text-[#D82129] cursor-pointer">
-                    <a href="{{URL('/membership')}}" class="flex items-center">
+                    <a href="{{ route ('membership')}}" class="flex items-center">
                         {{ $getMenu[0]->menu_1 }}
                         <i
                             class="fas fa-caret-down ml-1 text-xs inline-block transform transition-transform duration-200 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-0 w-52 hidden group-hover:block z-10">
                         <div class="bg-[#D82129] text-white mt-10 text-[14px]">
-                            <a href="{{URL('/membership')}}"
+                            <a href="{{ route('membership')}}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_2 }}</a>
                             <a href="{{ route('approach') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_3 }}</a>
@@ -148,7 +148,7 @@
             </button>
 
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
-                <li><a href="{{URL('/membership')}}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_2 }}</a></li>
+                <li><a href="{{ route('membership')}}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_2 }}</a></li>
                 <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_3 }}</a></li>
                 {{-- <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">Our Programs</a></li> --}}
                 <li><a href="{{ route('review') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_4 }}</a></li>

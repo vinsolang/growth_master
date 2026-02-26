@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Become an Execurtive | GrowthMaster'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_17); ?>
 <?php $__env->startSection('content'); ?>
     <?php $__env->startComponent('components.navbar'); ?>
     <?php echo $__env->renderComponent(); ?>

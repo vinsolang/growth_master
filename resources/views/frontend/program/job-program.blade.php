@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Programs Guaranteed')
+@section('title', $getMenu[0]->menu_10)
 @section('content')
     @component('components.navbar')
 

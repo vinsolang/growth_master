@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Why Join GrowthMaster for business coaching'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_2); ?>
 <div class=" w-full h-screen relative  ">
     <!-- Hero Image -->
     

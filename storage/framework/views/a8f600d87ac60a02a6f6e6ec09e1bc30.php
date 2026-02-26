@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title', 'Programs Guaranteed'); ?>
+<?php $__env->startSection('title', $getMenu[0]->menu_10); ?>
 <?php $__env->startSection('content'); ?>
     <?php $__env->startComponent('components.navbar'); ?>
 

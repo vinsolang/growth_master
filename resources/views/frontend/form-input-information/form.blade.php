@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Growth Master CEO CLIMB EVENTS')
+@section('title', $getMenu[0]->menu_6)
 @section('content')
     <style>
         .no-scrollbar::-webkit-scrollbar {

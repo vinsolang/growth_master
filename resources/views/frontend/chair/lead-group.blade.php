@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Become an Execurtive | GrowthMaster')
+@section('title', $getMenu[0]->menu_17)
 @section('content')
     @component('components.navbar')
     @endcomponent
