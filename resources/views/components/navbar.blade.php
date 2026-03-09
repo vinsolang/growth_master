@@ -207,7 +207,7 @@
                 <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_3 }}</a></li>
                 <li><a href="{{ route('Laws.of.eadership') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_14 }}</a>
                 </li>
-                <li><a href="{{ route('ceo.climp') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_20 }}</a>
+                <li><a href="{{ route('accounting') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_20 }}</a>
                 <li><a href="{{ route('ceo.climp') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_15 }}</a>
                 </li>
             </ul>
