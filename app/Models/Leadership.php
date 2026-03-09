@@ -8,18 +8,19 @@ class Leadership extends Model
 {
     protected $table = 'leaderships';
     protected $fillable = [
-           'description',
+        'description',
 
-           'title_card_1',
-           'desc_card_1',
-           'img_card_1',
+        'title_card',
+        'desc_card',
+        'img_card',
 
-           'title_card_2',
-           'desc_card_2',
-           'img_card_2',
+        'title_1',
+        'description_1',
+    ];
 
-
-           'title_1',
-           'description_1',
+    protected $casts = [
+        'title_card' => 'array',
+        'desc_card' => 'array',
+        'img_card' => 'array',
     ];
 }

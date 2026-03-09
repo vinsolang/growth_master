@@ -28,76 +28,50 @@ class LeadershipController extends Controller
         $request->validate([
             'description' => 'nullable|string',
 
-            'title_card_1'=> 'nullable|string',
-            'desc_card_1'=> 'nullable|string',
-            'img_card_1'=> 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'title_card.*' => 'nullable|string',
+            'desc_card.*' => 'nullable|string',
+            'img_card.*' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
 
-            'title_card_2'=> 'nullable|string',
-            'desc_card_2'=> 'nullable|string',
-            'img_card_2'=> 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
-
-            'title_1'=> 'nullable|string',
-            'description_1'=> 'nullable|string',
-
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'title_1' => 'nullable|string',
+            'description_1' => 'nullable|string',
         ]);
 
-        // Get first record or create
         $leaderships = Leadership::firstOrCreate([]);
-
-        // Fill text fields only
-        $leaderships->fill($request->except([
-            'image',
-            'img_card_1',
-            'img_card_2'
-        ]));
 
         $uploadPath = public_path('assets/leaderships');
 
-// Create folder if not exists
-if (!file_exists($uploadPath)) {
-    mkdir($uploadPath, 0755, true);
-}
-
-// ===============================
-// MAIN IMAGE
-// ===============================
-if ($request->hasFile('image')) {
-
-    if ($leaderships->image && file_exists(public_path($leaderships->image))) {
-        unlink(public_path($leaderships->image));
-    }
-
-    $file = $request->file('image');
-    $fileName = time() . '_main.' . $file->getClientOriginalExtension();
-    $file->move($uploadPath, $fileName);
-
-    $leaderships->image = 'assets/leaderships/' . $fileName;
-}
-
-// ===============================
-// CARD IMAGES
-// ===============================
-for ($i = 1; $i <= 2; $i++) {
-
-    $fieldName = "img_card_$i";
-
-    if ($request->hasFile($fieldName)) {
-
-        if ($leaderships->$fieldName && file_exists(public_path($leaderships->$fieldName))) {
-            unlink(public_path($leaderships->$fieldName));
+        if (!file_exists($uploadPath)) {
+            mkdir($uploadPath, 0755, true);
         }
 
-        $file = $request->file($fieldName);
-        $fileName = time() . "_card_$i." . $file->getClientOriginalExtension();
-        $file->move($uploadPath, $fileName);
+        $titles = $request->title_card ?? [];
+        $descs = $request->desc_card ?? [];
+        $images = $leaderships->img_card ?? [];
 
-        $leaderships->$fieldName = 'assets/leaderships/' . $fileName;
-    }
-}
+        foreach ($titles as $index => $title) {
 
-$leaderships->save();
+            if ($request->hasFile("img_card.$index")) {
 
-return redirect()->back()->with('success', 'Content updated successfully!');
+                $file = $request->file("img_card.$index");
+
+                $fileName = time().'_'.$index.'.'.$file->getClientOriginalExtension();
+
+                $file->move($uploadPath, $fileName);
+
+                $images[$index] = 'assets/leaderships/'.$fileName;
+            }
+        }
+
+        $leaderships->update([
+            'description' => $request->description,
+            'title_card' => $titles,
+            'desc_card' => $descs,
+            'img_card' => $images,
+
+            'title_1' => $request->title_1,
+            'description_1' => $request->description_1,
+        ]);
+
+        return back()->with('success','Content updated successfully!');
     }
 }

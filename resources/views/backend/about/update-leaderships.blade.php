@@ -53,69 +53,53 @@
                                     </div>
                                 </div>
 
-                                <div class="mb-3 col-12 border border-[#0F4634]">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Block 1</label>
-                                    <div class="mb-3 col-12">
-                                        <input class="form-control" type="text" name="title_card_1"
-                                            value="{{ $leaderships->title_card_1 }}" placeholder="Title" />
-                                    </div>
-                                    <div class="mb-3 col-12">
-                                        <textarea name="desc_card_1" class="form-control" id="desc_card_1"
-                                            placeholder="Description">{{ $leaderships->desc_card_1 }}</textarea>
-                                    </div>
-                                    <div class="mb-3 col-12">
+                                <div class="mb-3 col-12 border border-[#0F4634] p-3">
 
-                                        <div class="mb-3 col-12">
-                                            {{-- img_card_1 Preview --}}
-                                            <div class="mb-2">
-                                                <img id="previewimg_card_1"
-                                                    src="{{ isset($leaderships->img_card_1) ? asset($leaderships->img_card_1) : '' }}"
-                                                    width="150"
-                                                    class="rounded border"
-                                                    style="display: {{ isset($leaderships->img_card_1) ? 'block' : 'none' }};">
-                                            </div>
+                                    <label class="form-label text-[#0F4634]">Blocks</label>
 
-                                            {{-- File Input --}}
-                                            <input class="form-control"
-                                                type="file"
-                                                name="img_card_1"
-                                                id="img_card_1"
-                                                accept="image/*">
-                                        </div>
+                                    <div id="block-wrapper">
+
+                                    @if(!empty($leaderships->title_card))
+                                    @foreach($leaderships->title_card as $i => $title)
+
+                                    <div class="block-item border p-3 mb-3 rounded">
+
+                                    <input type="text"
+                                        name="title_card[]"
+                                        class="form-control mb-2"
+                                        placeholder="Title"
+                                        value="{{ $title }}">
+
+                                    <textarea name="desc_card[]"
+                                        class="form-control mb-2"
+                                        placeholder="Description">{{ $leaderships->desc_card[$i] ?? '' }}</textarea>
+
+                                    <img
+                                        src="{{ isset($leaderships->img_card[$i]) ? asset($leaderships->img_card[$i]) : '' }}"
+                                        width="120"
+                                        class="preview mb-2"
+                                        style="display: {{ isset($leaderships->img_card[$i]) ? 'block' : 'none' }}">
+
+                                    <input type="file"
+                                        name="img_card[]"
+                                        class="form-control img-input">
+
+                                    <button type="button" class="btn btn-danger mt-2 remove-block">Remove</button>
+
                                     </div>
+
+                                    @endforeach
+                                @endif
+
                                 </div>
 
-                                 <div class="mb-3 col-12 border border-[#0F4634]">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Block 2</label>
-                                    <div class="mb-3 col-12">
-                                        <input class="form-control" type="text" name="title_card_2"
-                                            value="{{ $leaderships->title_card_2 }}" placeholder="Title" />
-                                    </div>
-                                    <div class="mb-3 col-12">
-                                        <textarea name="desc_card_2" class="form-control" id="desc_card_2"
-                                            placeholder="Description">{{ $leaderships->desc_card_2 }}</textarea>
-                                    </div>
-                                    <div class="mb-3 col-12">
+                                <button type="button" id="addBlock" class="btn btn-success mt-3">
+                                + Add Block
+                                </button>
 
-                                        <div class="mb-3 col-12">
-                                            {{-- img_card_2 Preview --}}
-                                            <div class="mb-2">
-                                                <img id="previewimg_card_2"
-                                                    src="{{ isset($leaderships->img_card_2) ? asset($leaderships->img_card_2) : '' }}"
-                                                    width="150"
-                                                    class="rounded border"
-                                                    style="display: {{ isset($leaderships->img_card_2) ? 'block' : 'none' }};">
-                                            </div>
-
-                                            {{-- File Input --}}
-                                            <input class="form-control"
-                                                type="file"
-                                                name="img_card_2"
-                                                id="img_card_2"
-                                                accept="image/*">
-                                        </div>
-                                    </div>
                                 </div>
+
+
                                 <div class="mb-3 col-12">
                                         <label for="formFile" class="form-label text-[#0F4634]">Section Card 1</label>
                                         <div class="mb-3 col-12">
@@ -126,7 +110,7 @@
                                             <textarea name="description_1" class="form-control" id="description_1"
                                                 placeholder="Description">{{ $leaderships->description_1 }}</textarea>
                                         </div>
-                                    </div>
+                                </div>
                             </div>
                             <div class="flex gap-3">
                                 <input type="submit"
@@ -141,33 +125,62 @@
         </div>
     </div>
 <script>
-document.getElementById('img_card_1').addEventListener('change', function(e){
-    const preview = document.getElementById('previewimg_card_1');
-    const file = e.target.files[0];
 
-    if(file){
-        // Update preview to new img_card_1
-        preview.src = URL.createObjectURL(file);
-        preview.style.display = 'block';
-    } else {
-        // Keep old img_card_1 if no file selected
-        preview.style.display = '{{ isset($leaderships->img_card_1) ? 'block' : 'none' }}';
-    }
-});
-</script>
-<script>
-document.getElementById('img_card_2').addEventListener('change', function(e){
-    const preview = document.getElementById('previewimg_card_2');
-    const file = e.target.files[0];
+document.getElementById('addBlock').addEventListener('click', function(){
 
-    if(file){
-        // Update preview to new img_card_2
-        preview.src = URL.createObjectURL(file);
-        preview.style.display = 'block';
-    } else {
-        // Keep old img_card_2 if no file selected
-        preview.style.display = '{{ isset($leaderships->img_card_2) ? 'block' : 'none' }}';
-    }
+let wrapper = document.getElementById('block-wrapper');
+
+let html = `
+<div class="block-item border p-3 mb-3 rounded">
+
+<input type="text"
+name="title_card[]"
+class="form-control mb-2"
+placeholder="Title">
+
+<textarea name="desc_card[]"
+class="form-control mb-2"
+placeholder="Description"></textarea>
+
+<img class="preview mb-2" width="120" style="display:none">
+
+<input type="file"
+name="img_card[]"
+class="form-control img-input">
+
+<button type="button" class="btn btn-danger mt-2 remove-block">Remove</button>
+
+</div>
+`;
+
+wrapper.insertAdjacentHTML('beforeend', html);
+
 });
+
+document.addEventListener('click', function(e){
+
+if(e.target.classList.contains('remove-block')){
+e.target.closest('.block-item').remove();
+}
+
+});
+
+document.addEventListener('change', function(e){
+
+if(e.target.classList.contains('img-input')){
+
+let file = e.target.files[0];
+let preview = e.target.previousElementSibling;
+
+if(file){
+preview.src = URL.createObjectURL(file);
+preview.style.display = 'block';
+}
+
+}
+
+});
+
 </script>
+
 @endsection

@@ -279,6 +279,13 @@
             </ul>
             <ul class="menu-sub">
               <li class="menu-item">
+                <a href="{{ route('accounting.admin') }}" class="menu-link">
+                  <div data-i18n="Without menu">{{ $getMenu[0]->menu_20 }}</div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-sub">
+              <li class="menu-item">
                 <a href="{{ route('c_e_o_climbs') }}" class="menu-link">
                   <div data-i18n="Without menu">{{ $getMenu[0]->menu_15 }}</div>
                 </a>

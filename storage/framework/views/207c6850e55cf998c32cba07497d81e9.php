@@ -217,6 +217,13 @@
             </ul>
             <ul class="menu-sub">
               <li class="menu-item">
+                <a href="<?php echo e(route('accounting.admin')); ?>" class="menu-link">
+                  <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_20); ?></div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-sub">
+              <li class="menu-item">
                 <a href="<?php echo e(route('c_e_o_climbs')); ?>" class="menu-link">
                   <div data-i18n="Without menu"><?php echo e($getMenu[0]->menu_15); ?></div>
                 </a>

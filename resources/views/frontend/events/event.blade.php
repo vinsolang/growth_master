@@ -50,39 +50,35 @@
             {{-- Growth Master Events Types --}}
             <div class="space-y-6">
                 {{-- Title --}}
-                {{-- <h1 class="text-[#000000] text-center text-3xl md:text-4xl xl:text-5xl">Growth Master Events Types</h1>
+                <h1 class="text-blue-900 text-center text-3xl md:text-4xl xl:text-5xl py-6">{{ $getEventsex[0]->title_event_1 }}</h1>
                 <div class="flex justify-center items-center">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-1">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-                        <div class="bg-[#124d6b] py-14 px-8 space-y-4 w-[480px] h-auto xl:h-[500px]">
+                        @foreach ($getEventsex as $items)
+                            <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
-                                    <img src="{{ asset('assets/img-icon/m.png') }}" alt="" class="w-full h-full object-cover rounded-full">
+                                    <img src="{{ asset('storage/'.$items->image) }}" alt="" class="w-full h-full object-cover rounded-full">
                                 </div>
                                 <div>
-                                    <p class="text-[10px] text-white">Growth Master</p>
-                                    <h2 class="text-xl sm:text-1xl font-semibold text-white">Member</h2>
+                                    <p class="text-[10px] text-white">{{ $items->name }}</p>
+                                    <h2 class="text-xl sm:text-1xl font-semibold text-white">{{ $items->type }}</h2>
                                     <p class="text-[10px] text-white">events</p>
                                 </div>
                             </div>
                             <div class="text-white text-2xl">
-                                <h2>Growth Master Executive Summits</h2>
+                                <h2>{{ $items->title }}</h2>
                             </div>
                             <div class="">
                                 <p class="text-md md:text-lg leading-relaxed text-[#ffffff]">
-                                    Gain insights, make connections, and elevate your leadership at a Growth Master Executive
-                                    Summit.
-                                    These exclusive in-person events bring together members and qualified candidates for
-                                    market
-                                    forecasting from economic experts and Growth Master Research, targeted learning breakouts with
-                                    industry leaders,
-                                    and high-impact peer networking. Walk away with actionable strategies,
-                                    fresh perspectives, and a stronger connection to your greater Growth Master community.
+                                   {!! nl2br($items->description) !!}
                                 </p>
                             </div>
                         </div>
-
-                        <div class="bg-[#124d6b] py-14 px-8 space-y-4 w-[480px] h-auto xl:h-[500px]">
+                        @endforeach
+                        
+{{-- 
+                        <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
                                     <img src="{{ asset('assets/img-icon/g.png') }}" alt="" class="w-full h-full object-cover rounded-full">
@@ -106,7 +102,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-[#124d6b] py-14 px-8 space-y-4 w-[480px] h-auto xl:h-[500px]">
+                        <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
                                     <img src="{{ asset('assets/img-icon/m.png') }}" alt="" class="w-full h-full object-cover rounded-full">
@@ -134,7 +130,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-[#124d6b] py-14 px-8 space-y-4 w-[480px] h-auto xl:h-[500px]">
+                        <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
                                     <img src="{{ asset('assets/img-icon/g.png') }}" alt="" class="w-full h-full object-cover rounded-full">
@@ -158,8 +154,56 @@
                             </div>
                         </div>
 
+                        <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
+                            <div class="flex space-x-1">
+                                <div class="w-14 h-14 rounded-full bg-gray-400">
+                                    <img src="{{ asset('assets/img-icon/g.png') }}" alt="" class="w-full h-full object-cover rounded-full">
+                                </div>
+                                <div>
+                                    <p class="text-[10px] text-white">Growth Master</p>
+                                    <h2 class="text-xl sm:text-1xl font-semibold text-white">Guest</h2>
+                                    <p class="text-[10px] text-white">events</p>
+                                </div>
+                            </div>
+                            <div class="text-white text-2xl">
+                                <h2>Growth Master Executive Summits</h2>
+                            </div>
+                            <div class="">
+                                <p class="text-md md:text-lg leading-relaxed text-[#ffffff]">
+                                    Gain insights, make connections, and elevate your leadership at a Vistage Executive
+                                    Summit.
+                                    These exclusive in-person events bring together members and qualified candidates for
+                                    market
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
+                            <div class="flex space-x-1">
+                                <div class="w-14 h-14 rounded-full bg-gray-400">
+                                    <img src="{{ asset('assets/img-icon/g.png') }}" alt="" class="w-full h-full object-cover rounded-full">
+                                </div>
+                                <div>
+                                    <p class="text-[10px] text-white">Growth Master</p>
+                                    <h2 class="text-xl sm:text-1xl font-semibold text-white">Guest</h2>
+                                    <p class="text-[10px] text-white">events</p>
+                                </div>
+                            </div>
+                            <div class="text-white text-2xl">
+                                <h2>Growth Master Executive Summits</h2>
+                            </div>
+                            <div class="">
+                                <p class="text-md md:text-lg leading-relaxed text-[#ffffff]">
+                                    Gain insights, make connections, and elevate your leadership at a Vistage Executive
+                                    Summit.
+                                    These exclusive in-person events bring together members and qualified candidates for
+                                    market
+                                </p>
+                            </div>
+                        </div> --}}
+
                     </div>
-                </div> --}}
+                </div>
             </div>
 
             {{-- Event Calendar --}}
@@ -254,70 +298,81 @@
                     <h1 class="text-4xl font-normal">< ></h1>
                     <h1>Today</h1>
                 </button> --}}
-            <h1 class="text-blue-900 text-center text-3xl md:text-4xl xl:text-5xl py-6">Events</h1>
-                
-              @foreach ($showEvents as $items)
-                <div class="space-y-6">
+            <h1 class="text-blue-900 text-center text-3xl md:text-4xl xl:text-5xl py-6" id="event-sections">{{ $getEventsex[0]->title_event_2 }}</h1>
+                @php $globalIndex = 0; @endphp
 
-                    {{-- Line --}}
-                    <div class="flex justify-between items-center">
-                        <div class="bg-[#DBDBDB] h-[0.8px] w-[25%] md:w-[38%]"></div>
-                        <div class="text-center text-blue-900 text-xl">
-                            <h1>{{ \Carbon\Carbon::parse($items->event_date)->format('d M Y') }}</h1>
-                        </div>
-                        <div class="bg-[#DBDBDB] h-[0.8px] w-[25%] md:w-[38%]"></div>
-                    </div>
+                @foreach ($showEvents as $month => $events)
 
-                    {{-- Card --}}
-                    <div class="border-2 border-[#DBDBDB] h-auto xl:h-[400px] flex flex-col md:flex-row
-                        {{ $loop->index % 2 === 1 ? 'md:flex-row-reverse' : '' }}">
+                    <div class="space-y-6">
 
-                        {{-- Image --}}
-                        <div class="w-full md:w-1/4 bg-[#DBDBDB] relative">
-                            <img src="{{ asset($items->image) }}" alt=""
-                                class="w-full h-full object-cover">
-                            <div class="absolute inset-0"></div>
+                        {{-- Month Title --}}
+                        <div class="flex justify-between items-center">
+                            <div class="bg-[#DBDBDB] h-[0.8px] w-[25%] md:w-[38%]"></div>
 
-                            {{-- <p class="absolute inset-0 flex flex-col items-center justify-center
-                                    text-white font-semibold text-center px-3 bg-black/40">
-                                {{ $items->created_at->format('d') }} <br>
-                                {{ $items->created_at->format('M') }} | {{ $items->created_at->format('D') }}<br>
-                                {{ $items->event_time }} <br><br>
-                                {{ $items->event_type }}
-                            </p> --}}
-                        </div>
-
-                        {{-- Text --}}
-                        <div class="grid w-full md:w-[60%] py-10 px-4 md:px-10 gap-y-8">
-                            <div class="flex items-center space-x-2">
-                                <h2 class="uppercase text-[16px] text-blue-900 tracking-widest">
-                                    {{ $items->category }}
-                                </h2>
-                                <div class="bg-[#2A2D79] h-1 w-6"></div>
+                            <div class="text-center text-blue-900 text-xl md:text-2xl lg:text-4xl">
+                                <h1>{{ $month }}</h1>
                             </div>
 
-                            <h1 class="text-blue-900 text-3xl font-semibold">
-                                {{ $items->title }}
-                            </h1>
-
-                            <p class="text-blue-900 font-normal text-lg leading-relaxed">
-                                {{ $items->description }}
-                            </p>
-                            <div>
-                                @if ($items->link)
-                                    <a href="{{ $items->link }}"
-                                    target="_blank"
-                                    class="">
-                                        Learn More <span>&rarr;</span>
-                                    </a>
-                                @endif
-                            </div>
+                            <div class="bg-[#DBDBDB] h-[0.8px] w-[25%] md:w-[38%]"></div>
                         </div>
 
+                        {{-- Events Under This Month --}}
+                        @foreach ($events as $items)
+
+                            <div class="border-2 border-[#DBDBDB] h-auto xl:h-[400px] flex flex-col md:flex-row
+                                {{ $globalIndex % 2 === 1 ? 'md:flex-row-reverse' : '' }}">
+
+                                {{-- Image --}}
+                                <div class="w-full md:w-1/4 bg-[#DBDBDB] relative">
+                                    <img src="{{ asset($items->image) }}" class="w-full h-full object-cover">
+
+                                    <p class="absolute inset-0 flex flex-col items-center justify-center
+                                            text-white font-semibold text-center px-3 bg-black/50">
+                                        {{ $items->event_date->format('l') }} <br>
+                                        {{ $items->event_date->format('d') }} |
+                                        {{ $items->event_date->format('M') }} |
+                                        {{ $items->event_date->format('Y') }}<br>
+                                        {{ $items->event_time }} <br><br>
+                                        {{ $items->event_type }}
+                                    </p>
+                                </div>
+
+                                {{-- Text --}}
+                                <div class="grid w-full md:w-[60%] py-10 px-4 md:px-10 gap-y-8">
+                                    <div class="flex items-center space-x-2">
+                                        <h2 class="uppercase text-[16px] text-blue-900 tracking-widest">
+                                            {{ $items->category }}
+                                        </h2>
+                                        <div class="bg-[#2A2D79] h-1 w-6"></div>
+                                    </div>
+
+                                    <h1 class="text-blue-900 text-3xl font-semibold">
+                                        {{ $items->title }}
+                                    </h1>
+
+                                    <p class="text-blue-900 font-normal text-lg leading-relaxed">
+                                        {{ $items->description }}
+                                    </p>
+
+                                    
+                                    @if($items->slug)
+                                        <a href="{{ route('events.details', ['slug' => $items->slug]) }}#details" target="_blank">
+                                            Read More →
+                                        </a>
+                                    @endif
+                                   
+                                </div>
+
+                            </div>
+
+                            {{-- Increase Global Index --}}
+                            @php $globalIndex++; @endphp
+
+                        @endforeach
+
                     </div>
-                </div>
+
                 @endforeach
-
             </div>
             {{-- Button Back and Next --}}
             {{-- <div class="flex justify-between px-12 text-[#003f5e] text-[16px] md:text-xl font-semibold">

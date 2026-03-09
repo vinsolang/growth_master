@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\BAccounting;
 use App\Models\Banner;
 use App\Models\CEOClimb;
 use App\Models\HomeContent;
@@ -42,5 +43,13 @@ class AboutGrowthControll extends Controller
           $getBanner = Banner::all();
            $getMenu = NavbarMenu::all();
         return view('frontend.about.ceo-climp',compact('getBanner','getItem', 'getHomeContent', 'getMenu'));
+    }
+
+    public function Baccounting(){
+        $getBanner = Banner::all();
+        $getMenu = NavbarMenu::all();
+        $getItem = BAccounting::firstOrFail();
+        $getHomeContent = HomeContent::all();
+        return view('frontend.about.4b', compact('getMenu', 'getBanner', 'getItem', 'getHomeContent'));
     }
 }

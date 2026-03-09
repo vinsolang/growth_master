@@ -25,8 +25,7 @@
                         <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="{{ route('membership')}}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_2 }}</a>
-                            <a href="{{ route('approach') }}"
-                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_3 }}</a>
+                            
                             <a href="{{ route('review') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_4 }}</a>
                             <a href="{{ route('exclusive.peer.groups') }}" class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_5 }}</a>
@@ -75,8 +74,12 @@
                         <div class="bg-[#D82129] text-white mt-10 text-[14px]">
                             <a href="{{ route('about') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_13 }}</a>
+                            <a href="{{ route('approach') }}"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_3 }}</a>
                             <a href="{{ route('Laws.of.eadership') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_14 }}</a>
+                            <a href="{{ route('accounting') }}"
+                                class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_20 }}</a>
                             <a href="{{ route('ceo.climp') }}"
                                 class="block px-4 py-2 hover:text-[#003F5F] hover:bg-[#c3d1d9]">{{ $getMenu[0]->menu_15 }}</a>
                         </div>

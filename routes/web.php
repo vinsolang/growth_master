@@ -7,10 +7,12 @@ use App\Http\Controllers\backend\AboutUsController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\ApplyToBeController;
 use App\Http\Controllers\backend\AppraochContentController;
+use App\Http\Controllers\backend\BAccountingController;
 use App\Http\Controllers\backend\BannerController;
 use App\Http\Controllers\backend\CEOClimbController;
 use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
+use App\Http\Controllers\backend\EventTypeController;
 use App\Http\Controllers\backend\FAQsController;
 use App\Http\Controllers\backend\HelpSectionController;
 use App\Http\Controllers\backend\HomeCardController;
@@ -83,7 +85,7 @@ Route::get('membership/cac-members-reviews', [ClientController::class, 'growthRe
 Route::get('membership/member-application', [ClientController::class, 'membershipApplication'])->name('application');
 Route::get('membership/exclusive-cfo-group', [ClientController::class, 'ExclusivePeerGroups'])->name('exclusive.peer.groups');
 Route::get('per-to-per', function(){
-     $getBanner = Banner::all();
+    $getBanner = Banner::all();
     return view('frontend.sitemap.per-to-per-matoring', compact('getBanner'));
 })->name('per.to.per');
 
@@ -150,6 +152,11 @@ Route::delete('/chair-contact/{id}', [ChairContactController::class, 'destroy'])
 
 // Event
 Route::get('events', [ClientController::class, 'events'])->name('events');
+Route::get('events/details/{slug}', [ClientController::class, 'eventsDetails'])->name('events.details');
+
+
+
+
 Route::get('ceo-climb-events', [ClientController::class, 'ceoClimbEvents'])->name('ceo.climb.events');
 Route::get('research-center/webinar', [ClientController::class, 'researchCenterWebinar'])->name('research.center.webinar');
 // Growth Master Chair
@@ -163,6 +170,7 @@ Route::get('about-cac/what-is-cac', [AboutGrowthControll::class, 'aboutGrowth'])
 Route::get('about-cac', [AboutGrowthControll::class, 'whatIsGrowthMaster'])->name('what.is.growth');
 Route::get('about-cac/mstem-laws-of-career-success-factors', [AboutGrowthControll::class, 'leaderShip'])->name('Laws.of.eadership');
 Route::get('about-cac/the-leader-stairs', [AboutGrowthControll::class, 'CeoClimp'])->name('ceo.climp');
+Route::get('about-cac/4bs-of-accountants', [AboutGrowthControll::class, 'Baccounting'])->name('accounting');
 
 // sitemap
 Route::get('sitemap', [ClientController::class, 'sitemap'])->name('sitemap');
@@ -259,6 +267,10 @@ Route::middleware(['auth'])->group(function(){
     Route::get('leaderships/page', [LeadershipController::class, 'leaderships'])->name('leaderships.admin');
     Route::post('leaderships/add/page', [LeadershipController::class, 'SubmitLeaderships'])->name('submit.leaderships');
 
+     // 4B Accounting
+    Route::get('about/account/page', [BAccountingController::class, 'BAccouting'])->name('accounting.admin');
+    Route::post('about/account/add/', [BAccountingController::class, 'SubmitBAccount'])->name('submit.accounting.admin');
+
     // c_e_o_climbs
     Route::get('c_e_o_climbs/page', [CEOClimbController::class, 'c_e_o_climbs'])->name('c_e_o_climbs');
     Route::post('c_e_o_climbs/add/page', [CEOClimbController::class, 'Submitc_e_o_climbs'])->name('submit.c_e_o_climbs');
@@ -286,4 +298,8 @@ Route::middleware(['auth'])->group(function(){
     
     // Program block content
     Route::resource('job-guaranteed-program', ProgramGuaranteedController::class);
+
+    Route::get('/admin/events', [EventTypeController::class, 'index'])->name('events.index');
+    Route::post('/admin/events/update', [EventTypeController::class, 'update'])->name('events.update');
+
 });

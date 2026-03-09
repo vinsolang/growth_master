@@ -45,7 +45,7 @@
 
                                 <!-- Menu 1 -->
                                 <div class="col-md-6 mb-4 border border-green-400 p-2">
-                                    <h4>Menu 1</h4>
+                                    
                                     <label class="form-label text-[#0F4634]">Main Menu</label>
                                     <input class="form-control mb-3" type="text" name="menu_1" value="<?php echo e($menu->menu_1); ?>"
                                         placeholder="menu" />
@@ -65,7 +65,7 @@
 
                                 <!-- Menu 2 -->
                                 <div class="col-md-6 mb-4 border border-green-400 p-2">
-                                    <h4>Menu 2</h4>
+                                    
                                     <label class="form-label text-[#0F4634]">Main Menu</label>
                                     <input class="form-control mb-3" type="text" name="menu_7" value="<?php echo e($menu->menu_7); ?>"
                                         placeholder="menu" />
@@ -81,21 +81,24 @@
 
                                 <!-- Menu 3 -->
                                 <div class="col-md-6 mb-4 border border-green-400 p-2">
-                                    <h4>Menu 3</h4>
+                                    
                                     <label class="form-label text-[#0F4634]">Main Menu</label>
-                                    <input class="form-control" type="text" name="menu_11" value="<?php echo e($menu->menu_11); ?>"
+                                    <input class="form-control mb-3" type="text" name="menu_11" value="<?php echo e($menu->menu_11); ?>"
                                         placeholder="menu" />
+                                    
                                 </div>
 
                                 <!-- Menu 4 -->
                                 <div class="col-md-6 mb-4 border border-green-400 p-2">
-                                    <h4>Menu 4</h4>
+                                    
                                     <label class="form-label text-[#0F4634]">Main Menu</label>
                                     <input class="form-control mb-3" type="text" name="menu_12" value="<?php echo e($menu->menu_12); ?>"
                                         placeholder="menu" />
 
                                     <label class="form-label text-[#0F4634]">Menu dropdown</label>
                                     <input class="form-control mb-2" type="text" name="menu_13" value="<?php echo e($menu->menu_13); ?>"
+                                        placeholder="menu" />
+                                    <input class="form-control mb-2" type="text" name="menu_20" value="<?php echo e($menu->menu_20); ?>"
                                         placeholder="menu" />
                                     <input class="form-control mb-2" type="text" name="menu_14" value="<?php echo e($menu->menu_14); ?>"
                                         placeholder="menu" />
@@ -105,7 +108,7 @@
 
                                 <!-- Menu 5 -->
                                 <div class="col-md-6 mb-4 border border-green-400 p-2">
-                                    <h4>Menu 5</h4>
+                                    
                                     <label class="form-label text-[#0F4634]">Main Menu</label>
                                     <input class="form-control mb-3" type="text" name="menu_16" value="<?php echo e($menu->menu_16); ?>"
                                         placeholder="menu" />
@@ -134,10 +137,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
     <script>
         ClassicEditor

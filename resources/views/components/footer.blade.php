@@ -33,6 +33,7 @@
                     <li><a href="{{ route('ceo.climp') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_15 }}</a></li>
                     <li><a href="{{ route('chair.growth') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_17 }}</a></li>
                     <li><a href="{{ route('ceo.coa.qual') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_18 }}</a></li>
+                    <li><a href="{{ route('accounting') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_20 }}</a></li>
                     {{-- <li><a href="{{ route('chair.application') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_19 }}</a></li> --}}
                 </ul>
             </div>
@@ -41,6 +42,11 @@
                 <h2 class="text-yellow-200 italic text-sm font-semibold">Apply for CAC:</h2>
                 <ul class="space-y-2 text-sm">
                      <li><a href="{{ route('form.input') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_6 }}</a></li>
+                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Chair</a></li>
+                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Speaker</a></li>
+                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Licensee</a></li>
+                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Sponsor</a></li>
+                     <li><a href="" class="hover:text-yellow-200 transition-colors">Referral Program</a></li>
                      <li><a href="{{ route('chair.application') }}" class="hover:text-yellow-200 transition-colors">{{ $getMenu[0]->menu_19 }}</a></li>
                 </ul>
             </div>

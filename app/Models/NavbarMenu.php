@@ -27,5 +27,6 @@ class NavbarMenu extends Model
             'menu_17',
             'menu_18',
             'menu_19',
+            'menu_20',
     ];
 }

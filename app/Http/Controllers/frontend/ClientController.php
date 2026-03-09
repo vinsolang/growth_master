@@ -7,6 +7,7 @@ use App\Models\ApplyToBe;
 use App\Models\ApproachContent;
 use App\Models\Banner;
 use App\Models\Events;
+use App\Models\EventType;
 use App\Models\FAQs;
 use App\Models\HelpSection;
 use App\Models\HomeContent;
@@ -23,6 +24,7 @@ use App\Models\ReviewPageContent;
 use App\Models\WhyJoinGrowthMaster;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class ClientController extends Controller
 {
@@ -71,12 +73,29 @@ class ClientController extends Controller
 
     //  Event
      public function events(){
-        $showEvents = Events::all();
+        $getEventsex = EventType::all();
+       $showEvents = Events::orderBy('created_at', 'desc')->get()
+        ->groupBy(function ($item) {
+            return Carbon::parse($item->created_at)->format('F Y');
+        });
         $getBanner = Banner::all();
         $getMenu = NavbarMenu::all();
-        return view('frontend.events.event', compact('showEvents', 'getBanner', 'getMenu'));
+        return view('frontend.events.event', compact('showEvents', 'getBanner', 'getMenu', 'getEventsex'));
 
     }
+
+    public function eventsDetails($slug){
+        $getBanner = Banner::all();
+        $getMenu = NavbarMenu::all();
+        $getHomeContent = HomeContent::all();
+         $showEventsdetails = Events::where('slug', $slug)->firstOrFail();
+        //  $showEventsdetails = Events::orderBy('created_at', 'desc')->get();
+        return view('frontend.events.event-details', compact('getBanner', 'getMenu', 'getHomeContent', 'showEventsdetails'));
+    } 
+
+
+
+
     public function ceoClimbEvents(){
         $getBanner = Banner::all();
          $getMenu = NavbarMenu::all();

@@ -42,7 +42,7 @@
                             <p class="text-danger text-center">{{ Session::get('message') }}</p>
                         @endif
                         <div class="card-body">
-
+                            {{-- Event Show block --}}
                             <div class="row">
                                 <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">title</label>
@@ -59,17 +59,17 @@
                                     <textarea name="description" class="form-control" id=""></textarea>
                                 </div>
                 
-                                <div class="mb-3 col-12 d-none">
+                                <div class="mb-3 col-12">
                                     <label for="formFile" class="form-label text-[#0F4634]">Event Time</label>
                                     <input type="text" name="event_time" class="form-control">
                                 </div>
 
-                                <div class="mb-3 col-12 d-none">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Event Type</label>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Location of Event</label>
                                      <input class="form-control" type="text" name="event_type" />
                                 </div>
                                 <div class="mb-3 col-12">
-                                    <label for="formFile" class="form-label text-[#0F4634]">Link Of Event</label>
+                                    <label for="formFile" class="form-label text-[#0F4634] hidden">Link Of Event</label>
                                      <input class="form-control" type="text" name="link" placeholder="https://example.com"/>
                                 </div>
                                 <div class="mb-3 col-12">
@@ -82,8 +82,8 @@
 
                                     <div class="flex justify-between items-center">
                                         <label class="uploader flex flex-col items-center justify-center w-[400px] h-[300px]
-                       border-2 border-dashed border-[#0F4634]/40 cursor-pointer bg-[#F9FAFB] hover:bg-[#F3F4F6]
-                       transition relative overflow-hidden">
+                                            border-2 border-dashed border-[#0F4634]/40 cursor-pointer bg-[#F9FAFB] hover:bg-[#F3F4F6]
+                                            transition relative overflow-hidden">
 
                                             <!-- Preview (empty for add) -->
                                             <img class="preview-image hidden absolute inset-0 m-auto w-[350px] h-[200px] object-cover"
@@ -114,15 +114,227 @@
 
 
                             </div>
-                            <div class="flex gap-3">
-                                <a href="{{ route('event.index') }}"
-                                    class="px-6 py-3 border-2 border-[#0F4634] text-[#0F4634] font-semibold rounded-xl hover:bg-[#0F4634] hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200">
-                                    Cancel
-                                </a>
-                                <input type="submit"
-                                    class="px-6 py-3 border-2 border-[#0F4634] text-[#0F4634] font-semibold rounded-xl hover:bg-[#0F4634] hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200"
-                                    value="Submit">
+                            
+                            {{-- Event Show Details --}}
+                            <h1 class="text-2xl">Event Details</h1>
+                            <div class="row border border-[#0F4634]">
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634] text-xl">title</label>
+                                    <input class="form-control" type="text" name="title_overview" />
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Description</label>
+                                    <textarea name="description_overview" class="form-control" id="description_overview"></textarea>
+                                </div>
+
+                                <div class="mb-3 col-12">
+                                    <label for="formFile" class="form-label text-[#0F4634]">Background Image</label>
+                                    <div class="mb-3 col-12">
+                                        <div class="mb-2">
+                                            <img id="previewimg_details"
+                                                src="{{ isset($qualifications->img_details) ? asset($qualifications->img_details) : '' }}"
+                                                width="150"
+                                                class="rounded border"
+                                                style="display: {{ isset($qualifications->img_details) ? 'block' : 'none' }};">
+                                        </div>
+
+                                        <input class="form-control"
+                                            type="file"
+                                            name="img_details"
+                                            id="img_details"
+                                            accept="image/*">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Row 1 -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="content_card_1" class="form-label text-[#0F4634]">Content 1</label>
+                                        <textarea name="content_card_1" class="form-control" id="content_card_1"></textarea>
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="content_card_2" class="form-label text-[#0F4634]">Content 2</label>
+                                        <textarea name="content_card_2" class="form-control" id="content_card_2"></textarea>
+                                    </div>
+
+                                    <!-- Row 2 -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="content_card_3" class="form-label text-[#0F4634]">Content 3</label>
+                                        <textarea name="content_card_3" class="form-control" id="content_card_3"></textarea>
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="content_card_4" class="form-label text-[#0F4634]">Content 4</label>
+                                        <textarea name="content_card_4" class="form-control" id="content_card_4"></textarea>
+                                    </div>
+                                </div>
+
+                               <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634]">Images (Max 3)</label>
+
+                                    <div class="d-flex flex-row flex-wrap" id="preview_container">
+                                        {{-- Existing images --}}
+                                        @if(isset($qualifications->img_limit_3) && is_array($qualifications->img_limit_3))
+                                            @foreach($qualifications->img_limit_3 as $index => $img)
+                                                <div class="position-relative me-2 mb-2" style="width:150px;">
+                                                    <img src="{{ asset($img) }}" class="rounded border w-100">
+                                                    <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0 remove-img-btn">&times;</button>
+                                                    <input type="hidden" name="existing_img_limit_3[]" value="{{ $img }}">
+                                                </div>
+                                            @endforeach
+                                        @elseif(isset($qualifications->img_limit_3))
+                                            <div class="position-relative me-2 mb-2" style="width:150px;">
+                                                <img src="{{ asset($qualifications->img_limit_3) }}" class="rounded border w-100">
+                                                <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0 remove-img-btn">&times;</button>
+                                                <input type="hidden" name="existing_img_limit_3[]" value="{{ $qualifications->img_limit_3 }}">
+                                            </div>
+                                        @endif
+                                    </div>
+
+                                    <input class="form-control mt-2"
+                                        type="file"
+                                        name="img_limit_3[]"
+                                        id="img_limit_3"
+                                        accept="image/*"
+                                        multiple>
+                                </div>
+
+                                <div class="mb-3 col-md-12">
+                                    <label for="desc_overview" class="form-label text-[#0F4634]">Description Overview</label>
+                                    <textarea name="desc_overview" class="form-control" id="desc_overview"></textarea>
+                                </div>
                             </div>
+
+                            <div class="row border border-[#0F4634]">
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634] text-xl">Title</label>
+                                    <input type="text" name="title_details" class="form-control" />
+                                </div>
+                                <div class="mb-3">
+                                    <div id="details_container">
+                                        <!-- Initial template -->
+                                        <div class="row border border-[#0F4634] p-3 mb-3 detail-item">
+                                            <div class="mb-3 col-12">
+                                                <label class="form-label text-[#0F4634]">Name</label>
+                                                <input type="text" name="name_details[]" class="form-control" />
+                                            </div>
+                                            <div class="mb-3 col-12">
+                                                <label class="form-label text-[#0F4634]">Description</label>
+                                                <textarea name="position_details[]" class="form-control" ></textarea>
+                                            </div>
+                                            <div class="mb-3 col-12">
+                                                <label class="form-label text-[#0F4634]">Bio / Description</label>
+                                                <textarea name="bio_details[]" class="form-control"></textarea>
+                                            </div>
+
+                                            <!-- Profile Image -->
+                                            <div class="mb-3 col-12">
+                                                <label class="form-label text-[#0F4634]">Profile Image</label>
+                                                <div class="mb-2">
+                                                    <img class="preview-img rounded border" width="150" style="display:none;">
+                                                </div>
+                                                <input type="file" name="profile_image[]" class="form-control profile-img-input" accept="image/*">
+                                            </div>
+
+                                            <button type="button" class="btn btn-danger remove-detail-btn w-32">Remove</button>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" id="add_detail_btn" class="bg-green-700 text-white px-6 py-2 rounded">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div class="row border border-[#0F4634] p-4">
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634] text-xl">Title</label>
+                                    <input type="text" name="title_agenda" class="form-control" />
+                                </div>
+                                <div id="event-wrapper">
+                                    <!-- Dynamic items will show here -->
+                                </div>
+
+                                <!-- Add Button -->
+                                <div class="mt-3">
+                                    <button type="button" onclick="addEvent()" 
+                                        class="bg-green-700 text-white px-4 py-2 rounded">
+                                        + Add
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row border border-[#0F4634] p-4">
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634] text-xl">Title</label>
+                                    <input type="text" name="title_breakout" class="form-control" />
+                                </div>
+                                <div id="breakout-wrapper"></div>
+
+                                <div class="mt-3">
+                                    <button type="button" onclick="addBreakout()" 
+                                        class="bg-green-700 text-white px-4 py-2 rounded">
+                                        + Add
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            
+                            <div class="row border border-[#0F4634] p-4">
+
+                                <!-- Title -->
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634] text-xl">Title</label>
+                                    <input type="text" name="title_sponsor" class="form-control" />
+                                </div>
+
+                                <!-- Upload -->
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634]">Sponsor Logos</label>
+                                    <input type="file"
+                                        id="sponsorInput"
+                                        name="sponsor_logos[]"
+                                        class="form-control"
+                                        multiple
+                                        accept="image/*"
+                                        onchange="previewSponsors(event)">
+                                </div>
+
+                                <!-- Preview -->
+                                <div id="sponsor-preview" 
+                                    class="d-flex flex-wrap gap-3 mt-3">
+                                </div>
+
+                            </div>
+
+                            <div class="row border border-[#0F4634] p-4">
+
+                                <!-- Title -->
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634] text-xl">Title</label>
+                                    <input type="text" name="title_location" class="form-control" />
+                                </div>
+
+                                <div class="mb-3 col-12">
+                                    <label class="form-label text-[#0F4634]">Link Of Location</label>
+                                    <input type="text" name="location_link" class="form-control" />
+                                </div>
+
+
+                            </div>
+
+                            
+                        </div>
+
+
+                        <div class="flex gap-3">
+                            <a href="{{ route('event.index') }}"
+                                class="px-6 py-3 border-2 border-[#0F4634] text-[#0F4634] font-semibold rounded-xl hover:bg-[#0F4634] hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200">
+                                Cancel
+                            </a>
+                            <input type="submit"
+                                class="px-6 py-3 border-2 border-[#0F4634] text-[#0F4634] font-semibold rounded-xl hover:bg-[#0F4634] hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200"
+                                value="Submit">
                         </div>
                     </div>
                 </form>
@@ -130,8 +342,40 @@
             </div>
         </div>
     </div>
+ <script>
+    ClassicEditor
+        .create(document.querySelector('#description_details'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#content_card_1'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#content_card_2'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#content_card_3'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#content_card_4'))
+        .catch(error => {
+            console.error(error);
+        });
+     ClassicEditor
+        .create(document.querySelector('#desc_overview'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
-@endsection
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -197,3 +441,302 @@
   });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('img_details');
+    const preview = document.getElementById('previewimg_details');
+
+    input.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+
+        if (file) {
+            preview.src = URL.createObjectURL(file);
+            preview.style.display = 'block';
+        } else {
+            // fallback to existing image
+            @if(isset($qualifications->img_details))
+                preview.style.display = 'block';
+            @else
+                preview.style.display = 'none';
+            @endif
+        }
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('img_limit_3');
+    const container = document.getElementById('preview_container');
+
+    // Handle new uploads
+    input.addEventListener('change', function(e){
+        const files = Array.from(e.target.files).slice(0,3); // max 3
+        container.innerHTML = ''; // clear previous previews
+
+        files.forEach((file, i) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'position-relative me-2 mb-2';
+            wrapper.style.width = '150px';
+
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            img.className = 'rounded border w-100';
+            wrapper.appendChild(img);
+
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'btn btn-sm btn-danger position-absolute top-0 end-0 remove-img-btn';
+            btn.innerHTML = '&times;';
+            btn.addEventListener('click', () => {
+                wrapper.remove();
+                updateFileInput();
+            });
+            wrapper.appendChild(btn);
+
+            container.appendChild(wrapper);
+        });
+    });
+
+    // Remove existing image
+    container.addEventListener('click', function(e){
+        if(e.target.classList.contains('remove-img-btn')){
+            e.target.parentElement.remove();
+        }
+    });
+
+    // Optional: update file input if needed (advanced)
+    function updateFileInput(){
+        // You can rebuild DataTransfer if you want input.files to match previews
+        // This is optional, server will still get newly uploaded files from input
+    }
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    const container = document.getElementById('details_container');
+    const addBtn = document.getElementById('add_detail_btn');
+
+    function updateRemoveButtons() {
+        const items = container.querySelectorAll('.detail-item');
+        items.forEach((item, index) => {
+            const btn = item.querySelector('.remove-detail-btn');
+            if(items.length <= 1){
+                btn.style.display = 'none';
+            } else {
+                btn.style.display = 'inline-block';
+            }
+        });
+    }
+
+    // Initial check
+    updateRemoveButtons();
+
+    // Add new detail section
+    addBtn.addEventListener('click', function() {
+        const clone = container.querySelector('.detail-item').cloneNode(true);
+        clone.querySelectorAll('input, textarea').forEach(input => input.value = '');
+        clone.querySelectorAll('.preview-img').forEach(img => img.style.display = 'none');
+        container.appendChild(clone);
+        updateRemoveButtons();
+    });
+
+    // Remove detail section
+    container.addEventListener('click', function(e) {
+        if(e.target.classList.contains('remove-detail-btn')){
+            e.target.closest('.detail-item').remove();
+            updateRemoveButtons();
+        }
+    });
+
+    // Profile image preview
+    container.addEventListener('change', function(e){
+        if(e.target.classList.contains('profile-img-input')){
+            const file = e.target.files[0];
+            const preview = e.target.closest('.detail-item').querySelector('.preview-img');
+            if(file){
+                preview.src = URL.createObjectURL(file);
+                preview.style.display = 'block';
+            } else {
+                preview.style.display = 'none';
+            }
+        }
+    });
+});
+</script>
+
+<script>
+    function addEvent() {
+        let wrapper = document.getElementById('event-wrapper');
+
+        let index = wrapper.children.length;
+
+        let html = `
+            <div class="row mb-3 border p-3 rounded relative">
+                
+                <div class="col-md-5">
+                    <label>Event</label>
+                    <input type="text" name="agenda_items[${index}][title]" 
+                        class="form-control" placeholder="Enter Event">
+                </div>
+
+                <div class="col-md-5">
+                    <label>Time</label>
+                    <input type="text" name="agenda_items[${index}][date]" 
+                        class="form-control">
+                </div>
+
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="button" onclick="this.parentElement.parentElement.remove()" 
+                        class="btn btn-danger w-100">
+                        Remove
+                    </button>
+                </div>
+
+            </div>
+        `;
+
+        wrapper.insertAdjacentHTML('beforeend', html);
+    }
+</script>
+
+
+<script>
+    let breakoutIndex = 0;
+
+    function addBreakout() {
+        let wrapper = document.getElementById('breakout-wrapper');
+
+        let html = `
+            <div class="border p-4 mb-4 rounded position-relative">
+
+                <div class="mb-3">
+                    <label class="form-label text-[#0F4634]">Time</label>
+                    <input type="text" name="breakout_items[${breakoutIndex}][date]" 
+                        class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-[#0F4634]">Profile Image</label>
+                    <input type="file" 
+                        name="breakout_items[${breakoutIndex}][profile]" 
+                        class="form-control"
+                        onchange="previewImage(event, ${breakoutIndex})" />
+
+                    <img id="preview_${breakoutIndex}" 
+                        class="mt-2 rounded border" 
+                        width="120" 
+                        style="display:none;">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-[#0F4634]">Description</label>
+                    <textarea 
+                        name="breakout_items[${breakoutIndex}][description]" 
+                        id="description_breakout_${breakoutIndex}" 
+                        class="form-control"></textarea>
+                </div>
+
+                <button type="button" 
+                    onclick="this.parentElement.remove()" 
+                    class="btn btn-danger">
+                    Remove
+                </button>
+
+            </div>
+        `;
+
+        wrapper.insertAdjacentHTML('beforeend', html);
+
+        // Initialize CKEditor
+        ClassicEditor
+            .create(document.querySelector('#description_breakout_' + breakoutIndex))
+            .catch(error => {
+                console.error(error);
+            });
+
+        breakoutIndex++;
+    }
+
+    function previewImage(event, index) {
+        let reader = new FileReader();
+        reader.onload = function() {
+            let output = document.getElementById('preview_' + index);
+            output.src = reader.result;
+            output.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+<script>
+let selectedFiles = [];
+
+function previewSponsors(event) {
+    const previewContainer = document.getElementById('sponsor-preview');
+    const input = document.getElementById('sponsorInput');
+
+    selectedFiles = Array.from(event.target.files);
+    previewContainer.innerHTML = '';
+
+    selectedFiles.forEach((file, index) => {
+
+        let reader = new FileReader();
+
+        reader.onload = function(e) {
+
+            let wrapper = document.createElement('div');
+            wrapper.style.position = 'relative';
+
+            let img = document.createElement('img');
+            img.src = e.target.result;
+            img.style.width = '120px';
+            img.style.height = '120px';
+            img.style.objectFit = 'contain';
+            img.classList.add('border', 'rounded', 'p-2');
+
+            // Close button
+            let closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '×';
+            closeBtn.type = 'button';
+            closeBtn.style.position = 'absolute';
+            closeBtn.style.top = '0';
+            closeBtn.style.right = '0';
+            closeBtn.style.background = 'red';
+            closeBtn.style.color = 'white';
+            closeBtn.style.border = 'none';
+            closeBtn.style.borderRadius = '50%';
+            closeBtn.style.width = '24px';
+            closeBtn.style.height = '24px';
+            closeBtn.style.cursor = 'pointer';
+
+            closeBtn.onclick = function() {
+                removeImage(index);
+            };
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(closeBtn);
+            previewContainer.appendChild(wrapper);
+        };
+
+        reader.readAsDataURL(file);
+    });
+}
+
+function removeImage(index) {
+    selectedFiles.splice(index, 1);
+
+    const dataTransfer = new DataTransfer();
+    selectedFiles.forEach(file => dataTransfer.items.add(file));
+
+    const input = document.getElementById('sponsorInput');
+    input.files = dataTransfer.files;
+
+    // Refresh preview
+    previewSponsors({ target: input });
+}
+</script>
+@endsection

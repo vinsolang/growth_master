@@ -33,6 +33,7 @@ class NavbarMenuController extends Controller
         'menu_17' => 'nullable|string|max:255',
         'menu_18' => 'nullable|string|max:255',
         'menu_19' => 'nullable|string|max:255',
+        'menu_20' => 'nullable|string|max:255',
     ]);
 
          // Get existing record or create once
@@ -62,6 +63,7 @@ class NavbarMenuController extends Controller
             'menu_17',
             'menu_18',
             'menu_19',
+            'menu_20',
         ]));
 
         $menu->save();

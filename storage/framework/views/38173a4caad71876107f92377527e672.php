@@ -59,55 +59,58 @@
                 </p>
             </div>
             
-            <div class="lg:ml-28">
-                  <?php
-                        $cards = [
-                            [
-                                'image' => asset($getCotentPage[0]->img_card_1),
-                                'text'  => $getCotentPage[0]->desc_card_1,
-                                'title' => $getCotentPage[0]->title_card_1,
-                            ],
-                            [
-                                'image' => asset($getCotentPage[0]->img_card_2),
-                                'text'  => $getCotentPage[0]->desc_card_2,
-                                'title' => $getCotentPage[0]->title_card_2,
-                            ],
+           <div class="lg:ml-28">
+
+            <?php
+                // Make sure $getCotentPage is a single model, not a collection
+                $page = $getCotentPage[0] ?? null;
+                $cards = [];
+
+                if ($page && !empty($page->title_card)) {
+                    foreach ($page->title_card as $i => $title) {
+                        $cards[] = [
+                            'title' => $title,
+                            'text'  => $page->desc_card[$i] ?? '',
+                            'image' => isset($page->img_card[$i]) ? asset($page->img_card[$i]) : '',
                         ];
-                    ?>
-                <div class="flex flex-col space-y-7">
-                    <?php $__currentLoopData = $cards; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $card): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    }
+                }
+            ?>
 
-                        <div
-                            class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] md:h-[700px]">
+            <div class="flex flex-col space-y-7">
+                <?php $__currentLoopData = $cards; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $card): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                            
-                            <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
-                                                <?php echo e($index % 2 == 0 ? 'lg:order-1' : 'lg:order-2'); ?>
+                    <div class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] md:h-[700px]">
 
-                                            ">
-                                <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
-                                    <?php echo e($card['title']); ?>
+                        
+                        <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
+                                    <?php echo e($index % 2 == 0 ? 'lg:order-1' : 'lg:order-2'); ?>">
+                            <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
+                                <?php echo e($card['title']); ?>
 
-                                </h1>
-                                <p class="text-left text-blue-900 md:text-xl text-[14px] px-4 md:px-12">
-                                     <?php echo nl2br(e($card['text'])); ?>
+                            </h1>
+                            <p class="text-left text-blue-900 md:text-xl text-[14px] px-4 md:px-12">
+                                <?php echo nl2br(e($card['text'])); ?>
 
-                                </p>
-                            </div>
-                            
-                            <div class="lg:w-1/2 w-full lg:h-[90%] order-1 lg:py-4
-                                                <?php echo e($index % 2 == 0 ? 'lg:order-2' : 'lg:order-1'); ?>
-
-                                            ">
-                                <img src="<?php echo e($card['image']); ?>" class="w-full h-full object-cover">
-                            </div>
-
+                            </p>
                         </div>
 
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </div>
-            </div>
+                        
+                        <div class="lg:w-1/2 w-full lg:h-[90%] order-1 lg:py-4
+                                    <?php echo e($index % 2 == 0 ? 'lg:order-2' : 'lg:order-1'); ?>">
+                            <?php if(!empty($card['image'])): ?>
+                                <img src="<?php echo e($card['image']); ?>" class="w-full h-full object-cover">
+                            <?php endif; ?>
+                        </div>
 
+                    </div>
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+        </div>
+
+
+        
             
             
 

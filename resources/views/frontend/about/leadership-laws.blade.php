@@ -71,51 +71,56 @@
                 </p>
             </div>
             {{-- Block Image for poster --}}
-            <div class="lg:ml-28">
-                  @php
-                        $cards = [
-                            [
-                                'image' => asset($getCotentPage[0]->img_card_1),
-                                'text'  => $getCotentPage[0]->desc_card_1,
-                                'title' => $getCotentPage[0]->title_card_1,
-                            ],
-                            [
-                                'image' => asset($getCotentPage[0]->img_card_2),
-                                'text'  => $getCotentPage[0]->desc_card_2,
-                                'title' => $getCotentPage[0]->title_card_2,
-                            ],
+           <div class="lg:ml-28">
+
+            @php
+                // Make sure $getCotentPage is a single model, not a collection
+                $page = $getCotentPage[0] ?? null;
+                $cards = [];
+
+                if ($page && !empty($page->title_card)) {
+                    foreach ($page->title_card as $i => $title) {
+                        $cards[] = [
+                            'title' => $title,
+                            'text'  => $page->desc_card[$i] ?? '',
+                            'image' => isset($page->img_card[$i]) ? asset($page->img_card[$i]) : '',
                         ];
-                    @endphp
-                <div class="flex flex-col space-y-7">
-                    @foreach($cards as $index => $card)
+                    }
+                }
+            @endphp
 
-                        <div
-                            class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] md:h-[700px]">
+            <div class="flex flex-col space-y-7">
+                @foreach($cards as $index => $card)
 
-                            {{-- TEXT --}}
-                            <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
-                                                {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}
-                                            ">
-                                <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
-                                    {{ $card['title'] }}
-                                </h1>
-                                <p class="text-left text-blue-900 md:text-xl text-[14px] px-4 md:px-12">
-                                     {!! nl2br(e($card['text'])) !!}
-                                </p>
-                            </div>
-                            {{-- IMAGE --}}
-                            <div class="lg:w-1/2 w-full lg:h-[90%] order-1 lg:py-4
-                                                {{ $index % 2 == 0 ? 'lg:order-2' : 'lg:order-1' }}
-                                            ">
-                                <img src="{{ $card['image'] }}" class="w-full h-full object-cover">
-                            </div>
+                    <div class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] md:h-[700px]">
 
+                        {{-- TEXT --}}
+                        <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
+                                    {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}">
+                            <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
+                                {{ $card['title'] }}
+                            </h1>
+                            <p class="text-left text-blue-900 md:text-xl text-[14px] px-4 md:px-12">
+                                {!! nl2br(e($card['text'])) !!}
+                            </p>
                         </div>
 
-                    @endforeach
-                </div>
-            </div>
+                        {{-- IMAGE --}}
+                        <div class="lg:w-1/2 w-full lg:h-[90%] order-1 lg:py-4
+                                    {{ $index % 2 == 0 ? 'lg:order-2' : 'lg:order-1' }}">
+                            @if(!empty($card['image']))
+                                <img src="{{ $card['image'] }}" class="w-full h-full object-cover">
+                            @endif
+                        </div>
 
+                    </div>
+
+                @endforeach
+            </div>
+        </div>
+
+
+        
             {{-- Powers performance --}}
             {{-- <div class="space-y-10">
                 <h1
