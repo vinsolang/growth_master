@@ -92,10 +92,10 @@
             <div class="flex flex-col space-y-7">
                 @foreach($cards as $index => $card)
 
-                    <div class="flex flex-col lg:flex-row justify-center items-center lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] md:h-[700px]">
+                    <div class="flex flex-col lg:flex-row justify-start items-start lg:space-y-0 space-y-8 bg-[#DBDBDB] w-full lg:w-[90%] h-auto p-4">
 
                         {{-- TEXT --}}
-                        <div class="flex flex-col justify-center items-start lg:w-1/2 w-full lg:h-[480px] order-2 space-y-10 md:py-0 py-4
+                        <div class="flex flex-col justify-center items-start lg:w-1/2 w-full order-2 space-y-10 md:py-0 py-4
                                     {{ $index % 2 == 0 ? 'lg:order-1' : 'lg:order-2' }}">
                             <h1 class="text-blue-900 lg:text-5xl text-2xl font-semibold text-left px-4 md:px-12">
                                 {{ $card['title'] }}
@@ -120,7 +120,7 @@
         </div>
 
 
-        
+
             {{-- Powers performance --}}
             {{-- <div class="space-y-10">
                 <h1

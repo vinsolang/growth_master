@@ -211,7 +211,7 @@
                 <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_3); ?></a></li>
                 <li><a href="<?php echo e(route('Laws.of.eadership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_14); ?></a>
                 </li>
-                <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_20); ?></a>
+                <li><a href="<?php echo e(route('accounting')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_20); ?></a>
                 <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_15); ?></a>
                 </li>
             </ul>
