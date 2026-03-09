@@ -159,7 +159,7 @@
 
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="<?php echo e(route('membership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_2); ?></a></li>
-                <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_3); ?></a></li>
+               
                 
                 <li><a href="<?php echo e(route('review')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_4); ?></a></li>
                 <li><a href="<?php echo e(route('exclusive.peer.groups')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_5); ?></a></li>
@@ -208,8 +208,10 @@
 
             <ul id="mobileAbout" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="<?php echo e(route('about')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_13); ?></a></li>
+                <li><a href="<?php echo e(route('approach')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_3); ?></a></li>
                 <li><a href="<?php echo e(route('Laws.of.eadership')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_14); ?></a>
                 </li>
+                <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_20); ?></a>
                 <li><a href="<?php echo e(route('ceo.climp')); ?>" class="block hover:text-[#EDC11C]"><?php echo e($getMenu[0]->menu_15); ?></a>
                 </li>
             </ul>

@@ -152,7 +152,7 @@
 
             <ul id="mobileMembership" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="{{ route('membership')}}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_2 }}</a></li>
-                <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_3 }}</a></li>
+               
                 {{-- <li><a href="{{ route('program') }}" class="block hover:text-[#EDC11C]">Our Programs</a></li> --}}
                 <li><a href="{{ route('review') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_4 }}</a></li>
                 <li><a href="{{ route('exclusive.peer.groups') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_5 }}</a></li>
@@ -204,8 +204,10 @@
 
             <ul id="mobileAbout" class="hidden mt-3 ml-4 space-y-6 text-[15px] font-semibold">
                 <li><a href="{{ route('about') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_13 }}</a></li>
+                <li><a href="{{ route('approach') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_3 }}</a></li>
                 <li><a href="{{ route('Laws.of.eadership') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_14 }}</a>
                 </li>
+                <li><a href="{{ route('ceo.climp') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_20 }}</a>
                 <li><a href="{{ route('ceo.climp') }}" class="block hover:text-[#EDC11C]">{{ $getMenu[0]->menu_15 }}</a>
                 </li>
             </ul>
