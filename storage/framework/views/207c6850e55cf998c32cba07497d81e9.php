@@ -281,6 +281,36 @@
             </a>
           </li>
 
+           <!-- Layouts -->
+          <li class="menu-item">
+            <a href="<?php echo e(route('become.index')); ?>" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-group"></i>
+              <div data-i18n="Layouts">Speader</div>
+            </a>
+          </li>
+           <!-- Layouts -->
+          <li class="menu-item">
+            <a href="<?php echo e(route('licensee.index')); ?>" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-group"></i>
+              <div data-i18n="Layouts">License</div>
+            </a>
+          </li>
+            <!-- Layouts -->
+          <li class="menu-item">
+            <a href="<?php echo e(route('sponsors.index')); ?>" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-group"></i>
+              <div data-i18n="Layouts">Sponsor</div>
+            </a>
+          </li>
+
+           <li class="menu-item">
+            <a href="<?php echo e(route('referralprogram.index')); ?>" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-group"></i>
+              <div data-i18n="Layouts">Referral Program</div>
+            </a>
+          </li>
+
+
 
 
 

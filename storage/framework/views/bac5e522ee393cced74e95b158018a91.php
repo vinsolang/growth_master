@@ -42,11 +42,11 @@
                 <h2 class="text-yellow-200 italic text-sm font-semibold">Apply for CAC:</h2>
                 <ul class="space-y-2 text-sm">
                      <li><a href="<?php echo e(route('form.input')); ?>" class="hover:text-yellow-200 transition-colors"><?php echo e($getMenu[0]->menu_6); ?></a></li>
-                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Chair</a></li>
-                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Speaker</a></li>
-                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Licensee</a></li>
-                     <li><a href="" class="hover:text-yellow-200 transition-colors">Become a Sponsor</a></li>
-                     <li><a href="" class="hover:text-yellow-200 transition-colors">Referral Program</a></li>
+                     <li><a href="<?php echo e(route('chair.application')); ?>" class="hover:text-yellow-200 transition-colors">Become a Chair</a></li>
+                     <li><a href="<?php echo e(route('speaker')); ?>" class="hover:text-yellow-200 transition-colors">Become a Speaker</a></li>
+                     <li><a href="<?php echo e(route('licensee')); ?>" class="hover:text-yellow-200 transition-colors">Become a Licensee</a></li>
+                     <li><a href="<?php echo e(route('sponsor')); ?>" class="hover:text-yellow-200 transition-colors">Become a Sponsor</a></li>
+                     <li><a href="<?php echo e(route('referral-program')); ?>" class="hover:text-yellow-200 transition-colors">Referral Program</a></li>
                      <li><a href="<?php echo e(route('chair.application')); ?>" class="hover:text-yellow-200 transition-colors"><?php echo e($getMenu[0]->menu_19); ?></a></li>
                 </ul>
             </div>
@@ -66,6 +66,7 @@
                 <p class="font-bold text-sm">Tel: 015 55 44 41 / 012 401 909</p>
             </div>
         </div>
+
 
         
         <div class="flex space-x-4 mt-6">

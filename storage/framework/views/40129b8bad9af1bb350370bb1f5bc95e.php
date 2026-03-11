@@ -169,7 +169,8 @@
                                             <textarea name="sub_title_event" class="form-control" id="sub_title_event"
                                                 placeholder="Title of Event Card"><?php echo e($getSectionHome->sub_title_event); ?></textarea>
                                         </div>
-                                    <div class="mb-3 col-12">
+                                    <div class="hidden">
+                                        <div class="mb-3 col-12">
                                         <label for="formFile" class="form-label text-[#0F4634]">Event Card 1</label>
                                         <div class="mb-3 col-12">
                                             <input class="form-control" type="text" name="title_event_1"
@@ -250,6 +251,7 @@
                                             name="img_card_event_3"
                                             id="img_card_event_3"
                                             accept="image/*">
+                                    </div>
                                     </div>
                                 </div>
 

@@ -174,29 +174,29 @@
     <section class="max-w-7xl mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            @for ($i = 1; $i <= 3; $i++)
+            @foreach ($getEventsex as $items)
                 <div class="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="overflow-hidden">
                         <img
-                            src="{{ asset($getHomeContent[0]->{"img_card_event_$i"}) }}"
-                            alt="{{ $getHomeContent[0]->{"title_event_$i"} }}"
+                            src="{{ asset('storage/'.$items->image) }}"
+                            alt="{{ $getEventsex[0]->{"title_event_$i"} }}"
                             class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                     </div>
 
                     <div class="p-6">
                         <h3 class="mt-4 text-xl md:text-2xl font-bold text-blue-900 leading-snug">
-                            {{ $getHomeContent[0]->{"title_event_$i"} }}
+                            {{ $items->title }}
                         </h3>
                         <p class="text-gray-700 font-medium text-md md:text-lg mt-2">
-                            {!! nl2br(e($getHomeContent[0]->{"desc_card_event_$i"})) !!}
+                              {!! nl2br($items->description) !!}
                         </p>
                         <p class="mt-2 text-gray-400 text-sm">
-                            {{ $getHomeContent[0]->updated_at->format('d, M, Y') }}
+                            {{ $items->updated_at->format('d, M, Y') }}
                         </p>
                     </div>
                 </div>
-            @endfor
+             @endforeach
 
         </div>
     </section>

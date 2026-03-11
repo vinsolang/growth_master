@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\ApplyToBe;
 use App\Models\ApproachContent;
 use App\Models\Banner;
+use App\Models\BcomeSpeaker;
+use App\Models\CACLicensee;
+use App\Models\CACSponsor;
 use App\Models\Events;
 use App\Models\EventType;
 use App\Models\FAQs;
@@ -20,6 +23,7 @@ use App\Models\Program;
 use App\Models\ProgramContent;
 use App\Models\ProgramGuaranteed;
 use App\Models\ProgramJobText;
+use App\Models\ReferralProgram;
 use App\Models\ReviewPageContent;
 use App\Models\WhyJoinGrowthMaster;
 use Illuminate\Http\Request;
@@ -164,10 +168,33 @@ class ClientController extends Controller
         return view('components.sitemap', compact('getBanner', 'getMenu'));
     }
 
-    // public function Membership($slug){
-    //     $getBanner = Banner::where('slug', $slug)->get();
-    //     return view('components.sitemap', compact('getBanner'));
-    // }
+  
+    // Apply for CAC
+    public function BeComeASpeaker(){
+          $getBanner = Banner::all();
+          $getText = BcomeSpeaker::first();
+        return view('frontend.apply-cac.become-a-speaker', compact('getBanner', 'getText'));
+    }
+
+    public function BecomeLicensee(){
+        $getTextLicen = CACLicensee::all();
+        $getBanner = Banner::all();
+        return view('frontend.apply-cac.cac-licensees', compact('getBanner', 'getTextLicen'));
+    }
+
+     public function BecomeSponsor(){
+        $getTextSopnser = CACSponsor::all();
+        $getBanner = Banner::all();
+        return view('frontend.apply-cac.become-a-sponsor', compact('getBanner', 'getTextSopnser'));
+    }
+
+      public function BecomeReferralProgram(){
+        $getTextProgram = ReferralProgram::first();
+          $getBanner = Banner::all();
+        return view('frontend.apply-cac.referral-program', compact('getBanner', 'getTextProgram'));
+    }
+
+    
 
     
 }

@@ -379,4 +379,16 @@
         }
 
     </script>
+    <script>
+document.querySelectorAll('.imageInput').forEach(function(input){
+    input.addEventListener('change', function(e){
+        const file = e.target.files[0];
+        if(file){
+            const preview = this.parentElement.querySelector('.preview');
+            preview.src = URL.createObjectURL(file);
+            preview.classList.remove('hidden');
+        }
+    });
+});
+</script>
 @endsection

@@ -188,32 +188,32 @@
     <section class="max-w-7xl mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <?php for($i = 1; $i <= 3; $i++): ?>
+            <?php $__currentLoopData = $getEventsex; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="overflow-hidden">
                         <img
-                            src="<?php echo e(asset($getHomeContent[0]->{"img_card_event_$i"})); ?>"
-                            alt="<?php echo e($getHomeContent[0]->{"title_event_$i"}); ?>"
+                            src="<?php echo e(asset('storage/'.$items->image)); ?>"
+                            alt="<?php echo e($getEventsex[0]->{"title_event_$i"}); ?>"
                             class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                     </div>
 
                     <div class="p-6">
                         <h3 class="mt-4 text-xl md:text-2xl font-bold text-blue-900 leading-snug">
-                            <?php echo e($getHomeContent[0]->{"title_event_$i"}); ?>
+                            <?php echo e($items->title); ?>
 
                         </h3>
                         <p class="text-gray-700 font-medium text-md md:text-lg mt-2">
-                            <?php echo nl2br(e($getHomeContent[0]->{"desc_card_event_$i"})); ?>
+                              <?php echo nl2br($items->description); ?>
 
                         </p>
                         <p class="mt-2 text-gray-400 text-sm">
-                            <?php echo e($getHomeContent[0]->updated_at->format('d, M, Y')); ?>
+                            <?php echo e($items->updated_at->format('d, M, Y')); ?>
 
                         </p>
                     </div>
                 </div>
-            <?php endfor; ?>
+             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         </div>
     </section>

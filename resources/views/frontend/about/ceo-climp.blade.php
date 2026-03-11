@@ -23,14 +23,14 @@
             <!-- Text content (padding allowed here) -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 text-white bg-black/50">
 
-                <h1 class="text-[16px] md:text-[18px] lg:text-[25px] font-normal mb-3 md:px-10 xl:px-12 lg:-mt-4">
+                <h1 class="text-[16px] md:text-[18px] lg:text-[25px] font-normal mb-3 md:px-10 xl:px-12">
                     @if(!empty($getBanner) && $getBanner[9]->title === 'climb')
                             {{ $getBanner[9]->name }}
                             @endif
                 </h1>
 
                 <p
-                    class="text-[25px] md:text-[45px] lg:text-[55px] font-semibold max-w-[940px] leading-tight mb-3 md:px-10 xl:px-12 md:py-20">
+                    class="text-[18px] md:text-[25px] lg:text-[30px] font-semibold max-w-[940px] leading-tight mb-3 md:px-10 xl:px-12 md:py-20">
                       @if(!empty($getBanner) && $getBanner[9]->title === 'climb')
                             {!! nl2br(e(value: $getBanner[9]->content)) !!}
                             @endif

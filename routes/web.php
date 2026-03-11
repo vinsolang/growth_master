@@ -9,6 +9,9 @@ use App\Http\Controllers\backend\ApplyToBeController;
 use App\Http\Controllers\backend\AppraochContentController;
 use App\Http\Controllers\backend\BAccountingController;
 use App\Http\Controllers\backend\BannerController;
+use App\Http\Controllers\backend\BcomeSpeakerController;
+use App\Http\Controllers\backend\CACLicenseeController;
+use App\Http\Controllers\backend\CACSponsorController;
 use App\Http\Controllers\backend\CEOClimbController;
 use App\Http\Controllers\backend\ChairContactController;
 use App\Http\Controllers\backend\EventsController;
@@ -31,6 +34,7 @@ use App\Http\Controllers\backend\PeerGroupContentController;
 use App\Http\Controllers\backend\ProgramContentController;
 use App\Http\Controllers\backend\ProgramGuaranteedController;
 use App\Http\Controllers\backend\ProramJobTextController;
+use App\Http\Controllers\backend\ReferralProgramController;
 use App\Http\Controllers\backend\ReviewPageContentController;
 use App\Http\Controllers\backend\WhyJoinGrowthMasterController;
 use App\Http\Controllers\frontend\AboutGrowthControll;
@@ -38,6 +42,7 @@ use App\Http\Controllers\frontend\BecomeAMemberController;
 use App\Http\Controllers\frontend\ClientController;
 use App\Http\Controllers\MembershipController;
 use App\Models\Banner;
+use App\Models\EventType;
 use App\Models\FAQs;
 use App\Models\HomeContent;
 use App\Models\HomeText;
@@ -50,17 +55,19 @@ use Illuminate\Support\Facades\Route;
                                                 @@@ Frontend
 ============================================================================================== */
 Route::get('/', function () {
-      $showFAQs = FAQs::all();
-      $getBanner = Banner::all();
-      $getTeam = DB::table('team')->get();
-      $getHomeContent = HomeContent::all();
-      $getMenu = NavbarMenu::all();
+    $showFAQs = FAQs::all();
+    $getBanner = Banner::all();
+    $getTeam = DB::table('team')->get();
+    $getHomeContent = HomeContent::all();
+    $getMenu = NavbarMenu::all();
+    $getEventsex = EventType::take(3)->get();
     return view('frontend.home', compact(
         'showFAQs',
         'getBanner',
         'getTeam',
         'getHomeContent',
-        'getMenu'
+        'getMenu',
+        'getEventsex'
         ));
 })->name('home');
 
@@ -181,6 +188,11 @@ Route::resource('memberships', MembershipController::class)
 Route::get('thankyou-membership-application', [BecomeAMemberController::class, 'PageSubmitSucess'])->name('success');
 Route::get('form/input-info', [BecomeAMemberController::class, 'FormInputInfo'])->name('form.input');
 
+// Apply for CAC
+Route::get('apply-for-cac/become-a-speaker', [ClientController::class,'BeComeASpeaker'])->name('speaker');
+Route::get('apply-for-cac/cac-licensee', [ClientController::class,'BecomeLicensee'])->name('licensee');
+Route::get('apply-for-cac/cac-sponsor', [ClientController::class,'BecomeSponsor'])->name('sponsor');
+Route::get('apply-for-cac/referral-program', [ClientController::class,'BecomeReferralProgram'])->name('referral-program');
 
 
 /* ==============================================================================================
@@ -301,5 +313,18 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/admin/events', [EventTypeController::class, 'index'])->name('events.index');
     Route::post('/admin/events/update', [EventTypeController::class, 'update'])->name('events.update');
+
+    Route::get('/admin/become', [BcomeSpeakerController::class, 'index'])->name('become.index');
+    Route::post('/admin/become/update', [BcomeSpeakerController::class, 'update'])->name('become.update');
+
+    Route::get('/admin/licensee', [CACLicenseeController::class, 'index'])->name('licensee.index');
+    Route::post('/admin/licensee/update', [CACLicenseeController::class, 'update'])->name('licensee.update');
+
+    Route::get('/admin/sponsors', [CACSponsorController::class, 'index'])->name('sponsors.index');
+    Route::post('/admin/sponsors/update', [CACSponsorController::class, 'update'])->name('sponsors.update');
+//  referralprogram
+    Route::get('/admin/referralprogram', [ReferralProgramController::class, 'index'])->name('referralprogram.index');
+    Route::post('/admin/referralprogram/update', [ReferralProgramController::class, 'update'])->name('referralprogram.update');
+
 
 });
