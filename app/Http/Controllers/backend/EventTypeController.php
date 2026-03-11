@@ -23,10 +23,14 @@ class EventTypeController extends Controller
             $eventstype = $id ? EventType::find($id) : new EventType();
 
             $imagePath = $eventstype->image ?? null;
-
             if(isset($request->image[$key])){
-                $imagePath = $request->image[$key]->store('eventstype','public');
+                $image = $request->image[$key];
+                $imageName = time().'_'.$image->getClientOriginalName();
+                $image->move(public_path('storage/eventstype'), $imageName);
+
+                $imagePath = 'storage/eventstype/'.$imageName;
             }
+
 
             $eventstype->title_event_1 = $request->title_event_1;
             $eventstype->title_event_2 = $request->title_event_2;

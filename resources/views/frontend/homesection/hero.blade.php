@@ -178,7 +178,7 @@
                 <div class="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="overflow-hidden">
                         <img
-                            src="{{ asset('storage/'.$items->image) }}"
+                            src="{{ asset($items->image) }}"
                             alt="{{ $getEventsex[0]->{"title_event_$i"} }}"
                             class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
                         />

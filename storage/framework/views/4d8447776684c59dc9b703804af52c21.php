@@ -89,7 +89,7 @@
                                     <input type="file" name="image[]" class="imageInput">
 
                                     <?php if($event->image): ?>
-                                        <img src="<?php echo e(asset('storage/' . $event->image)); ?>" class="preview mt-2 w-20">
+                                        <img src="<?php echo e(asset($event->image)); ?>" class="preview mt-2 w-20">
                                     <?php endif; ?>
                                 </div>
 

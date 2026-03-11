@@ -87,7 +87,7 @@
                                     <input type="file" name="image[]" class="imageInput">
 
                                     @if($event->image)
-                                        <img src="{{ asset('storage/' . $event->image) }}" class="preview mt-2 w-20">
+                                        <img src="{{ asset($event->image) }}" class="preview mt-2 w-20">
                                     @endif
                                 </div>
 

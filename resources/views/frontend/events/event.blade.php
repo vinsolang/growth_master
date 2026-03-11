@@ -58,7 +58,7 @@
                             <div class="bg-[#2a2d78] py-12 px-8 space-y-4 h-auto">
                             <div class="flex space-x-1">
                                 <div class="w-14 h-14 rounded-full bg-gray-400">
-                                    <img src="{{ asset('storage/'.$items->image) }}" alt="" class="w-full h-full object-cover rounded-full">
+                                    <img src="{{ asset($items->image) }}" alt="" class="w-full h-full object-cover rounded-full">
                                 </div>
                                 <div>
                                     <p class="text-[10px] text-white">{{ $items->name }}</p>
