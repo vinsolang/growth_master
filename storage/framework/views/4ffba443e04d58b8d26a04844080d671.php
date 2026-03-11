@@ -68,10 +68,11 @@
                                                         <img src="<?php echo e(asset($image)); ?>" width="150" class="rounded border previewImg">
                                                     </div>
                                                     <input type="file" name="img_json[]" class="form-control imgInput" accept="image/*">
+                                                    <input type="hidden" name="old_img_json[]" value="<?php echo e($image); ?>">
                                                     <div class="mt-2">
                                                         <textarea name="title_json[]" class="form-control" placeholder="Description"><?php echo e($titles[$index] ?? ''); ?></textarea>
                                                     </div>
-                                                    <button type="button" class="hidden absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center removeItem hover:bg-red-600">&times;</button>
+                                                    <button type="button" class="rabsolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center removeItem hover:bg-red-600">&times;</button>
                                                 </div>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         <?php endif; ?>
